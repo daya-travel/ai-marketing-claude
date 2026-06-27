@@ -1,51 +1,53 @@
-# TikTok — Konzept — „Das mache ich, bevor ich allein losfliege"
+# TikTok — Concept — "Do THIS before you fly solo"
 
 **Account:** @her.solotrip (TikTok)
-**Ziel:** Reichweite über Completion + Suche (Keywords), neue Zielgruppe erreichen
-**Schmerzpunkt:** #1 Angst/Unsicherheit + #4 Entscheidungslähmung
-**Format:** TikTok, 12–18 Sek., 9:16, talking-to-camera + harte Schnitte
-**Wichtig:** Das ist die TikTok-Variante des gleichen Themas wie der IG-Reel —
-aber **anders verpackt** (siehe `instagram-vs-tiktok.md`). NICHT 1:1 derselbe Clip.
+**Goal:** Reach via completion + search (keywords), tap a new audience
+**Pain point:** #1 fear/uncertainty + #4 decision paralysis
+**Format:** TikTok, 12–18 sec, 9:16, talking-to-camera + hard cuts
+**Language:** English (primary).
+**Important:** Same topic as the IG Reel — but packaged differently (see `instagram-vs-tiktok.md`).
+NOT the same clip reposted. Tips are general best practices, not DAYA app features.
 
 ---
 
-## Hook (0–1 Sek.) — gesprochen, direkt in die Kamera
-> „Wenn du als Frau zum ersten Mal allein reist — mach bitte DAS, bevor du losfliegst."
+## Hook (0–1 sec) — spoken, straight to camera
+> "If you're a woman traveling alone for the first time — please do THIS before you fly."
 
-*(Roh, Handkamera, dein echtes Gesicht. Keine Intro-Animation. Sofort Thema.)*
+*(Raw, handheld, your real face. No intro animation. Straight into it.)*
 
-## Skript (schnell, talking-to-camera + on-screen Captions)
-- „Erstens: Schick deinen **Live-Standort** an eine Person, der du vertraust — mit fester Check-in-Zeit."
-- „Zweitens: Beim Einchecken **Foto vom Zimmer und vom Flur** an eine Freundin. Dauert 30 Sekunden."
-- „Drittens: **Notrufnummern und die Botschaft offline speichern** — bevor du landest, nicht danach."
-- „Solo reisen ist nicht gefährlich. Unvorbereitet reisen schon. Speicher dir das."
+## Script (fast, talking-to-camera + on-screen captions)
+- "One: send your **live location** to someone you trust — with a set check-in time."
+- "Two: at check-in, send a **photo of your room and the hallway** to a friend. Takes 30 seconds."
+- "Three: save **emergency numbers and your embassy offline** — before you land, not after."
+- "Solo travel isn't dangerous. Traveling unprepared is. Save this."
 
-## Gesprochene Keywords (für die TikTok-Suche bewusst sagen)
-„solo reisen als Frau", „erste Solo-Reise", „Sicherheit beim Alleinreisen", „solo travel tipps".
+## Spoken keywords (say them on purpose — for TikTok search)
+"solo travel as a woman", "first solo trip", "solo female travel safety", "solo travel tips".
 
-## On-Screen-Captions
-Automatische Untertitel an (TikTok-Caption-Funktion), Keywords zusätzlich groß einblenden.
+## On-Screen Captions
+Turn on auto-captions (TikTok caption feature), plus big keyword call-outs.
 
-## Caption (keyword-reich + Frage)
-> Solo reisen als Frau 🤍 Was machst DU, um dich sicher zu fühlen? 👇
-> #solotravel #solofemaletravel #reisenalsfrau #traveltok #safetytips
+## Caption (keyword-rich + question)
+> Solo travel as a woman 🤍 What do YOU do to feel safe? 👇
+> #solotravel #solofemaletravel #solofemaletraveler #traveltok #safetytips #solotraveltips
 
 ## Sound
-Trending-Sound aus der Reise-/„Get ready with me"-Ecke (wöchentlich prüfen). Notfalls
-Originalton — bei talking-to-camera oft sogar besser für die Completion.
+Trending sound from the travel / "get ready with me" space (check weekly). Or original audio —
+for talking-to-camera, original often wins on completion.
 
-## Reichweiten-Hebel danach
-- **Kommentar-Antwort-Video:** Auf den besten Kommentar („und wenn man kein Netz hat?") mit
-  einem Folge-Video antworten → kostenlose zweite Reichweitenwelle.
-- **Stitch-Einladung:** „Stitch das mit deinem #1 Solo-Travel-Tipp."
+## Reach levers after posting
+- **Reply-with-video:** answer the best comment ("what if you have no signal?") with a follow-up
+  video → a free second wave of reach.
+- **Stitch invite:** "Stitch this with your #1 solo travel tip."
 
-## Visuelle Umsetzung
-- Roh & echt. Handkamera, Tageslicht, kein Hochglanz.
-- Schnelle Schnitte pro Tipp, Tempo höher als beim IG-Reel.
-- **Tool-Tipp:** Kein eigenes Material? Über **Higgsfield** Clips generieren oder mit
-  Untertiteln versehen — die `short-form-pipeline` (in `ai-marketing-skills`) kann zudem
-  fertige Langvideos automatisch in vertikale, untertitelte Clips schneiden.
+## Visual Production
+- Raw & real. Handheld, daylight, no gloss.
+- Fast cuts per tip, faster pace than the IG Reel.
+- **Tool tip:** No footage? **Kling AI** / **Higgsfield** for clips, **Caption AI** for captions.
+  The `short-form-pipeline` (repo `ai-marketing-skills`) also auto-cuts long videos into
+  vertical, captioned clips.
 
-## Hinweis für Brand-Guardian
-- Gleiche ⚠️-Annahme wie beim Reel (Live-Standort-Funktion bestätigen).
-- TikTok-Ton bewusst direkter/rauer — bleibt aber stärkend, kein Angst-Marketing.
+## Note for Brand-Guardian
+- General safety best practices, not claimed DAYA features. ✅
+- TikTok tone is deliberately more direct/raw — still empowering, no fear marketing. ✅
+- No app/feature promises; no link push (waitlist not live yet). ✅

@@ -1,71 +1,73 @@
-# Instagram — Reel — „3 Dinge vor jeder Solo-Reise"
+# Instagram — Reel — "3 things I do before every solo trip"
 
 **Account:** @her.solotrip
-**Ziel:** Reichweite + Saves (Warm-up Richtung Warteliste, kein Hard-Sell)
-**Schmerzpunkt:** #1 Angst/Unsicherheit + #3 „niemand zum Check-in"
-**Format:** Reel, 15–20 Sek., 9:16
-⚠️ Sprache: Deutsch (Annahme). Englische Variante auf Wunsch — sag Bescheid.
+**Goal:** Reach + Saves (warming the audience toward the waitlist — no hard sell)
+**Pain point:** #1 fear/uncertainty + #3 "no one to check in with"
+**Format:** Reel, 15–20 sec, 9:16
+**Language:** English (primary). German version on request.
+**Note:** Tips are general best practices — NOT DAYA app features (app doesn't exist yet).
 
 ---
 
-## Hook (0–2 Sek.)
-**Gesprochen + On-Screen-Text:**
-> „Allein reisen als Frau ist nicht gefährlich. **Unvorbereitet** allein reisen schon."
+## Hook (0–2 sec)
+**Spoken + on-screen text:**
+> "Traveling alone as a woman isn't dangerous. Traveling alone *unprepared* is."
 
-*(Visuell: du/ihr am Flughafen oder beim Rucksack-Packen, Blick in die Kamera.)*
+*(Visual: you at the airport or packing your backpack, looking into the camera.)*
 
-## Skript / Szenen
+## Script / Scenes
 
-**Szene 1 — Tipp 1 (2–7 Sek.)**
-On-Screen: *„1. Teile deinen Live-Standort — mit Check-in-Zeit."*
-Voice: „Such dir EINE Vertrauensperson. Sie sieht, wo du bist, und weiß, wann du dich meldest."
+**Scene 1 — Tip 1 (2–7 sec)**
+On-screen: *"1. Share your live location — with a check-in time."*
+Voice: "Pick ONE person you trust. They see where you are, and they know when you'll check in."
 
-**Szene 2 — Tipp 2 (7–12 Sek.)**
-On-Screen: *„2. Beim Einchecken: Foto vom Zimmer + Flur an eine Freundin."*
-Voice: „30 Sekunden Aufwand. Im Notfall Gold wert."
+**Scene 2 — Tip 2 (7–12 sec)**
+On-screen: *"2. At check-in: photo of your room + hallway to a friend."*
+Voice: "Takes 30 seconds. Worth gold if anything ever happens."
 
-**Szene 3 — Tipp 3 (12–16 Sek.)**
-On-Screen: *„3. Notrufnummern + Botschaft OFFLINE speichern — vor dem Abflug."*
-Voice: „Kein Netz, keine Panik. Du hast alles dabei."
+**Scene 3 — Tip 3 (12–16 sec)**
+On-screen: *"3. Save emergency numbers + your embassy OFFLINE — before you fly."*
+Voice: "No signal, no panic. You've got everything with you."
 
-**Szene 4 — Abschluss (16–20 Sek.)**
-On-Screen: *„Vorbereitet ≠ ängstlich. Vorbereitet = frei."*
-Voice: „Du musst nicht mutig sein. Du musst vorbereitet sein. Dann gehört die Welt dir."
+**Scene 4 — Close (16–20 sec)**
+On-screen: *"Prepared ≠ scared. Prepared = free."*
+Voice: "You don't have to be fearless. You have to be prepared. Then the world is yours."
 
-## On-Screen-Text
-Großer, gut lesbarer Text in jeder Szene (viele schauen stumm). Marken-Akzentfarbe nutzen.
+## On-Screen Text
+Large, easy-to-read text in every scene (most watch on mute). Use brand accent color.
 
 ## Caption
-> Niemand sagt dir das vor der ersten Solo-Reise. 💛
+> Nobody tells you this before your first solo trip. 💛
 >
-> Solo zu reisen ist eines der schönsten Dinge, die du dir schenken kannst — und nein,
-> du musst dafür nicht furchtlos sein. Du musst nur vorbereitet sein.
+> Traveling solo is one of the best things you can give yourself — and no, you don't
+> have to be fearless to do it. You just have to be prepared.
 >
-> Speicher dir diese 3 Routinen für deine nächste Reise:
-> 1️⃣ Live-Standort + Check-in mit einer Vertrauensperson
-> 2️⃣ Foto von Zimmer & Flur an eine Freundin beim Einchecken
-> 3️⃣ Notrufnummern & Botschaft offline gespeichert — vor dem Abflug
+> Save these 3 routines for your next trip:
+> 1️⃣ Live location + a check-in time with someone you trust
+> 2️⃣ Photo of your room & hallway to a friend at check-in
+> 3️⃣ Emergency numbers & embassy saved offline — before you fly
 >
-> Welcher Tipp war neu für dich? Schreib's in die Kommentare 👇
-> Und folge @her.solotrip — wir bauen gerade etwas, das genau das für dich übernimmt. ✨
+> Which one was new to you? Tell me in the comments 👇
+> And follow @her.solotrip — we're building something to make all of this easier.
+> Built *with* you, for women who travel solo. ✨
 
 ## CTA
-Primär: **Speichern** („Speicher dir das für deine nächste Reise").
-Sekundär: **Kommentieren** (Frage) + **Folgen**.
-Sanfter Warteliste-Tease: „…etwas, das genau das für dich übernimmt." (noch kein Link/Hard-Sell)
+Primary: **Save** ("Save this for your next trip").
+Secondary: **Comment** (question) + **Follow**.
+Soft waitlist tease: "we're building something… built *with* you" (honest — no fake features, no link yet).
 
 ## Hashtags
-#solotravel #solofemaletravel #alleinreisen #reisenalsfrau #solotrip #safetytips
-#frauenunterwegs #reisetipps #sicherreisen #solofemaletraveler
+#solotravel #solofemaletravel #solofemaletraveler #solotrip #traveltips #safetytips
+#womenwhotravel #traveltok #solotraveltips #travelsafety
 
-## Visuelle Umsetzung
-- **Sound:** ruhiger, empowernder Trending-Audio (wöchentlich prüfen, was in der Reise-Nische trendet).
-- **Bild:** echte Aufnahmen > Stockfotos. Packen, Flughafen, Ankunft im Zimmer.
-- **Schnitt:** pro Tipp 1 harter Schnitt, Text mitlaufend, Tempo mittel.
-- **Tool-Tipp:** Wenn keine eigenen Clips da sind → über die **Higgsfield**-Integration
-  Video/Bilder generieren, oder in **Canva** aus dem Brand-Kit bauen. Frag mich einfach.
+## Visual Production
+- **Sound:** calm, empowering trending audio (check weekly what's trending in the travel niche).
+- **Footage:** real clips > stock. Packing, airport, arriving in the room.
+- **Editing:** one hard cut per tip, running on-screen text, medium pace.
+- **Tool tip:** No own footage? Generate b-roll with **Kling AI** or **Higgsfield**, auto-caption
+  with **Caption AI**, or build it on-brand in **Canva**. Just ask me.
 
-## Hinweis für Brand-Guardian
-- ⚠️ Tipp 1 setzt eine „Live-Standort + Check-in"-Funktion voraus — passt zu DAYA, bitte
-  bestätigen, dass die App das kann (sonst Formulierung neutraler halten).
-- Ton geprüft: stärkend, kein Angst-Marketing. Abschluss „Vorbereitet = frei" trägt die Markenbotschaft.
+## Note for Brand-Guardian
+- Tips are general safety best practices (phone features anyone has) — NOT claimed DAYA features. ✅
+- Tease is honest ("we're building") — no specific functionality promised. ✅
+- Tone checked: empowering, no fear marketing. Close "Prepared = free" carries the brand message. ✅

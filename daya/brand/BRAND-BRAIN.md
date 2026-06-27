@@ -1,45 +1,46 @@
 # DAYA — Marken-Gehirn (Brand Brain)
 
 > Die Quelle der Wahrheit für jede Stimme, jedes Wort, jedes Bild von DAYA.
-> Mit ⚠️ **ANNAHME** markierte Stellen müssen Alesya & Diana bestätigen.
+> Stand 27.06.2026 — mit Alesya & Diana bestätigt.
+> **Wichtig:** Die App existiert noch NICHT. Wir sind in der Waitlist-First-Phase
+> (siehe `daya/STRATEGY.md`). Content darf keine konkreten Features behaupten.
 
 ---
 
 ## 1. Was ist DAYA? (in einem Satz)
 
-⚠️ **ANNAHME:** DAYA ist die Sicherheits-App, die allein reisenden Frauen das Gefühl
-gibt, nie wirklich allein zu sein — damit Angst nie der Grund ist, eine Reise *nicht*
-zu machen.
+DAYA ist die im Aufbau befindliche Sicherheits-App, die allein reisenden Frauen das
+Gefühl geben soll, nie wirklich allein zu sein — damit Angst nie der Grund ist, eine
+Reise *nicht* zu machen.
 
-> **Bitte bestätigen/korrigieren:** Was macht die App konkret? Welche 3–5 Kernfunktionen
-> hat sie? (z. B. Live-Standort-Teilen, SOS-Knopf, Check-in-Timer, Sicherheits-Bewertungen
-> für Orte/Unterkünfte, Community verifizierter Frauen, Offline-Notfallinfos …)
+**Status:** Vor-Launch. Features werden gerade **gemeinsam mit der Community validiert**
+(Content + Warteliste = Marktforschung). Wir kommunizieren als Gründerinnen, die offen
+bauen ("build in public"): *"Wir bauen DAYA mit dir."*
+
+> Sobald Features entschieden sind, hier eintragen. Bis dahin: nur die **Vision** teasen,
+> keine konkreten Funktionen versprechen.
 
 ## 2. Mission & Warum (der tiefere Grund)
 
-⚠️ **ANNAHME:** Frauen sollen die Welt mit der gleichen Selbstverständlichkeit erkunden
-können wie alle anderen. Nicht „trotz" Sicherheitsbedenken, sondern *mit* einem Werkzeug,
-das diese Bedenken kleiner macht. Freiheit statt Angst.
+Frauen sollen die Welt mit der gleichen Selbstverständlichkeit erkunden können wie alle
+anderen. Nicht „trotz" Sicherheitsbedenken, sondern *mit* einem Werkzeug, das diese
+Bedenken kleiner macht. **Freiheit statt Angst.**
 
 ## 3. Positionierung
 
 | | |
 |---|---|
-| **Kategorie** | Sicherheits- & Reise-Companion-App für solo reisende Frauen |
+| **Kategorie** | Sicherheits- & Reise-Companion-App für solo reisende Frauen (im Aufbau) |
 | **Für wen** | Frauen, die allein reisen (wollen) und Sicherheit + Freiheit zugleich wollen |
 | **Anders als** | Generische Notfall-Apps (kalt, technisch) und reine Travel-Apps (kein Sicherheitsfokus) |
-| **Der Beweis** | ⚠️ **ANNAHME** — hier später echte Features/Zahlen/Testimonials eintragen |
+| **Der Beweis (jetzt)** | Eine Gründerinnen-Story + eine wachsende Community, die mitbaut |
 
-## 4. Markenstimme (Voice)
-
-⚠️ **ANNAHME — Standard-Tonalität: „Empowernd & warm".**
-*(Alternativen, falls ihr lieber anders klingt: „Mutig & rebellisch", „Sachlich &
-vertrauensvoll", „Freundschaftlich-nahbar". Sag Bescheid, ich stelle die ganze Stimme um.)*
+## 4. Markenstimme (Voice) — ✅ bestätigt: „Empowernd & warm"
 
 **So klingt DAYA:**
 - Wie eine erfahrene große Schwester: warm, klar, nie belehrend.
 - Stärkend, nie angstmachend. Wir reden über Sicherheit, ohne Panik zu verkaufen.
-- Ehrlich und konkret: echte Tipps, keine Floskeln.
+- Ehrlich und konkret: echte Tipps, keine Floskeln. Offen über das, was wir gerade bauen.
 - Auf Augenhöhe, „du", nahbar, aber kompetent.
 
 **So klingt DAYA NICHT:**
@@ -47,25 +48,26 @@ vertrauensvoll", „Freundschaftlich-nahbar". Sag Bescheid, ich stelle die ganze
 - ❌ Belehrend / von oben herab
 - ❌ Übertrieben technisch oder werblich
 - ❌ Toxisch-positiv („Einfach mutig sein, dann klappt's!")
+- ❌ Feature-Versprechen für eine App, die es noch nicht gibt
 
 **Wörter, die wir lieben:** Freiheit, Selbstbestimmt, Vertrauen, Bauchgefühl, du schaffst
-das, vorbereitet, nicht allein, deine Art zu reisen.
+das, vorbereitet, nicht allein, deine Art zu reisen, wir bauen das mit dir.
 **Wörter, die wir meiden:** Gefahr (außer mit Lösung), Opfer, Risiko (ohne Kontext), „pass auf!".
 
 ## 5. Werte
 
 1. **Sicherheit als Freiheit** — Sicherheit ist kein Käfig, sondern das, was Freiheit erst möglich macht.
 2. **Schwesternschaft** — Frauen stärken Frauen. Community vor Wettbewerb.
-3. **Ehrlichkeit** — keine Schönfärberei, keine Angstmache. Echte Tipps für echte Situationen.
-4. **Nachhaltigkeit** ⚠️ **ANNAHME** — respektvolles, verantwortungsvolles Reisen
-   (Umwelt, lokale Kultur, faire Begegnungen). *Bitte bestätigen, ob „nachhaltig" sich
-   auf ökologisches Reisen, auf langlebige/ehrliche Inhalte, oder auf beides bezieht.*
+3. **Ehrlichkeit** — keine Schönfärberei, keine Angstmache, keine Fake-Features. Wir bauen offen.
+4. **Nachhaltigkeit (= ehrlicher, langlebiger Content)** ✅ — wir machen Inhalte, die in
+   einem Jahr noch stimmen und nicht peinlich sind. Kein billiger Trend-Klau, keine
+   Eintagsfliegen, keine Aussagen, die wir später zurücknehmen müssen.
 
-## 6. Visuelle Identität (Platzhalter)
+## 6. Visuelle Identität (offen)
 
-⚠️ **ANNAHME / offen:** Farben, Logo, Schriftarten, Bildsprache hier eintragen.
-Empfehlung für den Anfang: warme, erdige Töne + ein klarer Akzent (Vertrauen + Wärme),
-echte Frauen in echten Reisesituationen statt Stockfoto-Glätte.
+⚠️ **Offen:** Farben, Logo, Schriftarten, Bildsprache. Empfehlung für den Anfang: warme,
+erdige Töne + ein klarer Akzent (Vertrauen + Wärme), echte Frauen in echten
+Reisesituationen statt Stockfoto-Glätte.
 
 > Wenn ihr ein Canva-Brand-Kit oder Figma-Design habt: Link/Zugang teilen — ich kann
 > über die Canva-/Figma-Integration direkt darauf zugreifen und Posts daraus bauen.
@@ -73,16 +75,17 @@ echte Frauen in echten Reisesituationen statt Stockfoto-Glätte.
 ## 7. Das Geschäftsziel hinter dem Content
 
 - **Jetzt:** Reichweite auf @her.solotrip aufbauen (Stand: 1.000 Follower, 26.06.2026).
-- **Bald:** Warteliste für die App platzieren → erste Verkäufe / Early Access.
-- **Content-Job:** Vertrauen + Reichweite aufbauen, sodass die Warteliste-Ankündigung
-  auf ein warmes, engagiertes Publikum trifft. Wir verkaufen noch nicht hart — wir bauen
-  Beziehung und säen „da kommt was, das genau dein Problem löst".
+- **Bald:** Warteliste platzieren → E-Mail-Eintragungen sammeln → Features validieren.
+- **Content-Job:** Vertrauen + Reichweite aufbauen, sodass die Warteliste-Ankündigung auf
+  ein warmes Publikum trifft. Wir verkaufen noch nicht hart — wir bauen Beziehung und
+  laden ein, gemeinsam etwas zu bauen. Details: `daya/STRATEGY.md`.
 
 ---
 
-### To-do für Alesya & Diana
-- [ ] Kernfunktionen der App eintragen (Abschnitt 1)
-- [ ] Tonalität bestätigen oder ändern (Abschnitt 4)
-- [ ] Bedeutung von „Nachhaltigkeit" klären (Abschnitt 5)
+### Status der offenen Punkte
+- [x] Tonalität bestätigt: empowernd & warm
+- [x] „Nachhaltigkeit" geklärt: ehrlicher, langlebiger Content
+- [x] Sprache: Englisch primär (Deutsch optional für Stories)
+- [x] App-Status geklärt: existiert noch nicht → Waitlist-First
+- [ ] Features: werden via Content + Warteliste validiert (noch offen — bewusst)
 - [ ] Visuelle Identität / Brand-Kit ergänzen (Abschnitt 6)
-- [ ] ⚠️-Markierungen entfernen, sobald bestätigt
