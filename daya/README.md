@@ -12,6 +12,7 @@ daya/
 ├── STRATEGY.md                ← Waitlist-First Go-to-Market (App existiert noch nicht!)
 ├── TOOLS.md                   ← Womit ihr Content produziert (Kling, Caption AI, Canva …)
 ├── brand/
+│   ├── PLAYBOOK.md            ← ⭐ KANONISCH: echte Insights, Regeln, SOLO & SAFE, Brand-Kit
 │   ├── BRAND-BRAIN.md         ← Wer ist DAYA? Stimme, Werte, Positionierung
 │   └── AUDIENCE.md            ← Zielgruppen-Analyse (solo reisende Frauen)
 ├── agents/                    ← spezialisierte Subagents, die Arbeit abnehmen
@@ -21,6 +22,8 @@ daya/
 │   ├── daya-instagram-specialist.md
 │   └── daya-tiktok-specialist.md
 └── content/                   ← fertige Inhalte, ready zum Posten
+    ├── solo-and-safe-02-ljubljana.md   ← ⭐ SOLO & SAFE Carousel (Flaggschiff)
+    ├── 30-day-content-plan.md
     ├── 2026-06-27-instagram-reel-01.md
     ├── 2026-06-27-tiktok-concept-01.md
     └── instagram-vs-tiktok.md

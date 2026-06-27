@@ -63,14 +63,17 @@ das, vorbereitet, nicht allein, deine Art zu reisen, wir bauen das mit dir.
    einem Jahr noch stimmen und nicht peinlich sind. Kein billiger Trend-Klau, keine
    Eintagsfliegen, keine Aussagen, die wir später zurücknehmen müssen.
 
-## 6. Visuelle Identität (offen)
+## 6. Visuelle Identität — ✅ definiert (siehe `brand/PLAYBOOK.md`)
 
-⚠️ **Offen:** Farben, Logo, Schriftarten, Bildsprache. Empfehlung für den Anfang: warme,
-erdige Töne + ein klarer Akzent (Vertrauen + Wärme), echte Frauen in echten
-Reisesituationen statt Stockfoto-Glätte.
-
-> Wenn ihr ein Canva-Brand-Kit oder Figma-Design habt: Link/Zugang teilen — ich kann
-> über die Canva-/Figma-Integration direkt darauf zugreifen und Posts daraus bauen.
+- **Tagline:** "solo travel, minus the fear"
+- **Format:** **faceless** — Stock-/Naturaufnahmen + Text-Overlay. Kein echtes Gesicht,
+  keine Männer. Frauen nur von hinten oder gar keine Personen. **Keine KI-Gesichter** (tot).
+- **Endcard:** FOLLOW @HER.SOLOTRIP / for solo travel, minus the fear
+- **Reel-Look:** Cream-Serif-Titel (Cormorant Garamond, #F2EDE3) + Karaoke-Captions
+  (bold grotesk, weiß, schwarze Kontur, aktives Wort in grüner Box).
+- **DAYA-Palette:** near-black `#0E0D0B` · cream `#F2EDE3` · terracotta `#C2552B`
+- **Slide-Palette:** cream card `#F2EDE3` · dark green title `#1A3A2E` · terracotta accent `#C2552B`
+- **💚** = verstecktes Marken-Symbol in jeder Caption.
 
 ## 7. Das Geschäftsziel hinter dem Content
 

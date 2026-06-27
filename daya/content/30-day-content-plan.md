@@ -1,74 +1,64 @@
-# DAYA — 30-Tage-Content-Plan (@her.solotrip)
+# DAYA / her.solotrip — 30-Tage-Content-Plan
 
-**Phase:** Waitlist-First, Vor-Launch. Ziel: Reichweite + Vertrauen → Warteliste-Eintragungen.
-**Sprache:** Englisch (primär), Deutsch optional in Stories.
-**Cadence (realistisch für 2-Personen-Team):** ~4 Posts/Woche IG + TikTok-Repurpose.
-Jeder Reel/TikTok wird plattformgerecht angepasst (kein 1:1-Repost — siehe `instagram-vs-tiktok.md`).
+**Phase:** Waitlist-First, Vor-Launch. Ziel: Reichweite + Saves → Warteliste-Eintragungen.
+**Quelle der Wahrheit:** `daya/brand/PLAYBOOK.md` (echte Insights). **Sprache:** Englisch. **Faceless.**
 
-> **Doppelnutzen:** Jeder Post testet einen Schmerzpunkt. Was Saves/Shares/Kommentare zieht,
-> bestimmt die Feature-Roadmap (Content = Marktforschung). Jede Woche 1 Story zur Feature-Validierung.
+> **Format-Split (Daten):** Carousels = Saves/Sends · Reels = Reichweite · Frage-Reel nur ~1×/Monat.
+> **Rückgrat = SOLO & SAFE-Serie** (eine sichere Stadt pro Carousel, 8-Slide-Template).
+> Jede Woche 1 Story zur Feature-Validierung (Content = Marktforschung).
+> Alle Hooks: **Neugier, nie Angst.** Max 5 Hashtags. 💚 in jede Caption. Save-/Send-Zeile.
+> **Batch-Tipp:** die 4 SOLO & SAFE-Carousels in einer Session bauen (nur Text + Fotos tauschen).
 
 ---
 
-## Woche 1 — PERMISSION (Reichweite + Identifikation)
-*Ziel: die mentale Hürde senken. „Solo-Reisen ist für DICH." Maximal teilbar.*
+## Woche 1 — Rückgrat + Reichweite
+| Tag | Format | Inhalt | Goal | Status |
+|---|---|---|---|---|
+| 1 | **Carousel** | **SOLO & SAFE #02 — Ljubljana** (8 Slides) | saves | ✅ fertig: `solo-and-safe-02-ljubljana.md` |
+| 3 | **Reel** | **"5 green flags a city is safe to start solo"** (faceless) | reach | ✅ fertig: `2026-06-27-instagram-reel-01.md` |
+| 5 | **Story** | Umfrage: "the safest city you've been to solo?" (offene Antwort) → füttert nächste SOLO & SAFE | research | — |
 
-| Tag | Plattform | Format | Thema & Hook | Schmerz | CTA/Ziel |
-|---|---|---|---|---|---|
-| 1 | IG + TikTok | Reel | **"5 myths about solo female travel that keep you home"** — Mythen entkräften | #1 Angst | Save + Follow |
-| 3 | IG | Carousel (6) | **"You don't have to be brave. You have to be prepared."** — Reframe | #1 | Save |
-| 4 | IG | Story | Umfrage: **"What's stopping you from traveling solo?"** (4 Optionen) | alle | Research |
-| 5 | TikTok | Talking-to-cam | **"Things I wish someone told me before my first solo trip"** — roh | #1 | Comment |
+## Woche 2 — Serie weiter + Saves
+| Tag | Format | Inhalt | Goal | Status |
+|---|---|---|---|---|
+| 8 | **Carousel** | **SOLO & SAFE #03 — Tbilisi, Georgia** (gleiches Template) | saves | to-build |
+| 10 | **Carousel** | **"what to set up on your phone before you fly"** (Safety-Setup, neu — kein Repeat) | saves | to-build |
+| 12 | **Reel** | **"how solo women pick where to stay"** (faceless, Neugier, mindset) | reach | to-build |
 
-## Woche 2 — PREPARATION (Saves + Autorität)
-*Ziel: konkret nützlich werden. Save-Magnete. Ihr seid die Expertinnen-Freundinnen.*
+## Woche 3 — Build in Public (faceless!)
+| Tag | Format | Inhalt | Goal | Status |
+|---|---|---|---|---|
+| 15 | **Carousel** | **SOLO & SAFE #04 — Oman** (Template) | saves | to-build |
+| 17 | **Reel** | **"why we're building something for women who travel solo"** — Voiceover über B-Roll, **kein Gesicht** | reach/follow | to-build |
+| 19 | **Story** | Feature-Umfrage: "which would help you most on a solo trip?" (Multiple Choice) | **Feature-Validierung** | — |
 
-| Tag | Plattform | Format | Thema & Hook | Schmerz | CTA/Ziel |
-|---|---|---|---|---|---|
-| 8 | IG + TikTok | Reel | **"3 things I do before every solo trip"** (bereits fertig) | #1/#3 | Save |
-| 10 | IG | Carousel (6) | **"How to tell if a neighborhood is safe — in 60 seconds"** | #5 Zielscheibe | Save |
-| 11 | TikTok | Demo | **"Hotel room safety check in 30 seconds"** — schnell, praktisch | #5 | Save + Share |
-| 12 | IG | Story | **"Ask me anything about solo travel safety"** Q&A | alle | Engagement + Research |
-
-## Woche 3 — REAL TALK / BUILD IN PUBLIC (Vertrauen + Feature-Validierung)
-*Ziel: Gründerinnen zeigen, offen bauen. Hier beginnt die Beziehung zur Marke DAYA.*
-
-| Tag | Plattform | Format | Thema & Hook | Schmerz | CTA/Ziel |
-|---|---|---|---|---|---|
-| 15 | IG + TikTok | Reel (Gesicht) | **"Why we're building DAYA"** — Alesya & Diana, das Warum | #1/#2 | Follow |
-| 17 | IG | Carousel | **"We asked women what scares them most about solo travel"** (echte Daten aus W1/W2) | alle | Comment |
-| 18 | TikTok | Skit/POV | **"POV: telling your mom you're traveling alone"** — relatable | #2 Sorge | Share |
-| 19 | IG | Story | **"We're building something. Which feature matters most to you?"** (Multiple Choice) | — | **Feature-Validierung** |
-
-## Woche 4 — COMMUNITY + WAITLIST WARM-UP (Zugehörigkeit → Eintragung)
-*Ziel: Gemeinschaft + die Warteliste sanft scharf schalten.*
-
-| Tag | Plattform | Format | Thema & Hook | Schmerz | CTA/Ziel |
-|---|---|---|---|---|---|
-| 22 | IG + TikTok | Reel | **"Solo, but never alone"** — die Community, die wir uns gewünscht haben | #6 Einsamkeit | Follow |
-| 24 | IG | Carousel | **"What DAYA will help you do"** — Vision (keine Fake-Features!) | #1 | Waitlist-Tease |
-| 25 | TikTok | Community | **"Tag a friend who needs to take her first solo trip"** | #6 | Share |
-| 27 | IG + Story | Post + Story | **"Join the waitlist — be a founding member"** (sobald Landingpage live) | — | **Link → Eintragung** |
+## Woche 4 — Community + Waitlist-Warm-up
+| Tag | Format | Inhalt | Goal | Status |
+|---|---|---|---|---|
+| 22 | **Carousel** | **SOLO & SAFE #05 — Iceland** (Template) | saves | to-build |
+| 24 | **Frage-Reel** (der eine pro Monat) | **"tell me the one city you'd send every first-time solo traveler 💚"** | comments | to-build |
+| 27 | **Post + Story** | **Waitlist-Warm-up** — faceless, "be a founding member" (sobald Landingpage live) | **Eintragungen** | to-build |
 
 ---
 
 ## Feste wöchentliche Bausteine
-- **1× Story-Umfrage/Q&A pro Woche** → Research + Engagement (füttert `daya-audience-analyst`).
-- **Auf den besten Kommentar pro Reel/TikTok mit einem Antwort-Video reagieren** → 2. Reichweitenwelle.
-- **Freitag:** Wochen-Review — Top-Post identifizieren, Thema in der Folgewoche vertiefen.
+- **1× Story (Umfrage/Q&A)** → Research + füttert `daya-audience-analyst` + nächste Städte.
+- **Top-Kommentar pro Reel mit Antwort-Video** kontern → 2. Reichweitenwelle.
+- **Wochen-Review (Fr):** Top-Post nach Saves/Reichweite → Thema in Folgewoche vertiefen.
 
-## Wichtige Regeln (aus STRATEGY.md)
-- Kein Hard-Sell, kein „App downloaden" (gibt es nicht). Tease = Vision, nicht Fake-Features.
-- Erst ab Woche 4 (oder sobald Landingpage live) aktiv zur Warteliste leiten.
+## Wichtige Regeln (aus PLAYBOOK.md)
+- **Faceless**, **Hook = Neugier (nie Angst)**, **Safety-Winkel** bei jedem Stadt-Post.
+- Reel = Reichweite, Carousel = Saves, Frage-Reel sparsam. **Max 5 Hashtags. 💚.**
+- DO-NOT-REPEAT-Liste vor jedem Post prüfen. Keine erfundenen App-Features. Keine Preise auf Slides.
 - Jeder Post durch `daya-brand-guardian` vor Veröffentlichung.
 
 ## Tracking (die Metrik, die zählt)
-| Woche | Reichweite | Saves | Neue Follower | Story-Antworten | Waitlist-Eintragungen |
-|---|---|---|---|---|---|
-| 1 | | | | | — |
-| 2 | | | | | — |
-| 3 | | | | | — |
-| 4 | | | | | (Start) |
+| Woche | Reichweite | **Saves** | Sends | Neue Follower | Story-Antworten | Waitlist-Eintragungen |
+|---|---|---|---|---|---|---|
+| 1 | | | | | | — |
+| 2 | | | | | | — |
+| 3 | | | | | | — |
+| 4 | | | | | | (Start) |
 
-> Sobald die Chat-Zusammenfassung & echte Insights da sind, schärfe ich Hooks und
-> Reihenfolge. Wenn ihr wollt, baue ich jeden der 16 Posts voll aus (wie den fertigen Reel).
+> Sag mir einfach pro Post den 3-Wort-Brief (**Goal + Format + Theme**) — dann baue ich
+> jeden „to-build"-Eintrag voll aus, wie die Ljubljana-Carousel.
