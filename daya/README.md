@@ -23,6 +23,11 @@ daya/
 │   ├── daya-brand-guardian.md
 │   ├── daya-instagram-specialist.md
 │   └── daya-tiktok-specialist.md
+├── skills/                    ← Skills, denen das System folgt
+│   └── viral-carousel/        ← Carousel-Bauregeln (3:4, Safe Zone, Anatomie)
+├── studio/                    ← Carousel-Renderer (HTML→PNG) + Foto-Specs
+│   ├── build-carousel.mjs     ← rendert 8 PNGs aus einem JSON-Spec
+│   └── posts/<slug>.json      ← pro Post die Slide-Daten
 └── content/                   ← fertige Inhalte, ready zum Posten
     ├── solo-and-safe-02-ljubljana.md   ← ⭐ SOLO & SAFE Carousel (Flaggschiff)
     ├── 30-day-content-plan.md

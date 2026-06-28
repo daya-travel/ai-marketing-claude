@@ -21,6 +21,8 @@ Lies `daya/brand/DESIGN-SYSTEM.md` (kanonische Design-Regeln, gewinnt im Zweifel
 - [ ] **Fotos:** echte reisende Frauen (von hinten) ODER nur Landschaft/Objekte? Nie Männer/Models? Nie Wiederholung?
 - [ ] **Emerald-Rückgrat + EIN warmer Akzent (marigold)?** Kein reines Weiß als Text? Icons silber (nie gold)?
 - [ ] **Hashtags ≤ 5, nach Plattform getrennt** (IG: #solofemaletravel + 1 Topic · TikTok: #fyp #traveltok)?
+- [ ] **Carousel-Mechanik** (`daya/skills/viral-carousel/SKILL.md`): 3:4 = 1080×1440? Text in Safe Zone?
+      Anatomie eingehalten (Hook → Transition → Tease → Climax → Action)? Musik beim Posten geplant?
 - [ ] **Sprache** korrekt (siehe offener Sprach-Konflikt in DESIGN-SYSTEM.md, bis geklärt nicht final übersetzen)?
 
 ## Inhaltliche Prüfung (0–10 je Kriterium)

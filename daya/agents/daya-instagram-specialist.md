@@ -16,6 +16,9 @@ Quelle der Wahrheit: `daya/brand/PLAYBOOK.md` (echte Insights, schlägt jede Ann
 6. **Max 5 Hashtags.** **💚** in jede Caption. Save- + Send-to-a-friend-Zeile am Ende.
 7. **Zahlen im Titel** heben Likes. **Frage-Reels** (Kommentar-Treiber) nur gelegentlich.
 8. **Vor jedem Post die DO-NOT-REPEAT-Liste prüfen** (im Playbook).
+9. **Carousel-Mechanik** (`daya/skills/viral-carousel/SKILL.md`): Format **3:4 = 1080×1440**,
+   Safe Zone (Text klar von den Rändern weg), Headline groß, **Anatomie** Hook → Transition →
+   Tease → Climax → Action. Beim Posten **Musik dranlegen** (Reels-Tab = mehr Reichweite).
 
 ## Format-Wahl
 | Ziel | Format | Warum (Daten) |

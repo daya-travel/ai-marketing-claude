@@ -29,13 +29,15 @@ const HEAD = `<!doctype html><html><head><meta charset="utf-8">
 <style>
 :root{--emerald:#0e3b2c;--emerald-mid:#1d5240;--bg:#f4ecdb;--cream:#f4ecdb;--amber:#cf8a1d;--marigold:#efc05a}
 *{margin:0;box-sizing:border-box}
-.slide{width:1080px;height:1350px;position:relative;overflow:hidden;padding:96px 90px;display:flex;flex-direction:column;font-family:'Inter',sans-serif}
+/* 3:4 = 1080x1440 (best carousel size). Safe zone: text clears Instagram UI -
+   180px bottom (caption), ~130px right (like/comment/share), 90px left, 150px top. */
+.slide{width:1080px;height:1440px;position:relative;overflow:hidden;padding:150px 140px 180px 90px;display:flex;flex-direction:column;font-family:'Inter',sans-serif}
 .cream{background:var(--bg);color:var(--emerald)}
 .emerald{background:var(--emerald);color:var(--cream)}
 .photo{color:var(--cream);justify-content:flex-end;background-size:cover;background-position:center}
 .scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,31,23,.95) 0%,rgba(5,31,23,.62) 42%,rgba(5,31,23,.18) 100%)}
 .content{position:relative;z-index:2}
-.counter{position:absolute;top:64px;right:90px;z-index:3;font-family:'Archivo';font-weight:800;letter-spacing:.14em;font-size:22px;color:var(--marigold)}
+.counter{position:absolute;top:70px;right:130px;z-index:3;font-family:'Archivo';font-weight:800;letter-spacing:.14em;font-size:22px;color:var(--marigold)}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:26px;color:var(--amber)}
 .photo .kicker{color:var(--marigold)}
 .tick{width:46px;height:6px;background:var(--marigold);margin:0 0 30px}
@@ -93,7 +95,7 @@ post.slides.forEach((slide, idx) => {
   const htmlPath = join(outDir, `slide-${String(i).padStart(2,'0')}.html`);
   const pngPath = join(outDir, `slide-${String(i).padStart(2,'0')}.png`);
   writeFileSync(htmlPath, html);
-  execSync(`${CHROME} --headless --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --virtual-time-budget=4000 --window-size=1080,1350 --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });
+  execSync(`${CHROME} --headless --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --virtual-time-budget=4000 --window-size=1080,1440 --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });
   console.log('rendered', basename(pngPath), slide.photo ? `(photo: ${photoUrl(slide.photo)?'ok':'MISSING '+slide.photo})` : '(no photo)');
 });
 console.log(`\nDone: ${n} slides -> ${outDir}`);
