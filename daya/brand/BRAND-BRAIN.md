@@ -9,16 +9,19 @@
 
 ## 1. Was ist DAYA? (in einem Satz)
 
-DAYA ist die im Aufbau befindliche Sicherheits-App, die allein reisenden Frauen das
-Gefühl geben soll, nie wirklich allein zu sein — damit Angst nie der Grund ist, eine
-Reise *nicht* zu machen.
+DAYA ist die Reise-App für solo reisende Frauen weltweit: eine **Assistentin / Stimme,
+die mit dir denkt** und dir das Gefühl gibt, nie wirklich allein zu sein. **Anti-Life360**
+(trackt nur, wenn du willst, beim Reisen, nicht 24/7). **Keine** Community-App, **keine**
+Überwachung. Inspiriert von Hekate & Diana. Schützend, nie ängstlich.
 
-**Status:** Vor-Launch. Features werden gerade **gemeinsam mit der Community validiert**
-(Content + Warteliste = Marktforschung). Wir kommunizieren als Gründerinnen, die offen
-bauen ("build in public"): *"Wir bauen DAYA mit dir."*
+**Voice-Beispiele:** "Dein Bodyguard, deine Freundin, deine Assistentin. 24/7 an deiner Seite."
 
-> Sobald Features entschieden sind, hier eintragen. Bis dahin: nur die **Vision** teasen,
-> keine konkreten Funktionen versprechen.
+**Status:** Vor-Launch / im Aufbau (Roadmap laut Design-Handoff: Founder-Beta Web-App Q1 2026,
+native iOS/Android Q3 2026). **Pricing:** Free / Roam 9,90 / Guardian 24,90 / Founder 199
+(einmalig, nur 200 Plätze). Founders: **Alesya & Diana, Nürnberg.**
+
+> Die Positionierung steht (siehe `brand/DESIGN-SYSTEM.md`). Im Content trotzdem **keine
+> konkreten Features behaupten**, die noch nicht laufen - die App ist Pre-Launch. Warteliste-First.
 
 ## 2. Mission & Warum (der tiefere Grund)
 
@@ -63,17 +66,19 @@ das, vorbereitet, nicht allein, deine Art zu reisen, wir bauen das mit dir.
    einem Jahr noch stimmen und nicht peinlich sind. Kein billiger Trend-Klau, keine
    Eintagsfliegen, keine Aussagen, die wir später zurücknehmen müssen.
 
-## 6. Visuelle Identität — ✅ definiert (siehe `brand/PLAYBOOK.md`)
+## 6. Visuelle Identität — ✅ definiert: siehe **`brand/DESIGN-SYSTEM.md`** (kanonisch)
 
-- **Tagline:** "solo travel, minus the fear"
-- **Format:** **faceless** — Stock-/Naturaufnahmen + Text-Overlay. Kein echtes Gesicht,
-  keine Männer. Frauen nur von hinten oder gar keine Personen. **Keine KI-Gesichter** (tot).
-- **Endcard:** FOLLOW @HER.SOLOTRIP / for solo travel, minus the fear
-- **Reel-Look:** Cream-Serif-Titel (Cormorant Garamond, #F2EDE3) + Karaoke-Captions
-  (bold grotesk, weiß, schwarze Kontur, aktives Wort in grüner Box).
-- **DAYA-Palette:** near-black `#0E0D0B` · cream `#F2EDE3` · terracotta `#C2552B`
-- **Slide-Palette:** cream card `#F2EDE3` · dark green title `#1A3A2E` · terracotta accent `#C2552B`
+Kurzfassung (Details + alle Tokens im Design-System):
+- **Tagline:** "solo travel, minus the fear" · **Mythos:** Hekate + Diana · Mood: tief, sicher, ruhig, schützend.
+- **Palette:** Emerald-Rückgrat `#0e3b2c` (immer) + EIN warmer Akzent `#efc05a` (marigold) +
+  cream `#f4ecdb` + silber `#d4dae0`. Night-black `#0b1014` für App. Dusk-Glow + Grain überall.
+- **Typo:** Archivo (Display) · Cormorant Garamond (Markenstimme/Serif) · Caveat (1 Hand-Touch) · Inter (Body).
+- **Fotos:** echte reisende Frauen (von hinten) ODER nur Landschaft/Objekte. Nie Männer/Models, nie Wiederholung.
+- **Harte Regeln:** nur Bindestriche (nie —) · Icons silber (nie gold) · kein reines Weiß als Text · max 5 Hashtags.
 - **💚** = verstecktes Marken-Symbol in jeder Caption.
+
+> ⚠️ Die ältere Palette (terracotta/dark-green) aus dem Content-Playbook ist überholt -
+> das Design-System (emerald/marigold) gewinnt. Canva-Demos in der alten Palette neu bauen.
 
 ## 7. Das Geschäftsziel hinter dem Content
 

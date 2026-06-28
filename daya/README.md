@@ -12,7 +12,8 @@ daya/
 ├── STRATEGY.md                ← Waitlist-First Go-to-Market (App existiert noch nicht!)
 ├── TOOLS.md                   ← Womit ihr Content produziert (Kling, Caption AI, Canva …)
 ├── brand/
-│   ├── PLAYBOOK.md            ← ⭐ KANONISCH: echte Insights, Regeln, SOLO & SAFE, Brand-Kit
+│   ├── DESIGN-SYSTEM.md       ← ⭐ KANONISCH (Design): Tokens, Typo, harte Regeln, Positionierung, Pricing
+│   ├── PLAYBOOK.md            ← ⭐ KANONISCH (Content): echte Insights, SOLO & SAFE, DO-NOT-REPEAT
 │   ├── BRAND-BRAIN.md         ← Wer ist DAYA? Stimme, Werte, Positionierung
 │   └── AUDIENCE.md            ← Zielgruppen-Analyse (solo reisende Frauen)
 ├── agents/                    ← spezialisierte Subagents, die Arbeit abnehmen

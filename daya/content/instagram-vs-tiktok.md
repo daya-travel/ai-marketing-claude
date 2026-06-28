@@ -1,4 +1,4 @@
-# Instagram vs. TikTok — warum ihr NICHT denselben Clip überall postet
+# Instagram vs. TikTok - warum ihr NICHT denselben Clip überall postet
 
 Kurz für Einsteiger: gleiches Thema, andere Verpackung. Hier ist der Unterschied,
 der euch Reichweite kostet, wenn ihr ihn ignoriert.
@@ -30,8 +30,8 @@ der euch Reichweite kostet, wenn ihr ihn ignoriert.
 ## Praktischer Workflow für euch
 
 1. **Ein Thema** wählen (z. B. „3 Dinge vor jeder Solo-Reise").
-2. **TikTok zuerst** drehen — roh, schnell, gesprochener Hook, Keywords. (Material entsteht eh.)
-3. **IG-Reel daraus ableiten** — sauberer schneiden, Brand-Text-Overlays, ruhigerer Sound,
+2. **TikTok zuerst** drehen - roh, schnell, gesprochener Hook, Keywords. (Material entsteht eh.)
+3. **IG-Reel daraus ableiten** - sauberer schneiden, Brand-Text-Overlays, ruhigerer Sound,
    ohne TikTok-Wasserzeichen.
 4. **Stories (IG)** für Community: Umfrage „Was hält dich vom Solo-Reisen ab?" → liefert
    Material für den nächsten Post.
@@ -40,10 +40,10 @@ der euch Reichweite kostet, wenn ihr ihn ignoriert.
 ## Womit ihr Content generiert (eure Tools)
 
 - **Eigenes Filmen** ist für TikTok ideal (roh wirkt besser). Reichweite > Perfektion.
-- **Higgsfield** (KI-Bild/Video) — wenn ihr (noch) kein eigenes Material habt.
-- **Canva / Figma** — für Brand-konforme IG-Reels, Carousels und Text-Overlays.
-- **`short-form-pipeline`** (Repo `ai-marketing-skills`) — schneidet lange Videos automatisch
+- **Higgsfield** (KI-Bild/Video) - wenn ihr (noch) kein eigenes Material habt.
+- **Canva / Figma** - für Brand-konforme IG-Reels, Carousels und Text-Overlays.
+- **`short-form-pipeline`** (Repo `ai-marketing-skills`) - schneidet lange Videos automatisch
   in vertikale, untertitelte Clips für beide Plattformen.
 
 > Frag Claude einfach: *„Mach aus Thema X einen TikTok UND einen IG-Reel mit dem
-> DAYA-System."* — dann laufen Content-Creator + beide Plattform-Spezialisten + Brand-Guardian.
+> DAYA-System."* - dann laufen Content-Creator + beide Plattform-Spezialisten + Brand-Guardian.
