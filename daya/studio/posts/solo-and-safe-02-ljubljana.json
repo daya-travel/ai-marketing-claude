@@ -5,6 +5,7 @@
   "slides": [
     {
       "type": "cover",
+      "photo": "01.png",
       "kicker": "SOLO & SAFE 02",
       "headline": "the safest\nlittle capital\nin europe",
       "sub": "and almost nobody's first guess",
@@ -12,35 +13,41 @@
     },
     {
       "type": "credential",
+      "photo": "02.png",
       "kicker": "LJUBLJANA, SLOVENIA",
       "text": "one of the world's\nsafest countries"
     },
     {
       "type": "tip",
+      "photo": "03.png",
       "num": "01",
       "head": "why women go alone here",
       "body": "low crime, walkable everything, and locals who switch to english the second you look lost."
     },
     {
       "type": "tip",
+      "photo": "04.png",
       "num": "02",
       "head": "the old town is car-free",
       "body": "just the river, the bridges and cafe tables. nothing to dodge, nowhere to rush."
     },
     {
       "type": "tip",
+      "photo": "05.png",
       "num": "03",
       "head": "the view",
       "body": "ride the funicular up to ljubljana castle. rooftops on one side, the alps on the other."
     },
     {
       "type": "tip",
+      "photo": "06.png",
       "num": "04",
       "head": "the tip no one gives you",
       "body": "hop the free kavalir electric buggy through the old town. locals use it, most tourists never spot it."
     },
     {
       "type": "tip",
+      "photo": "07.png",
       "num": "05",
       "head": "one easy day trip",
       "body": "lake bled is 40 minutes by bus. island church, a lake walk, back before dinner."
