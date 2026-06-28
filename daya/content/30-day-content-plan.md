@@ -21,7 +21,7 @@
 ## Woche 2 - Serie weiter + Saves
 | Tag | Format | Inhalt | Goal | Status |
 |---|---|---|---|---|
-| 8 | **Carousel** | **SOLO & SAFE #03 - Tbilisi, Georgia** (gleiches Template) | saves | to-build |
+| 8 | **Carousel** | **SOLO & SAFE #03 - Tbilisi, Georgia** (gleiches Template) | saves | ✅ fertig: `solo-and-safe-03-tbilisi.md` |
 | 10 | **Carousel** | **"what to set up on your phone before you fly"** (Safety-Setup, neu - kein Repeat) | saves | to-build |
 | 12 | **Reel** | **"how solo women pick where to stay"** (faceless, Neugier, mindset) | reach | to-build |
 
