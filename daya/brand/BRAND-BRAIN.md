@@ -20,6 +20,11 @@ die mit dir denkt** und dir das Gefühl gibt, nie wirklich allein zu sein. **Ant
 native iOS/Android Q3 2026). **Pricing:** Free / Roam 9,90 / Guardian 24,90 / Founder 199
 (einmalig, nur 200 Plätze). Founders: **Alesya & Diana, Nürnberg.**
 
+**Mehrsprachig (Produkt):** App + Landing sollen weltweit verkaufen → DE + EN + weitere Sprachen;
+der Sicherheitsanruf wird via **ElevenLabs**-Stimmen in vielen Sprachen umgesetzt (nach Verfügbarkeit).
+**Sprach-Regel Content:** Social-Posts (Insta/TikTok) = **Englisch** · interne Doks = **Deutsch**
+· App/Landing = mehrsprachig. (Details in `WORKFLOW.md`.)
+
 > Die Positionierung steht (siehe `brand/DESIGN-SYSTEM.md`). Im Content trotzdem **keine
 > konkreten Features behaupten**, die noch nicht laufen - die App ist Pre-Launch. Warteliste-First.
 

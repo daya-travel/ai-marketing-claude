@@ -80,14 +80,14 @@ Dreierregel, keine Gedankenstriche).
 
 ---
 
-## ⚠️ KONFLIKTE mit dem Content-Playbook (von Lesya zu klären)
-1. **Sprache:** Dieses Design-Handoff sagt **Deutsch ("du")** für @her.solotrip. Das
-   Content-Playbook + die echten Insights-Daten sagen **Englisch** (alle Top-Posts englisch).
-   → **Welche Sprache gilt für die Instagram-Posts?** (Vermutung: Site = Deutsch, IG-Posts =
-   Englisch? Oder Umstieg auf Deutsch?) **Bis geklärt: nicht final übersetzen.**
-2. **Farben:** Design-Handoff = **emerald #0e3b2c / cream #f4ecdb / marigold #efc05a / silver**.
-   Mein erstes Content-Playbook hatte **terracotta #C2552B / dark-green #1A3A2E** — das war
-   eine ältere/andere Palette. → **Dieses Design-System gewinnt.** Die Canva-Demo (Ljubljana-
-   Cover) nutzte versehentlich die alte Palette und ist damit **off-brand** → neu bauen.
-3. **Produktions-Pipeline:** Echter Weg = Cinematic-Kit (HTML→PNG, bei Claude Design), nicht
-   Canva. Meine Rolle = **Text/Strategie-Gehirn**, das fertige Blöcke an Claude Design übergibt.
+## ✅ GEKLÄRT (Lesya, 2026-06-28) — Sprach- & Pipeline-Modell
+1. **Sprache (final):**
+   - **@her.solotrip Posts (Insta + TikTok) = ENGLISCH** (Reichweite). On-Image-Text + Captions englisch.
+   - **App + Landing Page + Produkt = MEHRSPRACHIG** (DE + EN + mehr; Safety-Anruf via ElevenLabs-Stimmen).
+   - **Interne Doks/Strategie = DEUTSCH** (für Lesya zum Lesen). Das "Deutsch/du" aus §8 gilt für
+     Marke/Landing/App-Voice, NICHT für die englischen Social-Posts.
+2. **Farben (final):** Dieses Design-System (emerald #0e3b2c / cream #f4ecdb / marigold #efc05a /
+   silver #d4dae0) gewinnt. Die alte terracotta/dark-green-Palette ist überholt. Canva-Demo in
+   alter Palette = off-brand, wird nicht verwendet.
+3. **Pipeline (final):** siehe `daya/WORKFLOW.md`. Content-Gehirn (dieses Repo) liefert fertige
+   EN-Textblöcke + Foto-Briefs → Claude Design baut Visuals mit dem Cinematic-Kit (HTML→PNG).

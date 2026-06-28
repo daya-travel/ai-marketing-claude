@@ -9,8 +9,9 @@ Alle Agents, Posts und Kampagnen schöpfen aus den Dateien hier. Wer Content fü
 ```
 daya/
 ├── README.md                  ← du bist hier
-├── STRATEGY.md                ← Waitlist-First Go-to-Market (App existiert noch nicht!)
-├── TOOLS.md                   ← Womit ihr Content produziert (Kling, Caption AI, Canva …)
+├── STRATEGY.md                ← Waitlist-First Go-to-Market
+├── WORKFLOW.md                ← ⭐ Produktions-Pipeline: Content-Gehirn → Claude Design → Schedule
+├── TOOLS.md                   ← Womit ihr Content produziert (Kling, Caption AI, Higgsfield …)
 ├── brand/
 │   ├── DESIGN-SYSTEM.md       ← ⭐ KANONISCH (Design): Tokens, Typo, harte Regeln, Positionierung, Pricing
 │   ├── PLAYBOOK.md            ← ⭐ KANONISCH (Content): echte Insights, SOLO & SAFE, DO-NOT-REPEAT
