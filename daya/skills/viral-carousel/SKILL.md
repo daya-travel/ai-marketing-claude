@@ -68,6 +68,16 @@ full Hook -> Transition -> Tease -> Climax -> Action 1:1.
 - Closing slide: `SOLO, MINUS THE FEAR` + `@HER.SOLOTRIP` + save / save-it / send-to-a-friend lines.
 - Photo full-bleed with a top+bottom emerald dusk scrim so text is readable at both ends.
 
+### Cover anatomy + fonts (from the real cover, important)
+Top-left = **DAYA mark glyph** (`→))` bow/arrow + sound-waves, NOT a plain arrow) + `her.solotrip`
+lowercase. Top-right = `START HERE` (gold) on the cover / counter on tips.
+Bottom block, in order: **eyebrow** (Archivo, gold, spaced) -> **italic Cormorant lead line** ->
+**Archivo-900 headline** with ONE key word/phrase **gold-highlighted** -> **gold tick** ->
+**Inter body** paragraph (one gold phrase) -> small **"swipe ->"** bottom-right.
+**Font roles for social:** headline = Archivo heavy (NOT Cormorant); Cormorant italic = lead line +
+tagline only; Inter = body; Caveat = the "swipe" hand-touch. Gold highlight markup in specs: `*word*`.
+The renderer ships an SVG approximation of the DAYA mark - swap in the real logo PNG when available.
+
 ## 5. How to build one
 1. Write/extend a JSON spec in `daya/studio/posts/<slug>.json` (types: cover, credential, tip, endcard).
 2. Generate faceless photos (Higgsfield, 3:4) into `daya/studio/photos/<slug>/`.

@@ -1,9 +1,11 @@
 // DAYA SOLO & SAFE carousel builder — JSON spec -> on-brand PNG slides.
-// 3:4 (1080x1440), safe-zone, full-bleed photo backgrounds, faceless.
-// Layout follows her.solotrip's real carousels: handle top-left, counter top-right,
-// eyebrow top, headline bottom. No external design tool — headless Chromium renders.
+// Matches her.solotrip's real cover: DAYA mark + handle top-left, START HERE / counter top-right,
+// eyebrow + italic Cormorant lead + Archivo-heavy headline (gold-highlighted keywords) + gold tick
+// + Inter body + small "swipe". 3:4 (1080x1440), safe zone, full-bleed photo + dusk scrim.
+// Markup: *word* in any text -> gold highlight. \n -> line break.
 // Usage: node build-carousel.mjs posts/<slug>.json
-// Brand: daya/brand/DESIGN-SYSTEM.md  ·  Carousel rules: daya/skills/viral-carousel/SKILL.md
+// Brand: daya/brand/DESIGN-SYSTEM.md  ·  Rules: daya/skills/viral-carousel/SKILL.md
+// NOTE: the DAYA mark here is an SVG approximation; swap in the real logo PNG when available.
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { dirname, join, basename, isAbsolute } from 'node:path';
@@ -15,7 +17,7 @@ const specPath = process.argv[2];
 if (!specPath) { console.error('usage: node build-carousel.mjs posts/<slug>.json'); process.exit(1); }
 const post = JSON.parse(readFileSync(specPath, 'utf8'));
 const slug = post.slug || basename(specPath).replace(/\.json$/, '');
-const handle = post.handle || '→ her.solotrip';
+const handle = post.handle || 'her.solotrip';
 const photosBase = join(__dirname, 'photos', slug);
 const outDir = join(__dirname, 'out', slug);
 rmSync(outDir, { recursive: true, force: true });
@@ -23,69 +25,78 @@ mkdirSync(outDir, { recursive: true });
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const noEm = (s = '') => String(s).replace(/[—–]/g, '-'); // hard rule: hyphens only
-const br = (s = '') => esc(noEm(s)).replace(/\n/g, '<br>');
+const fmt = (s = '') => esc(noEm(s)).replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>').replace(/\n/g, '<br>');
 const photoUrl = (p) => { const abs = isAbsolute(p) ? p : join(photosBase, p); return existsSync(abs) ? `file://${abs}` : null; };
 const tipTotal = post.slides.filter(s => s.type === 'tip').length;
 
+// DAYA mark (arrow + two sound-wave arcs ~ "→))") — placeholder for the real logo PNG.
+const MARK = `<svg class="mark" width="48" height="26" viewBox="0 0 48 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 13 H22 M16 6 L24 13 L16 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 6 A 9 9 0 0 1 30 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M37 2 A 13 13 0 0 1 37 24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>`;
+const SWARR = `<svg width="42" height="18" viewBox="0 0 42 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 9 H34 M27 3 L36 9 L27 15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
 const HEAD = `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{--emerald:#0e3b2c;--emerald-mid:#1d5240;--cream:#f4ecdb;--amber:#cf8a1d;--marigold:#efc05a}
 *{margin:0;box-sizing:border-box}
 html,body{margin:0;padding:0;width:1080px;height:1440px;overflow:hidden;background:var(--emerald)}
-/* 3:4 = 1080x1440 (best carousel size). Safe zone clears Instagram UI:
-   ~150 top, 140 right, 180 bottom, 90 left. */
-.slide{width:1080px;height:1440px;position:relative;overflow:hidden;display:flex;flex-direction:column;padding:150px 140px 180px 90px;font-family:'Inter',sans-serif;color:var(--cream)}
+.slide{width:1080px;height:1440px;position:relative;overflow:hidden;display:flex;flex-direction:column;padding:150px 140px 170px 90px;font-family:'Inter',sans-serif;color:var(--cream)}
 .cream{background:var(--cream);color:var(--emerald)}
 .emerald{background:var(--emerald);color:var(--cream)}
 .photo{background-size:cover;background-position:center}
-.scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,31,23,.80) 0%,rgba(5,31,23,.12) 27%,rgba(5,31,23,.20) 54%,rgba(5,31,23,.97) 100%)}
+.scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,31,23,.74) 0%,rgba(5,31,23,.10) 24%,rgba(5,31,23,.30) 52%,rgba(5,31,23,.97) 100%)}
 .z{position:relative;z-index:2}
-.topbar{position:absolute;top:70px;left:90px;right:130px;z-index:3;display:flex;justify-content:space-between;align-items:center}
-.handle-sm{font-family:'Archivo';font-weight:800;letter-spacing:.12em;font-size:24px;opacity:.95}
+.hl{color:var(--marigold)}
+.mark{display:inline-block;vertical-align:middle}
+.topbar{position:absolute;top:68px;left:90px;right:130px;z-index:3;display:flex;justify-content:space-between;align-items:center}
+.handle-sm{font-family:'Inter';font-weight:600;letter-spacing:.01em;font-size:30px;display:inline-flex;align-items:center;gap:12px;opacity:.96}
+.startlabel{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:23px;color:var(--marigold)}
 .counter{font-family:'Archivo';font-weight:800;letter-spacing:.16em;font-size:22px;color:var(--marigold)}
-.eyebrow{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.2em;font-size:26px;color:var(--marigold)}
-.cream .eyebrow{color:var(--amber)}
-.tick{width:46px;height:6px;background:var(--marigold);margin:24px 0 0}
-h1{font-family:'Cormorant Garamond';font-weight:600;font-size:112px;line-height:1.0}
-.sub{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:44px;margin-top:24px;opacity:.97}
-.cream .sub{color:var(--emerald-mid)}
-.swipe{font-family:'Archivo';font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:22px;color:var(--marigold);margin-top:36px}
-.big{font-family:'Cormorant Garamond';font-weight:600;font-size:96px;line-height:1.03}
-.num{font-family:'Archivo';font-weight:900;font-size:116px;color:var(--marigold);line-height:.85}
-.head{font-family:'Cormorant Garamond';font-weight:600;font-size:80px;line-height:1.02;margin-top:12px}
-.body{font-family:'Inter';font-weight:400;font-size:38px;line-height:1.42;margin-top:28px;max-width:860px}
-.endline{font-family:'Cormorant Garamond';font-weight:600;font-size:84px;line-height:1.08}
-.handle{font-family:'Archivo';font-weight:800;letter-spacing:.1em;font-size:32px;margin-top:46px}
-.tag{font-family:'Cormorant Garamond';font-style:italic;font-size:42px;color:var(--marigold);margin-top:14px}
+.eyebrow{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:25px;color:var(--marigold)}
+.lead{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:50px;line-height:1.08;margin-top:18px}
+.cream .lead{color:var(--emerald-mid)}
+h1{font-family:'Archivo';font-weight:900;font-size:104px;line-height:.98;letter-spacing:-.02em;margin-top:14px}
+.big{font-family:'Archivo';font-weight:900;font-size:88px;line-height:1.0;letter-spacing:-.02em;margin-top:12px}
+.head{font-family:'Archivo';font-weight:900;font-size:78px;line-height:1.0;letter-spacing:-.02em;margin-top:6px}
+.tick{width:92px;height:7px;background:var(--marigold);border-radius:2px;margin:26px 0 0}
+.cbody{font-family:'Inter';font-weight:400;font-size:35px;line-height:1.42;margin-top:24px;max-width:820px}
+.cream .cbody{color:var(--emerald)}
+.swipe{position:absolute;right:130px;bottom:96px;z-index:3;font-family:'Caveat';font-weight:700;font-size:50px;color:var(--cream);display:inline-flex;align-items:center;gap:8px;opacity:.92}
+.endline{font-family:'Archivo';font-weight:900;font-size:92px;line-height:1.0;letter-spacing:-.02em}
+.handle{font-family:'Archivo';font-weight:800;letter-spacing:.1em;font-size:30px;margin-top:44px}
+.tag{font-family:'Cormorant Garamond';font-style:italic;font-size:46px;color:var(--marigold);margin-top:14px}
 .fill{flex:1}
-.grain{position:absolute;inset:0;z-index:4;opacity:.13;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+.grain{position:absolute;inset:0;z-index:4;opacity:.12;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 </style></head><body>`;
 const FOOT = `</body></html>`;
 const grain = `<div class="grain"></div>`;
-const topbar = (counter) => `<div class="topbar"><div class="handle-sm">${esc(handle)}</div>${counter ? `<div class="counter">${esc(counter)}</div>` : '<div></div>'}</div>`;
+const topbar = (right) => `<div class="topbar"><div class="handle-sm">${MARK}<span>${esc(handle)}</span></div>${right || '<span></span>'}</div>`;
+const swipe = `<div class="swipe">swipe${SWARR}</div>`;
 
 function render(slide) {
   const url = slide.photo ? photoUrl(slide.photo) : null;
   const cls = url ? 'photo' : (slide.type === 'endcard' ? 'emerald' : 'cream');
   const style = url ? ` style="background-image:url('${url}')"` : '';
   const scrim = url ? `<div class="scrim"></div>` : '';
+  const lead = slide.lead || slide.sub;
   let inner = '';
   switch (slide.type) {
     case 'cover':
-      inner = `${topbar('')}<div class="z"><div class="eyebrow">${esc(noEm(slide.kicker))}</div><div class="tick"></div></div><div class="fill"></div>` +
-        `<div class="z"><h1>${br(slide.headline)}</h1>${slide.sub ? `<div class="sub">${br(slide.sub)}</div>` : ''}<div class="swipe">${esc(slide.swipe || 'swipe →')}</div></div>`;
+      inner = `${topbar(`<div class="startlabel">${esc(noEm(slide.label || 'START HERE'))}</div>`)}<div class="fill"></div>` +
+        `<div class="z"><div class="eyebrow">${esc(noEm(slide.kicker))}</div>${lead ? `<div class="lead">${fmt(lead)}</div>` : ''}` +
+        `<h1>${fmt(slide.headline)}</h1><div class="tick"></div>${slide.body ? `<div class="cbody">${fmt(slide.body)}</div>` : ''}</div>${swipe}`;
       break;
     case 'credential':
-      inner = `${topbar('')}<div class="z"><div class="eyebrow">${esc(noEm(slide.kicker))}</div><div class="tick"></div></div><div class="fill"></div>` +
-        `<div class="z"><div class="big">${br(slide.text)}</div></div>`;
+      inner = `${topbar('')}<div class="fill"></div>` +
+        `<div class="z"><div class="eyebrow">${esc(noEm(slide.kicker))}</div>${lead ? `<div class="lead">${fmt(lead)}</div>` : ''}` +
+        `<div class="big">${fmt(slide.text)}</div><div class="tick"></div></div>`;
       break;
     case 'tip':
-      inner = `${topbar(`${slide.num} / ${String(tipTotal).padStart(2, '0')}`)}<div class="fill"></div>` +
-        `<div class="z"><div class="num">${esc(slide.num)}</div><div class="head">${br(slide.head)}</div><div class="body">${br(slide.body)}</div></div>`;
+      inner = `${topbar(`<div class="counter">${slide.num} / ${String(tipTotal).padStart(2, '0')}</div>`)}<div class="fill"></div>` +
+        `<div class="z"><div class="eyebrow">STEP ${esc(slide.num)}</div><div class="head">${fmt(slide.head)}</div><div class="tick"></div>` +
+        `<div class="cbody">${fmt(slide.body)}</div></div>`;
       break;
     case 'endcard':
-      inner = `<div class="fill"></div><div class="z"><div class="endline">${br(slide.line)}</div><div class="handle">${esc(slide.handle)}</div><div class="tag">${esc(noEm(slide.tagline))}</div></div><div class="fill"></div>`;
+      inner = `<div class="fill"></div><div class="z"><div class="endline">${fmt(slide.line)}</div><div class="handle">${esc(slide.handle)}</div><div class="tag">${esc(noEm(slide.tagline))}</div></div><div class="fill"></div>`;
       break;
     default: throw new Error('unknown slide type: ' + slide.type);
   }
