@@ -55,9 +55,14 @@
     },
     {
       "type": "endcard",
-      "line": "*save this*\nfor your first solo trip",
-      "handle": "@HER.SOLOTRIP",
-      "tagline": "solo travel, minus the fear"
+      "photo": "08.png",
+      "label": "SOLO, MINUS THE FEAR",
+      "lead": "five small reasons. one easier first trip.",
+      "headline": "*save this* for your next trip",
+      "ctas": [
+        {"icon": "bookmark", "text": "save it for your first solo trip"},
+        {"icon": "send", "text": "send it to a friend who travels solo"}
+      ]
     }
   ]
 }
