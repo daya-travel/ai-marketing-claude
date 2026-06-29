@@ -60,6 +60,14 @@ full Hook -> Transition -> Tease -> Climax -> Action 1:1.
 - Hyphens only, no em-dashes. Max 5 hashtags, split by platform (`DESIGN-SYSTEM.md` §9).
 - Visual style is DAYA's (emerald/cream/marigold + Cormorant + grain), NOT the source's.
 
+## 4b. Layout convention (from her.solotrip's real carousels in Drive)
+- **Top-left:** handle `→ her.solotrip`. **Top-right:** slide counter `02 / 05` (position in the
+  set, NOT a series episode number). The series name ("SOLO & SAFE") is an eyebrow, never numbered.
+- **Eyebrow** (kicker) sits **top**, **headline** sits **bottom-left** - never cluster everything
+  at the bottom. Per `DESIGN-SYSTEM.md` §5: kicker top-left, counter top-right, headline bottom-left.
+- Closing slide: `SOLO, MINUS THE FEAR` + `@HER.SOLOTRIP` + save / save-it / send-to-a-friend lines.
+- Photo full-bleed with a top+bottom emerald dusk scrim so text is readable at both ends.
+
 ## 5. How to build one
 1. Write/extend a JSON spec in `daya/studio/posts/<slug>.json` (types: cover, credential, tip, endcard).
 2. Generate faceless photos (Higgsfield, 3:4) into `daya/studio/photos/<slug>/`.
