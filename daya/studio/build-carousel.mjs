@@ -29,8 +29,9 @@ const fmt = (s = '') => esc(noEm(s)).replace(/\*([^*]+)\*/g, '<span class="hl">$
 const photoUrl = (p) => { const abs = isAbsolute(p) ? p : join(photosBase, p); return existsSync(abs) ? `file://${abs}` : null; };
 const tipTotal = post.slides.filter(s => s.type === 'tip').length;
 
-// Real DAYA mark (icon glyph cropped from the brand lockup). Cream = for dark/photo slides.
-const MARK = `<img class="mark" src="file://${join(__dirname, 'assets', 'daya-mark-cream.png')}">`;
+// Placeholder arrow mark (DAYA real logo must NOT be shown publicly yet — do not use the
+// brand assets in posted slides). Simple "->))" arrow + sound-wave arcs, inherits text color.
+const MARK = `<svg class="mark" width="48" height="26" viewBox="0 0 48 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 13 H22 M16 6 L24 13 L16 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 6 A 9 9 0 0 1 30 20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M37 2 A 13 13 0 0 1 37 24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>`;
 const SWARR = `<svg width="42" height="18" viewBox="0 0 42 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 9 H34 M27 3 L36 9 L27 15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const ICONS = {
   bookmark: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`,
@@ -51,7 +52,7 @@ html,body{margin:0;padding:0;width:1080px;height:1440px;overflow:hidden;backgrou
 .scrim{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,31,23,.74) 0%,rgba(5,31,23,.10) 24%,rgba(5,31,23,.30) 52%,rgba(5,31,23,.97) 100%)}
 .z{position:relative;z-index:2}
 .hl{color:var(--marigold)}
-.mark{height:38px;width:auto;display:inline-block;vertical-align:middle}
+.mark{display:inline-block;vertical-align:middle}
 .topbar{position:absolute;top:68px;left:90px;right:130px;z-index:3;display:flex;justify-content:space-between;align-items:center}
 .handle-sm{font-family:'Inter';font-weight:600;letter-spacing:.01em;font-size:30px;display:inline-flex;align-items:center;gap:12px;opacity:.96}
 .startlabel{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:23px;color:var(--marigold)}
