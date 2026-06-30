@@ -3,7 +3,7 @@
 > Von Lesya, Stand 2026-06. Das ist die **oberste Wahrheit** für @her.solotrip — basiert auf
 > echten Insights-Daten, nicht auf Annahmen. Bei Konflikt schlägt dieses Dokument jede Vermutung.
 > Account: faceless, **Englisch**, Solo-Female-Travel-**Safety** (nicht Travel-Inspo).
-> Verknüpftes Produkt: DAYA (Pre-Launch). Tagline: **"solo travel, minus the fear"**.
+> Verknüpftes Produkt: DAYA (Pre-Launch). Tagline: **"solo travel for women, minus the fear"**.
 
 ## Account-Snapshot
 - ~1.000 Follower, Start 25.05.2026 (+941 in 30 Tagen).
@@ -55,7 +55,7 @@ Fotos ändern sich. Jedes Mal ein Überraschungs-Hook.
 5. Der Ausblick (konkreter Ort)
 6. Der Tipp, den niemand gibt (unkonventionell)
 7. Ein einfacher Tagesausflug
-8. Endcard: "save this for your first solo trip" + @her.solotrip + "solo travel, minus the fear"
+8. Endcard: "save this for your first solo trip" + @her.solotrip + "solo travel for women, minus the fear"
 
 **Caption-Regel:** voller Text (übersetzbar), endet mit Save- + Send-to-a-friend-Zeile + 💚.
 **Preise:** NICHT auf Slides (veralten, erzwingen Rebuilds). Grobes Tagesbudget nur in der
@@ -70,8 +70,8 @@ solo · your first hour in a new city · [carousels] Solo Tax (single supplement
 the safety habits no one teaches you
 
 ## Brand-Kit
-- **Tagline:** "solo travel, minus the fear"
-- **Endcard:** FOLLOW @HER.SOLOTRIP / for solo travel, minus the fear
+- **Tagline:** "solo travel for women, minus the fear"
+- **Endcard:** FOLLOW @HER.SOLOTRIP / for solo travel for women, minus the fear
 - **Reel-Look:** Cream-Serif-Titel (Cormorant Garamond, #F2EDE3) + Karaoke-Captions
   (bold grotesk, weiß, schwarze Kontur, aktives Wort in grüner Box).
 - **DAYA-Palette:** near-black #0E0D0B · cream #F2EDE3 · terracotta #C2552B

@@ -66,7 +66,9 @@ h1{font-family:'Archivo';font-weight:800;font-size:104px;line-height:.98;letter-
 .tick{width:92px;height:7px;background:var(--marigold);border-radius:2px;margin:26px 0 0}
 .cbody{font-family:'Inter';font-weight:400;font-size:35px;line-height:1.42;margin-top:24px;max-width:820px}
 .cream .cbody{color:var(--emerald)}
-.swipe{position:absolute;right:130px;bottom:96px;z-index:3;font-family:'Caveat';font-weight:700;font-size:50px;color:var(--cream);display:inline-flex;align-items:center;gap:8px;opacity:.92}
+.coverfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:24px}
+.coverfoot .cbody{margin-top:0}
+.swipe{font-family:'Caveat';font-weight:700;font-size:50px;color:var(--cream);display:inline-flex;align-items:flex-end;gap:8px;opacity:.92;flex:none;white-space:nowrap;padding-bottom:4px}
 .endline{font-family:'Archivo';font-weight:800;font-size:92px;line-height:1.0;letter-spacing:-.02em}
 .handle{font-family:'Archivo';font-weight:800;letter-spacing:.1em;font-size:30px;margin-top:44px}
 .tag{font-family:'Cormorant Garamond';font-style:italic;font-size:46px;color:var(--marigold);margin-top:14px}
@@ -94,7 +96,8 @@ function render(slide) {
     case 'cover':
       inner = `${topbar(`<div class="startlabel">${esc(noEm(slide.label || 'START HERE'))}</div>`)}<div class="fill"></div>` +
         `<div class="z"><div class="eyebrow">${esc(noEm(slide.kicker))}</div>${lead ? `<div class="lead">${fmt(lead)}</div>` : ''}` +
-        `<h1>${fmt(slide.headline)}</h1><div class="tick"></div>${slide.body ? `<div class="cbody">${fmt(slide.body)}</div>` : ''}</div>${swipe}`;
+        `<h1>${fmt(slide.headline)}</h1><div class="tick"></div>` +
+        `<div class="coverfoot">${slide.body ? `<div class="cbody">${fmt(slide.body)}</div>` : '<div></div>'}<div class="swipe">swipe${SWARR}</div></div></div>`;
       break;
     case 'credential':
       inner = `${topbar('')}<div class="fill"></div>` +
@@ -107,8 +110,8 @@ function render(slide) {
         `<div class="cbody">${fmt(slide.body)}</div></div>`;
       break;
     case 'endcard':
-      inner = `${topbar(`<div class="startlabel">${esc(noEm(slide.label || 'SOLO, MINUS THE FEAR'))}</div>`)}<div class="fill"></div>` +
-        `<div class="z">${lead ? `<div class="lead">${fmt(lead)}</div>` : ''}<div class="big">${fmt(slide.headline || slide.line)}</div><div class="tick"></div>${ctaHtml(slide.ctas)}</div>`;
+      inner = `${topbar(slide.label ? `<div class="startlabel">${esc(noEm(slide.label))}</div>` : '')}<div class="fill"></div>` +
+        `<div class="z">${lead ? `<div class="lead">${fmt(lead)}</div>` : ''}<div class="big">${fmt(slide.headline || slide.line)}</div><div class="tick"></div>${ctaHtml(slide.ctas)}${slide.tagline ? `<div class="tag">${esc(noEm(slide.tagline))}</div>` : ''}</div>`;
       break;
     default: throw new Error('unknown slide type: ' + slide.type);
   }

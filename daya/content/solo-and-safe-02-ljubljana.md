@@ -52,7 +52,7 @@
 **Slide 8 - Endcard**
 > save this for your first solo trip
 > @her.solotrip
-> solo travel, minus the fear
+> solo travel for women, minus the fear
 
 ## Photo direction (faceless)
 - Cover: Ljubljanica river + Triple Bridge, no people or a woman from behind.
