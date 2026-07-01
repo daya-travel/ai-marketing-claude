@@ -68,7 +68,8 @@ h1{font-family:'Archivo';font-weight:800;font-size:104px;line-height:.98;letter-
 .cream .cbody{color:var(--emerald)}
 .coverfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:24px}
 .coverfoot .cbody{margin-top:0}
-.swipe{font-family:'Caveat';font-weight:700;font-size:50px;color:var(--cream);display:inline-flex;align-items:flex-end;gap:8px;opacity:.92;flex:none;white-space:nowrap;padding-bottom:4px}
+.swipe{font-family:'Caveat';font-weight:700;font-size:50px;color:var(--cream);opacity:.92;flex:none;white-space:nowrap;line-height:1}
+.swipe svg{vertical-align:middle;margin-left:10px}
 .endline{font-family:'Archivo';font-weight:800;font-size:92px;line-height:1.0;letter-spacing:-.02em}
 .handle{font-family:'Archivo';font-weight:800;letter-spacing:.1em;font-size:30px;margin-top:44px}
 .tag{font-family:'Cormorant Garamond';font-style:italic;font-size:46px;color:var(--marigold);margin-top:14px}
