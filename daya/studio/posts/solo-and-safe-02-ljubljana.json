@@ -56,6 +56,7 @@
     {
       "type": "endcard",
       "photo": "08.png",
+      "credit": false,
       "lead": "five simple tips. one easier trip.",
       "headline": "*save this* for your next trip",
       "ctas": [

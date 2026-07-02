@@ -19,8 +19,6 @@ Slovenia is one of the safest countries in the world, and its small capital feel
 
 Save this for your first solo trip, and send it to a friend who travels alone. 💚
 
-We are quietly building DAYA, a safety companion for women who travel solo. More soon.
-
 #solofemaletravel #ljubljana #slovenia #solotraveltips
 
 ---
