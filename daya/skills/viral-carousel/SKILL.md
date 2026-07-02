@@ -78,6 +78,13 @@ Bottom block, in order: **eyebrow** (Archivo, gold, spaced) -> **italic Cormoran
 tagline only; Inter = body; Caveat = the "swipe" hand-touch. Gold highlight markup in specs: `*word*`.
 The renderer ships an SVG approximation of the DAYA mark - swap in the real logo PNG when available.
 
+### Brand mentions (important)
+The real DAYA **logo must NOT be shown publicly yet** - never render the brand logo on posts.
+The top-left mark stays the placeholder arrow glyph. DAYA may be mentioned **by name (text only)**:
+a subtle **"by DAYA" credit (marigold heart)** sits top-right on the **closing slide** of every
+carousel (build brand recall toward the waitlist, without selling). The green 💚 stays in captions
+(it is invisible on dark photos). Do not put "by DAYA" on every slide - closing + caption only.
+
 ## 5. How to build one
 1. Write/extend a JSON spec in `daya/studio/posts/<slug>.json` (types: cover, credential, tip, endcard).
 2. Generate faceless photos (Higgsfield, 3:4) into `daya/studio/photos/<slug>/`.

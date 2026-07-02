@@ -38,6 +38,9 @@ const ICONS = {
   send: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>`,
 };
 const ctaHtml = (ctas = []) => ctas.length ? `<div class="ctas">${ctas.map((c, i) => `<div class="cta ${i === 0 ? 'fill' : 'outline'}">${ICONS[c.icon] || ''}<span>${esc(noEm(c.text))}</span></div>`).join('')}</div>` : '';
+// Subtle brand credit (text only, no logo). Marigold heart (green heart is invisible on dark photos).
+const HEART = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-6.7-4.1-9.2-8.2C1.2 9.9 2.6 6.2 6 6.2c2 0 3.2 1.2 4 2.4.8-1.2 2-2.4 4-2.4 3.4 0 4.8 3.7 3.2 6.6C18.7 16.9 12 21 12 21z"/></svg>`;
+const byline = (credit) => credit === false ? '' : `<div class="byline">${esc(noEm(credit || 'by DAYA'))}${HEART}</div>`;
 
 const HEAD = `<!doctype html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -56,6 +59,8 @@ html,body{margin:0;padding:0;width:1080px;height:1440px;overflow:hidden;backgrou
 .topbar{position:absolute;top:68px;left:90px;right:130px;z-index:3;display:flex;justify-content:space-between;align-items:center}
 .handle-sm{font-family:'Inter';font-weight:600;letter-spacing:.01em;font-size:30px;display:inline-flex;align-items:center;gap:12px;opacity:.96}
 .startlabel{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:23px;color:var(--marigold)}
+.byline{font-family:'Archivo';font-weight:700;letter-spacing:.05em;font-size:26px;color:var(--marigold);display:inline-flex;align-items:center;gap:9px}
+.byline svg{width:26px;height:26px}
 .counter{font-family:'Archivo';font-weight:800;letter-spacing:.16em;font-size:22px;color:var(--marigold)}
 .eyebrow{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:25px;color:var(--marigold)}
 .lead{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:50px;line-height:1.08;margin-top:18px}
@@ -111,7 +116,7 @@ function render(slide) {
         `<div class="cbody">${fmt(slide.body)}</div></div>`;
       break;
     case 'endcard':
-      inner = `${topbar(slide.label ? `<div class="startlabel">${esc(noEm(slide.label))}</div>` : '')}<div class="fill"></div>` +
+      inner = `${topbar(byline(slide.credit))}<div class="fill"></div>` +
         `<div class="z">${lead ? `<div class="lead">${fmt(lead)}</div>` : ''}<div class="big">${fmt(slide.headline || slide.line)}</div><div class="tick"></div>${ctaHtml(slide.ctas)}${slide.tagline ? `<div class="tag">${esc(noEm(slide.tagline))}</div>` : ''}</div>`;
       break;
     default: throw new Error('unknown slide type: ' + slide.type);
