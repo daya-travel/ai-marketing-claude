@@ -8,61 +8,61 @@
       "photo": "01.png",
       "label": "START HERE",
       "kicker": "SOLO & SAFE · SLOVENIA",
-      "lead": "the calm starts before you even unpack.",
-      "headline": "the *safest* little\ncapital in europe",
-      "body": "five reasons slovenia might be your *easiest* first solo trip. save it for later."
+      "lead": "you feel calm from the very first minute.",
+      "headline": "the *safest* small\ncapital in europe",
+      "body": "five reasons slovenia is a great first solo trip. save this post."
     },
     {
       "type": "credential",
       "photo": "02.png",
       "kicker": "LJUBLJANA, SLOVENIA",
-      "text": "one of the world's\n*safest* countries"
+      "text": "one of the *safest*\ncountries in the world"
     },
     {
       "type": "tip",
       "photo": "03.png",
       "num": "01",
-      "head": "why women go *alone* here",
-      "body": "low crime, walkable everything, and locals who switch to english the second you look lost."
+      "head": "why women travel here *alone*",
+      "body": "low crime. easy to walk everywhere. and most people speak english."
     },
     {
       "type": "tip",
       "photo": "04.png",
       "num": "02",
-      "head": "the old town is *car-free*",
-      "body": "just the river, the bridges and cafe tables. nothing to dodge, nowhere to rush."
+      "head": "the old town has *no cars*",
+      "body": "just the river, small bridges, and cafes. calm and easy to walk."
     },
     {
       "type": "tip",
       "photo": "05.png",
       "num": "03",
-      "head": "the *view*",
-      "body": "ride the funicular up to ljubljana castle. rooftops on one side, the alps on the other."
+      "head": "the best *view*",
+      "body": "take the cable car up to the castle. you see the whole city and the alps."
     },
     {
       "type": "tip",
       "photo": "06.png",
       "num": "04",
-      "head": "the tip *no one* gives you",
-      "body": "hop the free kavalir electric buggy through the old town. locals use it, most tourists never spot it."
+      "head": "a tip most people *miss*",
+      "body": "the small \"kavalir\" cart is free. locals use it to cross the old town."
     },
     {
       "type": "tip",
       "photo": "07.png",
       "num": "05",
       "head": "one *easy* day trip",
-      "body": "lake bled is 40 minutes by bus. island church, a lake walk, back before dinner."
+      "body": "lake bled is 40 minutes by bus. see the island church, walk around the lake, come back the same day."
     },
     {
       "type": "endcard",
       "photo": "08.png",
-      "lead": "five small reasons. one easier first trip.",
+      "lead": "five simple tips. one easier trip.",
       "headline": "*save this* for your next trip",
-      "tagline": "solo travel for women, minus the fear",
       "ctas": [
         {"icon": "bookmark", "text": "save it for your first solo trip"},
-        {"icon": "send", "text": "send it to a friend who travels solo"}
-      ]
+        {"icon": "send", "text": "send it to a friend who travels alone"}
+      ],
+      "tagline": "solo travel for women, minus the fear"
     }
   ]
 }
