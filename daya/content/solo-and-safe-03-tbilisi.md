@@ -51,7 +51,7 @@
 **Slide 8 - Endcard**
 > save this for your first solo trip
 > @her.solotrip
-> solo travel for women, minus the fear
+> solo travel, minus the fear
 
 ## Photo brief (faceless)
 - Cover: Tbilisi old town rooftops / Narikala from below, no people OR a woman from behind.

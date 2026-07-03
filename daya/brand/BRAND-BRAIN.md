@@ -74,7 +74,7 @@ das, vorbereitet, nicht allein, deine Art zu reisen, wir bauen das mit dir.
 ## 6. Visuelle Identität — ✅ definiert: siehe **`brand/DESIGN-SYSTEM.md`** (kanonisch)
 
 Kurzfassung (Details + alle Tokens im Design-System):
-- **Tagline:** "solo travel for women, minus the fear" · **Mythos:** Hekate + Diana · Mood: tief, sicher, ruhig, schützend.
+- **Tagline:** "solo travel, minus the fear" · **Mythos:** Hekate + Diana · Mood: tief, sicher, ruhig, schützend.
 - **Palette:** Emerald-Rückgrat `#0e3b2c` (immer) + EIN warmer Akzent `#efc05a` (marigold) +
   cream `#f4ecdb` + silber `#d4dae0`. Night-black `#0b1014` für App. Dusk-Glow + Grain überall.
 - **Typo:** Archivo (Display) · Cormorant Garamond (Markenstimme/Serif) · Caveat (1 Hand-Touch) · Inter (Body).
