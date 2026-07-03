@@ -37,7 +37,9 @@
    - ❌ "scared to go alone" (macht die Frau klein, verbreitet Angst, niemand teilt es).
 4. **Text-Regel:** Minimale Wörter auf den Slides, sofort verständlich auch bei schwachem
    Englisch. Voller Text in die Caption (übersetzbar).
-5. **Max 5 Hashtags** überall.
+5. **Hashtags (Update 2026-07, Wachstumsphase):** Instagram **~10-15 gemischt** (groß + mittel +
+   nischig) für Reichweite, solange der Account wächst. TikTok **3-5** + `#fyp` `#traveltok`.
+   (Die alte „max 5"-Regel galt für etablierte Accounts; hier zählt jetzt Discovery.)
 6. **Grünes Herz 💚** = verstecktes Marken-Symbol in jeder Caption.
 7. **Kommentar-Prompt-Video (palm style):** nur gelegentlich, sonst nutzt es sich ab.
 

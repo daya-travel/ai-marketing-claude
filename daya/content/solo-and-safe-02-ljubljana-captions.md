@@ -19,7 +19,7 @@ Slovenia is one of the safest countries in the world, and its small capital feel
 
 Save this for your first solo trip, and send it to a friend who travels alone. 💚
 
-#solofemaletravel #ljubljana #slovenia #solotraveltips
+#solofemaletravel #solotravel #solofemaletraveler #solotraveltips #femaletravel #womenwhotravel #safetravel #travelsafety #ljubljana #slovenia #visitslovenia #solotripsforwomen #europetravel #traveltips #traveladvice
 
 ---
 

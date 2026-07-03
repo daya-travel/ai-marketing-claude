@@ -65,10 +65,11 @@ Nie generische Sterne/Sparkles. Echte PNG-Lockups in `assets/` (in Claude Design
 (await img.decode() gegen die naturalWidth-Race). **Das ist die etablierte Pipeline von
 Claude Design — nicht Canva.** Carousels 1080×1350, Stories 1080×1920, 80px Seitenränder.
 
-## Hashtags (max 5, nach Plattform — fest)
-- **TikTok-only:** `#fyp`, `#traveltok`.
-- **Instagram:** `#solofemaletravel` + EIN hyper-relevanter Topic-Tag (z. B. `#singlesupplement`, `#budgettravel`).
-- Keine toten Mega-Tags (`#travel`, `#women`). Nicht denselben Set über beide Plattformen.
+## Hashtags (nach Plattform — Update 2026-07, Wachstumsphase)
+- **Instagram:** **~10-15 gemischt** (groß + mittel + nischig) für Discovery, solange der Account
+  wächst. Immer `#solofemaletravel` + Stadt/Land + Themen-Tags. Keine toten Mega-Tags (`#travel`, `#women`).
+- **TikTok:** **3-5** keyword-nahe Tags + `#fyp` `#traveltok`. Nicht denselben Set über beide Plattformen.
+- (Die frühere „max 5"-Regel galt für etablierte Accounts; in der Wachstumsphase zählt Reichweite.)
 
 ## Voice (Social — Deutsch, "du")
 Emotional, direkt, leicht trotzig. Beispiele:
