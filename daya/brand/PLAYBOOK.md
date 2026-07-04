@@ -9,6 +9,9 @@
 - ~1.000 Follower, Start 25.05.2026 (+941 in 30 Tagen).
 - **Faceless:** Stock-/Naturaufnahmen + Text-Overlay. Kein echtes Gesicht, keine Männer.
   Fotos: Frauen von hinten — oder gar keine Personen.
+  **Ausnahme (Team-Entscheidung 2026-07-04):** Diana + Alesya dürfen mit echten
+  Fotos auftreten (Presse, Founder-Story-Posts, Website). Faceless bleibt Regel
+  für die Content-Formate (Carousels/Reels), nicht für die Gründerinnen.
 - **KI-generierte Gesichter: GESTRICHEN** (schwächster Post, 8% Like-Rate, schlechteste Skip-Rate).
 
 ## Was die Daten sagen
