@@ -1,5 +1,16 @@
 # Playbook v21 (EN) - Seite-für-Seite-Audit + v22-Redesign-Prompt
 
+> ⚠️ SUPERSEDED (2026-07-04, ~19:10): Alesya hat parallel eine neue Design-
+> Richtung gesetzt (PDF an die cleane HTML-Version /de/playbook angleichen,
+> nur Brand-Farben). Der Lovable-Agent begann daraufhin einen "Content-Trim"
+> (16 Pack-Items -> 12, 7 Taxi-Sprachen -> 6) - Overflow-Fix durch LÖSCHEN,
+> was die Landing-Claims bricht. Ein neuer Prompt (an Lovable gesendet,
+> umsg_01kwq89qspenc9f73hq3rb1pfa) ersetzt den unten stehenden: Trim
+> rückgängig, Reflow statt Löschen, Claim-Invarianten (16/7/9/20/10) als
+> QA-Gate, plus die stil-unabhängigen Wahrheits-Fixes (Life360 raus,
+> "You bought this" raus, EN-Sprachreste raus). Die Seite-für-Seite-Liste
+> unten bleibt als Referenz für die v21-Befunde.
+
 > Grundlage: komplette Sichtung aller 37 Seiten der EN-v21-PDF + Skills
 > (sales-council: Hormozi/Cialdini/Schwartz-Lens, marketingskills/lead-magnets,
 > humanizer). Unten der fertige englische Prompt für Lovable.
