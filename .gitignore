@@ -39,3 +39,6 @@ node_modules/
 # Temp
 *.tmp
 *.bak
+
+# Generated reel clips (Higgsfield renders, ~60MB - IDs documented in daya/content/)
+daya/studio/reels/
