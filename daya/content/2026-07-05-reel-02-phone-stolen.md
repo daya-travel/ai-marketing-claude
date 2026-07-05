@@ -93,3 +93,14 @@ Zahl im Hook ✅ · Save-Trigger (Timeline) ✅ · kein Angstmarketing (Vorberei
 nicht Panik - der Ton bleibt ruhig, "then breathe") ✅ · faceless ✅ · ≤5 Hashtags ✅ ·
 💚 ✅ · Playbook-Funnel ✅ · Fakten aus dem Playbook (Notfall-Kaskade) ✅ ·
 116 116 ist die echte deutsche Sperr-Hotline ✅.
+
+## Bildbeschreibungen / Alt-Text TikTok-Carousel (je >50 Zeichen)
+1. Smartphone lying on wet cobblestones in a dark European alley at night - cover: what to do if your phone is stolen abroad
+2. Glowing laptop on a cafe table at night - minute 0 to 5: mark your phone as lost, Find My works from any browser
+3. Leather wallet with cards and passport in warm lamp light - minute 5 to 10: block your cards with one call to +49 116 116
+4. Woman's hands typing on a laptop in warm evening light - minute 10 to 15: change your email password first, it is the master key
+5. Fountain pen on an official document under a desk lamp - minute 15 to 25: police report with case number in writing for insurance
+6. Woman from behind texting on a rooftop terrace at dusk - minute 25 to 30: text your person "I am safe", then breathe
+7. Paper city map, handwritten note and room key on a hotel desk - day one without a phone: pay, fly, navigate and stay reachable the old way
+8. Woman from behind on a balcony above old town rooftops at golden hour - the point: you memorize nothing, screenshot this once
+9. Woman at a hotel window with sea view in soft morning light - save this, the full solo travel safety playbook is free via link in bio
