@@ -16,8 +16,9 @@ watch this, you get X"). Zeitachse liefert beides.
 
 ## Hook (Slide 1 / erste 2 Sekunden)
 
-> **Your phone just got stolen abroad.**
-> **The first 30 minutes decide everything.**
+> **What to do if your phone is *stolen* abroad**
+> *the first 30 minutes, minute by minute*
+> (Hook gekürzt auf Alesyas Wunsch, 05.07.)
 
 *(IG-Reel-Visual: Blue-Hour-Gasse-Clip, Text groß. TikTok: dunkles Foto, Serifen-Titel.)*
 
