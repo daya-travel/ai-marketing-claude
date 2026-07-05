@@ -23,10 +23,10 @@ const hl = (s) => s.replace(/\*(.+?)\*/g, '<span class="hl">$1</span>').replace(
 const STEPS = [
   { min: 'MIN 0-5', title: 'Mark it *lost*.', body: 'Borrow any phone or open any browser. Find My (Apple) or Find My Device (Google) - "Mark as Lost". Your phone locks itself and shows a message.' },
   { min: 'MIN 5-10', title: 'Block your *cards*.', body: 'Banking app on any device. German cards: one call to +49 116 116 blocks them all - 24/7, from anywhere.' },
-  { min: 'MIN 10-15', title: '*Email* password first.', body: 'Not Instagram. Email. It is the master key to everything else you own - whoever holds it can reset the rest.' },
+  { min: 'MIN 10-15', title: '*Email* password first.', body: 'Not Instagram. Email. It\'s the master key to everything else you own - whoever holds it can reset the rest.' },
   { min: 'MIN 15-25', title: 'Police report, *in writing*.', body: 'Ask for the case number on paper. Your travel insurance pays with it - and not without it.' },
   { min: 'MIN 25-30', title: 'Text *your person*.', body: 'From any device: "Phone stolen. I am safe. Reach me here." Then sit down and breathe. The worst part is over.' },
-  { min: 'MIN 31+', title: 'Day one, *without* a phone.', body: 'Pay - the card from your room stash. *The 3-wallet system.*\nFly - airlines print boarding passes at the desk. Passport is enough.\nNavigate - reception writes the address on paper. The old way works.\nReachable - WhatsApp Web and email run on any laptop or hotel computer.\nTomorrow - any phone shop sells a cheap prepaid. Your number moves back later.' },
+  { min: 'MIN 31+', title: 'Day one, *without* a phone.', body: 'Pay - the spare card hidden in your room. *The 3-wallet system.*\nFly - the check-in desk prints your boarding pass. Passport is enough.\nNavigate - reception writes the address on paper. Paper still works.\nReachable - WhatsApp Web and email, on any laptop.\nTomorrow - any phone shop sells a cheap prepaid. Your number is not lost.\n\n*A stolen phone ends a phone - not a trip.*' },
   { min: 'THE POINT', title: 'You memorize *nothing*.', body: 'Under stress nobody remembers lists. You screenshot this once, and it waits quietly in your camera roll until the day you need it.' },
 ];
 
@@ -83,7 +83,7 @@ slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/end.png"
 <div class="pad">
   <div class="kicker">save this</div>
   <div class="cv-title">You'll never need it - ${'<span class="hl">until you do</span>'}.</div>
-  <div class="cv-sub">the full playbook is free - link in bio</div>
+  <div class="cv-sub">send this to the friend who travels solo</div>
   <div class="bottom"><span class="tag">solo travel, minus the fear</span>${ARROW}</div>
 </div></div>`);
 
