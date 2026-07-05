@@ -41,6 +41,13 @@ Ask for the case number in writing. Your insurance pays with it - not without.
 **Minute 25-30 - Text your person.**
 From any device: "Phone stolen. I am safe. Reach me here." Then breathe.
 
+**Minute 31+ - Day one, without a phone.** *(neue Slide, Alesyas Frage 05.07.)*
+Pay: the card from your room stash (the 3-wallet system). Fly: airlines print
+boarding passes at the desk - passport is enough. Navigate: reception writes
+the address on paper. Reachable: WhatsApp Web + email on any laptop or hotel
+computer. Tomorrow: any phone shop sells a cheap prepaid - your number moves
+back later.
+
 ## Close (Slide 8 / letzte Szene)
 
 > **You won't remember this under stress. That's the point.**
@@ -60,6 +67,10 @@ From any device: "Phone stolen. I am safe. Reach me here." Then breathe.
 > 10-15 min: change your EMAIL password first - it's the master key
 > 15-25 min: police report, case number in writing (insurance needs it)
 > 25-30 min: text your person: "I'm safe, reach me here"
+>
+> And day one without a phone? The card from your room stash pays, the airline
+> desk prints your boarding pass, reception writes the address on paper, and
+> WhatsApp Web runs on any laptop. A stolen phone ends a phone - not a trip.
 >
 > Save this. You'll never need it - until you do. 💚
 > Full playbook is free - link in bio.

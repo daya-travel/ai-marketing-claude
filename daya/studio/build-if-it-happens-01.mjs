@@ -26,6 +26,7 @@ const STEPS = [
   { min: 'MIN 10-15', title: '*Email* password first.', body: 'Not Instagram. Email. It is the master key to everything else you own - whoever holds it can reset the rest.' },
   { min: 'MIN 15-25', title: 'Police report, *in writing*.', body: 'Ask for the case number on paper. Your travel insurance pays with it - and not without it.' },
   { min: 'MIN 25-30', title: 'Text *your person*.', body: 'From any device: "Phone stolen. I am safe. Reach me here." Then sit down and breathe. The worst part is over.' },
+  { min: 'MIN 31+', title: 'Day one, *without* a phone.', body: 'Pay - the card from your room stash. *The 3-wallet system.*\nFly - airlines print boarding passes at the desk. Passport is enough.\nNavigate - reception writes the address on paper. The old way works.\nReachable - WhatsApp Web and email run on any laptop or hotel computer.\nTomorrow - any phone shop sells a cheap prepaid. Your number moves back later.' },
   { min: 'THE POINT', title: 'You memorize *nothing*.', body: 'Under stress nobody remembers lists. You screenshot this once, and it waits quietly in your camera roll until the day you need it.' },
 ];
 
@@ -74,10 +75,10 @@ STEPS.forEach((s, i) => {
     <div><span class="chip">${s.min}</span></div>
     <div class="st-title">${hl(s.title)}</div>
     <div class="st-body">${hl(s.body)}</div>
-    <div class="bottom"><span class="count">${i + 2} / 8</span>${i < STEPS.length - 1 ? SWIPE : ''}</div>
+    <div class="bottom"><span class="count">${i + 2} / ${STEPS.length + 2}</span>${i < STEPS.length - 1 ? SWIPE : ''}</div>
   </div></div>`);
 });
-// 8 endcard
+// endcard (last slide)
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/end.png"><div class="scrim"></div><div class="grain"></div>
 <div class="pad">
   <div class="kicker">save this</div>
