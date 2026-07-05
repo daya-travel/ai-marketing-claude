@@ -47,10 +47,9 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .cv-title{font-family:'Cormorant Garamond';font-weight:600;font-size:104px;line-height:1.04;margin-top:26px}
 .cv-sub{font-family:'Inter';font-weight:500;font-size:33px;color:#e7efe7;opacity:.94;margin-top:30px}
 .bottom{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between}
-/* step slides */
-.step{background:radial-gradient(120% 85% at 50% 100%, #1d5240 0%, #0e3b2c 52%, #082018 100%)}
-.step .pad{justify-content:center}
-.step .bottom{margin-top:120px;position:absolute;left:88px;right:88px;bottom:84px}
+/* step slides - photo background, text anchored top under a heavy top scrim */
+.step .scrim{background:linear-gradient(180deg, rgba(6,29,21,.86) 0%, rgba(6,29,21,.62) 42%, rgba(6,29,21,.18) 72%, rgba(6,29,21,.55) 100%)}
+.step .bottom{margin-top:auto}
 .chip{display:inline-block;font-family:'Archivo';font-weight:800;letter-spacing:.24em;font-size:33px;color:#0e3b2c;background:#efc05a;border-radius:14px;padding:18px 38px}
 .st-title{font-family:'Cormorant Garamond';font-weight:600;font-size:112px;line-height:1.05;margin-top:54px}
 .st-body{font-family:'Inter';font-weight:400;font-size:37px;line-height:1.5;color:#e7efe7;opacity:.92;margin-top:44px;max-width:840px}
@@ -68,9 +67,9 @@ slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/cover.pn
   <div class="cv-sub">the first 30 minutes, minute by minute</div>
   <div class="bottom">${ARROW}${SWIPE}</div>
 </div></div>`);
-// 2-7 steps
+// 2-7 steps (photo backgrounds: step1.png .. step6.png)
 STEPS.forEach((s, i) => {
-  slides.push(`<div class="wrap step"><div class="grain"></div>
+  slides.push(`<div class="wrap step"><img class="photo" src="file://${PHOTOS}/step${i + 1}.png"><div class="scrim"></div><div class="grain"></div>
   <div class="pad">
     <div><span class="chip">${s.min}</span></div>
     <div class="st-title">${hl(s.title)}</div>
