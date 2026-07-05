@@ -12,15 +12,15 @@ Visual mit der 2am-Google-Anfrage pro Slide. Builder: `build-2am-searches.mjs`.
 4. 03/05 "what if someone follows me" -> Walk into a *hotel lobby*. (leuchtender Hoteleingang)
 5. 04/05 "emergency number in europe" -> 112. One number, *whole EU*. (Nachttisch, 2:07 Uhr)
 6. 05/05 "is solo travel worth it" -> You *already know*. (Sonnenaufgang am Flugzeugfenster)
-7. Endcard: "Every 2am answer, in *one calm place*." - playbook free, link in bio (Morgenbett)
+7. Endcard: "Save this for your *next trip*." + send-to-a-friend (Morgenbett) - OHNE Playbook (noch nicht praesentieren, Entscheidung 06.07.)
 
 ## Caption (TikTok)
 > the search history nobody talks about 🌙
 >
 > every solo traveler has googled at least three of these at 2am.
-> the answers are calmer than the hour suggests - swipe.
+> here are the answers - swipe.
 >
-> full solo safety playbook: free, link in bio 💚
+> save this for your next trip 💚
 >
 > #solotravel #solofemaletravel #traveltips #solotravelsafety #fyp
 
@@ -35,4 +35,4 @@ faceless ✅ · 5 Hashtags ✅ · 💚 ✅ · Funnel (Link in Bio) ✅ · keine 
 4. Search bar asking "what if someone follows me" over a warmly lit hotel entrance at night - answer: walk into a hotel lobby, staff is there all night
 5. Search bar asking "emergency number in europe" over a nightstand with alarm clock at 2:07 - answer: 112 works in the whole EU
 6. Search bar asking "is solo travel worth it" over a sunrise seen from an airplane window - answer: you already know
-7. Cozy hotel bed in golden morning light with tea and journal - every 2am answer in one calm place, free playbook via link in bio
+7. Cozy hotel bed in golden morning light with tea and journal - save this for your next trip and send it to a friend

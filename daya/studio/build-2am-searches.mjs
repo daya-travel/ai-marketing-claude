@@ -24,7 +24,7 @@ const SEARCHES = [
   { q: 'is it weird to eat dinner alone', a: 'No. It\'s a *power move*.', body: 'Bar seat, not corner table. A book, one glass of wine, talk to the bartender. Nobody stares - that\'s a story fear tells you at 2am.', photo: 'q1' },
   { q: 'hotel room safety check', a: '90 seconds, *then sleep*.', body: 'Chain on, deadbolt down, doorstop wedged, count the doors to the exit once. Your body sleeps better when it knows you checked.', photo: 'q2' },
   { q: 'what if someone follows me', a: 'Walk into a *hotel lobby*.', body: 'Not a shop - shops close. Hotels have staff at the door all night. Sit down, order tea, take your time.', photo: 'q3' },
-  { q: 'emergency number in europe', a: '112. One number, *whole EU*.', body: 'Works from any phone, even locked. Screenshot the full 20-country list before you land - it\'s in our free playbook.', photo: 'q4' },
+  { q: 'emergency number in europe', a: '112. One number, *whole EU*.', body: 'Works from any phone, even locked. Screenshot your country list before you land.', photo: 'q4' },
   { q: 'is solo travel worth it', a: 'You *already know*.', body: 'That\'s why you\'re up at 2am reading about it. Fear shrinks when plans grow.', photo: 'q5' },
 ];
 
@@ -34,21 +34,21 @@ const head = `<!doctype html><html><head><meta charset="utf-8">
 *{margin:0;box-sizing:border-box}
 html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
-.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.88) 0%, rgba(6,29,21,.6) 40%, rgba(6,29,21,.12) 70%, rgba(6,29,21,.42) 100%)}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.5) saturate(1.15) contrast(1.03)}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.45) 0%, rgba(6,29,21,.22) 42%, rgba(6,29,21,.05) 72%, rgba(6,29,21,.2) 100%)}
 .grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 /* top-left content block; right 210px + bottom stay clear for TikTok UI */
-.pad{position:absolute;inset:0;padding:150px 210px 120px 88px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
-.kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:27px;color:#efc05a}
+.pad{position:absolute;inset:0;padding:270px 210px 150px 88px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:27px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 .hl{font-style:italic;color:#efc05a}
-.num{font-family:'Cormorant Garamond';font-weight:600;font-size:120px;line-height:1;color:#efc05a}
+.num{font-family:'Cormorant Garamond';font-weight:600;font-size:120px;line-height:1;color:#efc05a;text-shadow:0 3px 26px rgba(0,0,0,.65)}
 .num small{font-size:44px;color:#f4ecdb;opacity:.65;font-family:'Archivo';font-weight:800;letter-spacing:.14em;vertical-align:18px;margin-left:14px}
 .search{display:flex;align-items:center;gap:20px;background:#f4ecdb;border-radius:60px;padding:26px 38px;margin-top:44px;box-shadow:0 18px 50px -18px rgba(0,0,0,.55)}
 .search span{font-family:'Inter';font-weight:500;font-size:35px;color:#0e3b2c}
-.ans{font-family:'Cormorant Garamond';font-weight:600;font-size:92px;line-height:1.06;margin-top:56px;max-width:780px}
-.body{font-family:'Inter';font-weight:400;font-size:36px;line-height:1.5;color:#e7efe7;opacity:.93;margin-top:36px;max-width:760px}
-.cv-title{font-family:'Cormorant Garamond';font-weight:600;font-size:108px;line-height:1.05;margin-top:30px;max-width:820px}
-.cv-sub{font-family:'Inter';font-weight:500;font-size:34px;color:#e7efe7;opacity:.94;margin-top:34px}
+.ans{font-family:'Cormorant Garamond';font-weight:600;font-size:92px;line-height:1.06;margin-top:56px;max-width:780px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
+.body{font-family:'Inter';font-weight:400;font-size:36px;line-height:1.5;color:#f4ecdb;margin-top:36px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
+.cv-title{font-family:'Cormorant Garamond';font-weight:600;font-size:108px;line-height:1.05;margin-top:30px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
+.cv-sub{font-family:'Inter';font-weight:500;font-size:34px;color:#f4ecdb;margin-top:34px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
 .bottom{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;width:100%}
 .swipe{font-family:'Caveat';font-weight:600;font-size:46px;color:#efc05a}
 .swipe svg{vertical-align:middle}
@@ -79,9 +79,9 @@ SEARCHES.forEach((s, i) => {
 // 7 endcard
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/end.png"><div class="scrim"></div><div class="grain"></div>
 <div class="pad">
-  <div class="kicker">close the tabs</div>
-  <div class="cv-title">Every 2am answer, in ${'<span class="hl">one calm place</span>'}.</div>
-  <div class="cv-sub">the full playbook is free - link in bio</div>
+  <div class="kicker">her.solotrip</div>
+  <div class="cv-title">Save this for your ${'<span class="hl">next trip</span>'}.</div>
+  <div class="cv-sub">and send it to the friend who keeps saying "one day"</div>
   <div class="bottom"><span class="tag">solo travel, minus the fear</span></div>
 </div></div>`);
 
