@@ -22,7 +22,7 @@ watch this, you get X"). Zeitachse liefert beides.
 
 *(IG-Reel-Visual: Blue-Hour-Gasse-Clip, Text groß. TikTok: dunkles Foto, Serifen-Titel.)*
 
-## Die Timeline (Slides 2-7 / Szenen)
+## Die Timeline (Slides 2-8 / Szenen)
 
 **Minute 0-5 - Lock it.**
 Borrow any phone or open any browser. Find My (Apple) or Find My Device
@@ -42,16 +42,21 @@ Ask for the case number in writing. Your insurance pays with it - not without.
 From any device: "Phone stolen. I am safe. Reach me here." Then breathe.
 
 **Minute 31+ - Day one, without a phone.** *(neue Slide, Alesyas Frage 05.07.)*
-Pay: the card from your room stash (the 3-wallet system). Fly: airlines print
-boarding passes at the desk - passport is enough. Navigate: reception writes
-the address on paper. Reachable: WhatsApp Web + email on any laptop or hotel
-computer. Tomorrow: any phone shop sells a cheap prepaid - your number moves
-back later.
+Pay: the spare card hidden in your room (the 3-wallet system).
+Fly: the check-in desk prints your boarding pass - passport is enough.
+Navigate: reception writes the address on paper - paper still works.
+Reachable: WhatsApp Web and email, on any laptop.
+Tomorrow: any phone shop sells a cheap prepaid - your number is not lost.
+Schlusszeile auf der Slide (gold/kursiv): *A stolen phone ends a phone - not a trip.*
 
-## Close (Slide 8 / letzte Szene)
+## The Point (Slide 8) + Close (Slide 9 / letzte Szene)
 
-> **You won't remember this under stress. That's the point.**
-> **It's one page in our free playbook - link in bio.**
+> **You won't remember this under stress. That's the point.** *(Slide 8)*
+> **You'll never need it - until you do.** *(Slide 9, Endcard)*
+> *save this - send this to the friend who travels solo*
+
+*(Playbook-Link bewusst rausgenommen - Entscheidung Alesya 05.07.: dieser Post
+läuft ohne Funnel, der nächste Post nimmt das Playbook wieder rein.)*
 
 *(Visual: Wellen-auf-Steinen-Clip in Zeitlupe / ruhiges Foto.)*
 
@@ -73,14 +78,15 @@ back later.
 > WhatsApp Web runs on any laptop. A stolen phone ends a phone - not a trip.
 >
 > Save this. You'll never need it - until you do. 💚
-> Full playbook is free - link in bio.
 >
 > IG: #solofemaletravel #solotraveltips #travelsafety
 > TikTok: #solotravel #solofemaletravel #traveltips #phonestolen #fyp
 
 ## Produktion
-- **TikTok-Carousel:** 8 Slides im SOLO & SAFE-Look (Emerald/Cream, Serifen-Titel,
-  eine Minute pro Slide) - kann ich mit build-carousel.mjs rendern, sag Bescheid.
+- **TikTok-Carousel:** 9 Slides im SOLO & SAFE-Look (Emerald/Cream, Serifen-Titel,
+  eine Minute pro Slide) - gerendert mit build-if-it-happens-01.mjs (3:4). Für Instagram zusätzlich als
+  9:16-Version (1080x1920, Text mittig, Reels-Safe-Zones) - Alesya baut das Reel
+  daraus direkt in der IG-App (Trend-Sound dort).
 - **IG-Reel:** vorhandene Clips reichen (01-bluehour-lane als Hook, 03-evening-square,
   04-market-coffee, 06-woman-lane, 08-waves als Close) + Karaoke-Captions.
   Timeline-Chips ("MIN 0-5") als Text-Overlay in Marigold.
@@ -91,7 +97,7 @@ back later.
 ## Brand-Guardian-Check
 Zahl im Hook ✅ · Save-Trigger (Timeline) ✅ · kein Angstmarketing (Vorbereitung,
 nicht Panik - der Ton bleibt ruhig, "then breathe") ✅ · faceless ✅ · ≤5 Hashtags ✅ ·
-💚 ✅ · Playbook-Funnel ✅ · Fakten aus dem Playbook (Notfall-Kaskade) ✅ ·
+💚 ✅ · Playbook-Funnel bewusst ausgelassen (Alesya, 05.07. - nächster Post wieder mit) · Fakten aus dem Playbook (Notfall-Kaskade) ✅ ·
 116 116 ist die echte deutsche Sperr-Hotline ✅.
 
 ## Bildbeschreibungen / Alt-Text TikTok-Carousel (je >50 Zeichen)
@@ -103,4 +109,4 @@ nicht Panik - der Ton bleibt ruhig, "then breathe") ✅ · faceless ✅ · ≤5 
 6. Woman from behind texting on a rooftop terrace at dusk - minute 25 to 30: text your person "I am safe", then breathe
 7. Paper city map, handwritten note and room key on a hotel desk - day one without a phone: pay, fly, navigate and stay reachable the old way
 8. Woman from behind on a balcony above old town rooftops at golden hour - the point: you memorize nothing, screenshot this once
-9. Woman at a hotel window with sea view in soft morning light - save this, the full solo travel safety playbook is free via link in bio
+9. Woman at a hotel window with sea view in soft morning light - save this and send it to the friend who travels solo
