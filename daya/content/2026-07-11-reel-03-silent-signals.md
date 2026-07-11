@@ -80,10 +80,14 @@ Tagline klein: *solo travel, minus the fear*
 - **Fertiges Reel:** `daya/studio/reels/reel-03-silent-signals/
   daya-reel-03-silent-signals.mp4` (24,6 s, 1080x1920, ohne Ton).
   Builder: `daya/studio/build-reel-03.mjs`.
-- **Handzeichen als Brand-Piktogramme** (SVG, Cream-Hand + Marigold-Daumen,
-  3 Schritte) statt gefilmter/KI-Hände - eine falsche Fingerhaltung würde
-  das FALSCHE Notsignal beibringen, das Diagramm ist exakt und geprüft.
-  Kein Filmen nötig.
+- **v2 (Alesyas Feedback "zu generisch"): echte Hände statt Piktogramme.**
+  Hook + 2021-Szene = kling-Video der kompletten Zeichen-Bewegung
+  (Job `2124f7e9`, aus verifiziertem Startbild); Steps 1-3 = KI-Fotos mit
+  Ken-Burns-Zoom (`photos/signal-hands/hand{1,2,3}.png`, Jobs `87074486`,
+  `d7fe3613`, `491cbd99`). Jede Fingerposition einzeln gegen das echte
+  Signal for Help geprüft; 2 falsche Erstversuche verworfen.
+  **Kosten: ~19,5 Credits** (3+2 Fotos à 2 + 1 Video 7,5; genehmigt ~14
+  + angekündigtes Retry-Risiko).
 - B-Roll: bluehour-lane (Hook), woman-lane (Step 1+2), tram (Step 3),
   carfree-street (2021-Story), evening-square (if you see it),
   market-coffee (Codewörter), waves (Wasser), ferry-sunset (Close).
