@@ -49,9 +49,11 @@ and even elsewhere, bartenders understand what you mean.*
 On-Screen: **"On the water: wave both arms overhead."**
 Sub: *crossed or waving arms above your head = official distress signal.*
 
-**SZENE 6 - CLOSE / REPOST-CTA (23-26 s) - B-Roll: Blue-Hour-Gasse (vorhanden)**
-On-Screen: **"A signal only works if people recognize it."**
-Sub: **"Repost this. That's literally how it starts working."**
+**SZENE 6 - CLOSE / REPOST-CTA (emotional, Alesyas Vorgabe 11.07.) -
+B-Roll: Fähre/Meer im Gegenlicht**
+On-Screen: **"One day a woman will make this sign - *hoping someone knows it*."**
+Sub: *be the reason someone does*
+Handschrift (Caveat, Marigold): **repost this**
 Tagline klein: *solo travel, minus the fear*
 
 ---
@@ -67,23 +69,45 @@ Tagline klein: *solo travel, minus the fear*
 > At the bar: "Ist Luisa hier?" (Germany), "Ask for Angela" (UK), or order an
 > "Angel Shot" (US). The staff will get you out - no questions, no drama.
 >
-> Here's the thing: these only work if people RECOGNIZE them.
-> So don't just save this - repost it to your story. 💚
+> Here's the thing: a signal only works if people recognize it.
+> One day a woman will make this sign and hope that someone knows it.
+> Be the reason someone does - repost this to your story. 💚
 >
 > #solotravel #solofemaletravel #signalforhelp #travelsafety #fyp
 
-## Produktion (0 Credits)
+## Produktion (0 Credits) - GEBAUT 11.07.
 
-- **Neu zu filmen (ihr selbst, 1 Take, Handy):** die Hand für Szene 1+2 -
-  faceless, neutraler Hintergrund (Wand/Fenster), warmes Licht. WICHTIG:
-  als Bewegung zeigen (Daumen rein → Finger schließen), nicht als Pose.
-- **Alles andere aus vorhandenen Clips:** 03-evening-square (Szene 3),
-  04-market-coffee (Szene 4), 07-ferry-sea-sunset oder 08-waves-on-stones
-  (Szene 5), 01-bluehour-lane (Szene 6). Schnitt wie Reel 02 über
-  build-reel-02.mjs-Pipeline (Overlays + ffmpeg), sobald der Hand-Clip da ist.
-- Kein Ton nötig - Trending Sound in der App drauf.
+- **Fertiges Reel:** `daya/studio/reels/reel-03-silent-signals/
+  daya-reel-03-silent-signals.mp4` (24,6 s, 1080x1920, ohne Ton).
+  Builder: `daya/studio/build-reel-03.mjs`.
+- **Handzeichen als Brand-Piktogramme** (SVG, Cream-Hand + Marigold-Daumen,
+  3 Schritte) statt gefilmter/KI-Hände - eine falsche Fingerhaltung würde
+  das FALSCHE Notsignal beibringen, das Diagramm ist exakt und geprüft.
+  Kein Filmen nötig.
+- B-Roll: bluehour-lane (Hook), woman-lane (Step 1+2), tram (Step 3),
+  carfree-street (2021-Story), evening-square (if you see it),
+  market-coffee (Codewörter), waves (Wasser), ferry-sunset (Close).
+- **Ton:** Option A - Trending Sound in der App (mehr Reichweite).
+  Option B - ElevenLabs-Voiceover (Skript unten) in CapCut/IG drunterlegen.
+
+## ElevenLabs-Voiceover-Skript (Option B)
+
+Stimme: warm, ruhig, weiblich, eher tief. Ein Block, Pausen über Punkte.
+Timing passt auf den Schnitt (Sekundenmarken = Szenenwechsel):
+
+> (0:00) This hand signal has saved lives. And most people can't recognize it.
+> (0:03) Palm out.
+> (0:05) Tuck your thumb.
+> (0:07) Close your fingers over it. It means: I need help.
+> (0:10) In twenty-twenty-one, a driver recognized it - and a missing girl was found.
+> (0:12) If you ever see it: don't confront. Stay close, and call for help.
+> (0:15) At the bar, ask: "Is Luisa here?" The staff will get you out. Quietly.
+> (0:18) On the water: wave both arms overhead.
+> (0:21) One day, a woman will make this sign - hoping someone knows it.
+> Be the reason someone does.
+
 - TikTok-Variante: gleiche Inhalte als Carousel (Slides statt Szenen),
-  Endcard "Repost this - that's how it starts working."
+  Endcard "be the reason someone does - repost this."
 
 ## Brand-Guardian-Check
 
