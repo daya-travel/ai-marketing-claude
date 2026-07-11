@@ -1,10 +1,11 @@
 // Reel 03 "Silent Signals" - Signal for Help + bar codewords + water signal.
-// Fully self-contained: the hand sign is rendered as accurate flat pictograms
-// (SVG, brand colors) instead of filmed/AI hands - a wrong finger position
-// would teach the WRONG distress signal, so the diagram must be exact:
-// step 1 palm out, step 2 thumb folded across palm, step 3 fingers closed
-// over the thumb. B-roll from the 9 existing clips. No audio on purpose
-// (trending sound or the ElevenLabs VO gets added in the app).
+// v2 (11.07.): real photographic hands instead of pictograms (Alesyas
+// feedback "zu generisch"). Hook = kling image-to-video of the full sign
+// motion; steps 1-3 = verified AI photos (photos/signal-hands/hand{1,2,3}.png)
+// with a slow Ken Burns zoom. EVERY hand asset was checked frame-by-frame
+// against the real Signal for Help before use - a wrong finger position
+// would teach the WRONG distress signal. No audio on purpose (trending
+// sound or the ElevenLabs VO gets added in the app).
 // Usage: node build-reel-03.mjs
 import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
@@ -15,6 +16,7 @@ import { FONT_CSS } from './fonts.mjs';
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CLIPS = join(__dirname, 'reels', 'reel-01-green-flags');
+const HANDS = join(__dirname, 'photos', 'signal-hands');
 const OUT = join(__dirname, 'reels', 'reel-03-silent-signals');
 const OV = join(OUT, 'overlays');
 rmSync(OUT, { recursive: true, force: true });
@@ -59,16 +61,19 @@ const step = (chip, svg, line, sub) => `
   </div>`;
 
 const SEGS = [
-  { clip: '01-bluehour-lane.mp4', ss: 0, dur: 2.6, body: `
+  // hook: the real sign motion (kling video from verified start frame)
+  { clip: join(HANDS, 'sign-motion.mp4'), abs: true, ss: 0, dur: 2.8, body: `
     <div class="mid">
       <div class="kicker">signal for help</div>
       <div class="hook">This hand signal has *saved lives*.</div>
       <div class="sub">most people can't recognize it - yet</div>
     </div>` },
-  { clip: '06-woman-lane-goldenhour.mp4', ss: 0, dur: 2.2, body: step('STEP 1', HAND_1, 'Palm *out*.') },
-  { clip: '06-woman-lane-goldenhour.mp4', ss: 2.4, dur: 2.2, body: step('STEP 2', HAND_2, 'Tuck your *thumb*.') },
-  { clip: '05-tram.mp4', ss: 0, dur: 2.6, body: step('STEP 3', HAND_3, 'Close your fingers *over it*.', 'it means: *I need help*') },
-  { clip: '02-carfree-morning-street.mp4', ss: 0, dur: 2.6, body: `
+  // steps: verified photos with slow Ken Burns zoom
+  { photo: join(HANDS, 'hand1.png'), dur: 2.2, body: step('STEP 1', '', 'Palm *out*.') },
+  { photo: join(HANDS, 'hand2.png'), dur: 2.2, body: step('STEP 2', '', 'Tuck your *thumb*.') },
+  { photo: join(HANDS, 'hand3.png'), dur: 2.6, body: step('STEP 3', '', 'Close your fingers *over it*.', 'it means: *I need help*') },
+  // second half of the motion video: fingers closing into the fist
+  { clip: join(HANDS, 'sign-motion.mp4'), abs: true, ss: 2.8, dur: 2.2, body: `
     <div class="mid">
       <div class="line">2021: a driver *recognized it*.</div>
       <div class="sub">a missing 16-year-old was found - because one person knew the sign</div>
@@ -104,6 +109,10 @@ ${FONT_CSS}
 html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .wrap{position:relative;width:${W}px;height:${H}px;display:flex;align-items:center;justify-content:center;padding:0 110px 0 96px}
 .scrim{position:absolute;inset:0;background:radial-gradient(90% 55% at 50% 46%, rgba(6,29,21,.66) 0%, rgba(6,29,21,.38) 55%, rgba(6,29,21,0) 100%)}
+/* photo steps: hand fills the frame -> text at top, light top/bottom scrim */
+.wrap.top{align-items:flex-start}
+.top .scrim{background:linear-gradient(180deg, rgba(6,29,21,.72) 0%, rgba(6,29,21,.3) 26%, rgba(6,29,21,0) 48%, rgba(6,29,21,.4) 100%)}
+.top .mid{transform:none;margin-top:140px}
 .mid{position:relative;text-align:center;max-width:860px;transform:translateY(-90px)}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.3em;font-size:26px;color:#efc05a;margin-bottom:34px}
 .hook{font-family:'Cormorant Garamond';font-weight:600;font-size:88px;line-height:1.08;color:#f4ecdb}
@@ -124,17 +133,26 @@ SEGS.forEach((s, i) => {
   // raw bodies still carry *emphasis* markers - convert them here (step()
   // output is already converted; it contains no asterisks, so this is safe)
   const body = s.body.replace(/\*([^*<]+?)\*/g, '<span class="hl">$1</span>');
-  writeFileSync(htmlPath, head + `<div class="wrap"><div class="scrim"></div>${body}</div>` + foot);
+  const wrapClass = s.photo ? 'wrap top' : 'wrap';
+  writeFileSync(htmlPath, head + `<div class="${wrapClass}"><div class="scrim"></div>${body}</div>` + foot);
   execSync(`${CHROME} --headless=new --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --force-device-scale-factor=1 --default-background-color=00000000 --virtual-time-budget=5000 --window-size=${W},${H + RESERVE} --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });
   execSync(`python3 -c "from PIL import Image; Image.open('${pngPath}').crop((0,0,${W},${H})).save('${pngPath}')"`, { stdio: 'ignore' });
   console.log('overlay', i, 'ok');
 });
 
-// 2) segments (trim supports a start offset now)
+// 2) segments: video clips get trimmed, photos get a slow Ken Burns zoom
 SEGS.forEach((s, i) => {
-  const src = join(CLIPS, s.clip);
-  if (!existsSync(src)) throw new Error('missing clip ' + src);
-  execSync(`ffmpeg -y -loglevel error -i "${src}" -i "${join(OV, `ov-${i}.png`)}" -filter_complex "[0:v]trim=${s.ss}:${s.ss + s.dur},setpts=PTS-STARTPTS,scale=${W}:${H}:flags=lanczos,fps=30[v];[v][1:v]overlay=0:0,format=yuv420p[out]" -map "[out]" -an -c:v libx264 -crf 18 -preset medium "${join(OUT, `seg-${i}.mp4`)}"`, { stdio: 'inherit' });
+  const ov = join(OV, `ov-${i}.png`);
+  const out = join(OUT, `seg-${i}.mp4`);
+  if (s.photo) {
+    if (!existsSync(s.photo)) throw new Error('missing photo ' + s.photo);
+    const frames = Math.round(30 * s.dur);
+    execSync(`ffmpeg -y -loglevel error -i "${s.photo}" -i "${ov}" -filter_complex "[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,zoompan=z='min(1+0.0014*on,1.12)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=30[v];[v][1:v]overlay=0:0,format=yuv420p[out]" -map "[out]" -frames:v ${frames} -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
+  } else {
+    const src = s.abs ? s.clip : join(CLIPS, s.clip);
+    if (!existsSync(src)) throw new Error('missing clip ' + src);
+    execSync(`ffmpeg -y -loglevel error -i "${src}" -i "${ov}" -filter_complex "[0:v]trim=${s.ss}:${s.ss + s.dur},setpts=PTS-STARTPTS,scale=${W}:${H}:flags=lanczos,fps=30[v];[v][1:v]overlay=0:0,format=yuv420p[out]" -map "[out]" -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
+  }
   console.log('segment', i, 'ok');
 });
 
