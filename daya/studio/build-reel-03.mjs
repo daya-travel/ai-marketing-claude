@@ -141,17 +141,25 @@ SEGS.forEach((s, i) => {
 });
 
 // 2) segments: video clips get trimmed, photos get a slow Ken Burns zoom
+// CLEAN=1 skips the text overlays (clean cut for external captioning, e.g.
+// Caption AI + ElevenLabs VO - see the produktions-kit doc)
+const CLEAN = process.env.CLEAN === '1';
 SEGS.forEach((s, i) => {
   const ov = join(OV, `ov-${i}.png`);
   const out = join(OUT, `seg-${i}.mp4`);
+  const finish = CLEAN ? 'format=yuv420p[out]' : null;
   if (s.photo) {
     if (!existsSync(s.photo)) throw new Error('missing photo ' + s.photo);
     const frames = Math.round(30 * s.dur);
-    execSync(`ffmpeg -y -loglevel error -i "${s.photo}" -i "${ov}" -filter_complex "[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,zoompan=z='min(1+0.0014*on,1.12)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=30[v];[v][1:v]overlay=0:0,format=yuv420p[out]" -map "[out]" -frames:v ${frames} -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
+    const kb = `[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,zoompan=z='min(1+0.0014*on,1.12)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=30[v]`;
+    const fc = CLEAN ? `${kb};[v]${finish}` : `${kb};[v][1:v]overlay=0:0,format=yuv420p[out]`;
+    execSync(`ffmpeg -y -loglevel error -i "${s.photo}" ${CLEAN ? '' : `-i "${ov}"`} -filter_complex "${fc}" -map "[out]" -frames:v ${frames} -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
   } else {
     const src = s.abs ? s.clip : join(CLIPS, s.clip);
     if (!existsSync(src)) throw new Error('missing clip ' + src);
-    execSync(`ffmpeg -y -loglevel error -i "${src}" -i "${ov}" -filter_complex "[0:v]trim=${s.ss}:${s.ss + s.dur},setpts=PTS-STARTPTS,scale=${W}:${H}:flags=lanczos,fps=30[v];[v][1:v]overlay=0:0,format=yuv420p[out]" -map "[out]" -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
+    const tr = `[0:v]trim=${s.ss}:${s.ss + s.dur},setpts=PTS-STARTPTS,scale=${W}:${H}:flags=lanczos,fps=30[v]`;
+    const fc = CLEAN ? `${tr};[v]${finish}` : `${tr};[v][1:v]overlay=0:0,format=yuv420p[out]`;
+    execSync(`ffmpeg -y -loglevel error -i "${src}" ${CLEAN ? '' : `-i "${ov}"`} -filter_complex "${fc}" -map "[out]" -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
   }
   console.log('segment', i, 'ok');
 });
@@ -159,5 +167,6 @@ SEGS.forEach((s, i) => {
 // 3) concat
 const list = SEGS.map((_, i) => `file 'seg-${i}.mp4'`).join('\n');
 writeFileSync(join(OUT, 'list.txt'), list);
-execSync(`cd "${OUT}" && ffmpeg -y -loglevel error -f concat -safe 0 -i list.txt -c copy daya-reel-03-silent-signals.mp4`, { stdio: 'inherit' });
-console.log('DONE ->', join(OUT, 'daya-reel-03-silent-signals.mp4'));
+const final = CLEAN ? 'daya-reel-03-CLEAN-no-text.mp4' : 'daya-reel-03-silent-signals.mp4';
+execSync(`cd "${OUT}" && ffmpeg -y -loglevel error -f concat -safe 0 -i list.txt -c copy ${final}`, { stdio: 'inherit' });
+console.log('DONE ->', join(OUT, final));
