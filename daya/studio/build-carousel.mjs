@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node
 import { execSync } from 'node:child_process';
 import { dirname, join, basename, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { FONT_CSS } from './fonts.mjs';
 
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -43,8 +44,8 @@ const HEART = `<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColo
 const byline = (credit) => credit === false ? '' : `<div class="byline">${esc(noEm(credit || 'by DAYA'))}${HEART}</div>`;
 
 const HEAD = `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
+${FONT_CSS}
 :root{--emerald:#0e3b2c;--emerald-mid:#1d5240;--cream:#f4ecdb;--amber:#cf8a1d;--marigold:#efc05a}
 *{margin:0;box-sizing:border-box}
 html,body{margin:0;padding:0;width:1080px;height:1440px;overflow:hidden;background:var(--emerald)}

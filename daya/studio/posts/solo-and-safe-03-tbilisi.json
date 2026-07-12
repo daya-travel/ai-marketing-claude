@@ -1,0 +1,65 @@
+{
+  "slug": "solo-and-safe-03-tbilisi",
+  "series": "SOLO & SAFE",
+  "city": "Tbilisi, Georgia",
+  "slides": [
+    {
+      "type": "cover",
+      "photo": "01.png",
+      "label": "START HERE",
+      "kicker": "SOLO & SAFE · GEORGIA",
+      "lead": "\"the guest is a gift\" is a real rule here.",
+      "headline": "the safe little capital\nnobody books *first*",
+      "body": "five reasons georgia is a great first solo trip. save this post."
+    },
+    {
+      "type": "credential",
+      "photo": "02.png",
+      "kicker": "TBILISI, GEORGIA",
+      "text": "low crime and\n*legendary* hospitality"
+    },
+    {
+      "type": "tip",
+      "num": "01",
+      "head": "why women travel here *alone*",
+      "body": "crime is low, prices are tiny, and guests are treated like family. hospitality is almost a religion here."
+    },
+    {
+      "type": "tip",
+      "num": "02",
+      "head": "the old town fits in *one walk*",
+      "body": "cobblestones, carved wooden balconies and sulfur baths - all close together, all on foot."
+    },
+    {
+      "type": "tip",
+      "photo": "05.png",
+      "num": "03",
+      "head": "the best *view*",
+      "body": "ride the cable car up to narikala fortress. the whole city lies under your feet."
+    },
+    {
+      "type": "tip",
+      "num": "04",
+      "head": "a tip most people *miss*",
+      "body": "skip taxis. the metro costs cents - and the bathhouse district is the local secret for a slow afternoon."
+    },
+    {
+      "type": "tip",
+      "num": "05",
+      "head": "one *easy* day trip",
+      "body": "mtskheta is 30 minutes away. ancient churches, the old capital - and you are back by lunch."
+    },
+    {
+      "type": "endcard",
+      "photo": "08.png",
+      "credit": false,
+      "lead": "five simple tips. one easier trip.",
+      "headline": "*save this* for your next trip",
+      "ctas": [
+        {"icon": "bookmark", "text": "save it for your first solo trip"},
+        {"icon": "send", "text": "send it to a friend who travels alone"}
+      ],
+      "tagline": "solo travel, minus the fear"
+    }
+  ]
+}
