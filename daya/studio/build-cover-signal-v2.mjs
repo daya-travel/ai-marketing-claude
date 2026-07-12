@@ -37,7 +37,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
   <div class="handle">her.solotrip</div>
   <div class="mid">
     <div class="kicker">solo travel &middot; safety</div>
-    <div class="title">she can't<br>say it<br>out loud.<span class="serif">her hand can.</span></div>
+    <div class="title">3 signs<br>that could<br>save<span class="serif">your life.</span></div>
   </div>
   <div class="save">watch &middot; then repost -<br>it only works if people know it</div>
 </div></div>
