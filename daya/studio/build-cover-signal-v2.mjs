@@ -22,11 +22,11 @@ ${FONT_CSS}
 html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
 .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) saturate(1.05)}
-.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.66) 0%, rgba(6,29,21,.3) 26%, rgba(6,29,21,.08) 52%, rgba(6,29,21,.66) 100%)}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.6) 0%, rgba(6,29,21,.42) 32%, rgba(6,29,21,.34) 58%, rgba(6,29,21,.62) 100%)}
 .grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 .pad{position:absolute;inset:0;padding:96px 80px 120px;display:flex;flex-direction:column;align-items:center;text-align:center}
 .handle{font-family:'Archivo';font-weight:800;font-size:44px;color:#f4ecdb;text-shadow:0 2px 20px rgba(0,0,0,.6)}
-.mid{margin-top:74px}
+.mid{margin-top:330px}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.32em;font-size:30px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 .title{font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:132px;line-height:1.05;color:#f4ecdb;margin-top:36px;text-shadow:0 4px 34px rgba(0,0,0,.65)}
 .serif{display:block;font-family:'Cormorant Garamond';font-style:italic;font-weight:600;text-transform:none;font-size:150px;line-height:1.02;color:#efc05a;margin-top:14px}
