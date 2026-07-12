@@ -9,7 +9,7 @@
       "label": "START HERE",
       "kicker": "SOLO & SAFE · GEORGIA",
       "lead": "\"the guest is a gift\" is a real rule here.",
-      "headline": "the safe little capital\nnobody books *first*",
+      "headline": "the safe little\ncapital nobody\nbooks *first*",
       "body": "five reasons georgia is a great first solo trip. save this post."
     },
     {
@@ -20,12 +20,14 @@
     },
     {
       "type": "tip",
+      "photo": "03.png",
       "num": "01",
       "head": "why women travel here *alone*",
       "body": "crime is low, prices are tiny, and guests are treated like family. hospitality is almost a religion here."
     },
     {
       "type": "tip",
+      "photo": "04.png",
       "num": "02",
       "head": "the old town fits in *one walk*",
       "body": "cobblestones, carved wooden balconies and sulfur baths - all close together, all on foot."
@@ -39,12 +41,14 @@
     },
     {
       "type": "tip",
+      "photo": "06.png",
       "num": "04",
       "head": "a tip most people *miss*",
       "body": "skip taxis. the metro costs cents - and the bathhouse district is the local secret for a slow afternoon."
     },
     {
       "type": "tip",
+      "photo": "07.png",
       "num": "05",
       "head": "one *easy* day trip",
       "body": "mtskheta is 30 minutes away. ancient churches, the old capital - and you are back by lunch."
