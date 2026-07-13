@@ -38,10 +38,14 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .r1 .site{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.34em;font-size:34px;color:#efc05a;margin-top:46px;text-shadow:0 2px 20px rgba(0,0,0,.6)}
 /* row 2: app */
 .r2{background:linear-gradient(120deg, #0a2b20 0%, #0e3b2c 45%, #14503c 100%)}
+.r2 .head{position:absolute;top:92px;left:0;right:0;text-align:center;z-index:2}
+.r2 .head .kick{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.34em;font-size:30px;color:#efc05a}
+.r2 .head h2{font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:76px;letter-spacing:.01em;color:#f4ecdb;margin-top:22px}
+.r2 .head h2 .hl{color:#efc05a}
 .r2 .tiles{position:absolute;inset:0;display:flex}
-.r2 .tile{width:1080px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:96px}
-.r2 img.ph{height:1020px;width:auto;border-radius:44px;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
-.r2 .cap{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:30px;color:#efc05a;margin-top:52px}
+.r2 .tile{width:1080px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:84px}
+.r2 img.ph{height:880px;width:auto;border-radius:40px;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+.r2 .cap{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:30px;color:#efc05a;margin-top:48px}
 .r2 .sub{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:44px;color:#f4ecdb;margin-top:16px}
 .r2 .glow{position:absolute;top:-320px;left:1170px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle, rgba(239,192,90,.16) 0%, rgba(239,192,90,0) 70%)}
 /* row 3: makers */
@@ -62,6 +66,7 @@ const ROWS = {
       <div class="site">dayatravel.app</div>
     </div></div>`,
   2: () => `<div class="wrap r2"><div class="glow"></div><div class="grain"></div>
+    <div class="head"><div class="kick">one app &middot; every step of the trip</div><h2>safety that <span class="hl">runs itself.</span></h2></div>
     <div class="tiles">
       <div class="tile"><img class="ph" src="file://${join(P, 'phone-checkin.png')}"><div class="cap">smart check-in</div><div class="sub">if you don't check in, your people know.</div></div>
       <div class="tile"><img class="ph" src="file://${join(P, 'phone-playbook.png')}"><div class="cap">the playbook, in your pocket</div><div class="sub">the right words, in the right language.</div></div>
