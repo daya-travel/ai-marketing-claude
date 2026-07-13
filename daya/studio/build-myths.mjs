@@ -22,11 +22,11 @@ const SWIPE = `<span class="swipe">swipe <svg width="36" height="36" viewBox="0 
 const hl = (s) => s.replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
 
 const MYTHS = [
-  { m: '“I’ll go when someone can come with me.”', t: 'Their yes is *never* coming.', body: 'Not because they don’t love you - calendars just never match. And alone you’ll have more company than you think: hostel kitchens, walking tours, cafe counters.', photo: 'over-50/q2.png' },
-  { m: '“I’m not the brave type.”', t: 'Brave is a *packing list*, not a personality.', body: 'An offline map. A checked-in hotel. One plan B. That’s all “brave” actually is.', photo: 'over-50/q5.png' },
-  { m: '“But what if something happens at night?”', t: 'Nights are a *plan*, not a lottery.', body: 'Arrive in daylight. Pick the lively street over the shortcut. Take the taxi when it’s late. Strategy beats worry, every night.', photo: '2am-searches/q3.png' },
-  { m: '“I can’t afford it right now.”', t: 'You already *price* the flights.', body: 'You check them, then close the app. A week in Tbilisi or Ljubljana costs less than staying home and wondering. The trip was never the expensive part.', photo: 'over-50/q3.png' },
-  { m: '“When things calm down.”', t: 'Things *never* calm down.', body: 'There is no calm year coming. There’s just you, one random Tuesday, finally booking it. The packed bag has been ready longer than you think.', photo: 'over-50/q1.png' },
+  { m: '“I’ll go when someone can come with me.”', t: 'You don’t have to *wait* for anyone.', body: 'Calendars never match - nobody’s fault. And alone you’ll meet *more* people: hostel kitchens, walking tours, cafe counters.', photo: 'over-50/q2.png' },
+  { m: '“I’m not the brave type.”', t: 'Brave is a *packing list*, not a personality.', body: 'An offline map. A checked-in hotel. One plan B. That’s all *brave* actually is.', photo: 'over-50/q5.png' },
+  { m: '“But what if something happens at night?”', t: 'Nights are a *plan*, not a lottery.', body: 'Arrive in daylight. Pick the lively street. Take the taxi when it’s late. *Strategy* beats worry.', photo: '2am-searches/q3.png' },
+  { m: '“I can’t afford it right now.”', t: 'You already *price* the flights.', body: 'You check them, then close the app. The trip was never the *expensive* part.', photo: 'over-50/q3.png' },
+  { m: '“When things calm down.”', t: 'Things *never* calm down.', body: 'There is no calm year coming. Just you, one random Tuesday, *finally booking it*.', photo: 'over-50/q1.png' },
 ];
 
 const head = `<!doctype html><html><head><meta charset="utf-8">
@@ -38,14 +38,16 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.5) saturate(1.15) contrast(1.03)}
 .scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.58) 0%, rgba(6,29,21,.38) 42%, rgba(6,29,21,.2) 72%, rgba(6,29,21,.4) 100%)}
 .grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-.pad{position:absolute;inset:0;padding:250px 150px 150px 150px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.pad{position:absolute;inset:0;padding:300px 130px 300px 130px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.foot{position:absolute;left:0;right:0;bottom:150px;display:flex;align-items:center;justify-content:center}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:27px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 .hl{font-style:italic;color:#efc05a}
 .num{font-family:'Cormorant Garamond';font-weight:600;font-size:120px;line-height:1;color:#efc05a;text-shadow:0 3px 26px rgba(0,0,0,.65)}
 .num small{font-size:44px;color:#f4ecdb;opacity:.65;font-family:'Archivo';font-weight:800;letter-spacing:.14em;vertical-align:18px;margin-left:14px}
-.myth{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:56px;line-height:1.15;color:#f4ecdb;opacity:.95;margin-top:46px;max-width:780px;text-shadow:0 3px 24px rgba(0,0,0,.75)}
-.truth{font-family:'Archivo';font-weight:800;font-size:84px;letter-spacing:-.02em;line-height:1.04;margin-top:48px;max-width:780px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
-.body{font-family:'Inter';font-weight:500;font-size:36px;line-height:1.5;color:#f4ecdb;margin-top:36px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
+.myth{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-size:80px;line-height:1.12;color:#f4ecdb;margin-top:40px;max-width:820px;text-shadow:0 3px 26px rgba(0,0,0,.8)}
+.tick{width:96px;height:7px;background:#efc05a;border-radius:3px;margin:44px auto 0}
+.truth{font-family:'Archivo';font-weight:800;font-size:88px;letter-spacing:-.02em;line-height:1.06;margin-top:44px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.75)}
+.body{font-family:'Inter';font-weight:500;font-size:34px;line-height:1.55;color:#f4ecdb;opacity:.95;margin-top:40px;max-width:720px;text-shadow:0 2px 22px rgba(0,0,0,.8)}
 .cv-title{font-family:'Archivo';font-weight:800;font-size:92px;letter-spacing:-.02em;line-height:1.06;margin-top:30px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
 .cv-sub{font-family:'Inter';font-weight:600;font-size:34px;line-height:1.45;color:#f4ecdb;margin-top:34px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
 .bottom{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;width:100%}
@@ -62,18 +64,18 @@ slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/over-50/
   <div class="kicker">her.solotrip &middot; be honest</div>
   <div class="cv-title">${hl('“Next summer.”<br>- you, *last* summer.')}</div>
   <div class="cv-sub">the 5 sentences that keep eating your years - swipe</div>
-  <div class="bottom"><span></span>${SWIPE}</div>
-</div></div>`);
+</div><div class="foot">${SWIPE}</div></div>`);
 // 2-4 myths
 MYTHS.forEach((s, i) => {
   slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/${s.photo}"><div class="scrim"></div><div class="grain"></div>
   <div class="pad">
-    <div class="num">0${i + 1}<small>/ 05</small></div>
-    <div class="myth">the sentence in your head: ${s.m}</div>
+    <div class="kicker">the sentence in your head &middot; 0${i + 1} / 05</div>
+    <div class="myth">${s.m}</div>
+    <div class="tick"></div>
     <div class="truth">${hl(s.t)}</div>
     <div class="body">${hl(s.body)}</div>
-    <div class="bottom"><span></span>${i < MYTHS.length - 1 ? SWIPE : ''}</div>
-  </div></div>`);
+  </div>
+  <div class="foot">${i < MYTHS.length - 1 ? SWIPE : ''}</div></div>`);
 });
 // 5 close - comment question (no playbook CTA)
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/2am-searches/end.png"><div class="scrim"></div><div class="grain"></div>
@@ -81,8 +83,7 @@ slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/2am-sear
   <div class="kicker">her.solotrip</div>
   <div class="cv-title">${hl('Your saved folder is full. *Your calendar isn’t.*')}</div>
   <div class="cv-sub">type the sentence that’s been stopping you - out loud is step one 💚</div>
-  <div class="bottom"><span class="tag">solo travel, minus the fear</span></div>
-</div></div>`);
+</div><div class="foot"><span class="tag">solo travel, minus the fear</span></div></div>`);
 
 slides.forEach((body, i) => {
   const htmlPath = join(OUT, `s${i + 1}.html`);
