@@ -34,18 +34,18 @@ ${FONT_CSS}
 html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
 .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.5) saturate(1.15) contrast(1.03)}
-.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.45) 0%, rgba(6,29,21,.22) 42%, rgba(6,29,21,.05) 72%, rgba(6,29,21,.2) 100%)}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.58) 0%, rgba(6,29,21,.38) 42%, rgba(6,29,21,.2) 72%, rgba(6,29,21,.4) 100%)}
 .grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-.pad{position:absolute;inset:0;padding:270px 210px 150px 88px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+.pad{position:absolute;inset:0;padding:250px 150px 150px 150px;display:flex;flex-direction:column;align-items:center;text-align:center}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:27px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 .hl{font-style:italic;color:#efc05a}
 .num{font-family:'Cormorant Garamond';font-weight:600;font-size:120px;line-height:1;color:#efc05a;text-shadow:0 3px 26px rgba(0,0,0,.65)}
 .num small{font-size:44px;color:#f4ecdb;opacity:.65;font-family:'Archivo';font-weight:800;letter-spacing:.14em;vertical-align:18px;margin-left:14px}
 .myth{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:56px;line-height:1.15;color:#f4ecdb;opacity:.95;margin-top:46px;max-width:780px;text-shadow:0 3px 24px rgba(0,0,0,.75)}
-.truth{font-family:'Cormorant Garamond';font-weight:600;font-size:92px;line-height:1.06;margin-top:48px;max-width:780px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
-.body{font-family:'Inter';font-weight:400;font-size:36px;line-height:1.5;color:#f4ecdb;margin-top:36px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
-.cv-title{font-family:'Cormorant Garamond';font-weight:600;font-size:104px;line-height:1.05;margin-top:30px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
-.cv-sub{font-family:'Inter';font-weight:500;font-size:34px;line-height:1.45;color:#f4ecdb;margin-top:34px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
+.truth{font-family:'Archivo';font-weight:800;font-size:84px;letter-spacing:-.02em;line-height:1.04;margin-top:48px;max-width:780px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
+.body{font-family:'Inter';font-weight:500;font-size:36px;line-height:1.5;color:#f4ecdb;margin-top:36px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
+.cv-title{font-family:'Archivo';font-weight:800;font-size:92px;letter-spacing:-.02em;line-height:1.06;margin-top:30px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.7)}
+.cv-sub{font-family:'Inter';font-weight:600;font-size:34px;line-height:1.45;color:#f4ecdb;margin-top:34px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
 .bottom{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;width:100%}
 .swipe{font-family:'Caveat';font-weight:600;font-size:46px;color:#efc05a}
 .swipe svg{vertical-align:middle}
