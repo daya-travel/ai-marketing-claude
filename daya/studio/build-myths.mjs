@@ -25,6 +25,8 @@ const MYTHS = [
   { m: '“I’ll go when someone can come with me.”', t: 'Their yes is *never* coming.', body: 'Not because they don’t love you - calendars just never match. And alone you’ll have more company than you think: hostel kitchens, walking tours, cafe counters.', photo: 'over-50/q2.png' },
   { m: '“I’m not the brave type.”', t: 'Brave is a *packing list*, not a personality.', body: 'An offline map. A checked-in hotel. One plan B. That’s all “brave” actually is.', photo: 'over-50/q5.png' },
   { m: '“But what if something happens at night?”', t: 'Nights are a *plan*, not a lottery.', body: 'Arrive in daylight. Pick the lively street over the shortcut. Take the taxi when it’s late. Strategy beats worry, every night.', photo: '2am-searches/q3.png' },
+  { m: '“I can’t afford it right now.”', t: 'You already *price* the flights.', body: 'You check them, then close the app. A week in Tbilisi or Ljubljana costs less than staying home and wondering. The trip was never the expensive part.', photo: 'over-50/q3.png' },
+  { m: '“When things calm down.”', t: 'Things *never* calm down.', body: 'There is no calm year coming. There’s just you, one random Tuesday, finally booking it. The packed bag has been ready longer than you think.', photo: 'over-50/q1.png' },
 ];
 
 const head = `<!doctype html><html><head><meta charset="utf-8">
@@ -59,14 +61,14 @@ slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/over-50/
 <div class="pad">
   <div class="kicker">her.solotrip &middot; be honest</div>
   <div class="cv-title">${hl('“Next summer.”<br>- you, *last* summer.')}</div>
-  <div class="cv-sub">the 3 sentences that keep eating your years - swipe</div>
+  <div class="cv-sub">the 5 sentences that keep eating your years - swipe</div>
   <div class="bottom"><span></span>${SWIPE}</div>
 </div></div>`);
 // 2-4 myths
 MYTHS.forEach((s, i) => {
   slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/${s.photo}"><div class="scrim"></div><div class="grain"></div>
   <div class="pad">
-    <div class="num">0${i + 1}<small>/ 03</small></div>
+    <div class="num">0${i + 1}<small>/ 05</small></div>
     <div class="myth">the sentence in your head: ${s.m}</div>
     <div class="truth">${hl(s.t)}</div>
     <div class="body">${hl(s.body)}</div>
