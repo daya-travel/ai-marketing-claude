@@ -22,9 +22,9 @@ const SWIPE = `<span class="swipe">swipe <svg width="36" height="36" viewBox="0 
 const hl = (s) => s.replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
 
 const MYTHS = [
-  { m: '“Everyone else has someone to go with.”', t: 'You’ll have *more* company, not less.', body: 'Nobody makes friends faster than a solo traveler. Hostel kitchens, walking tours, cafe counters - you choose your people, day by day.', photo: 'over-50/q2.png' },
-  { m: '“I’m not brave enough for this.”', t: 'You don’t need brave. You need *prepared*.', body: 'Courage is overrated. A checked-in hotel, an offline map and one plan B beat bravery every time.', photo: 'over-50/q5.png' },
-  { m: '“But what if something happens at night?”', t: 'Nights are a *plan*, not a lottery.', body: 'Arrive in daylight. Pick the lively street over the shortcut. Take the taxi when it’s late. That’s not fear - that’s a plan.', photo: '2am-searches/q3.png' },
+  { m: '“I’ll go when someone can come with me.”', t: 'Their yes is *never* coming.', body: 'Not because they don’t love you - calendars just never match. And alone you’ll have more company than you think: hostel kitchens, walking tours, cafe counters.', photo: 'over-50/q2.png' },
+  { m: '“I’m not the brave type.”', t: 'Brave is a *packing list*, not a personality.', body: 'An offline map. A checked-in hotel. One plan B. That’s all “brave” actually is.', photo: 'over-50/q5.png' },
+  { m: '“But what if something happens at night?”', t: 'Nights are a *plan*, not a lottery.', body: 'Arrive in daylight. Pick the lively street over the shortcut. Take the taxi when it’s late. Strategy beats worry, every night.', photo: '2am-searches/q3.png' },
 ];
 
 const head = `<!doctype html><html><head><meta charset="utf-8">
@@ -58,8 +58,8 @@ const slides = [];
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/over-50/q4.png"><div class="scrim"></div><div class="grain"></div>
 <div class="pad">
   <div class="kicker">her.solotrip &middot; be honest</div>
-  <div class="cv-title">${hl('Your dream trip lives in your *saved* folder.')}</div>
-  <div class="cv-sub">not in your calendar. these 3 sentences are the reason - swipe</div>
+  <div class="cv-title">${hl('“Next summer.”<br>- you, *last* summer.')}</div>
+  <div class="cv-sub">the 3 sentences that keep eating your years - swipe</div>
   <div class="bottom"><span></span>${SWIPE}</div>
 </div></div>`);
 // 2-4 myths
@@ -77,8 +77,8 @@ MYTHS.forEach((s, i) => {
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/2am-searches/end.png"><div class="scrim"></div><div class="grain"></div>
 <div class="pad">
   <div class="kicker">her.solotrip</div>
-  <div class="cv-title">${hl('Which sentence was *yours*?')}</div>
-  <div class="cv-sub">type it below. saying it out loud is step one 💚</div>
+  <div class="cv-title">${hl('Your saved folder is full. *Your calendar isn’t.*')}</div>
+  <div class="cv-sub">type the sentence that’s been stopping you - out loud is step one 💚</div>
   <div class="bottom"><span class="tag">solo travel, minus the fear</span></div>
 </div></div>`);
 
