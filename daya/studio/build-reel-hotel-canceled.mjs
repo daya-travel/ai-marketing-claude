@@ -31,13 +31,13 @@ const SEGS = [
     <div class="mid">
       <div class="kicker">if it happens &middot; 02</div>
       <div class="hook">Your hotel just *canceled*. Tonight.</div>
-      <div class="sub">5 steps - none of them is panic</div>
+      <div class="sub">here’s what actually helps</div>
     </div>` },
   { photo: 'q1.png', dur: 2.4, body: chip('STEP 1', 'Screenshot *everything*.') },
-  { photo: 'q2.png', dur: 2.6, body: chip('STEP 2', '“Non-refundable” was never *your* rule.') },
+  { photo: 'q2.png', dur: 2.6, body: chip('STEP 2', 'You *still* get your money back.') },
   { photo: 'q3.png', dur: 2.6, body: chip('STEP 3', 'Call the *platform*, not just the hotel.') },
   { photo: 'q4.png', dur: 2.6, body: chip('STEP 4', 'Save 3 backups *before* you fly.') },
-  { photo: 'q5.png', dur: 2.4, body: chip('STEP 5', 'Walk into a *different* lobby.') },
+  { photo: 'q5.png', dur: 2.4, body: chip('STEP 5', 'Just walk into *another* hotel.') },
   { photo: 'end.png', dur: 3.4, body: `
     <div class="mid">
       <div class="hook" style="font-size:74px">A canceled room ends a *booking* - not a trip.</div>

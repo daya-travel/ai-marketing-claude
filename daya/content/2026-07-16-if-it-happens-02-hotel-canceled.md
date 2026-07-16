@@ -28,10 +28,10 @@ eine vergleichbare Alternative, oft inkl. erster Nacht.
 > what happened to someone else.
 >
 > 1. Screenshot everything - confirmation, cancellation message, chat
-> 2. "Non-refundable" was never your rule - the hotel canceling means a full refund, always
+> 2. You still get your money back - "non-refundable" only stops YOU from canceling
 > 3. Call the platform, not just the hotel - they owe you a comparable room
 > 4. Save 2-3 backup hotels before you even fly
-> 5. If nobody answers: walk into a different lobby - in person beats midnight hotlines
+> 5. If the phone gets you nowhere, just walk into another hotel and ask - a person at a desk sorts it out faster
 >
 > A canceled room ends a booking, not a trip. Save this before you need it. 💚
 >
@@ -51,10 +51,10 @@ eine vergleichbare Alternative, oft inkl. erster Nacht.
 
 > Your hotel just canceled. Tonight. Here's what actually works.
 > Step one: screenshot everything. The confirmation, the cancellation message, the chat.
-> Step two: "non-refundable" was never your rule. If the hotel cancels, you get a full refund. Always.
+> Step two: you still get your money back. "Non-refundable" only stops you from canceling - if the hotel cancels, they owe you a full refund.
 > Step three: call the platform, not just the hotel. They owe you a comparable room.
 > Step four: save two or three backup hotels - before you even fly.
-> Step five: if nobody answers, walk into a different lobby. In person beats a hotline at midnight.
+> Step five: if the phone gets you nowhere, just walk into another hotel. A person at a desk helps faster than any helpline.
 > A canceled room ends a booking. Not a trip.
 
 ## Brand-Guardian-Check

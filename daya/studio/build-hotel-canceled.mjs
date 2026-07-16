@@ -24,11 +24,11 @@ const SWIPE = `<span class="swipe">swipe <svg width="36" height="36" viewBox="0 
 const hl = (s) => s.replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
 
 const STEPS = [
-  { q: 'step 1 &middot; the first 2 minutes', a: 'Screenshot *everything*.', body: 'Booking confirmation, the cancellation message, the chat. That’s your proof - get it before anything disappears.', photo: 'q1' },
-  { q: 'step 2 &middot; know this', a: '“Non-refundable” was never *your* rule.', body: 'That label binds you if you cancel. If the hotel cancels, you get a full refund. Always.', photo: 'q2' },
-  { q: 'step 3 &middot; who to call', a: 'Call the *platform*, not just the hotel.', body: 'Booking.com, Airbnb and co. owe you a comparable room - and often cover your first night at the new one.', photo: 'q3' },
-  { q: 'step 4 &middot; the move nobody makes', a: 'Save 3 backups *before* you fly.', body: 'Screenshot 2-3 nearby hotels before your trip even starts. Now “no room” takes 90 seconds to fix, not a panic spiral.', photo: 'q4' },
-  { q: 'step 5 &middot; if nobody answers', a: 'Walk into a *different* lobby.', body: 'In person beats the phone at midnight. Reception staff can often seat you faster than any hotline.', photo: 'q5' },
+  { q: 'step 1 &middot; the first 2 minutes', a: 'Screenshot *everything*.', body: 'The confirmation, the message, the chat. Grab it all now - screens like this have a way of vanishing.', photo: 'q1' },
+  { q: 'step 2 &middot; breathe, you’re covered', a: 'You *still* get your money back.', body: '“Non-refundable” only stops *you* from canceling. If the hotel cancels, they owe you a full refund - every time.', photo: 'q2' },
+  { q: 'step 3 &middot; who to call', a: 'Call the *platform*, not just the hotel.', body: 'The hotel shrugs. The app can’t. They have to find you another room - and often pay for your first night.', photo: 'q3' },
+  { q: 'step 4 &middot; the move nobody makes', a: 'Save 3 backups *before* you fly.', body: 'Before you even leave home, save two or three nearby. Then a canceled room is a two-minute fix, not a meltdown.', photo: 'q4' },
+  { q: 'step 5 &middot; if the phone fails', a: 'Just walk into *another* hotel.', body: 'Late at night, a person standing at a front desk sorts it out faster than any helpline. Go in and ask for a room.', photo: 'q5' },
 ];
 
 const head = `<!doctype html><html><head><meta charset="utf-8">
