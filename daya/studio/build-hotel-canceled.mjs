@@ -23,12 +23,13 @@ const W = 1080, H = 1920, RESERVE = 87;
 const SWIPE = `<span class="swipe">swipe <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#efc05a" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>`;
 const hl = (s) => s.replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
 
+// Sorted into 3 phases: BEFORE (prevention) -> WHEN IT HAPPENS -> AFTER.
 const STEPS = [
-  { q: 'step 1 &middot; the first 2 minutes', a: 'Screenshot *everything*.', body: 'The confirmation, the message, the chat. Grab it all now - screens like this have a way of vanishing.', photo: 'q1' },
-  { q: 'step 2 &middot; breathe, you’re covered', a: 'You *still* get your money back.', body: '“Non-refundable” only stops *you* from canceling. If the hotel cancels, they owe you a full refund - every time.', photo: 'q2' },
-  { q: 'step 3 &middot; who to call', a: 'Call the *platform*, not just the hotel.', body: 'The hotel shrugs. The app can’t. They have to find you another room - and often pay for your first night.', photo: 'q3' },
-  { q: 'step 4 &middot; the move nobody makes', a: 'Save 3 backups *before* you fly.', body: 'Before you even leave home, save two or three nearby. Then a canceled room is a two-minute fix, not a meltdown.', photo: 'q4' },
-  { q: 'step 5 &middot; if the phone fails', a: 'Just walk into *another* hotel.', body: 'Late at night, a person standing at a front desk sorts it out faster than any helpline. Go in and ask for a room.', photo: 'q5' },
+  { q: 'before you go', a: 'Save 3 backups *before* you fly.', body: 'Screenshot two or three nearby hotels while you’re still at home. Then a canceled room is a two-minute fix, not a meltdown.', photo: 'q4' },
+  { q: 'when it happens', a: 'Screenshot *everything*.', body: 'The confirmation, the message, the chat. Grab it all now - screens like this have a way of vanishing.', photo: 'q1' },
+  { q: 'when it happens', a: 'You *still* get your money back.', body: '“Non-refundable” only stops *you* from canceling. If the hotel cancels, they owe you a full refund - every time.', photo: 'q2' },
+  { q: 'when it happens', a: 'Call the *platform*, not just the hotel.', body: 'The hotel shrugs. The app can’t. They have to find you another room - and often pay for your first night.', photo: 'q3' },
+  { q: 'after - if the phone fails', a: 'Just walk into *another* hotel.', body: 'Late at night, a person at a front desk sorts it out faster than any helpline. Go in and ask for a room.', photo: 'q5' },
 ];
 
 const head = `<!doctype html><html><head><meta charset="utf-8">
@@ -43,8 +44,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .pad{position:absolute;inset:0;padding:270px 210px 150px 88px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.2em;font-size:26px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 .hl{font-style:italic;color:#efc05a}
-.num{font-family:'Cormorant Garamond';font-weight:600;font-size:120px;line-height:1;color:#efc05a;text-shadow:0 3px 26px rgba(0,0,0,.65)}
-.num small{font-size:44px;color:#f4ecdb;opacity:.65;font-family:'Archivo';font-weight:800;letter-spacing:.14em;vertical-align:18px;margin-left:14px}
+.phase{display:inline-block;font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:30px;color:#0e3b2c;background:#efc05a;border-radius:14px;padding:16px 32px;box-shadow:0 12px 34px -14px rgba(0,0,0,.6)}
 .ans{font-family:'Archivo';font-weight:800;font-size:80px;letter-spacing:-.02em;line-height:1.06;margin-top:48px;max-width:800px;text-shadow:0 3px 28px rgba(0,0,0,.72)}
 .body{font-family:'Inter';font-weight:500;font-size:36px;line-height:1.5;color:#f4ecdb;margin-top:36px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.75)}
 .cv-title{font-family:'Archivo';font-weight:800;font-size:88px;letter-spacing:-.02em;line-height:1.06;margin-top:30px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.72)}
@@ -69,8 +69,7 @@ slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/cover.pn
 STEPS.forEach((s, i) => {
   slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/${s.photo}.png"><div class="scrim"></div><div class="grain"></div>
   <div class="pad">
-    <div class="num">0${i + 1}<small>/ 05</small></div>
-    <div class="kicker" style="margin-top:22px">${s.q}</div>
+    <div class="phase">${s.q}</div>
     <div class="ans">${hl(s.a)}</div>
     <div class="body">${hl(s.body)}</div>
     <div class="bottom"><span></span>${i < STEPS.length - 1 ? SWIPE : ''}</div>

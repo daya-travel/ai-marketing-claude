@@ -33,11 +33,11 @@ const SEGS = [
       <div class="hook">Your hotel just *canceled*. Tonight.</div>
       <div class="sub">here’s what actually helps</div>
     </div>` },
-  { photo: 'q1.png', dur: 2.4, body: chip('STEP 1', 'Screenshot *everything*.') },
-  { photo: 'q2.png', dur: 2.6, body: chip('STEP 2', 'You *still* get your money back.') },
-  { photo: 'q3.png', dur: 2.6, body: chip('STEP 3', 'Call the *platform*, not just the hotel.') },
-  { photo: 'q4.png', dur: 2.6, body: chip('STEP 4', 'Save 3 backups *before* you fly.') },
-  { photo: 'q5.png', dur: 2.4, body: chip('STEP 5', 'Just walk into *another* hotel.') },
+  { photo: 'q4.png', dur: 2.6, body: chip('BEFORE YOU GO', 'Save 3 backups *before* you fly.') },
+  { photo: 'q1.png', dur: 2.4, body: chip('WHEN IT HAPPENS', 'Screenshot *everything*.') },
+  { photo: 'q2.png', dur: 2.6, body: chip('WHEN IT HAPPENS', 'You *still* get your money back.') },
+  { photo: 'q3.png', dur: 2.6, body: chip('WHEN IT HAPPENS', 'Call the *platform*, not just the hotel.') },
+  { photo: 'q5.png', dur: 2.4, body: chip('AFTER', 'Just walk into *another* hotel.') },
   { photo: 'end.png', dur: 3.4, body: `
     <div class="mid">
       <div class="hook" style="font-size:74px">A canceled room ends a *booking* - not a trip.</div>

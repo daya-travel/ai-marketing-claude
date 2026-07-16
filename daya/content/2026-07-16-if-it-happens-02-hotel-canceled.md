@@ -9,18 +9,22 @@ Ein Hotel darf stornieren, aber "non-refundable" bindet nur den Gast - storniert
 das Hotel, gibt es immer eine volle Rückerstattung. Buchungsplattformen schulden
 eine vergleichbare Alternative, oft inkl. erster Nacht.
 
-## Die 5 Schritte
+## Struktur: 3 Phasen (BEFORE / WHEN IT HAPPENS / AFTER)
 
-1. **Screenshot everything.** Buchungsbestätigung, Storno-Nachricht, Chat - das
-   ist der Beweis, sofort sichern.
-2. **"Non-refundable" was never your rule.** Das Label bindet nur dich als
-   Stornierende - storniert das Hotel, gibt's immer volle Rückerstattung.
-3. **Call the platform, not just the hotel.** Booking.com/Airbnb & Co. schulden
-   eine vergleichbare Alternative, oft inkl. erster Nacht in der neuen Unterkunft.
-4. **Save 3 backups before you fly.** 2-3 Alternativ-Hotels vor der Reise
-   screenshotten - "kein Zimmer" wird zur 90-Sekunden-Lösung statt Panik.
-5. **Walk into a different lobby.** Persönlich vor Ort schneller als Hotline
-   um Mitternacht.
+**BEFORE YOU GO**
+- **Save 3 backups before you fly.** 2-3 Alternativ-Hotels vor der Reise
+  screenshotten - "kein Zimmer" wird zur 2-Minuten-Lösung statt Panik.
+
+**WHEN IT HAPPENS**
+- **Screenshot everything.** Bestätigung, Storno-Nachricht, Chat - sofort sichern.
+- **You still get your money back.** "Non-refundable" bindet nur dich; storniert
+  das Hotel, gibt's immer volle Rückerstattung.
+- **Call the platform, not just the hotel.** Booking.com/Airbnb & Co. schulden
+  eine vergleichbare Alternative, oft inkl. erster Nacht.
+
+**AFTER (wenn das Telefon nichts bringt)**
+- **Just walk into another hotel.** Persönlich vor Ort schneller als Hotline
+  um Mitternacht.
 
 ## Caption (IG + TikTok)
 
