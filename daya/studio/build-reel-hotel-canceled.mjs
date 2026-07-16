@@ -1,7 +1,9 @@
 // IG Reel "IF IT HAPPENS 02" - hotel cancels without warning. Reuses the
 // exact 7 photos from the TikTok carousel (build-hotel-canceled.mjs) with
-// a slow Ken Burns zoom per scene - zero new credits. No audio on purpose
-// (trending sound or ElevenLabs VO gets added in the app, same as reel-03).
+// a slow Ken Burns zoom per scene - zero new credits. Overlays carry the
+// FULL copy (phase badge + title + body), same as the carousel, just no
+// swipe cue. No audio on purpose (trending sound or ElevenLabs VO added in
+// the app). Sorted into 3 phases: BEFORE -> WHEN IT HAPPENS -> AFTER.
 // Usage: node build-reel-hotel-canceled.mjs
 import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
@@ -20,28 +22,30 @@ const W = 1080, H = 1920, RESERVE = 87;
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const hl = (s) => esc(s).replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
-const chip = (label, text) => `
-  <div class="mid">
-    <div class="chip">${esc(label)}</div>
-    <div class="line">${hl(text)}</div>
+// step scene = phase badge + big title + body, matching the carousel
+const step = (phase, title, body) => `
+  <div class="pad">
+    <div class="phase">${esc(phase)}</div>
+    <div class="ans">${hl(title)}</div>
+    <div class="body">${hl(body)}</div>
   </div>`;
 
 const SEGS = [
-  { photo: 'cover.png', dur: 2.8, body: `
-    <div class="mid">
+  { photo: 'cover.png', dur: 3.0, body: `
+    <div class="pad">
       <div class="kicker">if it happens &middot; 02</div>
-      <div class="hook">Your hotel just *canceled*. Tonight.</div>
-      <div class="sub">here’s what actually helps</div>
+      <div class="cv-title">${hl('Your hotel just *canceled*. Tonight.')}</div>
+      <div class="cv-sub">here’s what actually helps</div>
     </div>` },
-  { photo: 'q4.png', dur: 2.6, body: chip('BEFORE YOU GO', 'Save 3 backups *before* you fly.') },
-  { photo: 'q1.png', dur: 2.4, body: chip('WHEN IT HAPPENS', 'Screenshot *everything*.') },
-  { photo: 'q2.png', dur: 2.6, body: chip('WHEN IT HAPPENS', 'You *still* get your money back.') },
-  { photo: 'q3.png', dur: 2.6, body: chip('WHEN IT HAPPENS', 'Call the *platform*, not just the hotel.') },
-  { photo: 'q5.png', dur: 2.4, body: chip('AFTER', 'Just walk into *another* hotel.') },
-  { photo: 'end.png', dur: 3.4, body: `
-    <div class="mid">
-      <div class="hook" style="font-size:74px">A canceled room ends a *booking* - not a trip.</div>
-      <div class="sub">save this before you need it</div>
+  { photo: 'q4.png', dur: 4.0, body: step('before you go', 'Save 3 backups *before* you fly.', 'Screenshot two or three nearby hotels while you’re still at home. Then a canceled room is a two-minute fix, not a meltdown.') },
+  { photo: 'q1.png', dur: 3.6, body: step('when it happens', 'Screenshot *everything*.', 'The confirmation, the message, the chat. Grab it all now - screens like this have a way of vanishing.') },
+  { photo: 'q2.png', dur: 4.2, body: step('when it happens', 'You *still* get your money back.', '“Non-refundable” only stops *you* from canceling. If the hotel cancels, they owe you a full refund - every time.') },
+  { photo: 'q3.png', dur: 4.0, body: step('when it happens', 'Call the *platform*, not just the hotel.', 'The hotel shrugs. The app can’t. They have to find you another room - and often pay for your first night.') },
+  { photo: 'q5.png', dur: 4.0, body: step('after - if the phone fails', 'Just walk into *another* hotel.', 'Late at night, a person at a front desk sorts it out faster than any helpline. Go in and ask for a room.') },
+  { photo: 'end.png', dur: 3.6, body: `
+    <div class="pad end">
+      <div class="cv-title" style="font-size:80px">${hl('A canceled room ends a *booking* - not a trip.')}</div>
+      <div class="cv-sub">save this before you need it</div>
       <div class="brand">solo travel, minus the fear</div>
     </div>` },
 ];
@@ -51,20 +55,22 @@ const head = `<!doctype html><html><head><meta charset="utf-8">
 ${FONT_CSS}
 *{margin:0;box-sizing:border-box}
 html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
-.wrap{position:relative;width:${W}px;height:${H}px;display:flex;align-items:center;justify-content:center;padding:0 110px 0 96px}
-.scrim{position:absolute;inset:0;background:radial-gradient(90% 55% at 50% 46%, rgba(6,29,21,.66) 0%, rgba(6,29,21,.38) 55%, rgba(6,29,21,0) 100%)}
-.mid{position:relative;text-align:center;max-width:860px;transform:translateY(-90px)}
-.kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.3em;font-size:26px;color:#efc05a;margin-bottom:34px}
-.hook{font-family:'Cormorant Garamond';font-weight:600;font-size:86px;line-height:1.1;color:#f4ecdb}
+.wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.62) 0%, rgba(6,29,21,.42) 38%, rgba(6,29,21,.28) 66%, rgba(6,29,21,.55) 100%)}
+.pad{position:absolute;inset:0;padding:230px 120px 240px 120px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left}
+.pad.end{justify-content:center;align-items:center;text-align:center}
 .hl{font-style:italic;color:#efc05a}
-.sub{font-family:'Inter';font-weight:500;font-size:32px;color:#e7efe7;opacity:.92;margin-top:36px}
-.chip{display:inline-block;font-family:'Archivo';font-weight:800;letter-spacing:.22em;font-size:34px;color:#0e3b2c;background:#efc05a;border-radius:14px;padding:16px 34px;margin-bottom:40px}
-.line{font-family:'Archivo';font-weight:800;font-size:66px;letter-spacing:-.01em;line-height:1.14;color:#f4ecdb}
-.brand{font-family:'Cormorant Garamond';font-style:italic;font-size:34px;color:#efc05a;margin-top:44px;opacity:.9}
+.kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:28px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
+.phase{display:inline-block;font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:32px;color:#0e3b2c;background:#efc05a;border-radius:14px;padding:18px 34px;box-shadow:0 12px 34px -14px rgba(0,0,0,.6)}
+.ans{font-family:'Archivo';font-weight:800;font-size:84px;letter-spacing:-.02em;line-height:1.06;margin-top:44px;max-width:840px;text-shadow:0 3px 28px rgba(0,0,0,.75)}
+.body{font-family:'Inter';font-weight:500;font-size:40px;line-height:1.5;color:#f4ecdb;margin-top:38px;max-width:820px;text-shadow:0 2px 22px rgba(0,0,0,.8)}
+.cv-title{font-family:'Archivo';font-weight:800;font-size:92px;letter-spacing:-.02em;line-height:1.08;margin-top:30px;max-width:840px;text-shadow:0 3px 28px rgba(0,0,0,.75)}
+.cv-sub{font-family:'Inter';font-weight:500;font-size:36px;color:#f4ecdb;margin-top:34px;text-shadow:0 2px 22px rgba(0,0,0,.8)}
+.brand{font-family:'Cormorant Garamond';font-style:italic;font-size:38px;color:#efc05a;margin-top:44px;opacity:.92;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 </style></head><body>`;
 const foot = `</body></html>`;
 
-// 1) overlays (transparent PNGs)
+// 1) overlays (transparent PNGs) - dark scrim baked in so text stays readable
 SEGS.forEach((s, i) => {
   const htmlPath = join(OV, `ov-${i}.html`);
   const pngPath = join(OV, `ov-${i}.png`);
@@ -81,7 +87,7 @@ SEGS.forEach((s, i) => {
   const ov = join(OV, `ov-${i}.png`);
   const out = join(OUT, `seg-${i}.mp4`);
   const frames = Math.round(30 * s.dur);
-  execSync(`ffmpeg -y -loglevel error -i "${photo}" -i "${ov}" -filter_complex "[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,zoompan=z='min(1+0.0014*on,1.12)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=30[v];[v][1:v]overlay=0:0,format=yuv420p[out]" -map "[out]" -frames:v ${frames} -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
+  execSync(`ffmpeg -y -loglevel error -i "${photo}" -i "${ov}" -filter_complex "[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,zoompan=z='min(1+0.0011*on,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${frames}:s=${W}x${H}:fps=30[v];[v][1:v]overlay=0:0,format=yuv420p[out]" -map "[out]" -frames:v ${frames} -an -c:v libx264 -crf 18 -preset medium "${out}"`, { stdio: 'inherit' });
   console.log('segment', i, 'ok');
 });
 
