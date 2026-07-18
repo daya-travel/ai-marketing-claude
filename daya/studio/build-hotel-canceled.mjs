@@ -38,8 +38,8 @@ ${FONT_CSS}
 *{margin:0;box-sizing:border-box}
 html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
-.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.5) saturate(1.15) contrast(1.03)}
-.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.45) 0%, rgba(6,29,21,.22) 42%, rgba(6,29,21,.05) 72%, rgba(6,29,21,.2) 100%)}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.06) saturate(1.1) contrast(1.03)}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.6) 0%, rgba(6,29,21,.32) 40%, rgba(6,29,21,.16) 70%, rgba(6,29,21,.42) 100%)}
 .grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 .pad{position:absolute;inset:0;padding:270px 210px 150px 88px;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.2em;font-size:26px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
@@ -61,7 +61,7 @@ const slides = [];
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/cover.png"><div class="scrim"></div><div class="grain"></div>
 <div class="pad">
   <div class="kicker">if it happens &middot; 02</div>
-  <div class="cv-title">Your hotel just *canceled*. Tonight.</div>
+  <div class="cv-title">${hl('Your hotel just *canceled*. Tonight.')}</div>
   <div class="cv-sub">5 steps - none of them is panic</div>
   <div class="bottom"><span></span>${SWIPE}</div>
 </div></div>`);
@@ -79,7 +79,7 @@ STEPS.forEach((s, i) => {
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/end.png"><div class="scrim"></div><div class="grain"></div>
 <div class="pad">
   <div class="kicker">her.solotrip</div>
-  <div class="cv-title">A canceled room ends a *booking* - not a trip.</div>
+  <div class="cv-title">${hl('A canceled room ends a *booking* - not a trip.')}</div>
   <div class="cv-sub">save this before you need it</div>
   <div class="bottom"><span class="tag">solo travel, minus the fear</span></div>
 </div></div>`);
