@@ -41,6 +41,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.58) 0%, rgba(6,29,21,.36) 34%, rgba(6,29,21,.5) 62%, rgba(6,29,21,.6) 100%)}
 .grain{position:absolute;inset:0;opacity:.14;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 .pad{position:absolute;inset:0;padding:130px 110px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.pad-top{position:absolute;inset:0;padding:200px 110px 150px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center}
 .foot{position:absolute;left:0;right:0;bottom:150px;display:flex;align-items:center;justify-content:center}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.2em;font-size:26px;color:#efc05a;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 .hl{font-style:italic;color:#efc05a}
@@ -50,7 +51,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .warn{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:48px;line-height:1.18;color:#f4ecdb;opacity:.95;margin-top:26px;max-width:820px;text-shadow:0 3px 24px rgba(0,0,0,.8)}
 .truth{font-family:'Archivo';font-weight:800;font-size:62px;letter-spacing:-.015em;line-height:1.1;margin-top:32px;max-width:840px;text-shadow:0 3px 28px rgba(0,0,0,.78)}
 .body{font-family:'Inter';font-weight:500;font-size:32px;line-height:1.52;color:#f4ecdb;margin-top:30px;max-width:740px;text-shadow:0 2px 22px rgba(0,0,0,.82)}
-.cv-title{font-family:'Archivo';font-weight:800;font-size:86px;letter-spacing:-.02em;line-height:1.08;margin-top:30px;max-width:860px;text-shadow:0 3px 28px rgba(0,0,0,.78)}
+.cv-title{font-family:'Archivo';font-weight:800;font-size:98px;letter-spacing:-.02em;line-height:1.05;margin-top:30px;max-width:880px;text-shadow:0 3px 28px rgba(0,0,0,.78)}
 .cv-sub{font-family:'Inter';font-weight:600;font-size:34px;color:#f4ecdb;margin-top:34px;max-width:780px;text-shadow:0 2px 22px rgba(0,0,0,.82)}
 .swipe{font-family:'Caveat';font-weight:600;font-size:46px;color:#efc05a}
 .swipe svg{vertical-align:middle}
@@ -69,7 +70,7 @@ slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/cover.pn
 // 2-8 cities
 CITIES.forEach((c, i) => {
   slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/${c.photo}.png"><div class="scrim"></div><div class="grain"></div>
-  <div class="pad">
+  <div class="pad-top">
     <div class="num">0${i + 1}<small>/ 07</small></div>
     <div class="city">${c.city}</div>
     <div class="warn">${c.warn}</div>
@@ -79,7 +80,7 @@ CITIES.forEach((c, i) => {
 });
 // 9 endcard
 slides.push(`<div class="wrap"><img class="photo" src="file://${PHOTOS}/end.png"><div class="scrim"></div><div class="grain"></div>
-<div class="pad">
+<div class="pad-top">
   <div class="kicker">her.solotrip</div>
   <div class="cv-title">${hl('The real danger? *Never going* because of a headline.')}</div>
   <div class="cv-sub">save this before you cross a city off your list</div>

@@ -51,7 +51,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .warn{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:50px;line-height:1.16;color:#f4ecdb;opacity:.95;margin-top:24px;max-width:800px;text-shadow:0 3px 24px rgba(0,0,0,.78)}
 .truth{font-family:'Archivo';font-weight:800;font-size:66px;letter-spacing:-.015em;line-height:1.08;margin-top:34px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.75)}
 .body{font-family:'Inter';font-weight:500;font-size:32px;line-height:1.5;color:#f4ecdb;margin-top:30px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.8)}
-.cv-title{font-family:'Archivo';font-weight:800;font-size:92px;letter-spacing:-.02em;line-height:1.06;margin-top:30px;max-width:840px;text-shadow:0 3px 28px rgba(0,0,0,.75)}
+.cv-title{font-family:'Archivo';font-weight:800;font-size:106px;letter-spacing:-.02em;line-height:1.04;margin-top:30px;max-width:860px;text-shadow:0 3px 28px rgba(0,0,0,.75)}
 .cv-sub{font-family:'Inter';font-weight:600;font-size:34px;color:#f4ecdb;margin-top:34px;max-width:780px;text-shadow:0 2px 22px rgba(0,0,0,.8)}
 .bottom{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;width:100%}
 .swipe{font-family:'Caveat';font-weight:600;font-size:46px;color:#efc05a}
