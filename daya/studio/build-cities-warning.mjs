@@ -47,7 +47,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .hl{font-style:italic;color:#efc05a}
 .num{font-family:'Cormorant Garamond';font-weight:600;font-size:100px;line-height:1;color:#efc05a;text-shadow:0 3px 26px rgba(0,0,0,.65)}
 .num small{font-size:38px;color:#f4ecdb;opacity:.65;font-family:'Archivo';font-weight:800;letter-spacing:.14em;vertical-align:14px;margin-left:12px}
-.city{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:32px;color:#f4ecdb;margin-top:20px;text-shadow:0 2px 20px rgba(0,0,0,.7)}
+.city{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:42px;color:#efc05a;margin-top:20px;text-shadow:0 2px 20px rgba(0,0,0,.7)}
 .warn{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:50px;line-height:1.16;color:#f4ecdb;opacity:.95;margin-top:24px;max-width:800px;text-shadow:0 3px 24px rgba(0,0,0,.78)}
 .truth{font-family:'Archivo';font-weight:800;font-size:66px;letter-spacing:-.015em;line-height:1.08;margin-top:34px;max-width:820px;text-shadow:0 3px 28px rgba(0,0,0,.75)}
 .body{font-family:'Inter';font-weight:500;font-size:32px;line-height:1.5;color:#f4ecdb;margin-top:30px;max-width:760px;text-shadow:0 2px 22px rgba(0,0,0,.8)}
