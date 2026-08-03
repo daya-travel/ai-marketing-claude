@@ -34,7 +34,10 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .r1 .scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.35) 0%, rgba(6,29,21,.15) 40%, rgba(6,29,21,.55) 100%)}
 .r1 .mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .r1 .logo{height:150px;filter:drop-shadow(0 6px 30px rgba(0,0,0,.5))}
-.r1 .claim{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-size:120px;color:#f4ecdb;margin-top:44px;text-shadow:0 4px 34px rgba(0,0,0,.6)}
+/* typographic wordmark per DESIGN-SYSTEM (swap for the real logo PNG when available) */
+.r1 .mark{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:150px;color:#f4ecdb;text-shadow:0 4px 34px rgba(0,0,0,.6)}
+.r1 .claim{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-size:110px;color:#f4ecdb;margin-top:30px;text-shadow:0 4px 34px rgba(0,0,0,.6)}
+.r1 .claim .hl{color:#efc05a}
 .r1 .site{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.34em;font-size:34px;color:#efc05a;margin-top:46px;text-shadow:0 2px 20px rgba(0,0,0,.6)}
 /* row 2: app */
 .r2{background:linear-gradient(120deg, #0a2b20 0%, #0e3b2c 45%, #14503c 100%)}
@@ -61,23 +64,26 @@ const ROWS = {
   1: () => existsSync(join(P, 'hero.png')) && `<div class="wrap r1">
     <img class="photo" src="file://${join(P, 'hero.png')}"><div class="scrim"></div><div class="grain"></div>
     <div class="mid">
-      <img class="logo" src="file://${join(P, 'daya-horiz-cream.png')}">
-      <div class="claim">solo travel, minus the fear.</div>
+      ${existsSync(join(P, 'daya-horiz-cream.png'))
+        ? `<img class="logo" src="file://${join(P, 'daya-horiz-cream.png')}">`
+        : `<div class="mark">Daya</div>`}
+      <div class="claim">Sicherheits-App für <span class="hl">Alltag &amp; Reisen.</span></div>
       <div class="site">dayatravel.app</div>
     </div></div>`,
-  2: () => `<div class="wrap r2"><div class="glow"></div><div class="grain"></div>
-    <div class="head"><div class="kick">one app &middot; every step of the trip</div><h2>safety that <span class="hl">runs itself.</span></h2></div>
+  // needs the three real app screenshots - skipped until they land in photos/daya-grid/
+  2: () => ['phone-checkin.png', 'phone-sos.png', 'phone-walkhome.png'].every((f) => existsSync(join(P, f))) && `<div class="wrap r2"><div class="glow"></div><div class="grain"></div>
+    <div class="head"><div class="kick">eine App &middot; jeden Tag, jede Reise</div><h2>so passt DAYA <span class="hl">auf dich auf.</span></h2></div>
     <div class="tiles">
-      <div class="tile"><img class="ph" src="file://${join(P, 'phone-checkin.png')}"><div class="cap">smart check-in</div><div class="sub">if you don't check in, your people know.</div></div>
-      <div class="tile"><img class="ph" src="file://${join(P, 'phone-playbook.png')}"><div class="cap">the playbook, in your pocket</div><div class="sub">the right words, in the right language.</div></div>
-      <div class="tile"><img class="ph" src="file://${join(P, 'phone-walkhome.png')}"><div class="cap">walk-me-home</div><div class="sub">someone watches the route with you.</div></div>
+      <div class="tile"><img class="ph" src="file://${join(P, 'phone-checkin.png')}"><div class="cap">Check-in</div><div class="sub">meldest du dich nicht, wissen es deine Leute.</div></div>
+      <div class="tile"><img class="ph" src="file://${join(P, 'phone-sos.png')}"><div class="cap">Notfall</div><div class="sub">ein Druck, und Hilfe weiß, wo du bist.</div></div>
+      <div class="tile"><img class="ph" src="file://${join(P, 'phone-walkhome.png')}"><div class="cap">Walk-me-home</div><div class="sub">jemand geht den Weg mit dir. Jeden Weg.</div></div>
     </div></div>`,
   3: () => existsSync(join(P, 'founders.png')) && `<div class="wrap r3">
     <img class="photo" src="file://${join(P, 'founders.png')}"><div class="scrim"></div><div class="grain"></div>
     <div class="mid">
-      <div class="line">built by two women</div>
-      <div class="serif">who actually travel solo.</div>
-      <div class="sub">DAYA &middot; coming soon &middot; dayatravel.app</div>
+      <div class="line">von Frauen</div>
+      <div class="serif">für Frauen.</div>
+      <div class="sub">DAYA &middot; Sicherheit für Alltag &amp; Reisen &middot; dayatravel.app</div>
     </div></div>`,
 };
 
