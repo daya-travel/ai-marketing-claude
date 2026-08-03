@@ -67,23 +67,23 @@ const ROWS = {
       ${existsSync(join(P, 'daya-horiz-cream.png'))
         ? `<img class="logo" src="file://${join(P, 'daya-horiz-cream.png')}">`
         : `<div class="mark">Daya</div>`}
-      <div class="claim">Sicherheits-App für <span class="hl">Alltag &amp; Reisen.</span></div>
+      <div class="claim">safety app for <span class="hl">everyday life &amp; travel.</span></div>
       <div class="site">dayatravel.app</div>
     </div></div>`,
   // needs the three real app screenshots - skipped until they land in photos/daya-grid/
   2: () => ['phone-checkin.png', 'phone-sos.png', 'phone-walkhome.png'].every((f) => existsSync(join(P, f))) && `<div class="wrap r2"><div class="glow"></div><div class="grain"></div>
-    <div class="head"><div class="kick">eine App &middot; jeden Tag, jede Reise</div><h2>so passt DAYA <span class="hl">auf dich auf.</span></h2></div>
+    <div class="head"><div class="kick">one app &middot; every day, every trip</div><h2>this is how DAYA <span class="hl">looks out for you.</span></h2></div>
     <div class="tiles">
-      <div class="tile"><img class="ph" src="file://${join(P, 'phone-checkin.png')}"><div class="cap">Check-in</div><div class="sub">meldest du dich nicht, wissen es deine Leute.</div></div>
-      <div class="tile"><img class="ph" src="file://${join(P, 'phone-sos.png')}"><div class="cap">Notfall</div><div class="sub">ein Druck, und Hilfe weiß, wo du bist.</div></div>
-      <div class="tile"><img class="ph" src="file://${join(P, 'phone-walkhome.png')}"><div class="cap">Walk-me-home</div><div class="sub">jemand geht den Weg mit dir. Jeden Weg.</div></div>
+      <div class="tile"><img class="ph" src="file://${join(P, 'phone-checkin.png')}"><div class="cap">check-in</div><div class="sub">if you don't check in, your people know.</div></div>
+      <div class="tile"><img class="ph" src="file://${join(P, 'phone-sos.png')}"><div class="cap">emergency</div><div class="sub">one tap, and help knows where you are.</div></div>
+      <div class="tile"><img class="ph" src="file://${join(P, 'phone-walkhome.png')}"><div class="cap">walk-me-home</div><div class="sub">someone walks the route with you. Any route.</div></div>
     </div></div>`,
   3: () => existsSync(join(P, 'founders.png')) && `<div class="wrap r3">
     <img class="photo" src="file://${join(P, 'founders.png')}"><div class="scrim"></div><div class="grain"></div>
     <div class="mid">
-      <div class="line">von Frauen</div>
-      <div class="serif">für Frauen.</div>
-      <div class="sub">DAYA &middot; Sicherheit für Alltag &amp; Reisen &middot; dayatravel.app</div>
+      <div class="line">by women</div>
+      <div class="serif">for women.</div>
+      <div class="sub">DAYA &middot; safety for everyday life &amp; travel &middot; dayatravel.app</div>
     </div></div>`,
 };
 
