@@ -51,45 +51,84 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#0e3b2c}
 .r2 img.ph{height:880px;width:auto;border-radius:40px;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
 .r2 .cap{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.26em;font-size:30px;color:#efc05a;margin-top:48px}
 .r2 .sub{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:44px;color:#f4ecdb;margin-top:16px}
-/* built-in phone mockups (no real screenshots available yet) */
-.phone{width:432px;height:880px;border-radius:56px;background:#05170f;padding:14px;box-shadow:0 40px 90px -30px rgba(0,0,0,.75), 0 0 0 2px rgba(244,236,219,.10)}
-.scr{position:relative;width:100%;height:100%;border-radius:44px;overflow:hidden;background:linear-gradient(170deg,#0b3125 0%,#082419 100%);display:flex;flex-direction:column;align-items:center;padding:34px 30px}
-.scr .bar{width:118px;height:7px;border-radius:4px;background:rgba(244,236,219,.28)}
-.scr .brand{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;letter-spacing:.28em;font-size:23px;color:#f4ecdb;opacity:.82;margin-top:26px}
-.scr .lbl{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.2em;font-size:16px;color:#efc05a;margin-top:34px}
-.scr .big{font-family:'Archivo';font-weight:800;font-size:52px;color:#f4ecdb;margin-top:12px;line-height:1.1;text-align:center}
-.scr .note{font-family:'Inter';font-weight:500;font-size:19px;color:#f4ecdb;opacity:.62;margin-top:14px;text-align:center;line-height:1.45}
-.ring{position:relative;width:250px;height:250px;border-radius:50%;margin-top:40px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  background:radial-gradient(circle,rgba(239,192,90,.14) 0%,rgba(239,192,90,0) 70%);border:3px solid rgba(239,192,90,.55)}
-.ring .t{font-family:'Archivo';font-weight:800;font-size:60px;color:#efc05a}
-.ring .u{font-family:'Inter';font-weight:600;font-size:17px;color:#f4ecdb;opacity:.6;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
-.sos{width:250px;height:250px;border-radius:50%;margin-top:40px;display:flex;align-items:center;justify-content:center;
-  background:radial-gradient(circle at 38% 32%,#f7d283 0%,#efc05a 45%,#d8a63c 100%);box-shadow:0 0 0 18px rgba(239,192,90,.13), 0 0 0 36px rgba(239,192,90,.06)}
-.sos span{font-family:'Archivo';font-weight:800;font-size:58px;letter-spacing:.06em;color:#0a2b20}
-.map{position:relative;width:100%;height:300px;border-radius:26px;margin-top:36px;overflow:hidden;background:linear-gradient(150deg,#0e3f2f 0%,#0a2c21 100%);border:1px solid rgba(244,236,219,.12)}
-.map i{position:absolute;background:rgba(244,236,219,.09)}
-.route{position:absolute;left:14%;top:78%;width:72%;height:3px;background:linear-gradient(90deg,#efc05a,rgba(239,192,90,.25));border-radius:3px;transform:rotate(-31deg);transform-origin:left center}
-.dot{position:absolute;width:22px;height:22px;border-radius:50%;background:#efc05a;box-shadow:0 0 0 8px rgba(239,192,90,.22)}
-.pill{display:flex;align-items:center;gap:12px;margin-top:26px;padding:14px 24px;border-radius:999px;background:rgba(244,236,219,.09);border:1px solid rgba(244,236,219,.14)}
-.pill em{width:13px;height:13px;border-radius:50%;background:#efc05a;display:block}
-.pill span{font-family:'Inter';font-weight:600;font-size:20px;color:#f4ecdb;opacity:.92;font-style:normal}
-.who{display:flex;gap:-10px;margin-top:30px}
-.who b{width:60px;height:60px;border-radius:50%;margin-left:-14px;border:3px solid #0b3125;display:flex;align-items:center;justify-content:center;
-  font-family:'Archivo';font-weight:800;font-size:23px;color:#0a2b20;background:#efc05a}
-.who b:nth-child(2){background:#cfe3d6}
-.who b:nth-child(3){background:#f4ecdb}
-.r2 .glow{position:absolute;top:-320px;left:1170px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle, rgba(239,192,90,.16) 0%, rgba(239,192,90,0) 70%)}
-/* row 3: makers */
-.r3 .scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(6,29,21,.5) 0%, rgba(6,29,21,.2) 45%, rgba(6,29,21,.6) 100%)}
-.r3 .mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.r3 .line{font-family:'Archivo';font-weight:800;text-transform:uppercase;font-size:96px;letter-spacing:.01em;color:#f4ecdb;text-shadow:0 4px 34px rgba(0,0,0,.6)}
-.r3 .serif{font-family:'Cormorant Garamond';font-style:italic;font-weight:600;font-size:104px;color:#efc05a;margin-top:10px;text-shadow:0 4px 34px rgba(0,0,0,.6)}
-.r3 .sub{font-family:'Inter';font-weight:500;font-size:38px;color:#f4ecdb;opacity:.92;margin-top:44px;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+/* phone mockups rebuilt from the real Lovable app screens (SOS / fake call /
+   check-in), copy forced to English - the live app still shows mixed DE/EN */
+.phone{width:430px;height:900px;border-radius:52px;background:#04140d;padding:11px;
+  border:1px solid rgba(239,192,90,.30);box-shadow:0 42px 95px -32px rgba(0,0,0,.8)}
+.scr{position:relative;width:100%;height:100%;border-radius:42px;overflow:hidden;padding:18px 22px 0;
+  background:linear-gradient(165deg,#0e3928 0%,#082017 58%,#061a12 100%);display:flex;flex-direction:column}
+.notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:112px;height:21px;border-radius:14px;background:#04140d}
+.sb{display:flex;justify-content:space-between;align-items:center;font-family:'Cormorant Garamond';font-weight:500;font-size:15px;color:#f4ecdb;opacity:.72}
+.hdr{display:flex;justify-content:space-between;align-items:center;margin-top:15px}
+.hdr .l{display:flex;align-items:center;gap:9px;font-family:'Archivo';font-weight:700;letter-spacing:.22em;font-size:15px;color:#f4ecdb}
+.hdr .l em{width:11px;height:11px;border-radius:50%;background:#2ecc8f;display:block;box-shadow:0 0 10px rgba(46,204,143,.85)}
+.hdr .r{font-family:'Archivo';font-weight:700;letter-spacing:.22em;font-size:13px;color:#f4ecdb;opacity:.55}
+.rule{height:1px;background:rgba(244,236,219,.16);margin-top:13px}
+.tabs{display:flex;margin-top:17px;border:1px solid rgba(239,192,90,.45);border-radius:999px;padding:5px}
+.tabs b{flex:1;text-align:center;padding:11px 0;border-radius:999px;font-family:'Archivo';font-weight:700;letter-spacing:.11em;font-size:12px;color:#f4ecdb;opacity:.6}
+.tabs b.on{background:#efc05a;color:#0a2b20;opacity:1;box-shadow:0 0 22px rgba(239,192,90,.45)}
+.ttl{font-family:'Cormorant Garamond';font-weight:500;font-size:34px;color:#f4ecdb;text-align:center;margin-top:24px}
+.desc{font-family:'Inter';font-weight:400;font-size:15px;line-height:1.5;color:#f4ecdb;opacity:.62;text-align:center;margin-top:11px}
+.mid2{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;width:100%}
+.sosbtn{width:194px;height:194px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  background:radial-gradient(circle at 40% 32%,#f8dc9a 0%,#efc05a 52%,#d9a942 100%);
+  box-shadow:0 0 0 13px rgba(239,192,90,.10),0 0 0 28px rgba(239,192,90,.05),0 0 62px rgba(239,192,90,.35)}
+.sosbtn span{font-family:'Cormorant Garamond';font-weight:500;font-size:31px;color:#0a2b20}
+.callbtn{width:132px;height:132px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(239,192,90,.13);border:1px solid rgba(239,192,90,.34);box-shadow:0 0 0 24px rgba(239,192,90,.045)}
+.ringc{position:relative;width:206px;height:206px;border-radius:50%;border:2px solid rgba(239,192,90,.42);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.ringc .knob{position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:15px;height:15px;border-radius:50%;background:#efc05a}
+.ringc .v{font-family:'Inter';font-weight:500;font-size:25px;letter-spacing:.1em;color:#f4ecdb}
+.pills{display:flex;gap:11px}
+.pills b{padding:12px 19px;border-radius:999px;border:1px solid rgba(239,192,90,.45);font-family:'Archivo';font-weight:700;letter-spacing:.1em;font-size:13px;color:#efc05a}
+.pills b.on{background:#efc05a;color:#0a2b20}
+.cta{width:100%;padding:17px 0;border-radius:999px;background:#efc05a;text-align:center;
+  font-family:'Archivo';font-weight:800;letter-spacing:.16em;font-size:15px;color:#0a2b20;box-shadow:0 0 34px rgba(239,192,90,.38)}
+.hint{font-family:'Archivo';font-weight:700;letter-spacing:.17em;font-size:13px;color:#efc05a;text-align:center}
+.chip{padding:11px 19px;border-radius:999px;background:rgba(244,236,219,.09);
+  font-family:'Archivo';font-weight:700;letter-spacing:.13em;font-size:12px;color:#f4ecdb;opacity:.85}
+.ways{display:flex;gap:20px;justify-content:center;font-family:'Archivo';font-weight:700;letter-spacing:.13em;font-size:11.5px;color:#f4ecdb;opacity:.58}
+.nav{display:flex;padding:13px 2px 10px;border-top:1px solid rgba(244,236,219,.12);margin-top:auto}
+.nav i{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;font-style:normal;
+  font-family:'Archivo';font-weight:700;letter-spacing:.09em;font-size:10px;color:#f4ecdb;opacity:.45}
+.nav i.on{color:#efc05a;opacity:1}
+.nav i.warn{color:#e8654f;opacity:.95}
+.hbar{width:116px;height:5px;border-radius:3px;background:rgba(244,236,219,.3);margin:0 auto 11px}
 </style></head><body>`;
 const foot = `</body></html>`;
 
-const phone = (inner) => `<div class="phone"><div class="scr">
-  <div class="bar"></div><div class="brand">Daya</div>${inner}
+const ico = {
+  shield: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0a2b20" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/></svg>`,
+  call: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#efc05a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>`,
+  timer: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#efc05a" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 9.5v4M9.5 2h5"/></svg>`,
+  home: `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/></svg>`,
+  map: `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M9 3L3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>`,
+  chat: `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 01-8 8H7l-4 3V12a8 8 0 018-8h2a8 8 0 018 8z"/></svg>`,
+  friends: `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><circle cx="17.5" cy="9" r="2.3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16.5 14.5c2.5 0 4.5 2 4.5 4.5"/></svg>`,
+  warn: `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3.5l8.5 15.5h-17L12 3.5z"/><path d="M12 10v4M12 16.8v.4"/></svg>`,
+};
+
+// bottom tab bar - `on` is the highlighted item, SOS always keeps its red tint
+const nav = (on) => `<div class="nav">
+  <i class="${on === 'home' ? 'on' : ''}">${ico.home}HOME</i>
+  <i class="${on === 'map' ? 'on' : ''}">${ico.map}MAP</i>
+  <i class="${on === 'chat' ? 'on' : ''}">${ico.chat}CHAT</i>
+  <i class="${on === 'friends' ? 'on' : ''}">${ico.friends}FRIENDS</i>
+  <i class="warn">${ico.warn}SOS</i>
+</div><div class="hbar"></div>`;
+
+const TABS = ['SOS', 'FAKE CALL', 'CHECK-IN'];
+const phone = (active, title, desc, body, navOn) => `<div class="phone"><div class="scr">
+  <div class="notch"></div>
+  <div class="sb"><span>23:47</span><span>88%</span></div>
+  <div class="hdr"><div class="l"><em></em>DAYA</div><div class="r">LIVE</div></div>
+  <div class="rule"></div>
+  <div class="tabs">${TABS.map((t) => `<b class="${t === active ? 'on' : ''}">${t}</b>`).join('')}</div>
+  <div class="ttl">${title}</div>
+  <div class="desc">${desc}</div>
+  <div class="mid2">${body}</div>
+  ${nav(navOn)}
 </div></div>`;
 
 const ROWS = {
@@ -102,40 +141,30 @@ const ROWS = {
       <div class="claim">safety app for <span class="hl">everyday life &amp; travel.</span></div>
       <div class="site">dayatravel.app</div>
     </div></div>`,
-  // Phone screens are drawn in HTML from the design system - swap in real app
-  // screenshots (phone-checkin/-sos/-walkhome.png) once they exist.
   2: () => `<div class="wrap r2"><div class="glow"></div><div class="grain"></div>
     <div class="head"><div class="kick">one app &middot; every day, every trip</div><h2>this is how DAYA <span class="hl">looks out for you.</span></h2></div>
     <div class="tiles">
-      <div class="tile">${phone(`
-        <div class="lbl">check-in</div>
-        <div class="big">you're due<br>at 21:00</div>
-        <div class="ring"><div class="t">2:14</div><div class="u">left</div></div>
-        <div class="note">miss it, and your people<br>get told automatically.</div>
-        <div class="who"><b>D</b><b>M</b><b>A</b></div>`)}
-        <div class="cap">check-in</div><div class="sub">if you don't check in, your people know.</div></div>
-      <div class="tile">${phone(`
-        <div class="lbl">emergency</div>
-        <div class="big">hold to<br>send help</div>
-        <div class="sos"><span>SOS</span></div>
-        <div class="note">shares your live location,<br>even with the screen locked.</div>
-        <div class="pill"><em></em><span>Lisbon &middot; Rua da Prata</span></div>`)}
-        <div class="cap">emergency</div><div class="sub">one tap, and help knows where you are.</div></div>
-      <div class="tile">${phone(`
-        <div class="lbl">walk-me-home</div>
-        <div class="big">Diana is<br>watching</div>
-        <div class="map">
-          <i style="left:0;top:34%;width:100%;height:2px"></i>
-          <i style="left:38%;top:0;width:2px;height:100%"></i>
-          <i style="left:72%;top:0;width:2px;height:100%"></i>
-          <i style="left:0;top:70%;width:100%;height:2px"></i>
-          <div class="route"></div>
-          <div class="dot" style="left:12%;top:76%"></div>
-          <div class="dot" style="left:74%;top:26%;background:#f4ecdb"></div>
-        </div>
-        <div class="note">she sees you move.<br>she sees you stop.</div>
-        <div class="pill"><em></em><span>12 min to home</span></div>`)}
-        <div class="cap">walk-me-home</div><div class="sub">someone walks the route with you. Any route.</div></div>
+      <div class="tile">
+        ${phone('SOS', 'Trigger SOS',
+          'Hold for 2.4 seconds - a false alarm is impossible. DAYA sends your live location, the last 60 seconds of ambient sound and your emergency note to up to 3 trusted contacts.',
+          `<div class="sosbtn">${ico.shield}<span>SOS</span></div>
+           <div class="hint">PRESS AND HOLD &middot; 2.4 SEC</div>
+           <div class="ways"><span>SMS</span><span>PUSH</span><span>MAIL</span></div>`, 'home')}
+        <div class="cap">sos</div><div class="sub">one hold - location, sound and your note go out.</div></div>
+      <div class="tile">
+        ${phone('FAKE CALL', 'Start Voice Cover',
+          'Tap - the call comes in 1 second. In the app you can schedule it from 10 seconds up to 5 minutes ahead.',
+          `<div class="callbtn">${ico.call}</div>
+           <div class="chip">PREVIEW: MOM CALLING</div>
+           <div class="cta">TEST IT NOW</div>`, 'chat')}
+        <div class="cap">fake call</div><div class="sub">a way out of any room, in one tap.</div></div>
+      <div class="tile">
+        ${phone('CHECK-IN', 'Check-in timer',
+          "Choose 15, 30 or 60 min (customizable in the app). If you don't check in on time, you first get a warning - then escalation kicks in.",
+          `<div class="pills"><b class="on">15 MIN</b><b>30 MIN</b><b>60 MIN</b></div>
+           <div class="ringc"><div class="knob"></div>${ico.timer}<div class="v">15 min</div></div>
+           <div class="cta">START TIMER</div>`, 'friends')}
+        <div class="cap">check-in</div><div class="sub">miss the timer and the escalation starts.</div></div>
     </div></div>`,
   3: () => existsSync(join(P, 'founders.png')) && `<div class="wrap r3">
     <img class="photo" src="file://${join(P, 'founders.png')}"><div class="scrim"></div><div class="grain"></div>
