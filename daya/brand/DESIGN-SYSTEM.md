@@ -53,6 +53,12 @@ Dusk-Glow = marigold→emerald, radial, tief & warm. Nie drei laute Akzente.
 - **Wordmark:** "DAYA" Cormorant 600, uppercase, letter-spacing 0.18em.
 - **Silver shimmer** auf dunklen Headlines. Social-Art nie unter 24px (auf 1080-Breite).
 
+## Name
+**DAYA = Di*a*n*a* + ales*y*a** — die beiden Gründerinnen. Das ist die Herkunft des
+Namens, nicht die Jägerin. (Das Bogen-Motiv im Logo spielt zusätzlich auf Diana die
+Jägerin an — zwei verschiedene Sachen, nicht vermischen.) Der Namens-Reveal ist ein
+starkes, menschliches Detail für Social und Bio — ruhig benutzen.
+
 ## Logo
 Recurve-Bogen + horizontaler Pfeil + **zwei konzentrische Schallwellen-Bögen** rechts der
 Pfeilspitze (Diana die Jägerin + "Stimme/Signal"). **Die Schallwellen sind essenziell — nie weglassen.**
