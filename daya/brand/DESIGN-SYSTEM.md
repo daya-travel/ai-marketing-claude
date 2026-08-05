@@ -56,8 +56,11 @@ Dusk-Glow = marigold→emerald, radial, tief & warm. Nie drei laute Akzente.
 ## Name
 **DAYA = Di*a*n*a* + ales*y*a** — die beiden Gründerinnen. Das ist die Herkunft des
 Namens, nicht die Jägerin. (Das Bogen-Motiv im Logo spielt zusätzlich auf Diana die
-Jägerin an — zwei verschiedene Sachen, nicht vermischen.) Der Namens-Reveal ist ein
-starkes, menschliches Detail für Social und Bio — ruhig benutzen.
+Jägerin an — zwei verschiedene Sachen, nicht vermischen.)
+
+**Nie ausbuchstabieren.** Den Namen nicht erklären, nicht auflösen, kein "der Name
+steht für…". Stattdessen mit **„— Diana & Alesya"** signieren; wer will, kommt selbst
+drauf. Entscheidung Alesya, 03.08.: erklärt ist der Effekt weg.
 
 ## Logo
 Recurve-Bogen + horizontaler Pfeil + **zwei konzentrische Schallwellen-Bögen** rechts der
