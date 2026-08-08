@@ -104,6 +104,21 @@ Landessprache ein, alarmiert Kontakte parallel, weltweit).
 Antwortet laut, in deiner Sprache, in 5 Sekunden.
 **Tarife:** Guardian 24,90 EUR/Monat + Roam. Free-Tier behält SOS, Check-ins, Voice Cover.
 
+### DAYA ist eine SIE, kein ES
+
+Die KI-Begleiterin heißt DAYA, und die eigene Seite schreibt bereits „**She** knows your
+itinerary… **She** answers in 5 seconds." Das gilt für alle Texte.
+
+- Pronomen: **she / her**, niemals `it`.
+- So oft wie möglich **den Namen sagen** statt „the app", „it", „the product".
+  „DAYA tells the people you chose" schlägt „the app notifies your contacts".
+- Ziel ist Nähe. Die Leserin soll das Gefühl haben, dass jemand da ist, nicht dass eine
+  Software läuft.
+- Grenze: nichts behaupten, was eine Software nicht kann. Sie „hört zu" und „meldet sich",
+  sie „sorgt sich" nicht und „liebt" nicht.
+
+Festgelegt von Alesya, 03.08.
+
 ### Abgrenzung zu Life360 (Positionierung)
 
 **Falsch wäre „DAYA trackt nicht".** DAYA hat Live-Standort, Auto-Eskalation und mit dem
