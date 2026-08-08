@@ -90,6 +90,22 @@ Emotional, direkt, leicht trotzig. Beispiele:
 - "Alleine reisen als Frau? Mit DAYA bist du nie wirklich allein."
 - "Dein Bodyguard, deine Freundin, deine Assistentin. 24/7 an deiner Seite."
 - Sign-off: "Made with rage and love in Nürnberg."
+### DAYA ist KEINE Tracking-App (Positionierung, nicht verhandelbar)
+
+Life360, Noonlight & Co. überwachen passiv: etwas läuft mit, jemand schaut zu, die Frau
+ist das Objekt. **DAYA funktioniert umgekehrt.** Jedes Feature wird von ihr ausgelöst:
+SOS drückt sie, Voice Cover tippt sie, den Check-in-Timer stellt sie selbst, die drei
+Kontakte wählt sie selbst.
+
+**Verbotene Formulierungen** (klingen nach Überwachung, machen uns zur Konkurrenz):
+`runs in the background`, `always on`, `we keep an eye on you`, `someone knows where you
+are` ohne Auslöser, `tracking`, `monitoring`, alles mit „im Hintergrund".
+
+**Richtig:** „You decide when it starts." · „Nobody is tracking you." · „Nothing happens
+until you set it." Die Frau ist immer das Subjekt des Satzes.
+
+Fehler gemacht und korrigiert am 03.08. (Alesya: „hört sich nach Life360 an").
+
 ### Anti-Slop-Regeln (gelten für ALLE Texte, DE und EN)
 
 Die Leserin muss merken, dass da Menschen sitzen. Jedes KI-Muster zerstört genau das.
