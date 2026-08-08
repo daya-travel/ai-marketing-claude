@@ -75,10 +75,15 @@ Nie generische Sterne/Sparkles. Echte PNG-Lockups in `assets/` (in Claude Design
 Claude Design — nicht Canva.** Carousels 1080×1350, Stories 1080×1920, 80px Seitenränder.
 
 ## Hashtags (nach Plattform — Update 2026-07, Wachstumsphase)
-- **Instagram:** **~10-15 gemischt** (groß + mittel + nischig) für Discovery, solange der Account
-  wächst. Immer `#solofemaletravel` + Stadt/Land + Themen-Tags. Keine toten Mega-Tags (`#travel`, `#women`).
-- **TikTok:** **3-5** keyword-nahe Tags + `#fyp` `#traveltok`. Nicht denselben Set über beide Plattformen.
-- (Die frühere „max 5"-Regel galt für etablierte Accounts; in der Wachstumsphase zählt Reichweite.)
+**MAXIMAL 5 HASHTAGS. IMMER. AUF JEDER PLATTFORM. KEINE AUSNAHME.**
+
+Festgelegt von Alesya, mehrfach, zuletzt 03.08. Die frühere „~10-15 in der Wachstumsphase"-
+Empfehlung an dieser Stelle war falsch und hat wiederholt zu falschen Entwürfen geführt.
+Sie ist gestrichen. Wer hier mehr als 5 hinschreibt, hat die Regel nicht gelesen.
+
+- **Instagram:** 5 Stück, gemischt aus groß + mittel + nischig. Keine toten Mega-Tags
+  (`#travel`, `#women`).
+- **TikTok:** 5 Stück, letzter davon `#fyp`. Nicht derselbe Satz wie auf Instagram.
 
 ## Voice (Social — Deutsch, "du")
 Emotional, direkt, leicht trotzig. Beispiele:
@@ -94,8 +99,10 @@ Die Leserin muss merken, dass da Menschen sitzen. Jedes KI-Muster zerstört gena
    / `We didn't do X, we did Y`). Meistgenanntes KI-Erkennungszeichen. Sag einfach, was ist.
    Entscheidung Alesya, 03.08.
 2. **Dreierregel** — drei aufgezählte Dinge im gleichen Rhythmus. Nimm zwei oder vier.
-3. **Gedankenstriche (— / –)** im Fließtext. Punkt oder Komma. (Ausnahme: Signatur
-   „— Diana & Alesya".)
+3. **Lange Gedankenstriche (— / –) sind komplett verboten**, auch in der Signatur.
+   Erlaubt ist nur der einfache Bindestrich/Minus `-`, mit Leerzeichen als Pause:
+   „Hold for 2.4 seconds - false alarm impossible." So schreibt die DAYA-Seite selbst,
+   das ist die Hausschreibweise. Signatur also `- Diana & Alesya`.
 4. **Etwas verneinen, das wir tatsächlich tun.** „We never ran a survey" widerspricht
    dem datengestützten Playbook. Erst prüfen, was auf der Seite steht.
 5. **Über die Botschaft reden statt sie zu sagen** („this is not a marketing line",
