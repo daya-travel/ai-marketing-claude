@@ -90,21 +90,37 @@ Emotional, direkt, leicht trotzig. Beispiele:
 - "Alleine reisen als Frau? Mit DAYA bist du nie wirklich allein."
 - "Dein Bodyguard, deine Freundin, deine Assistentin. 24/7 an deiner Seite."
 - Sign-off: "Made with rage and love in Nürnberg."
-### DAYA ist KEINE Tracking-App (Positionierung, nicht verhandelbar)
+### Featureliste (Stand dayatravel.app, 03.08.) — VOR jedem Text lesen
 
-Life360, Noonlight & Co. überwachen passiv: etwas läuft mit, jemand schaut zu, die Frau
-ist das Objekt. **DAYA funktioniert umgekehrt.** Jedes Feature wird von ihr ausgelöst:
-SOS drückt sie, Voice Cover tippt sie, den Check-in-Timer stellt sie selbst, die drei
-Kontakte wählt sie selbst.
+**Guardian-Kern:** KI-Guardian-Call · Live-Standort · Auto-Eskalation · KI-Begleiterin in
+74 Sprachen · Prioritäts-SOS.
+**Weiter:** Voice Cover (ein Tap, Handy klingelt, vorbereitetes Gespräch laut genug für
+alle, verschafft 90 Sekunden) · Automatischer Check-in (App pingt deine Person zu deinen
+Zeiten; bestätigst du nicht, eskaliert sie für dich) · Panik-Score (Puls-/Schlafdaten der
+Uhr lösen einen Check-in aus, bevor du selbst etwas merkst; still, außer du brauchst ihn) ·
+Lokaler Notruf-Assist (GPS erkennt das Land, blendet lokale Notrufnummer + SOS-Satz in der
+Landessprache ein, alarmiert Kontakte parallel, weltweit).
+**KI-Begleiterin heißt DAYA.** Kennt Reiseplan, Gesundheitsnotizen, lokale Notrufnummern.
+Antwortet laut, in deiner Sprache, in 5 Sekunden.
+**Tarife:** Guardian 24,90 EUR/Monat + Roam. Free-Tier behält SOS, Check-ins, Voice Cover.
 
-**Verbotene Formulierungen** (klingen nach Überwachung, machen uns zur Konkurrenz):
-`runs in the background`, `always on`, `we keep an eye on you`, `someone knows where you
-are` ohne Auslöser, `tracking`, `monitoring`, alles mit „im Hintergrund".
+### Abgrenzung zu Life360 (Positionierung)
 
-**Richtig:** „You decide when it starts." · „Nobody is tracking you." · „Nothing happens
-until you set it." Die Frau ist immer das Subjekt des Satzes.
+**Falsch wäre „DAYA trackt nicht".** DAYA hat Live-Standort, Auto-Eskalation und mit dem
+Panik-Score sogar passives Mitlaufen. Wer das Gegenteil schreibt, lügt.
 
-Fehler gemacht und korrigiert am 03.08. (Alesya: „hört sich nach Life360 an").
+Der Unterschied ist, **für wen** es läuft. Bei Life360 richtet häufig jemand anderes die
+Überwachung ein (Eltern, Partner) — die Frau ist das Objekt. Bei DAYA stellt sie es selbst
+ein, wählt ihre Kontakte selbst, und die App handelt **für sie**, wenn sie selbst nicht
+mehr kann. Eigene Zeile von der Seite: „Wenn du nicht bestätigst, eskaliert sie für dich."
+
+**Richtig:** „You choose who sees you and when." · „If you cannot act, it acts for you."
+**Falsch:** „Nobody is tracking you." · „Nothing runs in the background." (beides unwahr)
+
+Zwei Fehler hintereinander gemacht am 03.08.: erst Überwachungssprache benutzt
+(„runs quietly in the background" — klang nach Life360), dann ins Gegenteil übertrieben
+(„Nobody is tracking you" — schlicht falsch). Ursache beide Male: über das Produkt
+geraten, statt die Featureliste zu lesen.
 
 ### Anti-Slop-Regeln (gelten für ALLE Texte, DE und EN)
 
