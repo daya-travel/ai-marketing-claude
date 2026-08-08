@@ -85,8 +85,28 @@ Emotional, direkt, leicht trotzig. Beispiele:
 - "Alleine reisen als Frau? Mit DAYA bist du nie wirklich allein."
 - "Dein Bodyguard, deine Freundin, deine Assistentin. 24/7 an deiner Seite."
 - Sign-off: "Made with rage and love in Nürnberg."
-Copy durch Anti-Slop-Editing (kein KI-Vokabular, kein Hype, keine Fake-Social-Proof, keine
-Dreierregel, keine Gedankenstriche).
+### Anti-Slop-Regeln (gelten für ALLE Texte, DE und EN)
+
+Die Leserin muss merken, dass da Menschen sitzen. Jedes KI-Muster zerstört genau das.
+
+**Verboten:**
+1. **„nicht X, sondern Y"** und alle Varianten (`It's not A, it's B` / `Not an alarm, just a…`
+   / `We didn't do X, we did Y`). Meistgenanntes KI-Erkennungszeichen. Sag einfach, was ist.
+   Entscheidung Alesya, 03.08.
+2. **Dreierregel** — drei aufgezählte Dinge im gleichen Rhythmus. Nimm zwei oder vier.
+3. **Gedankenstriche (— / –)** im Fließtext. Punkt oder Komma. (Ausnahme: Signatur
+   „— Diana & Alesya".)
+4. **Etwas verneinen, das wir tatsächlich tun.** „We never ran a survey" widerspricht
+   dem datengestützten Playbook. Erst prüfen, was auf der Seite steht.
+5. **Über die Botschaft reden statt sie zu sagen** („this is not a marketing line",
+   „let that sink in", „here's the thing").
+6. **Schwere Wörter ohne Gewinn** — `roughly`, `deliberate`, `remarkable`, `ambient`,
+   `leverage`, `seamless`. Die Hälfte der Leserinnen sind keine Muttersprachlerinnen.
+7. **Vage Abstraktionen** („the other kind", „a system that…"). Wenn unklar ist, was
+   gemeint ist, ist es nicht zu Ende gedacht.
+8. Kein Hype, keine erfundene Social Proof, keine erfundenen Zahlen.
+
+**Prüfung vor jedem Post:** Würde eine Freundin diesen Satz so sagen? Wenn nein, umschreiben.
 
 ---
 
