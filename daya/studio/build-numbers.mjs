@@ -44,7 +44,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden}
 .glow{position:absolute;top:-280px;right:-220px;width:820px;height:820px;border-radius:50%;
   background:radial-gradient(circle,rgba(239,192,90,.15) 0%,rgba(239,192,90,0) 70%)}
 .grain{position:absolute;inset:0;opacity:.13;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-.pad{position:absolute;inset:0;padding:96px 88px;display:flex;flex-direction:column;justify-content:center}
+.pad{position:absolute;inset:0;padding:150px 88px 140px;display:flex;flex-direction:column;justify-content:center}
 .pad.mid{align-items:center;justify-content:center;text-align:center}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.3em;font-size:32px;color:#efc05a}
 .rule{height:2px;background:rgba(239,192,90,.35);margin:26px 0 46px}
@@ -66,6 +66,8 @@ html,body{width:${W}px;height:${H}px;overflow:hidden}
 .handle{font-family:'Archivo';font-weight:800;text-transform:lowercase;letter-spacing:.16em;font-size:32px;color:#efc05a}
 .sig{display:flex;flex-direction:column;align-items:center}
 .markonly{height:230px;margin-bottom:56px}
+.wm-handle{position:absolute;top:52px;left:88px;font-family:'Archivo';font-weight:800;letter-spacing:.16em;font-size:25px;color:#efc05a;opacity:.9}
+.wm-logo{position:absolute;bottom:44px;right:78px;height:62px;opacity:.6}
 .lockup{display:flex;align-items:center;gap:34px}
 .lockup img{height:104px}
 .lockup span{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:62px;color:#f4ecdb;line-height:1}
@@ -159,11 +161,15 @@ const SLIDES = [
   </div>`,
 ];
 
+const WM = `<div class="wm-handle">@her.solotrip</div>` +
+  (existsSync(MARK) ? `<img class="wm-logo" src="file://${MARK}">` : '');
+
 SLIDES.forEach((body, i) => {
   const n = String(i + 1).padStart(2, '0');
+  const wm = i === SLIDES.length - 1 ? '' : WM;
   const htmlPath = join(OUT, `s${n}.html`);
   const pngPath = join(OUT, `${n}.png`);
-  writeFileSync(htmlPath, head + `<div class="wrap"><div class="glow"></div><div class="grain"></div>${body}</div>` + foot);
+  writeFileSync(htmlPath, head + `<div class="wrap"><div class="glow"></div><div class="grain"></div>${body}${wm}</div>` + foot);
   execSync(`${CHROME} --headless=new --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --force-device-scale-factor=1 --default-background-color=FF0E3B2C --virtual-time-budget=6000 --window-size=${W},${H + RESERVE} --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });
   execSync(`python3 -c "from PIL import Image; Image.open('${pngPath}').crop((0,0,${W},${H})).save('${pngPath}')"`, { stdio: 'ignore' });
   console.log('slide', n, 'ok');
