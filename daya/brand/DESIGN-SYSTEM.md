@@ -104,6 +104,13 @@ Landessprache ein, alarmiert Kontakte parallel, weltweit).
 Antwortet laut, in deiner Sprache, in 5 Sekunden.
 **Tarife:** Guardian 24,90 EUR/Monat + Roam. Free-Tier behält SOS, Check-ins, Voice Cover.
 
+### Logo auf @her.solotrip: erlaubt, aber nur am Schluss
+
+Die alte Regel („Logo noch nicht zeigen, nur der Pfeil") ist von Alesya am 03.08.
+gelockert worden: Das echte DAYA-Logo darf auf her.solotrip-Posts **am Ende** stehen
+(letzte Slide, Absender-Zeile). Nicht auf Cover-Slides, nicht mitten im Inhalt — der
+Post soll erst Nutzen liefern und dann zeigen, wer ihn gemacht hat.
+
 ### DAYA ist eine SIE, kein ES
 
 Die KI-Begleiterin heißt DAYA, und die eigene Seite schreibt bereits „**She** knows your
