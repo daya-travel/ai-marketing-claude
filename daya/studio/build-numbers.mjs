@@ -29,10 +29,15 @@ const LOGO = join(__dirname, 'photos', 'daya-grid', 'daya-icon.png');
 // bow mark keyed out of the app icon (luminance key + circular mask). Placeholder
 // until the real transparent lockup lands in photos/daya-grid/.
 const MARK = join(__dirname, 'photos', 'daya-grid', 'daya-mark-cream.png');
-const OUT = join(__dirname, 'out', 'numbers');
+// `node build-numbers.mjs tiktok` renders 9:16 instead of the 4:5 Instagram crop.
+// On TikTok the right edge carries the action buttons and the bottom ~450px the
+// caption, so content is pushed into the safe upper area and the mark moves to
+// the top right corner.
+const TT = process.argv[2] === 'tiktok';
+const OUT = join(__dirname, 'out', TT ? 'numbers-tiktok' : 'numbers');
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
-const W = 1080, H = 1350, RESERVE = 87;
+const W = 1080, H = TT ? 1920 : 1350, RESERVE = 87;
 
 const head = `<!doctype html><html><head><meta charset="utf-8">
 <style>
@@ -44,7 +49,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden}
 .glow{position:absolute;top:-280px;right:-220px;width:820px;height:820px;border-radius:50%;
   background:radial-gradient(circle,rgba(239,192,90,.15) 0%,rgba(239,192,90,0) 70%)}
 .grain{position:absolute;inset:0;opacity:.13;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-.pad{position:absolute;inset:0;padding:150px 88px 140px;display:flex;flex-direction:column;justify-content:center}
+.pad{position:absolute;inset:0;padding:${TT ? '210px 88px 470px' : '150px 88px 140px'};display:flex;flex-direction:column;justify-content:center}
 .pad.mid{align-items:center;justify-content:center;text-align:center}
 .kicker{font-family:'Archivo';font-weight:800;text-transform:uppercase;letter-spacing:.3em;font-size:32px;color:#efc05a}
 .rule{height:2px;background:rgba(239,192,90,.35);margin:26px 0 46px}
@@ -62,12 +67,12 @@ html,body{width:${W}px;height:${H}px;overflow:hidden}
 .step b{font-family:'Archivo';font-weight:800;font-size:44px;color:#efc05a;line-height:1.1;min-width:56px}
 .step span{font-family:'Inter';font-weight:500;font-size:34px;line-height:1.35;color:#f4ecdb}
 .logo{width:172px;height:172px;border-radius:42px;margin-bottom:48px;box-shadow:0 22px 54px -18px rgba(0,0,0,.7)}
-.pad.between{align-items:center;justify-content:space-between;text-align:center}
+.pad.between{align-items:center;justify-content:space-between;text-align:center;padding:${TT ? '150px 88px 420px' : '150px 88px 140px'}}
 .handle{font-family:'Archivo';font-weight:800;text-transform:lowercase;letter-spacing:.16em;font-size:32px;color:#efc05a}
 .sig{display:flex;flex-direction:column;align-items:center}
 .markonly{height:230px;margin-bottom:56px}
 .wm-handle{position:absolute;top:52px;left:88px;font-family:'Archivo';font-weight:800;letter-spacing:.16em;font-size:25px;color:#efc05a;opacity:.9}
-.wm-logo{position:absolute;bottom:44px;right:78px;height:62px;opacity:.6}
+.wm-logo{position:absolute;${TT ? 'top:44px;right:84px' : 'bottom:44px;right:78px'};height:62px;opacity:.6}
 .lockup{display:flex;align-items:center;gap:34px}
 .lockup img{height:104px}
 .lockup span{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:62px;color:#f4ecdb;line-height:1}
