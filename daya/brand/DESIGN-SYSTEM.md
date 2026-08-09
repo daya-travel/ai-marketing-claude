@@ -107,9 +107,10 @@ Antwortet laut, in deiner Sprache, in 5 Sekunden.
 ### Logo auf @her.solotrip: erlaubt, aber nur am Schluss
 
 Die alte Regel („Logo noch nicht zeigen, nur der Pfeil") ist von Alesya am 03.08.
-gelockert worden: Das echte DAYA-Logo darf auf her.solotrip-Posts **am Ende** stehen
-(letzte Slide, Absender-Zeile). Nicht auf Cover-Slides, nicht mitten im Inhalt — der
-Post soll erst Nutzen liefern und dann zeigen, wer ihn gemacht hat.
+aufgehoben worden. Das echte DAYA-Logo gehört jetzt **aufs Cover und auf die letzte
+Slide**. Auf der Schluss-Slide zusätzlich: oben `@her.solotrip`, unten Logo plus
+Wortmarke `DAYA` (Cormorant 600, uppercase, letter-spacing .2em). Nicht mitten in den
+Inhalts-Slides — dazwischen zählt nur der Nutzen.
 
 ### DAYA ist eine SIE, kein ES
 

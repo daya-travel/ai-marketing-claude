@@ -58,7 +58,12 @@ html,body{width:${W}px;height:${H}px;overflow:hidden}
 .step{display:flex;gap:26px;align-items:flex-start;margin-top:34px;text-align:left}
 .step b{font-family:'Archivo';font-weight:800;font-size:44px;color:#efc05a;line-height:1.1;min-width:56px}
 .step span{font-family:'Inter';font-weight:500;font-size:34px;line-height:1.35;color:#f4ecdb}
-.logo{width:180px;height:180px;border-radius:44px;margin-bottom:52px;box-shadow:0 22px 54px -18px rgba(0,0,0,.7)}
+.logo{width:172px;height:172px;border-radius:42px;margin-bottom:48px;box-shadow:0 22px 54px -18px rgba(0,0,0,.7)}
+.pad.between{align-items:center;justify-content:space-between;text-align:center}
+.handle{font-family:'Archivo';font-weight:800;text-transform:lowercase;letter-spacing:.16em;font-size:32px;color:#efc05a}
+.sig{display:flex;flex-direction:column;align-items:center}
+.sig img{width:104px;height:104px;border-radius:26px;box-shadow:0 16px 40px -14px rgba(0,0,0,.7)}
+.sig .mark{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:46px;color:#f4ecdb;margin-top:22px}
 </style></head><body>`;
 const foot = `</body></html>`;
 
@@ -72,6 +77,7 @@ const LIST = (kicker, rows, note) => `<div class="pad">
 const SLIDES = [
   // 1 cover
   `<div class="pad mid">
+    ${existsSync(LOGO) ? `<img class="logo" src="file://${LOGO}">` : ''}
     <div class="title">Numbers every woman should have.</div>
     <div class="sub">You will probably never call them.<br>Save them anyway.</div>
   </div>`,
@@ -135,10 +141,16 @@ const SLIDES = [
   </div>`,
 
   // 9 save + logo
-  `<div class="pad mid">
-    ${existsSync(LOGO) ? `<img class="logo" src="file://${LOGO}">` : ''}
-    <div class="title">Save this post.</div>
-    <div class="sub">One day it might be for someone you love.</div>
+  `<div class="pad between">
+    <div class="handle">@her.solotrip</div>
+    <div>
+      <div class="title">Save this post.</div>
+      <div class="sub">One day it might be for someone you love.</div>
+    </div>
+    <div class="sig">
+      ${existsSync(LOGO) ? `<img src="file://${LOGO}">` : ''}
+      <div class="mark">Daya</div>
+    </div>
   </div>`,
 ];
 
