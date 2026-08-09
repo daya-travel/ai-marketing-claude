@@ -26,6 +26,9 @@ import { FONT_CSS } from './fonts.mjs';
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const LOGO = join(__dirname, 'photos', 'daya-grid', 'daya-icon.png');
+// bow mark keyed out of the app icon (luminance key + circular mask). Placeholder
+// until the real transparent lockup lands in photos/daya-grid/.
+const MARK = join(__dirname, 'photos', 'daya-grid', 'daya-mark-cream.png');
 const OUT = join(__dirname, 'out', 'numbers');
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
@@ -62,8 +65,10 @@ html,body{width:${W}px;height:${H}px;overflow:hidden}
 .pad.between{align-items:center;justify-content:space-between;text-align:center}
 .handle{font-family:'Archivo';font-weight:800;text-transform:lowercase;letter-spacing:.16em;font-size:32px;color:#efc05a}
 .sig{display:flex;flex-direction:column;align-items:center}
-.sig img{width:104px;height:104px;border-radius:26px;box-shadow:0 16px 40px -14px rgba(0,0,0,.7)}
-.sig .mark{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:46px;color:#f4ecdb;margin-top:22px}
+.markonly{height:230px;margin-bottom:56px}
+.lockup{display:flex;align-items:center;gap:34px}
+.lockup img{height:104px}
+.lockup span{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:62px;color:#f4ecdb;line-height:1}
 </style></head><body>`;
 const foot = `</body></html>`;
 
@@ -77,7 +82,7 @@ const LIST = (kicker, rows, note) => `<div class="pad">
 const SLIDES = [
   // 1 cover
   `<div class="pad mid">
-    ${existsSync(LOGO) ? `<img class="logo" src="file://${LOGO}">` : ''}
+    ${existsSync(MARK) ? `<img class="markonly" src="file://${MARK}">` : ''}
     <div class="title">Numbers every woman should have.</div>
     <div class="sub">You will probably never call them.<br>Save them anyway.</div>
   </div>`,
@@ -147,9 +152,9 @@ const SLIDES = [
       <div class="title">Save this post.</div>
       <div class="sub">One day it might be for someone you love.</div>
     </div>
-    <div class="sig">
-      ${existsSync(LOGO) ? `<img src="file://${LOGO}">` : ''}
-      <div class="mark">Daya</div>
+    <div class="lockup">
+      ${existsSync(MARK) ? `<img src="file://${MARK}">` : ''}
+      <span>Daya</span>
     </div>
   </div>`,
 ];
