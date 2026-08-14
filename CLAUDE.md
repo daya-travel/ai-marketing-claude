@@ -55,3 +55,15 @@ ungeprüft rausgegangen.
 
 Higgsfield speichert Generierungen serverseitig. Vor dem Neugenerieren erst
 `show_generations` durchsuchen — spart Credits.
+
+**Kein Thema wählen, dessen Kern ein Handgriff ist.** Bildgenerierung kann Räume, Wege,
+Gegenstände und Menschen von hinten. Hände, die etwas Feinmechanisches tun, kann sie nicht.
+Belegt am 14.08. am Hoteltür-Reel: 24 Motive, kein einziges korrekt, immer derselbe Fehler
+(Stoff über die Hardware gehängt statt hineingestopft). Ein falsch gezeigter Sicherheitsgriff
+ist schlimmer als gar keiner — jemand macht es nach und hält die Tür für gesichert.
+Braucht ein Thema eine Demonstration: Alesya filmt sie mit dem Handy, oder das Thema fällt weg.
+
+Bei Videoclips nicht nur ein Standbild prüfen, sondern **acht Frames über die ganze Länge**.
+Die Fehler stecken in der Bewegung: eine Person, die sich auflöst; ein Handtuch, das am Ende
+herunterrutscht; zwei Hände mit verschiedenen Hauttönen; eine Männerhand auf einem
+Solo-Frauen-Account.
