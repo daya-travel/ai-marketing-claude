@@ -63,6 +63,31 @@ Belegt am 14.08. am Hoteltür-Reel: 24 Motive, kein einziges korrekt, immer ders
 ist schlimmer als gar keiner — jemand macht es nach und hält die Tür für gesichert.
 Braucht ein Thema eine Demonstration: Alesya filmt sie mit dem Handy, oder das Thema fällt weg.
 
+### Das Bildrezept (funktioniert, nicht neu erraten)
+
+Referenz sind `daya/studio/photos/daya-grid/hero.png` und `founders.png` (beide von Diana
+in Claude Design gebaut) sowie `photos/transit/t901.png` und `t902.png`. Vor jeder neuen
+Serie ansehen und den Look treffen.
+
+- **Auf jedem Bild ist ein Mensch**, außer es ist bewusst reine Landschaft. Ein Rückspiegel,
+  ein Türgriff oder ein Stück Straße ist kein Motiv.
+- **Die Haltung ist frei** - von hinten, von der Seite, von vorn, sitzend, gehend.
+  Entscheidung Alesya, 18.08.2026. Was bleibt: echte Reisende, keine Studio- oder
+  Fashion-Models, keine Posen.
+- **Der Ort muss ein Ort sein, den man in einem Satz benennen kann.** Bahnsteig,
+  Nachtzugabteil, Marktgang, Aussichtspunkt. Geht das nicht, taugt das Motiv nicht.
+- **Schön, aber nicht zu perfekt.** Sonst glaubt es niemand. Prompt-Bausteine, die das
+  liefern: „Candid documentary photograph of an ordinary young woman ...", „everyday
+  clothes, no styling", „unposed, caught mid-thought", „slight imperfection".
+- **Stil-Zusatz, der nachweislich funktioniert:** „Rich saturated colour, warm natural
+  light, slight imperfection, shallow depth of field, realistic, vertical."
+- **Verbotene Prompt-Bausteine:** „no colour grading", „slight grain", „shot on a phone"
+  (erzeugt flaue dunkle Bilder, 14.08. komplett neu gemacht) und jeder Filmstock-Name wie
+  „Kodak Portra" (erzeugt einen echten Filmstreifen samt Perforation).
+- **Schrift im Bild:** soul_2 kann keine Buchstaben. Motive so rahmen, dass keine bedruckte
+  Fläche scharf im Bild liegt. Bilder immer in echter Anzeigegröße prüfen, nicht in voller
+  Auflösung - Buchstabensalat, der bei 100 % unsichtbar ist, wird in der Zelle zur Schlagzeile.
+
 Bei Videoclips nicht nur ein Standbild prüfen, sondern **acht Frames über die ganze Länge**.
 Die Fehler stecken in der Bewegung: eine Person, die sich auflöst; ein Handtuch, das am Ende
 herunterrutscht; zwei Hände mit verschiedenen Hauttönen; eine Männerhand auf einem

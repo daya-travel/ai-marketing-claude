@@ -25,8 +25,10 @@ nur 200 Plätze).
 
 ## ⛔ HARTE REGELN (Founder ist da streng)
 1. **Nur Bindestriche (-), NIE Gedankenstriche (—)** — in Bild-Text UND Captions.
-2. **Fotos: nur echte reisende Frauen** (Rucksack, von hinten, in Natur/Stadt). Nie Männer,
-   nie Studio/Fashion-Models. Fotos ohne Personen = nur Landschaft/Objekte.
+2. **Fotos: nur echte reisende Frauen** (in Natur, Stadt, unterwegs). **Die Haltung ist frei** -
+   von hinten, von der Seite, von vorn, sitzend, gehend. Die alte Vorgabe „nur von hinten"
+   ist aufgehoben (Alesya, 18.08.2026). Nie Männer, nie Studio/Fashion-Models, keine Posen.
+   Fotos ohne Personen = nur Landschaft/Objekte.
 3. **Nie ein Foto wiederholen** (Dup-Scan vor dem Ausspielen).
 4. **Icons sind SILBER, nie Gold.** Gold/Marigold = nur Hintergrund-Atmosphäre + Text-Akzent.
 5. **Reines Weiß (#fff) als Text ist verboten** — `--silver` (dunkel) oder `--cream` (warm).
