@@ -69,35 +69,35 @@ const BEATS = [
     title: 'How to move through a new city alone', hi: 'alone',
     body: 'Trains, rides and the hours in between. No guesswork.', bodyHi: 'No guesswork.' },
 
-  { id: '01', dur: 7.1, photo: 't902', n: 1,
+  { id: '01', dur: 7.1, photo: 't902', n: 1, gx: 'right', gy: 300,
     kicker: 'NIGHT TRAIN',
     lead: 'Check the one thing most people skip.',
     title: 'Book the ladies only compartment', hi: 'ladies only',
     body: 'Nightjet has one in the couchette and the sleeper. Women only, same price as a mixed compartment. Look for the female icon when you book, they sell out early.',
     bodyHi: 'same price' },
 
-  { id: '02', dur: 4.96, photo: 'n42', n: 2,
+  { id: '02', dur: 4.96, photo: 'n42', n: 2, gx: 'left', gy: 300,
     kicker: 'GETTING A RIDE',
     lead: 'The first sentence decides the rest.',
-    title: 'Ask who are you here for', hi: 'who are you here for',
+    title: 'Ask who are you here for', hi: 'who',
     body: 'Never say your name first. A real driver already has it on the screen in front of them. If they have to guess, walk away.',
     bodyHi: 'walk away' },
 
-  { id: '03', dur: 5.2, photo: 'm431', n: 3,
+  { id: '03', dur: 5.2, photo: 'm431', n: 3, gx: 'right', gy: 300,
     kicker: 'GETTING A RIDE',
     lead: 'The right car can still be the wrong one.',
     title: 'Check the plate, not the car', hi: 'the plate',
     body: 'The scam is the right model with the wrong plate. Match the whole thing before you open the door, not just the colour.',
     bodyHi: 'before you open the door' },
 
-  { id: '04', dur: 3.6, photo: 'm442', n: 4,
+  { id: '04', dur: 3.6, photo: 'm442', n: 4, gx: 'left', gy: 900,
     kicker: 'ON BOARD',
     lead: 'Quieter is not the same as better.',
     title: 'Sit in the fuller carriage', hi: 'fuller',
     body: 'Not the empty one at the end, even though it is quieter. Near the doors, near other people, is the better seat.',
     bodyHi: 'near other people' },
 
-  { id: '05', dur: 3.77, photo: 'm456', n: 5,
+  { id: '05', dur: 3.77, photo: 'm456', n: 5, gx: 'left', gy: 560,
     kicker: 'WAITING',
     lead: 'Where you wait is part of the plan.',
     title: 'Wait for your ride inside', hi: 'inside',
@@ -107,7 +107,7 @@ const BEATS = [
   // clip-morning was dropped after the eight-frame check: it is a train front
   // with two small figures beside it, so the beat would have been the one slide
   // in the set without a woman on it. The still does the job better.
-  { id: '06', dur: 3.73, photo: 'm463', n: 6,
+  { id: '06', dur: 3.73, photo: 'm463', n: 6, gx: 'right', gy: 300,
     kicker: 'TIMING',
     lead: 'Same ticket, different arrival.',
     title: 'Book the earlier train', hi: 'earlier',
@@ -152,16 +152,19 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 /* Kopfzeile: Bildmarke plus Handle links, Zaehler rechts */
 .bar{position:absolute;left:68px;right:68px;top:88px;display:flex;align-items:center;
   justify-content:space-between}
-.brand{display:flex;align-items:center;gap:14px}
-.brand img{height:30px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.9))}
-.brand span{font-family:'Inter';font-weight:600;font-size:26px;letter-spacing:.01em;
+/* In der Kopfzeile steht allein der Account-Name. Die DAYA-Bildmarke stand hier
+   direkt neben "her.solotrip" und wurde dadurch als Logo des Reise-Accounts
+   gelesen - zwei Marken vermischt. DAYA tritt nur auf der Endkarte auf. */
+.brand{font-family:'Inter';font-weight:600;font-size:26px;letter-spacing:.01em;
   color:#f4ecdb;text-shadow:0 2px 10px rgba(0,0,0,.8)}
 .count{font-family:'Inter';font-weight:700;font-size:24px;letter-spacing:.16em;
   color:#efc05a;text-shadow:0 2px 10px rgba(0,0,0,.85)}
 
-/* grosse Umriss-Ziffer, nur auf den nummerierten Slides */
-.ghost{position:absolute;right:56px;top:300px;font-family:'Archivo';font-weight:800;
-  font-size:300px;line-height:.8;letter-spacing:-.04em;color:transparent;
+/* Grosse Umriss-Ziffer, nur auf den nummerierten Slides. Seite und Hoehe werden
+   pro Beat gesetzt (gx/gy), weil eine feste Ecke bei drei von sechs Fotos auf
+   einem Gesicht landete. Vor jeder Aenderung an einem Foto: Slide ansehen. */
+.ghost{position:absolute;font-family:'Archivo';font-weight:800;
+  font-size:270px;line-height:.8;letter-spacing:-.04em;color:transparent;
   -webkit-text-stroke:3px rgba(239,192,90,.62)}
 
 /* Textblock unten links */
@@ -224,10 +227,10 @@ BEATS.forEach((b) => {
   <div class="top"></div>
   <div class="scrim"></div>
   <div class="bar">
-    <span class="brand">${mark}<span>her.solotrip</span></span>
+    <span class="brand">her.solotrip</span>
     ${b.n ? `<span class="count">${String(b.n).padStart(2, '0')} / ${String(TIPS).padStart(2, '0')}</span>` : ''}
   </div>
-  ${b.n ? `<div class="ghost">${String(b.n).padStart(2, '0')}</div>` : ''}
+  ${b.n ? `<div class="ghost" style="${b.gx === 'left' ? 'left' : 'right'}:70px;top:${b.gy}px">${String(b.n).padStart(2, '0')}</div>` : ''}
   <div class="copy">
     <div class="kicker">${esc(b.kicker)}</div>
     <div class="lead">${esc(b.lead)}</div>

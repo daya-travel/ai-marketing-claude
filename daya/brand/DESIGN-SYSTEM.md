@@ -78,7 +78,27 @@ Aufbau von oben nach unten:
 | Bild | ein randloses Foto pro Slide |
 
 **Die Gold-Hervorhebung ist Pflicht und sparsam:** eine Stelle in der Überschrift,
-eine im Fließtext. Nie mehr.
+eine im Fließtext. Nie mehr. Am 20.08. stand auf einer Slide fast die ganze
+Überschrift in Gold („Ask **who are you here for**") - damit hebt sie nichts mehr
+hervor.
+
+### Marken nicht vermischen
+
+- **In der Kopfzeile steht allein `her.solotrip`**, ohne Zeichen davor. Eine
+  eigene Bildmarke für den Reise-Account gibt es nicht.
+- **Die DAYA-Bildmarke steht nur auf der Endkarte**, dort zusammen mit der
+  Wortmarke. Das ist die einzige Stelle, an der DAYA als Absender auftritt.
+
+Am 20.08. stand die DAYA-Marke direkt neben `her.solotrip` und wurde dadurch als
+Logo des Reise-Accounts gelesen.
+
+### Die Umriss-Ziffer liegt nie auf einem Gesicht
+
+Seite und Höhe werden **pro Slide** gesetzt (`gx`, `gy` im Build-Skript), nicht
+einmal fest für alle. Bei fester Ecke oben rechts lag die Ziffer am 20.08. auf
+drei von sechs Slides auf einem Gesicht. Nach jedem Fototausch die Slide in
+**voller Größe** ansehen - im Kontaktbogen sieht man ein Gesicht unter einer
+Ziffer nicht.
 
 ### Regel für Layout-Entscheidungen
 
