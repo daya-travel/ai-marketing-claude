@@ -1,21 +1,23 @@
 // Reel + TikTok carousel "how to move through a new city alone" - her.solotrip.
 //
-// LAYOUT, third attempt, and why. Attempt one was the 2x2 grid of
-// build-solo-dates.mjs - rejected because two identical-looking posts back to
-// back read as copy-paste. Attempt two was a masthead band plus a solid text
-// bar - rejected because three hard edges chop the frame and over running video
-// it reads as a news lower-third. A detail (making the logo legible) had been
-// allowed to dictate the whole layout.
+// LAYOUT: der Hausstil aus build-solo-dates.mjs, unveraendert uebernommen.
+// Textband in der Bildmitte, Caveat als Schreibschrift, Archivo fett fuer den
+// Fliesstext, Handle in Marigold unten, Bildmarke nur auf der Endkarte.
 //
-// What it is now: one edge-to-edge photo per slide, no bands and no bars. The
-// text sits in the lower third over a soft gradient, left aligned. The logo sits
-// in the darkest part of that gradient next to the handle, so it is carried by
-// the gradient instead of by a box of its own. Different from the last post in
-// two visible ways (single photo instead of four, text low and left instead of
-// centred) while staying the same brand.
+// Drei Anlaeufe davor waren jeweils ein neu erfundener Stil und alle drei falsch:
+// ein Kopfzeilen-Band mit Textbalken (las sich wie eine Nachrichten-Einblendung),
+// dann Text unten links ueber einem Verlauf, dann derselbe Text weiter oben mit
+// Handle und Marke in der Kopfzeile. Entscheidung Alesya, 20.08.: der Stil bleibt
+// gleich, er wird pro Post nicht neu erfunden. Werte hier also nicht anfassen -
+// aendert sich der Hausstil, aendert er sich in beiden Dateien zugleich.
 //
-// TYPE: Cormorant Garamond for the headline and Inter for the body, instead of
-// Caveat + Archivo. Both are in the design system, so it is still the brand.
+// Der einzige Unterschied zum Vorgaengerpost ist das Bild darunter: ein randloses
+// Foto pro Slide statt des Vierer-Rasters. Das Textband liegt dadurch nicht mehr
+// auf einer Rasternaht, sondern auf einem durchgehenden Foto.
+//
+// Nebeneffekt, der die Safe-Area-Frage erledigt: das Band sitzt bei 34 bis 66 %
+// der Hoehe, also weit ausserhalb der Bereiche, die Instagram (oben 220, unten
+// 450 px) und TikTok (oben 140, unten 484 px) mit ihrer Oberflaeche ueberdecken.
 //
 // FACT BASE (checked 18.08. before any image was generated):
 //   - Nightjet ladies-only compartment: couchette or sleeper, women only, same
@@ -60,7 +62,7 @@ const EMERALD = '#0e3b2c';
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
 const BEATS = [
-  { id: 'cover', dur: 3.14, photo: 't901', clip: 'clip-car.mp4',
+  { id: 'cover', dur: 3.14, photo: 't901', clip: 'clip-car.mp4', cover: true,
     title: 'How to move through a new city alone',
     body: 'Six things that make it easier. Solo travel, minus the guesswork.' },
 
@@ -102,40 +104,32 @@ ${FONT_CSS}
 *{margin:0;box-sizing:border-box}
 html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
-/* SAFE AREAS (nachgelesen 20.08., jeweils der strengste der gefundenen Werte):
-   Instagram Reel oben 220 / unten 450 / rechts 120 px, TikTok oben 140 /
-   unten 484 / rechts 180 px. Deshalb sitzt der Text ueber 520 px vom unteren
-   Rand und die Zeile mit Handle und Bildmarke bei 240 px von oben - beides
-   ausserhalb beider Oberflaechen. Vorher lag die Zeile auf 118 px und war auf
-   dem Handy von Caption und Ton-Leiste verdeckt. */
-.scrim{position:absolute;left:0;right:0;bottom:0;height:72%;
-  background:linear-gradient(180deg,
-    rgba(6,29,21,0) 0%,
-    rgba(6,29,21,.38) 25%,
-    rgba(6,29,21,.75) 45%,
-    rgba(6,29,21,.90) 65%,
-    rgba(6,29,21,.95) 100%)}
-.topscrim{position:absolute;left:0;right:0;top:0;height:24%;
-  background:linear-gradient(180deg,rgba(6,29,21,.78) 0%,rgba(6,29,21,.66) 62%,rgba(6,29,21,0) 100%)}
-.copy{position:absolute;left:0;right:0;bottom:520px;padding:0 78px;text-align:left}
-.kicker{width:58px;height:2px;background:#efc05a;margin-bottom:30px;opacity:.9}
-.title{font-family:'Cormorant Garamond';font-weight:600;font-size:82px;line-height:1.04;
-  color:#f4ecdb;letter-spacing:.004em;text-shadow:0 2px 18px rgba(0,0,0,.55)}
-.title.sm{font-size:70px}
-.body{font-family:'Inter';font-weight:400;font-size:32px;line-height:1.5;
-  color:#f4ecdb;opacity:.92;margin-top:24px;max-width:840px;
-  text-shadow:0 2px 14px rgba(0,0,0,.6)}
-/* Handle und Bildmarke oben, im weichen Kopfverlauf */
-.topbar{position:absolute;left:78px;right:78px;top:240px;
-  display:flex;align-items:center;justify-content:space-between}
-.handle{font-family:'Inter';font-weight:600;text-transform:lowercase;
-  letter-spacing:.14em;font-size:26px;color:#f4ecdb;opacity:.78;
-  text-shadow:0 2px 12px rgba(0,0,0,.8)}
-.lockup{display:flex;align-items:center;gap:15px}
-.lockup img{height:52px;filter:drop-shadow(0 3px 12px rgba(0,0,0,.9))}
-.lockup .word{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;
-  letter-spacing:.22em;font-size:32px;color:#efc05a;line-height:1;
-  text-shadow:0 3px 12px rgba(0,0,0,.9)}
+/* HAUSSTIL - identisch zu build-solo-dates.mjs. Werte hier nicht neu erfinden.
+   Textband in der Bildmitte, Caveat als Schreibschrift, Archivo fett fuer den
+   Fliesstext, Handle in Marigold, Bildmarke nur auf der Endkarte. Nebenbei
+   loest die Bildmitte die Safe Areas von Instagram und TikTok von selbst. */
+.band{position:absolute;left:0;right:0;top:34%;height:32%;
+  background:linear-gradient(180deg,rgba(6,29,21,0) 0%,rgba(6,29,21,.62) 26%,rgba(6,29,21,.62) 74%,rgba(6,29,21,0) 100%)}
+.pad{position:absolute;inset:0;padding:0 76px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center}
+.script{font-family:'Caveat';font-weight:600;font-size:96px;line-height:1.0;color:#f4ecdb;
+  text-shadow:0 4px 26px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.8)}
+.script.big{font-size:120px}
+.title{font-family:'Archivo';font-weight:800;font-size:64px;line-height:1.1;letter-spacing:-.02em;
+  color:#f4ecdb;margin-top:16px;text-shadow:0 4px 26px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.8)}
+.body{font-family:'Archivo';font-weight:700;font-size:40px;line-height:1.28;color:#f4ecdb;
+  margin-top:22px;max-width:900px;text-shadow:0 4px 24px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.85)}
+.wm{position:absolute;bottom:250px;left:0;right:0;text-align:center;font-family:'Archivo';
+  font-weight:800;letter-spacing:.2em;font-size:26px;color:#efc05a;opacity:.92;
+  text-shadow:0 2px 18px rgba(0,0,0,.9)}
+/* auf der Endkarte geht der Handle nach oben und die Bildmarke nach unten */
+.wm.top{top:150px;bottom:auto}
+.lockup{position:absolute;bottom:300px;left:0;right:0;display:flex;justify-content:center}
+.plate{display:flex;align-items:center;gap:18px}
+.plate img{height:70px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.98)) drop-shadow(0 1px 5px rgba(0,0,0,.95))}
+.plate .word{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;
+  letter-spacing:.2em;font-size:42px;color:#efc05a;line-height:1;
+  text-shadow:0 4px 16px rgba(0,0,0,.98),0 1px 5px rgba(0,0,0,.95)}
 </style></head><body>`;
 const foot = `</body></html>`;
 
@@ -160,18 +154,15 @@ im.crop(((w - ${W}) // 2, (h - ${H}) // 2, (w - ${W}) // 2 + ${W}, (h - ${H}) //
 BEATS.forEach((b) => {
   const htmlPath = join(OV, `${b.id}.html`);
   const pngPath = join(OV, `${b.id}.png`);
-  const long = b.title.length > 30;
   const mark = existsSync(MARK) ? `<img src="file://${MARK}">` : '';
   writeFileSync(htmlPath, head + `<div class="wrap">
-  <div class="topscrim"></div>
-  <div class="scrim"></div>
-  <div class="copy">
-    ${b.endcard ? '<div class="kicker"></div>' : ''}
-    <div class="title${long ? ' sm' : ''}">${esc(b.title)}</div>
+  <div class="band"></div>
+  <div class="pad">
+    <div class="script${b.cover ? ' big' : ''}">${esc(b.title)}</div>
     <div class="body">${esc(b.body)}</div>
   </div>
-  <div class="topbar"><span class="handle">@her.solotrip</span>
-    <span class="lockup">${mark}<span class="word">Daya</span></span></div>
+  <div class="wm${b.endcard ? ' top' : ''}">@her.solotrip</div>
+  ${b.endcard ? `<div class="lockup"><div class="plate">${mark}<span class="word">Daya</span></div></div>` : ''}
 </div>` + foot);
   execSync(`${CHROME} --headless=new --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --force-device-scale-factor=1 --default-background-color=00000000 --virtual-time-budget=5000 --window-size=${W},${H + RESERVE} --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });
   execSync(`python3 -c "from PIL import Image; Image.open('${pngPath}').crop((0,0,${W},${H})).save('${pngPath}')"`, { stdio: 'ignore' });

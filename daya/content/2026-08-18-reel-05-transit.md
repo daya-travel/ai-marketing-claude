@@ -17,32 +17,33 @@ Keine Zahl im Post, die nicht belegt ist. Keine Statistik, kein Prozentwert.
 
 ---
 
-## Layout, dritter Anlauf
+## Layout: der Hausstil, nicht neu erfunden
 
-1. **Vierer-Raster** wie bei „solo trip dates" - verworfen, weil zwei gleich
-   aussehende Posts hintereinander nach Copy-Paste aussehen.
-2. **Kopfzeilen-Band plus Textbalken** - verworfen, weil drei harte Kanten das
-   Bild zerschneiden und es über laufendem Video wie eine Nachrichten-Einblendung
-   wirkt. Ein Detail (Logo lesbar machen) hatte das ganze Layout diktiert.
-3. **Randloses Foto, weicher Verlauf** - so ist es jetzt. Ein Bild pro Slide von
-   Kante zu Kante, Text im unteren Drittel und linksbündig, Handle und Bildmarke
-   im dunkelsten Teil des Verlaufs. Zwei sichtbare Unterschiede zum Vorgängerpost
-   (ein Foto statt vier, Text unten links statt mittig), gleiche Marke.
+Drei Anläufe davor waren jeweils ein selbst ausgedachter Stil, und alle drei
+waren falsch: Kopfzeilen-Band mit Textbalken, dann Text unten links über einem
+Verlauf, dann derselbe Text weiter oben mit Handle und Marke in der Kopfzeile.
 
-Schrift: Cormorant Garamond für die Überschriften, Inter für den Fließtext.
+**Entscheidung Alesya, 20.08.: Der Stil bleibt gleich und wird pro Post nicht neu
+erfunden.** Übernommen aus `build-solo-dates.mjs`, Wert für Wert:
 
-**Safe Areas, nachgelesen am 20.08.** Die Quellen nennen unterschiedliche Werte,
-genommen ist jeweils der strengste: Instagram Reel oben 220, unten 450, rechts
-120 px. TikTok oben 140, unten 484, rechts 180 px.
+| Element | Wert |
+|---|---|
+| Textband | oben 34 %, Höhe 32 %, weicher Emerald-Verlauf |
+| Überschrift | Caveat 96 px, auf dem Cover 120 px |
+| Fließtext | Archivo 700, 40 px, zentriert, max. 900 px |
+| Handle | Archivo 800, 26 px, Marigold, 250 px von unten |
+| Endkarte | Handle oben auf 150 px, Bildmarke plus Wort unten auf 300 px |
 
-Erste Fassung lag mitten drin: Handle und Bildmarke auf 118 px vom unteren Rand,
-Fließtext ab 268 px. Auf dem Handy hätten Caption, Ton-Leiste und die Knopfleiste
-das verdeckt. Jetzt beginnt der Text bei 520 px vom unteren Rand, und Handle plus
-Bildmarke sitzen bei 240 px von oben in einem weichen Kopfverlauf. Der Kopfverlauf
-muss dunkel genug bleiben: auf der Endkarte liegt die Marke über heller Landschaft
-und war bei .58 nicht mehr lesbar, deshalb .78.
+Der einzige Unterschied zum Vorgängerpost ist das Bild darunter: ein randloses
+Foto pro Slide statt des Vierer-Rasters. Das Textband liegt dadurch auf einem
+durchgehenden Foto statt auf einer Rasternaht.
 
----
+**Safe Areas erledigen sich damit von selbst.** Das Band sitzt zwischen 34 und
+66 % der Höhe. Instagram überdeckt oben 220 und unten 450 px, TikTok oben 140 und
+unten 484 px (nachgelesen 20.08., die Quellen nennen unterschiedliche Werte,
+genommen ist jeweils der strengste). Der Text liegt weit dazwischen.
+
+Ändert sich der Hausstil, ändert er sich in beiden Build-Dateien zugleich.
 
 ## Bilder
 
