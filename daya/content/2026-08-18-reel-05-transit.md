@@ -17,33 +17,33 @@ Keine Zahl im Post, die nicht belegt ist. Keine Statistik, kein Prozentwert.
 
 ---
 
-## Layout: der Hausstil, nicht neu erfunden
+## Layout: der Hausstil, und wo er jetzt steht
 
-Drei Anläufe davor waren jeweils ein selbst ausgedachter Stil, und alle drei
-waren falsch: Kopfzeilen-Band mit Textbalken, dann Text unten links über einem
-Verlauf, dann derselbe Text weiter oben mit Handle und Marke in der Kopfzeile.
+Für diesen einen Post wurden vier Layouts erfunden, bis Alesya am 20.08. den Stil
+festgelegt hat: **Cormorant Garamond als Überschrift, Inter als Fließtext, Text im
+unteren Drittel und linksbündig.** Keine Handschrift.
 
-**Entscheidung Alesya, 20.08.: Der Stil bleibt gleich und wird pro Post nicht neu
-erfunden.** Übernommen aus `build-solo-dates.mjs`, Wert für Wert:
+Das deckt sich mit den Schrift-Rollen, die ohnehin im Design-System stehen:
+Cormorant ist die Markenstimme, Inter ist Body, und Caveat ist nur für **einen**
+menschlichen Akzent pro Layout gedacht, nie für den Text. Der veröffentlichte Post
+`solo trip dates` hat sich nicht daran gehalten und bleibt trotzdem, wie er ist.
+
+**Die Werte stehen jetzt in `daya/brand/DESIGN-SYSTEM.md`, Abschnitt Post-Layout.**
+Dort werden sie geändert, nicht im Build-Skript. Kurzfassung:
 
 | Element | Wert |
 |---|---|
-| Textband | oben 34 %, Höhe 32 %, weicher Emerald-Verlauf |
-| Überschrift | Caveat 96 px, auf dem Cover 120 px |
-| Fließtext | Archivo 700, 40 px, zentriert, max. 900 px |
-| Handle | Archivo 800, 26 px, Marigold, 250 px von unten |
-| Endkarte | Handle oben auf 150 px, Bildmarke plus Wort unten auf 300 px |
+| Bild | ein randloses Foto pro Slide |
+| Fläche hinter dem Text | weicher Verlauf, keine Balken |
+| Überschrift | Cormorant Garamond 600, 82 px, lange Titel 70 px |
+| Fließtext | Inter 400, 32 px, max. 840 px |
+| Handle und Marke | eine Zeile direkt unter dem Fließtext |
+| Unterkante des Blocks | 520 px über dem unteren Rand |
 
-Der einzige Unterschied zum Vorgängerpost ist das Bild darunter: ein randloses
-Foto pro Slide statt des Vierer-Rasters. Das Textband liegt dadurch auf einem
-durchgehenden Foto statt auf einer Rasternaht.
-
-**Safe Areas erledigen sich damit von selbst.** Das Band sitzt zwischen 34 und
-66 % der Höhe. Instagram überdeckt oben 220 und unten 450 px, TikTok oben 140 und
-unten 484 px (nachgelesen 20.08., die Quellen nennen unterschiedliche Werte,
-genommen ist jeweils der strengste). Der Text liegt weit dazwischen.
-
-Ändert sich der Hausstil, ändert er sich in beiden Build-Dateien zugleich.
+Der ganze Block wandert damit als Einheit. Weil die Zeile mit Handle und Marke im
+Fluss unter dem Text steht statt am Bildrand, bleibt sie automatisch außerhalb der
+Bereiche, die Instagram (unten 450 px) und TikTok (unten 484 px) überdecken.
+Im Prüfbild nachgesehen, nicht angenommen.
 
 ## Bilder
 

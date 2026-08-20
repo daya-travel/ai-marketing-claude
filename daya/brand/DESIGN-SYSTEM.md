@@ -55,6 +55,39 @@ Dusk-Glow = marigold→emerald, radial, tief & warm. Nie drei laute Akzente.
 - **Wordmark:** "DAYA" Cormorant 600, uppercase, letter-spacing 0.18em.
 - **Silver shimmer** auf dunklen Headlines. Social-Art nie unter 24px (auf 1080-Breite).
 
+## Post-Layout (Hausstil, 1080x1920)
+
+Festgelegt von Alesya am 20.08.2026, nachdem für einen einzigen Post viermal ein
+neues Layout erfunden wurde. **Das hier ist die Quelle. Werte werden hier geändert,
+nicht im Build-Skript.**
+
+| Element | Wert |
+|---|---|
+| Bild | ein randloses Foto pro Slide, Kante zu Kante. Kein Raster, keine geteilte Fläche |
+| Fläche hinter dem Text | ein weicher Verlauf nach unten. Keine Balken, keine Bänder, keine harten Kanten |
+| Überschrift | `Cormorant Garamond` 600, 82 px, linksbündig. Über 30 Zeichen: 70 px |
+| Fließtext | `Inter` 400, 32 px, Zeilenhöhe 1.5, max. 840 px breit |
+| Handle und Bildmarke | eine Zeile direkt unter dem Fließtext. Handle links in Creme, `DAYA` rechts in Marigold |
+| Unterkante des Textblocks | **520 px** über dem unteren Bildrand |
+| Caveat | nur als einzelner Akzent, nie Überschrift, nie Fließtext (siehe Typografie oben) |
+
+**Warum 520 px.** Beide Apps überdecken den unteren Bildrand mit ihrer eigenen
+Oberfläche. Nachgelesen am 20.08., die Quellen nennen unterschiedliche Werte,
+genommen ist jeweils der strengste:
+
+| | oben | unten | rechts |
+|---|---|---|---|
+| Instagram Reel | 220 px | 450 px | 120 px |
+| TikTok | 140 px | 484 px | 180 px |
+
+Erste Fassung des Transit-Posts hatte Handle und Marke auf 118 px und den
+Fließtext ab 268 px. Beides wäre auf dem Handy von Caption und Ton-Leiste verdeckt
+gewesen.
+
+**Was der veröffentlichte Post `solo trip dates` anders macht:** Vierer-Raster,
+Caveat als Überschrift, Text mittig. Der Post ist raus und bleibt, wie er ist. Der
+Hausstil oben gilt ab dem Transit-Post.
+
 ## Name
 **DAYA = Di*a*n*a* + ales*y*a** — die beiden Gründerinnen. Das ist die Herkunft des
 Namens, nicht die Jägerin. (Das Bogen-Motiv im Logo spielt zusätzlich auf Diana die

@@ -1,3 +1,7 @@
+// HINWEIS: Dieser Post ist veroeffentlicht und bleibt, wie er ist. Der Stil
+// fuer neue Posts steht in daya/brand/DESIGN-SYSTEM.md, Abschnitt Post-Layout
+// (Cormorant Garamond als Ueberschrift, Inter als Fliesstext, Text im unteren
+// Drittel linksbuendig). Werte von hier nicht in neue Builds uebernehmen.
 // Reel "solo trip dates" - her.solotrip, 1080x1920, ~42 s, 9 ideas + cover + endcard.
 //
 // Format borrowed from the collage reels that are doing the numbers right now
