@@ -39,6 +39,21 @@ Alle Motive neu gemacht am 18.08. nach dem Bildrezept in `CLAUDE.md`. **Auf jede
 der acht Slides ist eine Frau zu sehen.** Der erste Satz hatte auf 25 Motiven nur
 sechs mit Menschen und eine leere Rolltreppe als Cover - unbrauchbar.
 
+**Zweite Runde am 20.08.** nach Alesyas Durchsicht: vier Motive getauscht.
+- Slide 4 „Check the plate": vorher öffnete sie schon die Tür, der Text sagt aber
+  „prüfen, bevor du die Tür öffnest". Jetzt steht sie hinter dem Auto und schaut
+  aufs Kennzeichen.
+- Slide 5 „Fuller carriage": vorher frontaler Blick in die Kamera, wirkte gestellt.
+  Jetzt sitzt sie in der Nähe der Türen zwischen anderen Fahrgästen, genau wie im
+  Text.
+- Slide 6 „Wait inside": im alten Bild gab es weder Scheibe noch Straße. Jetzt
+  steht sie innen an der Glasfront, draußen die dunkle Straße, zwei weitere
+  Personen im Raum.
+- Slide 7 „Earlier train": vorher unglückliche Sitzhaltung hinter einem Pfeiler.
+  Jetzt Bahnsteig im Morgenlicht mit anderen Reisenden. Eine Variante mit
+  Kaffeebecher wurde verworfen, weil die Hand am Becher zu Brei zerlief, und eine
+  zweite wegen einer verformten Hand im Vordergrund.
+
 Aussortiert und warum:
 - zwei Flughafen-Motive: verzerrte Buchstaben auf den Flugzeugleitwerken, dazu
   Mode-Styling statt echter Reisender

@@ -72,22 +72,22 @@ const BEATS = [
     title: 'Ask who are you here for',
     body: 'Never say your name first. A real driver already has it on the screen in front of them. If they have to guess, walk away.' },
 
-  { id: '03', dur: 5.2, photo: 'n41',
+  { id: '03', dur: 5.2, photo: 'm431',
     title: 'Check the plate, not the car',
     body: 'The scam is the right model with the wrong plate. Match the whole thing before you open the door, not just the colour.' },
 
-  { id: '04', dur: 3.6, photo: 'n52',
+  { id: '04', dur: 3.6, photo: 'm442',
     title: 'Sit in the fuller carriage',
     body: 'Not the empty one at the end, even though it is quieter. Near the doors, near other people, is the better seat.' },
 
-  { id: '05', dur: 3.77, photo: 'n65',
+  { id: '05', dur: 3.77, photo: 'm456',
     title: 'Wait for your ride inside',
     body: 'Not at the kerb in the dark. Inside there are staff and other people, and you can watch for the car through the glass.' },
 
   // clip-morning was dropped after the eight-frame check: it is a train front
   // with two small figures beside it, so the beat would have been the one slide
   // in the set without a woman on it. The still does the job better.
-  { id: '06', dur: 3.73, photo: 'n72',
+  { id: '06', dur: 3.73, photo: 'm463',
     title: 'Book the earlier train',
     body: 'Same ticket, different arrival. More people on the platform, more open at the other end, and no waiting alone once you land.' },
 
