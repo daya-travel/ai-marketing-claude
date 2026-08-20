@@ -102,28 +102,34 @@ ${FONT_CSS}
 *{margin:0;box-sizing:border-box}
 html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
-/* one soft gradient carries everything: the copy, the handle and the mark. No
-   band, no bar, no box - the photo runs edge to edge underneath it. */
-.scrim{position:absolute;left:0;right:0;bottom:0;height:66%;
+/* SAFE AREAS (nachgelesen 20.08., jeweils der strengste der gefundenen Werte):
+   Instagram Reel oben 220 / unten 450 / rechts 120 px, TikTok oben 140 /
+   unten 484 / rechts 180 px. Deshalb sitzt der Text ueber 520 px vom unteren
+   Rand und die Zeile mit Handle und Bildmarke bei 240 px von oben - beides
+   ausserhalb beider Oberflaechen. Vorher lag die Zeile auf 118 px und war auf
+   dem Handy von Caption und Ton-Leiste verdeckt. */
+.scrim{position:absolute;left:0;right:0;bottom:0;height:72%;
   background:linear-gradient(180deg,
     rgba(6,29,21,0) 0%,
-    rgba(6,29,21,.28) 30%,
-    rgba(6,29,21,.72) 58%,
-    rgba(6,29,21,.93) 82%,
-    rgba(6,29,21,.96) 100%)}
-.copy{position:absolute;left:0;right:0;bottom:268px;padding:0 78px;text-align:left}
+    rgba(6,29,21,.38) 25%,
+    rgba(6,29,21,.75) 45%,
+    rgba(6,29,21,.90) 65%,
+    rgba(6,29,21,.95) 100%)}
+.topscrim{position:absolute;left:0;right:0;top:0;height:24%;
+  background:linear-gradient(180deg,rgba(6,29,21,.78) 0%,rgba(6,29,21,.66) 62%,rgba(6,29,21,0) 100%)}
+.copy{position:absolute;left:0;right:0;bottom:520px;padding:0 78px;text-align:left}
 .kicker{width:58px;height:2px;background:#efc05a;margin-bottom:30px;opacity:.9}
 .title{font-family:'Cormorant Garamond';font-weight:600;font-size:82px;line-height:1.04;
   color:#f4ecdb;letter-spacing:.004em;text-shadow:0 2px 18px rgba(0,0,0,.55)}
 .title.sm{font-size:70px}
 .body{font-family:'Inter';font-weight:400;font-size:32px;line-height:1.5;
-  color:#f4ecdb;opacity:.92;margin-top:24px;max-width:880px;
+  color:#f4ecdb;opacity:.92;margin-top:24px;max-width:840px;
   text-shadow:0 2px 14px rgba(0,0,0,.6)}
-/* handle and mark sit in the darkest part of the gradient, bottom of the frame */
-.foot{position:absolute;left:78px;right:78px;bottom:118px;
+/* Handle und Bildmarke oben, im weichen Kopfverlauf */
+.topbar{position:absolute;left:78px;right:78px;top:240px;
   display:flex;align-items:center;justify-content:space-between}
 .handle{font-family:'Inter';font-weight:600;text-transform:lowercase;
-  letter-spacing:.14em;font-size:26px;color:#f4ecdb;opacity:.72;
+  letter-spacing:.14em;font-size:26px;color:#f4ecdb;opacity:.78;
   text-shadow:0 2px 12px rgba(0,0,0,.8)}
 .lockup{display:flex;align-items:center;gap:15px}
 .lockup img{height:52px;filter:drop-shadow(0 3px 12px rgba(0,0,0,.9))}
@@ -157,13 +163,14 @@ BEATS.forEach((b) => {
   const long = b.title.length > 30;
   const mark = existsSync(MARK) ? `<img src="file://${MARK}">` : '';
   writeFileSync(htmlPath, head + `<div class="wrap">
+  <div class="topscrim"></div>
   <div class="scrim"></div>
   <div class="copy">
     ${b.endcard ? '<div class="kicker"></div>' : ''}
     <div class="title${long ? ' sm' : ''}">${esc(b.title)}</div>
     <div class="body">${esc(b.body)}</div>
   </div>
-  <div class="foot"><span class="handle">@her.solotrip</span>
+  <div class="topbar"><span class="handle">@her.solotrip</span>
     <span class="lockup">${mark}<span class="word">Daya</span></span></div>
 </div>` + foot);
   execSync(`${CHROME} --headless=new --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --force-device-scale-factor=1 --default-background-color=00000000 --virtual-time-budget=5000 --window-size=${W},${H + RESERVE} --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });

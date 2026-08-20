@@ -31,6 +31,17 @@ Keine Zahl im Post, die nicht belegt ist. Keine Statistik, kein Prozentwert.
 
 Schrift: Cormorant Garamond für die Überschriften, Inter für den Fließtext.
 
+**Safe Areas, nachgelesen am 20.08.** Die Quellen nennen unterschiedliche Werte,
+genommen ist jeweils der strengste: Instagram Reel oben 220, unten 450, rechts
+120 px. TikTok oben 140, unten 484, rechts 180 px.
+
+Erste Fassung lag mitten drin: Handle und Bildmarke auf 118 px vom unteren Rand,
+Fließtext ab 268 px. Auf dem Handy hätten Caption, Ton-Leiste und die Knopfleiste
+das verdeckt. Jetzt beginnt der Text bei 520 px vom unteren Rand, und Handle plus
+Bildmarke sitzen bei 240 px von oben in einem weichen Kopfverlauf. Der Kopfverlauf
+muss dunkel genug bleiben: auf der Endkarte liegt die Marke über heller Landschaft
+und war bei .58 nicht mehr lesbar, deshalb .78.
+
 ---
 
 ## Bilder
