@@ -57,35 +57,36 @@ Dusk-Glow = marigold→emerald, radial, tief & warm. Nie drei laute Akzente.
 
 ## Post-Layout (Hausstil, 1080x1920)
 
-**Vorlage ist der Post von `@heygirlceo`**, den Alesya geschickt hat (Screenshots
-IMG_3685, IMG_3686, IMG_3688). Am Bild gemessen, nicht geschätzt. Der Hausstil ist
-nicht erfunden, er ist abgeschaut.
+**Vorlage ist die Slide, die Alesya am 20.08. geschickt hat** („Book a 24/7
+reception", Strandbild, Zähler 03/05). Am Bild ausgemessen. Nicht erfinden,
+nicht nachempfinden - nachbauen.
+
+Aufbau von oben nach unten:
 
 | Element | Wert |
 |---|---|
-| Textblock | mittig, weiches Band `top:34%`, `height:32%`, kein Kasten, keine harten Kanten |
-| Überschrift | `Archivo` 800, **Kleinbuchstaben**, 64 px, Zeilenhöhe 1.05, mittig zentriert |
-| Fließtext | `Archivo` 700, 40 px, Zeilenhöhe 1.28, max. 900 px, mittig zentriert |
-| Farbe | Creme `#f4ecdb`. Die Vorlage nimmt reines Weiß, das ist bei uns verboten (harte Regel 5) |
-| Handle | `@her.solotrip`, Archivo 800, 26 px, Marigold, 250 px von unten |
-| Endkarte | Handle oben auf 150 px, Bildmarke plus `DAYA` unten auf 300 px |
-| Bild | ein randloses Foto pro Slide (Entscheidung Alesya am Muster, 20.08.). Die Vorlage nimmt ein Vierer-Raster, dafür bräuchten wir 32 Fotos statt 16 |
+| Kopfzeile | `68 px` vom Rand, `88 px` von oben. Links Bildmarke in Gold (30 px) plus `her.solotrip` in Inter 600, 26 px, Creme. Rechts der Zähler `01 / 06` in Inter 700, 24 px, Marigold, Laufweite .16em |
+| Umriss-Ziffer | die Nummer der Slide als Umriss, Archivo 800, 300 px, ohne Füllung, Konturlinie 3 px in Marigold mit 62 % Deckkraft. Rechts oben. Nur auf den nummerierten Slides |
+| Kicker | Kategorie in Versalien, Inter 700, 24 px, Marigold, Laufweite .22em |
+| Kursive Zeile | `Cormorant Garamond` 500 **italic**, 46 px, Creme. Ein Satz, der die Überschrift anmoderiert |
+| Überschrift | `Archivo` 800, 82 px, Zeilenhöhe 1.02, Creme, **genau ein Wort oder eine Wendung in Marigold** |
+| Strich | 74 x 6 px, Marigold, abgerundet |
+| Fließtext | `Inter` 400, 31 px, Zeilenhöhe 1.5, Creme, **genau eine Wendung in Marigold und 600** |
+| Pille | unten rechts, Marigold gefüllt, Text `SAVE THIS` in Emerald, Inter 700, 24 px, Lesezeichen-Symbol davor |
+| Endkarte | statt der Pille die Wortmarke unten links: Bildmarke plus `DAYA` in Cormorant 600 |
+| Verlauf | oben ein leichter für die Kopfzeile, unten ein weicher über 58 % der Höhe |
+| Bild | ein randloses Foto pro Slide |
 
-**Caveat nicht als Überschrift.** In der Vorlage steht Schreibschrift in genau
-einer Zeile auf dem Cover, sonst nirgends. Der Post `solo trip dates` hatte sie auf
-jeder Slide, das war der Fehler dort.
-
-**Der Textblock liegt in der Bildmitte, damit ist er außerhalb dessen, was die Apps
-überdecken.** Nachgelesen 20.08., die Quellen nennen unterschiedliche Werte,
-genommen ist jeweils der strengste: Instagram Reel oben 220, unten 450, rechts
-120 px. TikTok oben 140, unten 484, rechts 180 px.
+**Die Gold-Hervorhebung ist Pflicht und sparsam:** eine Stelle in der Überschrift,
+eine im Fließtext. Nie mehr.
 
 ### Regel für Layout-Entscheidungen
 
-**Nie nach Schriftnamen fragen. Immer eine gerenderte Slide zeigen und danach
-fragen.** Am 20.08. wurde für einen einzigen Post viermal ein Layout erfunden,
-weil ich die geschickte Vorlage nie aufgemacht und stattdessen über Schriftnamen
-diskutiert habe. Erst eine Musterslide, dann die restlichen.
+**Nie nach Schriftnamen fragen, nie ein Layout nacherzählen. Die geschickte
+Vorlage aufmachen, ausmessen, nachbauen.** Am 20.08. wurden für einen einzigen
+Post fünf Layouts gebaut, weil ich die Vorlage nicht angesehen habe. Die
+Screenshots liegen in `/root/.claude/uploads/<session>/`. Vor jeder Layout-Arbeit
+dort nachsehen.
 
 ## Name
 **DAYA = Di*a*n*a* + ales*y*a** — die beiden Gründerinnen. Das ist die Herkunft des

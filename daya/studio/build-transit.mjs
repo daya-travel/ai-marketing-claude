@@ -64,40 +64,72 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
 const BEATS = [
   { id: 'cover', dur: 3.14, photo: 't901', clip: 'clip-car.mp4', cover: true,
-    title: 'How to move through a new city alone',
-    body: 'Six things that make it easier. Solo travel, minus the guesswork.' },
+    kicker: 'SOLO TRAVEL',
+    lead: 'Six things I do now that I did not do on my first trip.',
+    title: 'How to move through a new city alone', hi: 'alone',
+    body: 'Trains, rides and the hours in between. No guesswork.', bodyHi: 'No guesswork.' },
 
-  { id: '01', dur: 7.1, photo: 't902',
-    title: 'Book the ladies only compartment',
-    body: 'Nightjet has one in the couchette and the sleeper. Women only, same price as a mixed compartment. Look for the female icon when you book, they sell out early.' },
+  { id: '01', dur: 7.1, photo: 't902', n: 1,
+    kicker: 'NIGHT TRAIN',
+    lead: 'Check the one thing most people skip.',
+    title: 'Book the ladies only compartment', hi: 'ladies only',
+    body: 'Nightjet has one in the couchette and the sleeper. Women only, same price as a mixed compartment. Look for the female icon when you book, they sell out early.',
+    bodyHi: 'same price' },
 
-  { id: '02', dur: 4.96, photo: 'n42',
-    title: 'Ask who are you here for',
-    body: 'Never say your name first. A real driver already has it on the screen in front of them. If they have to guess, walk away.' },
+  { id: '02', dur: 4.96, photo: 'n42', n: 2,
+    kicker: 'GETTING A RIDE',
+    lead: 'The first sentence decides the rest.',
+    title: 'Ask who are you here for', hi: 'who are you here for',
+    body: 'Never say your name first. A real driver already has it on the screen in front of them. If they have to guess, walk away.',
+    bodyHi: 'walk away' },
 
-  { id: '03', dur: 5.2, photo: 'm431',
-    title: 'Check the plate, not the car',
-    body: 'The scam is the right model with the wrong plate. Match the whole thing before you open the door, not just the colour.' },
+  { id: '03', dur: 5.2, photo: 'm431', n: 3,
+    kicker: 'GETTING A RIDE',
+    lead: 'The right car can still be the wrong one.',
+    title: 'Check the plate, not the car', hi: 'the plate',
+    body: 'The scam is the right model with the wrong plate. Match the whole thing before you open the door, not just the colour.',
+    bodyHi: 'before you open the door' },
 
-  { id: '04', dur: 3.6, photo: 'm442',
-    title: 'Sit in the fuller carriage',
-    body: 'Not the empty one at the end, even though it is quieter. Near the doors, near other people, is the better seat.' },
+  { id: '04', dur: 3.6, photo: 'm442', n: 4,
+    kicker: 'ON BOARD',
+    lead: 'Quieter is not the same as better.',
+    title: 'Sit in the fuller carriage', hi: 'fuller',
+    body: 'Not the empty one at the end, even though it is quieter. Near the doors, near other people, is the better seat.',
+    bodyHi: 'near other people' },
 
-  { id: '05', dur: 3.77, photo: 'm456',
-    title: 'Wait for your ride inside',
-    body: 'Not at the kerb in the dark. Inside there are staff and other people, and you can watch for the car through the glass.' },
+  { id: '05', dur: 3.77, photo: 'm456', n: 5,
+    kicker: 'WAITING',
+    lead: 'Where you wait is part of the plan.',
+    title: 'Wait for your ride inside', hi: 'inside',
+    body: 'Not at the kerb in the dark. Inside there are staff and other people, and you can watch for the car through the glass.',
+    bodyHi: 'staff and other people' },
 
   // clip-morning was dropped after the eight-frame check: it is a train front
   // with two small figures beside it, so the beat would have been the one slide
   // in the set without a woman on it. The still does the job better.
-  { id: '06', dur: 3.73, photo: 'm463',
-    title: 'Book the earlier train',
-    body: 'Same ticket, different arrival. More people on the platform, more open at the other end, and no waiting alone once you land.' },
+  { id: '06', dur: 3.73, photo: 'm463', n: 6,
+    kicker: 'TIMING',
+    lead: 'Same ticket, different arrival.',
+    title: 'Book the earlier train', hi: 'earlier',
+    body: 'More people on the platform, more open at the other end, and no waiting alone once you land.',
+    bodyHi: 'no waiting alone' },
 
   { id: 'end', dur: 4.03, photo: 'n82', endcard: true,
-    title: 'Save this before your next transfer',
-    body: 'Which one did you not know?' },
+    kicker: 'SAVE THIS',
+    lead: 'Six things, one transfer at a time.',
+    title: 'Save this before your next transfer', hi: 'next transfer',
+    body: 'Which one did you not know?', bodyHi: 'Which one' },
 ];
+const TIPS = BEATS.filter((b) => b.n).length;
+
+// Gold-Hervorhebung: genau eine Stelle in der Ueberschrift und eine im Fliesstext,
+// so wie in der Vorlage. Kein Fund, kein Hervorheben - nichts wird geraten.
+const hi = (text, part) => {
+  const t = esc(text);
+  if (!part) return t;
+  const p = esc(part);
+  return t.includes(p) ? t.replace(p, `<span class="hi">${p}</span>`) : t;
+};
 
 const head = `<!doctype html><html><head><meta charset="utf-8">
 <style>
@@ -105,29 +137,62 @@ ${FONT_CSS}
 *{margin:0;box-sizing:border-box}
 html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
-/* weiches Band in der Bildmitte. Die Vorlage hat gar keins, ihre Fotos sind
-   durchweg dunkel - unsere gehen von Nachtstrasse bis Morgensonne, deshalb der
-   weiche Verlauf statt gar nichts. Kein Kasten, keine harten Kanten. */
-.band{position:absolute;left:0;right:0;top:34%;height:32%;
-  background:linear-gradient(180deg,rgba(6,29,21,0) 0%,rgba(6,29,21,.62) 26%,rgba(6,29,21,.62) 74%,rgba(6,29,21,0) 100%)}
-.pad{position:absolute;inset:0;padding:0 76px;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center}
-.title{font-family:'Archivo';font-weight:800;font-size:64px;line-height:1.05;
-  letter-spacing:-.02em;text-transform:lowercase;color:#f4ecdb;
-  text-shadow:0 4px 26px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.8)}
-.body{font-family:'Archivo';font-weight:700;font-size:40px;line-height:1.28;color:#f4ecdb;
-  margin-top:22px;max-width:900px;text-shadow:0 4px 24px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.85)}
-.wm{position:absolute;bottom:250px;left:0;right:0;text-align:center;font-family:'Archivo';
-  font-weight:800;letter-spacing:.2em;font-size:26px;color:#efc05a;opacity:.92;
-  text-shadow:0 2px 18px rgba(0,0,0,.9)}
-/* auf der Endkarte geht der Handle nach oben und die Bildmarke nach unten */
-.wm.top{top:150px;bottom:auto}
-.lockup{position:absolute;bottom:300px;left:0;right:0;display:flex;justify-content:center}
-.plate{display:flex;align-items:center;gap:18px}
-.plate img{height:70px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.98)) drop-shadow(0 1px 5px rgba(0,0,0,.95))}
-.plate .word{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;
-  letter-spacing:.2em;font-size:42px;color:#efc05a;line-height:1;
-  text-shadow:0 4px 16px rgba(0,0,0,.98),0 1px 5px rgba(0,0,0,.95)}
+/* Verlauf: oben nur leicht angedunkelt fuer die Kopfzeile, unten traegt er den
+   ganzen Textblock */
+.top{position:absolute;left:0;right:0;top:0;height:16%;
+  background:linear-gradient(180deg,rgba(6,29,21,.55) 0%,rgba(6,29,21,0) 100%)}
+.scrim{position:absolute;left:0;right:0;bottom:0;height:58%;
+  background:linear-gradient(180deg,
+    rgba(6,29,21,0) 0%,
+    rgba(6,29,21,.42) 26%,
+    rgba(6,29,21,.80) 52%,
+    rgba(6,29,21,.94) 76%,
+    rgba(6,29,21,.97) 100%)}
+
+/* Kopfzeile: Bildmarke plus Handle links, Zaehler rechts */
+.bar{position:absolute;left:68px;right:68px;top:88px;display:flex;align-items:center;
+  justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:30px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.9))}
+.brand span{font-family:'Inter';font-weight:600;font-size:26px;letter-spacing:.01em;
+  color:#f4ecdb;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.count{font-family:'Inter';font-weight:700;font-size:24px;letter-spacing:.16em;
+  color:#efc05a;text-shadow:0 2px 10px rgba(0,0,0,.85)}
+
+/* grosse Umriss-Ziffer, nur auf den nummerierten Slides */
+.ghost{position:absolute;right:56px;top:300px;font-family:'Archivo';font-weight:800;
+  font-size:300px;line-height:.8;letter-spacing:-.04em;color:transparent;
+  -webkit-text-stroke:3px rgba(239,192,90,.62)}
+
+/* Textblock unten links */
+.copy{position:absolute;left:68px;right:68px;bottom:250px}
+.kicker{font-family:'Inter';font-weight:700;font-size:24px;letter-spacing:.22em;
+  color:#efc05a;text-shadow:0 2px 10px rgba(0,0,0,.85)}
+.lead{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;font-size:46px;
+  line-height:1.2;color:#f4ecdb;margin-top:22px;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.title{font-family:'Archivo';font-weight:800;font-size:82px;line-height:1.02;
+  letter-spacing:-.025em;color:#f4ecdb;margin-top:14px;text-wrap:balance;
+  text-shadow:0 3px 18px rgba(0,0,0,.75)}
+.title.sm{font-size:70px}
+.hi{color:#efc05a}
+.rule{width:74px;height:6px;background:#efc05a;margin:28px 0 26px;border-radius:3px}
+.body{font-family:'Inter';font-weight:400;font-size:31px;line-height:1.5;
+  color:#f4ecdb;opacity:.95;max-width:900px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.body .hi{font-weight:600;opacity:1}
+
+/* Pille unten rechts */
+.save{position:absolute;right:68px;bottom:100px;display:flex;align-items:center;gap:12px;
+  background:#efc05a;color:#0e3b2c;border-radius:32px;padding:16px 30px;
+  font-family:'Inter';font-weight:700;font-size:24px;letter-spacing:.1em;
+  box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.save svg{width:22px;height:22px;fill:#0e3b2c}
+
+/* Endkarte: Wortmarke statt Pille */
+.lockup{position:absolute;left:68px;bottom:96px;display:flex;align-items:center;gap:16px}
+.lockup img{height:52px;filter:drop-shadow(0 3px 12px rgba(0,0,0,.9))}
+.lockup .word{font-family:'Cormorant Garamond';font-weight:600;text-transform:uppercase;
+  letter-spacing:.22em;font-size:34px;color:#efc05a;line-height:1;
+  text-shadow:0 3px 12px rgba(0,0,0,.9)}
 </style></head><body>`;
 const foot = `</body></html>`;
 
@@ -153,14 +218,26 @@ BEATS.forEach((b) => {
   const htmlPath = join(OV, `${b.id}.html`);
   const pngPath = join(OV, `${b.id}.png`);
   const mark = existsSync(MARK) ? `<img src="file://${MARK}">` : '';
+  const long = b.title.length > 30;
+  const bookmark = '<svg viewBox="0 0 24 24"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/></svg>';
   writeFileSync(htmlPath, head + `<div class="wrap">
-  <div class="band"></div>
-  <div class="pad">
-    <div class="title">${esc(b.title)}</div>
-    <div class="body">${esc(b.body)}</div>
+  <div class="top"></div>
+  <div class="scrim"></div>
+  <div class="bar">
+    <span class="brand">${mark}<span>her.solotrip</span></span>
+    ${b.n ? `<span class="count">${String(b.n).padStart(2, '0')} / ${String(TIPS).padStart(2, '0')}</span>` : ''}
   </div>
-  <div class="wm${b.endcard ? ' top' : ''}">@her.solotrip</div>
-  ${b.endcard ? `<div class="lockup"><div class="plate">${mark}<span class="word">Daya</span></div></div>` : ''}
+  ${b.n ? `<div class="ghost">${String(b.n).padStart(2, '0')}</div>` : ''}
+  <div class="copy">
+    <div class="kicker">${esc(b.kicker)}</div>
+    <div class="lead">${esc(b.lead)}</div>
+    <div class="title${long ? ' sm' : ''}">${hi(b.title, b.hi)}</div>
+    <div class="rule"></div>
+    <div class="body">${hi(b.body, b.bodyHi)}</div>
+  </div>
+  ${b.endcard
+    ? `<div class="lockup">${mark}<span class="word">Daya</span></div>`
+    : `<div class="save">${bookmark}SAVE THIS</div>`}
 </div>` + foot);
   execSync(`${CHROME} --headless=new --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --force-device-scale-factor=1 --default-background-color=00000000 --virtual-time-budget=5000 --window-size=${W},${H + RESERVE} --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });
   execSync(`python3 -c "from PIL import Image; Image.open('${pngPath}').crop((0,0,${W},${H})).save('${pngPath}')"`, { stdio: 'ignore' });

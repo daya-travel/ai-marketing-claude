@@ -17,24 +17,25 @@ Keine Zahl im Post, die nicht belegt ist. Keine Statistik, kein Prozentwert.
 
 ---
 
-## Layout: die geschickte Vorlage, nicht meine Erfindung
+## Layout: die Vorlage, ausgemessen und nachgebaut
 
-Für diesen Post wurden vier Layouts erfunden, weil ich die Screenshots, die Alesya
-geschickt hatte, nie aufgemacht habe. Am 20.08. nachgeholt. Vorlage ist
-`@heygirlceo`:
+Fünf Anläufe, weil ich die geschickte Vorlage nicht angesehen habe. Am 20.08.
+nachgeholt. Aufbau pro Slide:
 
-- Überschrift in fetter Sans, **klein geschrieben**, mittig, rund 64 px
-- Fließtext in fetter Sans, mittig, rund 40 px, enge Zeilen
-- Text sitzt in der Bildmitte
-- kein Logo auf den Innenslides, Schreibschrift nur auf dem Cover der Vorlage
+- Kopfzeile mit Bildmarke, `her.solotrip` und Zähler `01 / 06`
+- große Umriss-Ziffer in Gold rechts oben
+- Kicker in Versalien und Gold
+- eine kursive Serifenzeile als Anmoderation
+- fette Überschrift mit genau einem goldenen Wort
+- goldener Strich
+- Fließtext mit genau einer goldenen Hervorhebung
+- `SAVE THIS`-Pille unten rechts, auf der Endkarte stattdessen die Wortmarke
 
-Der veröffentlichte Post `solo trip dates` war schon fast das. Der einzige echte
-Unterschied: dort stand Caveat als Überschrift auf jeder Slide. Genau das ist raus.
+Die Werte stehen in `daya/brand/DESIGN-SYSTEM.md`, Abschnitt Post-Layout.
 
-Ein randloses Foto pro Slide statt des Vierer-Rasters der Vorlage, entschieden am
-Muster. Die Werte stehen jetzt in `daya/brand/DESIGN-SYSTEM.md`, Abschnitt
-Post-Layout, samt der Regel: Layout nie über Schriftnamen abfragen, immer eine
-gerenderte Slide zeigen.
+Neu dazugekommen sind pro Slide ein Kicker und eine kursive Zeile, weil die
+Vorlage beides hat. Der Fließtext von Slide 7 wurde um „Same ticket, different
+arrival" gekürzt, weil dieser Satz jetzt die kursive Zeile ist.
 
 ## Bilder
 
