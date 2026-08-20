@@ -57,36 +57,35 @@ Dusk-Glow = marigold→emerald, radial, tief & warm. Nie drei laute Akzente.
 
 ## Post-Layout (Hausstil, 1080x1920)
 
-Festgelegt von Alesya am 20.08.2026, nachdem für einen einzigen Post viermal ein
-neues Layout erfunden wurde. **Das hier ist die Quelle. Werte werden hier geändert,
-nicht im Build-Skript.**
+**Vorlage ist der Post von `@heygirlceo`**, den Alesya geschickt hat (Screenshots
+IMG_3685, IMG_3686, IMG_3688). Am Bild gemessen, nicht geschätzt. Der Hausstil ist
+nicht erfunden, er ist abgeschaut.
 
 | Element | Wert |
 |---|---|
-| Bild | ein randloses Foto pro Slide, Kante zu Kante. Kein Raster, keine geteilte Fläche |
-| Fläche hinter dem Text | ein weicher Verlauf nach unten. Keine Balken, keine Bänder, keine harten Kanten |
-| Überschrift | `Cormorant Garamond` 600, 82 px, linksbündig. Über 30 Zeichen: 70 px |
-| Fließtext | `Inter` 400, 32 px, Zeilenhöhe 1.5, max. 840 px breit |
-| Handle und Bildmarke | eine Zeile direkt unter dem Fließtext. Handle links in Creme, `DAYA` rechts in Marigold |
-| Unterkante des Textblocks | **520 px** über dem unteren Bildrand |
-| Caveat | nur als einzelner Akzent, nie Überschrift, nie Fließtext (siehe Typografie oben) |
+| Textblock | mittig, weiches Band `top:34%`, `height:32%`, kein Kasten, keine harten Kanten |
+| Überschrift | `Archivo` 800, **Kleinbuchstaben**, 64 px, Zeilenhöhe 1.05, mittig zentriert |
+| Fließtext | `Archivo` 700, 40 px, Zeilenhöhe 1.28, max. 900 px, mittig zentriert |
+| Farbe | Creme `#f4ecdb`. Die Vorlage nimmt reines Weiß, das ist bei uns verboten (harte Regel 5) |
+| Handle | `@her.solotrip`, Archivo 800, 26 px, Marigold, 250 px von unten |
+| Endkarte | Handle oben auf 150 px, Bildmarke plus `DAYA` unten auf 300 px |
+| Bild | ein randloses Foto pro Slide (Entscheidung Alesya am Muster, 20.08.). Die Vorlage nimmt ein Vierer-Raster, dafür bräuchten wir 32 Fotos statt 16 |
 
-**Warum 520 px.** Beide Apps überdecken den unteren Bildrand mit ihrer eigenen
-Oberfläche. Nachgelesen am 20.08., die Quellen nennen unterschiedliche Werte,
-genommen ist jeweils der strengste:
+**Caveat nicht als Überschrift.** In der Vorlage steht Schreibschrift in genau
+einer Zeile auf dem Cover, sonst nirgends. Der Post `solo trip dates` hatte sie auf
+jeder Slide, das war der Fehler dort.
 
-| | oben | unten | rechts |
-|---|---|---|---|
-| Instagram Reel | 220 px | 450 px | 120 px |
-| TikTok | 140 px | 484 px | 180 px |
+**Der Textblock liegt in der Bildmitte, damit ist er außerhalb dessen, was die Apps
+überdecken.** Nachgelesen 20.08., die Quellen nennen unterschiedliche Werte,
+genommen ist jeweils der strengste: Instagram Reel oben 220, unten 450, rechts
+120 px. TikTok oben 140, unten 484, rechts 180 px.
 
-Erste Fassung des Transit-Posts hatte Handle und Marke auf 118 px und den
-Fließtext ab 268 px. Beides wäre auf dem Handy von Caption und Ton-Leiste verdeckt
-gewesen.
+### Regel für Layout-Entscheidungen
 
-**Was der veröffentlichte Post `solo trip dates` anders macht:** Vierer-Raster,
-Caveat als Überschrift, Text mittig. Der Post ist raus und bleibt, wie er ist. Der
-Hausstil oben gilt ab dem Transit-Post.
+**Nie nach Schriftnamen fragen. Immer eine gerenderte Slide zeigen und danach
+fragen.** Am 20.08. wurde für einen einzigen Post viermal ein Layout erfunden,
+weil ich die geschickte Vorlage nie aufgemacht und stattdessen über Schriftnamen
+diskutiert habe. Erst eine Musterslide, dann die restlichen.
 
 ## Name
 **DAYA = Di*a*n*a* + ales*y*a** — die beiden Gründerinnen. Das ist die Herkunft des

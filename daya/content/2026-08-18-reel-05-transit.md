@@ -17,33 +17,24 @@ Keine Zahl im Post, die nicht belegt ist. Keine Statistik, kein Prozentwert.
 
 ---
 
-## Layout: der Hausstil, und wo er jetzt steht
+## Layout: die geschickte Vorlage, nicht meine Erfindung
 
-Für diesen einen Post wurden vier Layouts erfunden, bis Alesya am 20.08. den Stil
-festgelegt hat: **Cormorant Garamond als Überschrift, Inter als Fließtext, Text im
-unteren Drittel und linksbündig.** Keine Handschrift.
+Für diesen Post wurden vier Layouts erfunden, weil ich die Screenshots, die Alesya
+geschickt hatte, nie aufgemacht habe. Am 20.08. nachgeholt. Vorlage ist
+`@heygirlceo`:
 
-Das deckt sich mit den Schrift-Rollen, die ohnehin im Design-System stehen:
-Cormorant ist die Markenstimme, Inter ist Body, und Caveat ist nur für **einen**
-menschlichen Akzent pro Layout gedacht, nie für den Text. Der veröffentlichte Post
-`solo trip dates` hat sich nicht daran gehalten und bleibt trotzdem, wie er ist.
+- Überschrift in fetter Sans, **klein geschrieben**, mittig, rund 64 px
+- Fließtext in fetter Sans, mittig, rund 40 px, enge Zeilen
+- Text sitzt in der Bildmitte
+- kein Logo auf den Innenslides, Schreibschrift nur auf dem Cover der Vorlage
 
-**Die Werte stehen jetzt in `daya/brand/DESIGN-SYSTEM.md`, Abschnitt Post-Layout.**
-Dort werden sie geändert, nicht im Build-Skript. Kurzfassung:
+Der veröffentlichte Post `solo trip dates` war schon fast das. Der einzige echte
+Unterschied: dort stand Caveat als Überschrift auf jeder Slide. Genau das ist raus.
 
-| Element | Wert |
-|---|---|
-| Bild | ein randloses Foto pro Slide |
-| Fläche hinter dem Text | weicher Verlauf, keine Balken |
-| Überschrift | Cormorant Garamond 600, 82 px, lange Titel 70 px |
-| Fließtext | Inter 400, 32 px, max. 840 px |
-| Handle und Marke | eine Zeile direkt unter dem Fließtext |
-| Unterkante des Blocks | 520 px über dem unteren Rand |
-
-Der ganze Block wandert damit als Einheit. Weil die Zeile mit Handle und Marke im
-Fluss unter dem Text steht statt am Bildrand, bleibt sie automatisch außerhalb der
-Bereiche, die Instagram (unten 450 px) und TikTok (unten 484 px) überdecken.
-Im Prüfbild nachgesehen, nicht angenommen.
+Ein randloses Foto pro Slide statt des Vierer-Rasters der Vorlage, entschieden am
+Muster. Die Werte stehen jetzt in `daya/brand/DESIGN-SYSTEM.md`, Abschnitt
+Post-Layout, samt der Regel: Layout nie über Schriftnamen abfragen, immer eine
+gerenderte Slide zeigen.
 
 ## Bilder
 
