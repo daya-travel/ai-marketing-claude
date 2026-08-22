@@ -70,7 +70,7 @@ const EMERALD = '#0e3b2c';
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
 const BEATS = [
-  { id: 'cover', dur: 3.14, photo: 't901', clip: 'clip-car.mp4', cover: true,
+  { id: 'cover', dur: 3.14, photo: 'c2', clip: 'clip-car.mp4', cover: true,
     kicker: 'SOLO TRAVEL',
     lead: 'Six things I do now that I did not do on my first trip.',
     title: 'How to move through a new city alone', hi: 'alone',
@@ -121,7 +121,7 @@ const BEATS = [
     body: 'More people on the platform, more open at the other end, and no waiting alone once you land.',
     bodyHi: 'no waiting alone' },
 
-  { id: 'end', dur: 4.03, photo: 'n82', endcard: true,
+  { id: 'end', dur: 4.03, photo: 'e1', endcard: true,
     kicker: 'SAVE THIS',
     // Spruch auf der Schlusskarte, aus Alesyas eigener Formulierung fuer den
     // Vorgaengerpost: "und jedes Mal komme ich nach Hause und bin anders als davor"

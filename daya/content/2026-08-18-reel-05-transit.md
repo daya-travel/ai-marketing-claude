@@ -76,14 +76,14 @@ langsamem Zoom. **Keine neuen Video-Credits.**
 
 | # | Überschrift | Text |
 |---|---|---|
-| 1 | How to move through a new city alone | Six things that make it easier. Solo travel, minus the guesswork. |
+| 1 | How to move through a new city alone | Cover, Foto `c2` (Frau steigt nachts in den Zug). Kicker SOLO TRAVEL, Pille SWIPE |
 | 2 | Book the ladies only compartment | Nightjet has one in the couchette and the sleeper. Women only, same price as a mixed compartment. Look for the female icon when you book, they sell out early. |
 | 3 | Ask who are you here for | Never say your name first. A real driver already has it on the screen in front of them. If they have to guess, walk away. |
 | 4 | Check the plate, not the car | The scam is the right model with the wrong plate. Match the whole thing before you open the door, not just the colour. |
 | 5 | Sit in the fuller carriage | Not the empty one at the end, even though it is quieter. Near the doors, near other people, is the better seat. |
 | 6 | Wait for your ride inside | Not at the kerb in the dark. Inside there are staff and other people, and you can watch for the car through the glass. |
 | 7 | Book the earlier train | Same ticket, different arrival. More people on the platform, more open at the other end, and no waiting alone once you land. |
-| 8 | Save this before your next transfer | Which one did you not know? |
+| 8 | Save this before your next transfer | Schlusskarte, Foto `e1` (Kopf an der Zugscheibe). Spruch „You come home a little different every time.", DAYA-Wortmarke, Pille FOLLOW |
 
 ---
 
