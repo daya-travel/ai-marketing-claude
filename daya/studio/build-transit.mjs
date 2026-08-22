@@ -49,6 +49,10 @@ const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PHOTOS = join(__dirname, 'photos', 'transit');
 const CLIPS = join(PHOTOS, 'clips');
+// Zwei Fassungen desselben Zeichens: oben in Creme neben dem Account-Namen,
+// unten auf der Schlusskarte in Gold zusammen mit der Wortmarke. Die Farbe ist
+// der Unterschied - beide in Gold sah nach zwei Logos derselben Marke aus.
+const MARK_CREAM = join(__dirname, 'photos', 'daya-grid', 'daya-mark-cream.png');
 const MARK = join(__dirname, 'photos', 'daya-grid', 'daya-mark-gold.png');
 const OUT = join(__dirname, 'reels', 'reel-transit');
 const OV = join(OUT, 'overlays');
@@ -155,7 +159,9 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 /* In der Kopfzeile steht allein der Account-Name. Die DAYA-Bildmarke stand hier
    direkt neben "her.solotrip" und wurde dadurch als Logo des Reise-Accounts
    gelesen - zwei Marken vermischt. DAYA tritt nur auf der Endkarte auf. */
-.brand{font-family:'Inter';font-weight:600;font-size:26px;letter-spacing:.01em;
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:30px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.95))}
+.brand span{font-family:'Inter';font-weight:600;font-size:26px;letter-spacing:.01em;
   color:#f4ecdb;text-shadow:0 2px 10px rgba(0,0,0,.8)}
 .count{font-family:'Inter';font-weight:700;font-size:24px;letter-spacing:.16em;
   color:#efc05a;text-shadow:0 2px 10px rgba(0,0,0,.85)}
@@ -177,6 +183,7 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
   letter-spacing:-.025em;color:#f4ecdb;margin-top:14px;text-wrap:balance;
   text-shadow:0 3px 18px rgba(0,0,0,.75)}
 .title.sm{font-size:70px}
+.title.lg{font-size:92px}
 .hi{color:#efc05a}
 .rule{width:74px;height:6px;background:#efc05a;margin:28px 0 26px;border-radius:3px}
 .body{font-family:'Inter';font-weight:400;font-size:31px;line-height:1.5;
@@ -221,26 +228,32 @@ BEATS.forEach((b) => {
   const htmlPath = join(OV, `${b.id}.html`);
   const pngPath = join(OV, `${b.id}.png`);
   const mark = existsSync(MARK) ? `<img src="file://${MARK}">` : '';
+  const markCream = existsSync(MARK_CREAM) ? `<img src="file://${MARK_CREAM}">` : '';
   const long = b.title.length > 30;
   const bookmark = '<svg viewBox="0 0 24 24"><path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"/></svg>';
+  const arrow = '<svg viewBox="0 0 24 24"><path d="M13 4l8 8-8 8-1.4-1.4 5.6-5.6H3v-2h14.2l-5.6-5.6z"/></svg>';
+  const plus = '<svg viewBox="0 0 24 24"><path d="M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7z"/></svg>';
   writeFileSync(htmlPath, head + `<div class="wrap">
   <div class="top"></div>
   <div class="scrim"></div>
   <div class="bar">
-    <span class="brand">her.solotrip</span>
+    <span class="brand">${markCream}<span>her.solotrip</span></span>
     ${b.n ? `<span class="count">${String(b.n).padStart(2, '0')} / ${String(TIPS).padStart(2, '0')}</span>` : ''}
   </div>
   ${b.n ? `<div class="ghost" style="${b.gx === 'left' ? 'left' : 'right'}:70px;top:${b.gy}px">${String(b.n).padStart(2, '0')}</div>` : ''}
   <div class="copy">
     <div class="kicker">${esc(b.kicker)}</div>
     <div class="lead">${esc(b.lead)}</div>
-    <div class="title${long ? ' sm' : ''}">${hi(b.title, b.hi)}</div>
+    <div class="title${b.cover ? ' lg' : long ? ' sm' : ''}">${hi(b.title, b.hi)}</div>
     <div class="rule"></div>
     <div class="body">${hi(b.body, b.bodyHi)}</div>
   </div>
-  ${b.endcard
-    ? `<div class="lockup">${mark}<span class="word">Daya</span></div>`
-    : `<div class="save">${bookmark}SAVE THIS</div>`}
+  ${b.endcard ? `<div class="lockup">${mark}<span class="word">Daya</span></div>` : ''}
+  ${b.cover
+    ? `<div class="save">SWIPE ${arrow}</div>`
+    : b.endcard
+      ? `<div class="save">${plus}FOLLOW</div>`
+      : `<div class="save">${bookmark}SAVE THIS</div>`}
 </div>` + foot);
   execSync(`${CHROME} --headless=new --no-sandbox --disable-gpu --hide-scrollbars --force-color-profile=srgb --force-device-scale-factor=1 --default-background-color=00000000 --virtual-time-budget=5000 --window-size=${W},${H + RESERVE} --screenshot=${pngPath} "file://${htmlPath}"`, { stdio: 'ignore' });
   execSync(`python3 -c "from PIL import Image; Image.open('${pngPath}').crop((0,0,${W},${H})).save('${pngPath}')"`, { stdio: 'ignore' });

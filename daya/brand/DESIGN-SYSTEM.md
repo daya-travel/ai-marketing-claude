@@ -82,15 +82,28 @@ eine im Fließtext. Nie mehr. Am 20.08. stand auf einer Slide fast die ganze
 Überschrift in Gold („Ask **who are you here for**") - damit hebt sie nichts mehr
 hervor.
 
+### Drei Kartentypen
+
+| Karte | Zähler und Ziffer | Pille unten rechts | Wortmarke |
+|---|---|---|---|
+| Cover | nein | `SWIPE` mit Pfeil | nein |
+| Tipp | ja | `SAVE THIS` mit Lesezeichen | nein |
+| Schluss | nein | `FOLLOW` mit Plus | `DAYA` in Gold, unten links |
+
+Überschrift auf dem Cover 92 px statt 82 px.
+
 ### Marken nicht vermischen
 
-- **In der Kopfzeile steht allein `her.solotrip`**, ohne Zeichen davor. Eine
-  eigene Bildmarke für den Reise-Account gibt es nicht.
-- **Die DAYA-Bildmarke steht nur auf der Endkarte**, dort zusammen mit der
-  Wortmarke. Das ist die einzige Stelle, an der DAYA als Absender auftritt.
+Dasselbe Bogen-Zeichen tritt zweimal auf, unterschieden allein durch die Farbe:
 
-Am 20.08. stand die DAYA-Marke direkt neben `her.solotrip` und wurde dadurch als
-Logo des Reise-Accounts gelesen.
+- **Kopfzeile:** `daya-mark-cream.png`, 30 px, in Creme, links neben
+  `her.solotrip`. So steht es in der Vorlage.
+- **Schlusskarte:** `daya-mark-gold.png` in Gold, zusammen mit der Wortmarke
+  `DAYA`. Nur dort.
+
+Am 20.08. stand oben die **goldene** Fassung, also zweimal dieselbe Form in
+derselben Farbe - das las sich als ein Logo, das der falschen Marke gehört. Der
+Fehler war die Farbe, nicht das Zeichen.
 
 ### Die Umriss-Ziffer liegt nie auf einem Gesicht
 
