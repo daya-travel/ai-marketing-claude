@@ -123,7 +123,9 @@ const BEATS = [
 
   { id: 'end', dur: 4.03, photo: 'n82', endcard: true,
     kicker: 'SAVE THIS',
-    lead: 'Six things, one transfer at a time.',
+    // Spruch auf der Schlusskarte, aus Alesyas eigener Formulierung fuer den
+    // Vorgaengerpost: "und jedes Mal komme ich nach Hause und bin anders als davor"
+    lead: 'You come home a little different every time.',
     title: 'Save this before your next transfer', hi: 'next transfer',
     body: 'Which one did you not know?', bodyHi: 'Which one' },
 ];
@@ -185,6 +187,7 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .copy{position:absolute;left:80px;right:80px;bottom:250px}
 .kicker{font-family:'Archivo';font-weight:800;font-size:24px;letter-spacing:.2em;
   color:#efc05a;text-shadow:0 2px 10px rgba(0,0,0,.85)}
+.lead.big{font-size:56px;line-height:1.15}
 .lead{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;font-size:46px;
   line-height:1.2;color:#f4ecdb;margin-top:22px;text-shadow:0 2px 14px rgba(0,0,0,.7)}
 .title{font-family:'Archivo';font-weight:800;font-size:82px;line-height:1.02;
@@ -252,7 +255,7 @@ BEATS.forEach((b) => {
   ${b.n ? `<div class="ghost" style="${b.gx === 'left' ? 'left' : 'right'}:80px;top:${b.gy}px">${String(b.n).padStart(2, '0')}</div>` : ''}
   <div class="copy">
     <div class="kicker">${esc(b.kicker)}</div>
-    <div class="lead">${esc(b.lead)}</div>
+    <div class="lead${b.endcard ? ' big' : ''}">${esc(b.lead)}</div>
     <div class="title${b.cover ? ' lg' : long ? ' sm' : ''}">${hi(b.title, b.hi)}</div>
     <div class="rule"></div>
     <div class="body">${hi(b.body, b.bodyHi)}</div>
