@@ -1,0 +1,80 @@
+/* ─────────────────────────────────────────────────────────────
+   DAYA · Design Tokens
+   Reise-App für Solo-reisende Frauen
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* Brand */
+  --daya-emerald:       #0e3b2c;   /* Primary — Buttons, Akzente */
+  --daya-emerald-deep:  #051f17;   /* Tief-Smaragd — Karten, Sektionen */
+  --daya-emerald-glow:  rgba(14, 59, 44, 0.45);
+
+  /* Neutrals */
+  --daya-silver:        #d4dae0;   /* Text, Icons */
+  --daya-silver-dim:    #8a8f96;   /* Sekundärtext */
+  --daya-silver-faint:  #5b6168;   /* Hint, Caption */
+
+  /* Surfaces */
+  --daya-bg:            #0b1014;   /* Seite (Nachtblau-Schwarz) */
+  --daya-card:          #131a20;   /* Cards, Modals */
+  --daya-card-hi:       #1a2229;   /* Hover-State */
+  --daya-ink:           #06090d;   /* Pures Schwarz */
+
+  /* Lines */
+  --daya-line:          rgba(212, 218, 224, 0.10);
+  --daya-line-strong:   rgba(212, 218, 224, 0.20);
+
+  /* Typografie */
+  --daya-font-serif:    'Cormorant Garamond', 'Times New Roman', serif;
+  --daya-font-sans:     'Inter', system-ui, -apple-system, sans-serif;
+  --daya-font-mono:     ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Radien */
+  --daya-radius-sm:     8px;
+  --daya-radius-md:     14px;
+  --daya-radius-lg:     18px;
+  --daya-radius-pill:   999px;
+
+  /* Shadows */
+  --daya-shadow-card:   0 8px 20px rgba(0, 0, 0, 0.4);
+  --daya-shadow-glow:   0 0 24px var(--daya-emerald-glow);
+}
+
+/* ── Silber-Schimmer (für Headlines, Logo-Wortmarke) ── */
+.daya-silver-shimmer {
+  background: linear-gradient(135deg,
+    #8a929b 0%, #c8cfd6 18%, #f4f6f8 32%,
+    #d4dae0 50%, #98a0a8 68%, #e8ecf0 85%, #aab2bb 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: daya-shimmer 9s ease-in-out infinite;
+}
+@keyframes daya-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* ── Silber-Flächen (für Cards, Pills) ── */
+.daya-silver-surface {
+  background: linear-gradient(135deg,
+    #98a0a8 0%, #c8cfd6 18%, #f4f6f8 32%,
+    #d4dae0 50%, #aab2bb 68%, #e8ecf0 85%, #b4bcc4 100%);
+  color: var(--daya-ink);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* ── Globale Korn-Textur (über alles drüberlegen) ── */
+.daya-texture-overlay {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.20;
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+}

@@ -94,20 +94,31 @@ hervor.
 
 ### Marken nicht vermischen
 
-**Der Bogen mit Pfeil ist die Bildmarke von DAYA.** Er steht nie neben
-`her.solotrip`, in keiner Farbe. Sonst liest er sich als Logo des Reise-Accounts.
+**Zwei verschiedene Marken. Quelle: `daya/brand/design-package/` (Paket von
+Alesya, 22.08.2026).**
 
-- **Kopfzeile:** nur der Schriftzug `her.solotrip`. Ein eigenes Zeichen für den
-  Reise-Account existiert nicht - im ganzen Projekt liegen nur `daya-mark-cream.png`,
-  `daya-mark-gold.png` und `daya-icon.png`, und alle drei sind DAYA. Auch der
-  veröffentlichte Post `solo trip dates` zeigt `@her.solotrip` als reinen
-  Schriftzug.
-- **Schlusskarte:** Bogen in Gold plus Wortmarke `DAYA`. Nur dort.
+| Marke | Zeichen | Wo |
+|---|---|---|
+| `her.solotrip` | **Pfeil mit zwei Schallwellen-Bögen**, dünne Linie, Strichstärke 1.5, Creme | Kopfzeile jedes Posts, daneben der Name in Archivo Bold |
+| DAYA | **Bogen mit Pfeil** | nur auf der Schlusskarte, in Gold, mit der Wortmarke |
 
-Am 20.08. stand die Marke zweimal falsch: erst in Gold, dann in Creme neben dem
-Account-Namen. Beides war derselbe Fehler. Kommt von Alesya ein eigenes Zeichen
-für `her.solotrip`, wandert es nach `daya/studio/photos/her-solotrip/` und wird in
-`build-transit.mjs` in der Kopfzeile eingesetzt.
+Die Glyphe liegt als SVG unter `design-package/logo/her-solotrip-glyph-cream.svg`
+und wird im Build-Skript inline eingesetzt, damit sie bei 30 px scharf bleibt.
+
+Am 20.08. stand dreimal der DAYA-Bogen in der Kopfzeile, einmal in Gold, einmal in
+Creme, einmal gar nichts. Alle drei falsch. Die Pfeil-Glyphe ist die richtige.
+
+**Weitere Werte aus dem Paket, die vorher geraten waren:** Kicker in Archivo
+700-800 (nicht Inter), Seitenrand 80 px, Text auf Marigold-Flächen in Warm-Ink
+`#1a140b`, Korn über allem (~18 % Deckkraft, `mix-blend-mode: overlay`) und eine
+leichte Emerald-Gradierung über jedem Foto. Beides ist laut Paket DAYA-Signatur.
+
+**Zwei Abweichungen, bei denen Alesyas Ansage gilt, nicht das Paket:**
+- Das Paket nennt in der README Marigold `#EFB050`, in `DAYA-DESIGN.md` aber
+  `#efc05a`. Letzteres ist die als „single source of truth" bezeichnete Datei, also
+  gilt `#efc05a`.
+- Das Paket schreibt „Fotos: Frauen von hinten". Alesya hat das am 18.08.
+  aufgehoben, jede Haltung ist erlaubt.
 
 ### Die Umriss-Ziffer liegt nie auf einem Gesicht
 
