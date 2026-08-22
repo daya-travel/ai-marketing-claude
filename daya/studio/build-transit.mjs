@@ -49,9 +49,11 @@ const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PHOTOS = join(__dirname, 'photos', 'transit');
 const CLIPS = join(PHOTOS, 'clips');
-// Zwei Fassungen desselben Zeichens: oben in Creme neben dem Account-Namen,
-// unten auf der Schlusskarte in Gold zusammen mit der Wortmarke. Die Farbe ist
-// der Unterschied - beide in Gold sah nach zwei Logos derselben Marke aus.
+// Der Bogen mit Pfeil ist die Bildmarke von DAYA. Er darf NICHT neben
+// "her.solotrip" stehen, egal in welcher Farbe - dann liest er sich als Logo des
+// Reise-Accounts. Ein eigenes Zeichen fuer her.solotrip gibt es nicht; im
+// veroeffentlichten Post steht der Account-Name deshalb als reiner Schriftzug.
+// Kommt eines von Alesya, hier eintragen und in der Kopfzeile einsetzen.
 const MARK_CREAM = join(__dirname, 'photos', 'daya-grid', 'daya-mark-cream.png');
 const MARK = join(__dirname, 'photos', 'daya-grid', 'daya-mark-gold.png');
 const OUT = join(__dirname, 'reels', 'reel-transit');
@@ -237,7 +239,7 @@ BEATS.forEach((b) => {
   <div class="top"></div>
   <div class="scrim"></div>
   <div class="bar">
-    <span class="brand">${markCream}<span>her.solotrip</span></span>
+    <span class="brand"><span>her.solotrip</span></span>
     ${b.n ? `<span class="count">${String(b.n).padStart(2, '0')} / ${String(TIPS).padStart(2, '0')}</span>` : ''}
   </div>
   ${b.n ? `<div class="ghost" style="${b.gx === 'left' ? 'left' : 'right'}:70px;top:${b.gy}px">${String(b.n).padStart(2, '0')}</div>` : ''}

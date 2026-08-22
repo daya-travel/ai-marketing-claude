@@ -94,16 +94,20 @@ hervor.
 
 ### Marken nicht vermischen
 
-Dasselbe Bogen-Zeichen tritt zweimal auf, unterschieden allein durch die Farbe:
+**Der Bogen mit Pfeil ist die Bildmarke von DAYA.** Er steht nie neben
+`her.solotrip`, in keiner Farbe. Sonst liest er sich als Logo des Reise-Accounts.
 
-- **Kopfzeile:** `daya-mark-cream.png`, 30 px, in Creme, links neben
-  `her.solotrip`. So steht es in der Vorlage.
-- **Schlusskarte:** `daya-mark-gold.png` in Gold, zusammen mit der Wortmarke
-  `DAYA`. Nur dort.
+- **Kopfzeile:** nur der Schriftzug `her.solotrip`. Ein eigenes Zeichen für den
+  Reise-Account existiert nicht - im ganzen Projekt liegen nur `daya-mark-cream.png`,
+  `daya-mark-gold.png` und `daya-icon.png`, und alle drei sind DAYA. Auch der
+  veröffentlichte Post `solo trip dates` zeigt `@her.solotrip` als reinen
+  Schriftzug.
+- **Schlusskarte:** Bogen in Gold plus Wortmarke `DAYA`. Nur dort.
 
-Am 20.08. stand oben die **goldene** Fassung, also zweimal dieselbe Form in
-derselben Farbe - das las sich als ein Logo, das der falschen Marke gehört. Der
-Fehler war die Farbe, nicht das Zeichen.
+Am 20.08. stand die Marke zweimal falsch: erst in Gold, dann in Creme neben dem
+Account-Namen. Beides war derselbe Fehler. Kommt von Alesya ein eigenes Zeichen
+für `her.solotrip`, wandert es nach `daya/studio/photos/her-solotrip/` und wird in
+`build-transit.mjs` in der Kopfzeile eingesetzt.
 
 ### Die Umriss-Ziffer liegt nie auf einem Gesicht
 
