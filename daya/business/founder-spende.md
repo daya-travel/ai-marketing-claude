@@ -85,3 +85,36 @@ Bei 25 verkauften Pässen wären es rechnerisch 116 EUR.
   Steuerberaterin klären.
 - **Widerspruch auf der eigenen Seite:** Startseite sagt „Gesamtwert 576 EUR",
   /founder sagt „Statt 497 EUR". Angleichen, bevor die Runde öffentlich läuft.
+
+---
+
+## Empfängerin: Global Fund for Women (geprüft 22.08.2026)
+
+**Wer sie sind:** US-amerikanische 501(c)(3) public charity, 505 Montgomery Street,
+Floor 11, San Francisco. Spendenpost an ein Postfach in Washington DC, Telefon
+(415) 248-4800. Eine EIN steht nicht auf den öffentlichen Seiten. Eine europäische
+oder deutsche Schwesterorganisation ist nicht auffindbar.
+
+**Steuerlich:** Die USA sind ein Drittstaat. Nach § 10b EStG sind nur Spenden an
+Empfänger in EU oder EWR abzugsfähig, und auch die nur bei Erfüllung der deutschen
+Gemeinnützigkeitsregeln. **Eine Spende hierhin ist in Deutschland nicht absetzbar.**
+
+**Der Weg, der funktioniert: Sponsoring statt Spende.** Nach dem BMF-Sponsoring-Erlass
+vom 18.02.1998 ist die Zahlung eine voll abzugsfähige Betriebsausgabe, wenn eine
+konkrete Gegenleistung mit wirtschaftlichem Wert vereinbart ist: Nennung als
+Partnerin, Logo, Erwähnung in der Kampagne. Das gilt auch, wenn die Organisation
+nichts mit dem Produkt zu tun hat. Nötig sind Vereinbarung und Rechnung, keine
+Zuwendungsbestätigung.
+
+**Vor der Zusage klären:**
+
+1. **Dürfen wir sie öffentlich nennen und ihr Logo verwenden?** Ohne Gegenleistung
+   keine Betriebsausgabe. Das ist die erste Frage in der Anfrage.
+2. **Reverse Charge nach § 13b UStG** könnte auf die Werbeleistung greifen. Gehört
+   zur Steuerberaterin.
+3. **Größenordnung:** rund 7.000 EUR sind für einen weltweiten Fördermittelgeber eine
+   normale Spende. Möglich, dass sie in den Standard-Spendenprozess verweisen. Dann
+   ist es eine Spende ohne Gegenleistung und ohne Abzug.
+
+**Falls sie das Nennen nicht erlauben:** europäische Alternativen mit demselben Zweck
+suchen, bei denen der Abzug nach § 10b EStG möglich ist.
