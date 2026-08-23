@@ -1,4 +1,10 @@
-# Spende aus der Founder-Runde - Rechnung
+# Spende und Partnerschaft - Rechnung
+
+**Korrektur 22.08.2026:** Eine frühere Fassung ging davon aus, dass nach dem
+31.12.2026 keine Einnahmen mehr kommen. Falsch. Ab 01.01.2027 verkauft DAYA Abos:
+Roam 9,90 EUR/Monat, Guardian 24,90 EUR/Monat, Free bleibt kostenlos. Damit ist die
+Founder-Runde der Anfang und nicht das Ende, und die Partnerschaft wird langfristig
+gerechnet.
 
 **Stand:** 22.08.2026 · **Frage:** Welche Summe können wir aus den 200 Founder-Tickets
 spenden, damit wir eine Organisation anfragen können.
@@ -118,3 +124,66 @@ Zuwendungsbestätigung.
 
 **Falls sie das Nennen nicht erlauben:** europäische Alternativen mit demselben Zweck
 suchen, bei denen der Abzug nach § 10b EStG möglich ist.
+
+
+---
+
+# Teil 2: Langfristige Partnerschaft aus den Abo-Einnahmen
+
+**Ziel (Alesya, 22.08.2026):** langfristig unterstützen, grob 10 % jährlich aus den
+Abo-Einnahmen. Das ist der eigentliche Wert für eine Organisation, nicht die
+einmalige Founder-Summe.
+
+## Was von einem Abo ankommt
+
+Preise laut dayatravel.app: **Roam 9,90 EUR/Monat, Guardian 24,90 EUR/Monat**, beide
+inkl. USt., Abos ab 01.01.2027.
+
+Zwei Abzüge stehen fest: 19 % Umsatzsteuer, und die Provision des Vertriebswegs.
+Apple und Google nehmen **15 % bis 1 Mio. USD Jahresumsatz** (Apple: Anmeldung zum
+Small Business Program nötig, Google: automatisch), darüber 30 %. Über die eigene
+Website mit Stripe sind es 1,5 % + 0,25 EUR.
+
+| Tarif | brutto | Store 15 % | Store 30 % | Web/Stripe |
+|---|---|---|---|---|
+| Guardian | 24,90 | **17,79** | 14,65 | **20,30** |
+| Roam | 9,90 | **7,07** | 5,82 | **7,92** |
+
+Pro Abonnentin und Jahr: Guardian 213,43 EUR über den Store, 243,61 EUR über Web.
+
+## Spende bei 10 % vom Nettoerlös
+
+Annahme für den Mix: 70 % Guardian, 30 % Roam, 60 % über App Store, 40 % über die
+eigene Seite. Das ist eine Annahme, keine gemessene Zahl.
+
+| zahlende Nutzerinnen | Nettoerlös/Jahr | 10 % Spende |
+|---|---|---|
+| 250 | 46.133 | **4.613** |
+| 500 | 92.266 | **9.227** |
+| 1.000 | 184.531 | **18.453** |
+| 2.500 | 461.328 | **46.133** |
+| 5.000 | 922.656 | **92.266** |
+
+## Wie die Zusage formuliert sein muss
+
+**10 % des jährlichen Nettoerlöses aus DAYA-Abos**, wobei Nettoerlös heißt: Umsatz
+abzüglich Umsatzsteuer und abzüglich der Provision von Apple, Google oder Stripe.
+Also das Geld, das tatsächlich auf dem Konto ankommt.
+
+Nicht vom Bruttoumsatz, denn davon habt ihr bis zu 30 % nie gesehen. Nicht vom
+Gewinn, denn in den ersten Jahren ist der klein oder negativ, und dann wäre die
+Spende null - genau das würde eine langfristige Partnerschaft entwerten.
+
+**Wichtig:** eine Umsatzbeteiligung läuft auch in Verlustjahren. Bei 1.000
+Abonnentinnen sind das 18.453 EUR im Jahr, unabhängig davon, ob ihr Gewinn macht.
+Das muss tragbar sein. Wenn nicht: 5 % zusagen und öffentlich mehr geben.
+
+## Offene Punkte
+
+- **Apple Small Business Program anmelden**, sobald die App im Store ist. Ohne
+  Anmeldung 30 % statt 15 %, das ist bei 1.000 Abonnentinnen ein Unterschied von
+  rund 37.000 EUR im Jahr.
+- **DAYA Promise**, 12 Monate Geld-zurück ab Launch, kann Erlöse zurückholen. Die
+  Spende sollte auf den Erlös nach Rückerstattungen gerechnet werden.
+- Laufende Kosten je Nutzerin (SMS, KI-Anrufe, Server) sind noch nicht beziffert.
+  Für eine Umsatzbeteiligung egal, für eure Planung nicht.
