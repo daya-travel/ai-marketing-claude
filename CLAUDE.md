@@ -84,6 +84,12 @@ Serie ansehen und den Look treffen.
 - **Verbotene Prompt-Bausteine:** „no colour grading", „slight grain", „shot on a phone"
   (erzeugt flaue dunkle Bilder, 14.08. komplett neu gemacht) und jeder Filmstock-Name wie
   „Kodak Portra" (erzeugt einen echten Filmstreifen samt Perforation).
+- **Der Bildmittelpunkt ist nie ihr Hintern.** Steht die Kamera hinter einer Frau und
+  schneidet auf Oberschenkelhöhe ab, sitzt die Gesäßtasche in der Bildmitte. Belegt am
+  14.08. (`u-home-a`, `c1`) und am 25.08. wieder (`x8-view-a`). Prompt-Baustein, der es
+  löst: „seen small in the frame from a distance, full figure, the view doing the work".
+- **Anatomie an Sitzmöbeln prüfen.** Übergeschlagene Beine an Stühlen erzeugt soul_2
+  regelmäßig falsch - das Bein wächst dann aus der Lehne (25.08., `x4-dinner4-a`).
 - **Schrift im Bild:** soul_2 kann keine Buchstaben. Motive so rahmen, dass keine bedruckte
   Fläche scharf im Bild liegt. Bilder immer in echter Anzeigegröße prüfen, nicht in voller
   Auflösung - Buchstabensalat, der bei 100 % unsichtbar ist, wird in der Zelle zur Schlagzeile.
