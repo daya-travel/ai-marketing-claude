@@ -41,9 +41,12 @@ const ONLY = process.env.ONLY || '';
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
 const BEATS = [
+  // Hook zeigt auf das Bild selbst: die Leserin scannt die Gegenstaende, findet die
+  // Antwort nicht und muss wischen. Aufloesung auf Slide 05. Die Behauptung stimmt,
+  // die Blisterpackung liegt im Bild und Pseudoephedrin ist in Japan verboten.
   { id: '01', photo: 'j1-flatlay-a', kind: 'object', cover: true,
-    head: 'Before you fly to Japan alone',
-    body: 'Five things worth knowing.' },
+    head: 'One thing in this bag is banned in Japan.',
+    body: 'Five things worth knowing before you fly.' },
 
   { id: '02', photo: 'j2-train-b', kind: 'photo',
     head: 'Japan is one of the safest countries in the world for women.',
@@ -57,7 +60,7 @@ const BEATS = [
   // Gesicht, geprueft am 28.08. an der ersten Fassung dieser Slide.
   { id: '04', photo: 'm4-park-a', kind: 'photo', ty: 34,
     head: "There's a police box within five minutes of you.",
-    body: 'In central Tokyo, usually right by a JR exit. Search 交番 on the map. Shibuya and Kabukicho have English speakers on every shift. Emergency is 110.' },
+    body: 'In central Tokyo, usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110.' },
 
   { id: '05', photo: 'j5-meds-b', kind: 'object',
     head: 'Check your cold medicine before you fly.',
@@ -67,8 +70,12 @@ const BEATS = [
     head: 'Pack a hand towel and a plastic bag.',
     body: 'Most public toilets have no paper and no dryer. And there are almost no public bins, so you carry your rubbish to a konbini.' },
 
+  { id: '07', photo: 'n7-phone', kind: 'object',
+    head: "Lose your phone here and you'll probably get it back.",
+    body: 'In Tokyo about 83% of lost phones find their owner, the highest return rate of anything. Wallets are around 65%. They all go to the same police box, and about 7,700 things get handed in every day.' },
+
   { id: 'end', photo: 'j7-end-a', kind: 'photo', endcard: true,
-    head: 'Save this before you book.' },
+    head: 'Now go book it.' },
 ];
 
 const head = `<!doctype html><html><head><meta charset="utf-8">

@@ -16,13 +16,39 @@ nicht bespielt. Albanien ist die Billig-Empfehlung von 2024/25.
 
 | # | Typ | Text |
 |---|---|---|
-| 1 | Objekt | **Before you fly to Japan alone** · Five things worth knowing. |
+| 1 | Objekt | **One thing in this bag is banned in Japan.** Five things worth knowing before you fly. |
 | 2 | Foto | **Japan is one of the safest countries in the world for women.** It also has women-only carriages on 87 train lines. Both of those are true. |
 | 3 | Foto | **The pink markings aren't decoration.** Weekday rush hour, from the first train until around 9:30, and evenings on some lines. Pink paint on the platform, pink stickers on the door. Get on the wrong one by accident and nothing happens. It's a social rule, not a law. |
-| 4 | Foto | **There's a police box within five minutes of you.** In central Tokyo, usually right by a JR exit. Search 交番 on the map. Shibuya and Kabukicho have English speakers on every shift. Emergency is 110. |
+| 4 | Foto | **There's a police box within five minutes of you.** In central Tokyo, usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110. |
 | 5 | Objekt | **Check your cold medicine before you fly.** Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for in advance. Your prescription doesn't override it. |
 | 6 | Objekt | **Pack a hand towel and a plastic bag.** Most public toilets have no paper and no dryer. And there are almost no public bins, so you carry your rubbish to a konbini. |
-| 7 | Foto | **Save this before you book.** · DAYA-Wortmarke |
+| 7 | Objekt | **Lose your phone here and you'll probably get it back.** In Tokyo about 83% of lost phones find their owner, the highest return rate of anything. Wallets are around 65%. They all go to the same police box, and about 7,700 things get handed in every day. |
+| 8 | Foto | **Now go book it.** · DAYA-Wortmarke |
+
+## Nachbesserung am 28.08. nach Alesyas Rueckmeldung
+
+> „vllt stärkeren hook? ansonsten mir gefällt es. und am ende fehlt etwas cooles,
+> alles sehr trocken."
+
+**Der Hook-Fehler war handwerklich.** Das Nutzenversprechen stand auf dem Cover
+(„Before you fly to Japan alone - five things worth knowing") und die Spannung auf
+Slide 2. Genau falsch herum: ein Cover, das wie eine Kapitelueberschrift liest,
+stoppt keinen Daumen.
+
+Neu zeigt der Hook auf das Bild selbst. Die Leserin scannt reflexhaft die
+Gegenstaende, findet die Antwort nicht und muss wischen. Die Aufloesung steht auf
+Slide 5, also tief im Post. **Die Behauptung stimmt:** die Blisterpackung liegt im
+Bild, und Pseudoephedrin-Erkaeltungsmittel sind in Japan belegt verboten.
+
+**Die neue Slide 7 ist die Belohnung.** Der Post handelt sechs Slides lang davon, was
+schiefgehen kann. Diese dreht es um, beantwortet die groesste stille Angst jeder
+Solo-Reisenden, und greift Slide 4 wieder auf: dasselbe Polizeihaeuschen.
+
+**Die Schlusskarte** hiess „Save this before you book." Das ist eine Anweisung, keine
+Pointe. Jetzt „Now go book it." Die Speichern-Bitte steht in der Caption.
+
+**Slide 4** hat einen Halbsatz Waerme bekommen. Belegt ist, dass Koban vor allem fuer
+Wegauskuenfte benutzt werden. Das senkt die Hemmschwelle, dort wirklich hineinzugehen.
 
 ## Belegzeile - jeder Fakt mit Quelle
 
@@ -43,6 +69,11 @@ nicht bespielt. Albanien ist die Billig-Empfehlung von 2024/25.
 | Viele öffentliche Toiletten ohne Papier und ohne Trockner | explore.com „The Unexpected Item Tourists Should Know Many Public Restrooms In Japan Do Not Have"; japan.travel (JNTO) zu Tenugui |
 | Kaum öffentliche Mülleimer, entfernt nach 1995 | japaninsidersecrets.com; yahoo.com |
 | Müll zum Konbini, Behälter am Eingang oder an der Kasse | japaninsidersecrets.com |
+| Koban werden vor allem für Wegauskünfte benutzt | japan-dev.com: „People in Japan use koban most for asking directions" |
+| **Rund 83 %** der verlorenen Handys in Tokio kommen zurück, höchste Quote aller Kategorien | Tokyo Metropolitan Government, „Lost & Found Property System"; Auswertung der Tokioter Polizei |
+| Geldbörsen **rund 65 %**, oft noch am selben Tag | dieselben Quellen; livejapan.com |
+| **Rund 7.700** Fundsachen täglich in Tokios Koban | Tokyo Metropolitan Government |
+| Kontext, nicht im Post: 4.538.244 Fundmeldungen 2025, 4,507 Mrd. Yen Bargeld, davon rund 3,23 Mrd. zurückgegeben | Tokioter Polizei, Jahreszahlen 2025 |
 
 **Korrektur vor der Auslieferung.** Die erste Fassung von Slide 2 sagte „Japan is
 ranked **the safest** country in the world for women". Das ist falsch. Island führt
@@ -91,6 +122,8 @@ sitzt dort jetzt bei 34 % statt 50 % (`ty` im BEATS-Array).
 
 **Instagram**
 
+One thing in this bag is banned in Japan. It's the cold medicine.
+
 Japan is one of the safest countries in the world for women, and it still has
 women-only carriages on 87 train lines. Both of those are true, and knowing why makes
 the trip easier.
@@ -102,8 +135,8 @@ Pink paint, pink stickers on the door. It's a social rule, so nothing happens if
 board the wrong one.
 
 There's a police box, a koban, within about five minutes of you in central Tokyo,
-usually right by a JR exit. Search 交番 on the map. Shibuya and Kabukicho have English
-speakers on every shift. Emergency is 110.
+usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for
+directions. Emergency is 110.
 
 Check your cold medicine before you fly. Sudafed, Actifed and Vicks inhalers are
 banned, and anything with codeine needs a permit you apply for in advance.
@@ -113,20 +146,23 @@ Most public toilets have no paper and no dryer, so everyone carries a small hand
 And there are almost no public bins, so your rubbish goes with you until you reach a
 konbini.
 
+Now the good part. Lose your phone and you'll probably get it back. In Tokyo about 83%
+of lost phones find their owner, and they go to the same police box.
+
 Two more from the picture: slip-on shoes, because you take them off constantly, and an
 IC card, which you tap for the train and at the konbini counter.
 
-Who's going this year?
+Save it for the flight. Who's going this year?
 
 #japantravel #solofemaletravel #solotravel #japantips #travelalone
 
 **TikTok**
 
-Japan is one of the safest countries in the world for women. It also has women-only
-carriages on 87 train lines.
+One thing in this bag is banned in Japan, and it's probably the most boring thing you
+own.
 
-Five things worth knowing before you go, including the one that can stop you at
-customs.
+Five things worth knowing before you go, plus the one that will make you love the
+place.
 
 Save it for the flight.
 
