@@ -16,7 +16,7 @@ nicht bespielt. Albanien ist die Billig-Empfehlung von 2024/25.
 
 | # | Typ | Text |
 |---|---|---|
-| 1 | Objekt | **One thing in this bag is banned in Japan.** Five things worth knowing before you fly. |
+| 1 | Objekt | **One thing in this bag is banned in Japan.** Six things worth knowing before you fly. |
 | 2 | Foto | **Japan is one of the safest countries in the world for women.** It also has women-only carriages on 87 train lines. Both of those are true. |
 | 3 | Foto | **The pink markings aren't decoration.** Weekday rush hour, from the first train until around 9:30, and evenings on some lines. Pink paint on the platform, pink stickers on the door. Get on the wrong one by accident and nothing happens. It's a social rule, not a law. |
 | 4 | Foto | **There's a police box within five minutes of you.** In central Tokyo, usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110. |
@@ -46,6 +46,28 @@ Solo-Reisenden, und greift Slide 4 wieder auf: dasselbe Polizeihaeuschen.
 
 **Die Schlusskarte** hiess „Save this before you book." Das ist eine Anweisung, keine
 Pointe. Jetzt „Now go book it." Die Speichern-Bitte steht in der Caption.
+
+**Zaehler korrigiert.** Das Cover versprach „five things", der Post liefert sechs
+Info-Slides (02 bis 07). Alesya hat es gefunden. Jetzt „six".
+
+**Der gruene Hintergrund ist weg.** Die Objektbilder lagen als 4:5-Karte auf
+Emerald-Grund, weil ein 9:16-Zuschnitt rund 30 % der Breite weggeschnitten haette.
+Alesya am 28.08.: „vllt kannst du doch das bild in voller breite des slides machen
+... dieser gruene hintergrund stoert irgendwie." Geloest ueber `outpaint_image`
+(4:5 auf 9:16). Das Modell verlaengert Leinen und Weg, die Gegenstaende bleiben
+unangetastet, und oben und unten entsteht freie Flaeche fuer den Text. Beim
+Handy-Motiv hat der Outpaint sogar den ganzen Herbstpark ergaenzt, das Ergebnis ist
+besser als das Original.
+
+Zwei Layout-Folgen daraus:
+
+- **`light`-Flag.** Auf hellen Objektbildern entfallen Mittelverlauf und
+  Emerald-Gradierung. Mit ihnen versank das Leinen im Matsch und die Gegenstaende
+  waren nicht mehr absuchbar - genau das, was der Hook verlangt. Stattdessen nur ein
+  enger, kraeftiger Verlauf hinter dem Textblock (`.botlight` bzw. `.toplight`).
+- **Dunkle Kopfzeile.** Auf hellen Bildern mit tiefem Text steht `her.solotrip` in
+  Emerald statt Creme, sonst ist es Creme auf Creme. Sitzt der Text oben (Slide 07),
+  ist der Bildkopf ohnehin verdunkelt, dort bleibt die Kopfzeile creme.
 
 **Slide 4** hat einen Halbsatz Waerme bekommen. Belegt ist, dass Koban vor allem fuer
 Wegauskuenfte benutzt werden. Das senkt die Hemmschwelle, dort wirklich hineinzugehen.
@@ -99,10 +121,8 @@ DAYA-Wortmarke auf der Schlusskarte.
   geprüft: „Japan - solo - before you fly" und „check before you fly", beide korrekt.
 - **Fotos** (Slides 2, 3, 4, 7) über `soul_2` nach dem Bildrezept.
 
-**Zwei Slide-Typen im Layout.** Die Objektbilder sind 4:5. Ein zentraler 9:16-Zuschnitt
-hätte rund 30 % der Breite weggeschnitten, also die Gegenstände am Rand. Sie sitzen
-deshalb als Karte auf Emerald-Grund, Text darunter. Das zeigt das ganze Bild und
-trennt die Objektslides sichtbar von den Fotoslides.
+**Alle Slides sind randlos.** Die Objektbilder kamen als 4:5 und wurden über
+`outpaint_image` auf 9:16 erweitert. Siehe Nachbesserung oben.
 
 **Aussortiert und warum:**
 

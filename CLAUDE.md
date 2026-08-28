@@ -84,6 +84,17 @@ Serie ansehen und den Look treffen.
   Gegenstände selbst der Inhalt sind und Information tragen. Die Regel richtet sich
   gegen faule Ersatzmotive, nicht gegen ein bewusstes Objektbild. Ihre Begründung:
   „Es ging um Sachen die man packt, was hat es mit Menschen zu tun?"
+- **Seitenverhältnis nicht per Zuschnitt lösen, sondern per `outpaint_image`.**
+  Objektbilder aus `nano_banana_pro` kommen als 4:5, die Slides sind 9:16. Ein
+  zentraler Zuschnitt schneidet rund 30 % der Breite weg, also die Gegenstände am
+  Rand. `outpaint_image` mit `aspect_ratio: '9:16'` verlängert Leinen, Holz oder Weg
+  sauber weiter und schafft nebenbei freie Fläche für den Text (28.08.). Ein
+  farbiger Hintergrund hinter einer Bildkarte ist die schlechtere Lösung, Alesya
+  hat sie sofort als störend erkannt.
+- **Auf hellen Objektbildern keine Verläufe über das ganze Bild.** Mittelverlauf und
+  Emerald-Gradierung machen Leinen zu Matsch und die Gegenstände unlesbar. Nur ein
+  enger, kräftiger Verlauf hinter dem Textblock. Und die Kopfzeile dort in Emerald
+  statt Creme, sonst steht Creme auf Creme.
 - **Modellwahl nach Schrift im Bild.** Braucht das Motiv lesbaren Text, etwa ein
   beschriftetes Kärtchen in einem Flatlay, dann `nano_banana_pro`. `soul_2` kann keine
   Buchstaben. Bei textfähigen Modellen jedes Wort einzeln buchstabieren und prüfen.

@@ -3,13 +3,18 @@
 // Nutzwert-Post. Zielmetrik ist Speichern, nicht Reposten. Jeder Fakt ist belegt,
 // Quellen stehen in daya/content/2026-08-28-carousel-japan.md.
 //
-// ZWEI SLIDE-TYPEN:
-//   'photo'  - randloses 9:16-Foto, Text mittig. Wie Variante B im Design-System.
-//   'object' - 4:5-Objektbild als Karte auf Emerald, Text darunter. Neu.
-//     Grund: die Objektbilder kommen aus nano_banana_pro und sind 4:5. Ein
-//     zentraler 9:16-Zuschnitt schneidet rund 30 % der Breite weg, also die
-//     Gegenstaende am Rand. Die Karte auf Emerald zeigt das ganze Bild und
-//     trennt die Objektslides sichtbar von den Fotoslides.
+// ALLE SLIDES SIND RANDLOS. Die Objektbilder kamen aus nano_banana_pro als 4:5.
+// Erste Fassung setzte sie als Karte auf Emerald-Grund, weil ein 9:16-Zuschnitt
+// rund 30 % der Breite weggeschnitten haette. Alesya am 28.08.: „vllt kannst du
+// doch das bild in voller breite des slides machen ... dieser gruene hintergrund
+// stoert irgendwie." Richtig. Geloest ueber `outpaint_image` von 4:5 auf 9:16:
+// das Modell verlaengert Leinen und Weg, die Gegenstaende bleiben unangetastet,
+// und es entsteht oben und unten freie Flaeche fuer den Text.
+//
+// ty = vertikale Position des Textblocks in Prozent. Auf den Objektslides sitzt
+// der Text tief in der leeren Leinenflaeche, damit er keinen Gegenstand verdeckt.
+// Ab ty >= 65 wird zusaetzlich der untere Verlauf eingeblendet, sonst waere Creme
+// auf hellem Leinen unlesbar.
 //
 // Modellwahl, bewusst getrennt:
 //   Objektbilder -> nano_banana_pro, weil sie lesbare Kaertchen brauchen.
@@ -29,7 +34,7 @@ import { FONT_CSS } from './fonts.mjs';
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PHOTOS = join(__dirname, 'photos', 'japan');
-const GLYPH = `<svg viewBox="0 0 24 24" fill="none" stroke="#f4ecdb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h9"/><path d="M11 9.5 13.5 12 11 14.5"/><path d="M16.5 7.2a7 7 0 0 1 0 9.6"/><path d="M19 5a10.5 10.5 0 0 1 0 14"/></svg>`;
+const glyph = (stroke) => `<svg viewBox="0 0 24 24" fill="none" stroke="${stroke}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h9"/><path d="M11 9.5 13.5 12 11 14.5"/><path d="M16.5 7.2a7 7 0 0 1 0 9.6"/><path d="M19 5a10.5 10.5 0 0 1 0 14"/></svg>`;
 const MARK = join(__dirname, 'photos', 'daya-grid', 'daya-mark-gold.png');
 const OUT = join(__dirname, 'reels', 'carousel-japan');
 const OV = join(OUT, 'overlays');
@@ -44,37 +49,38 @@ const BEATS = [
   // Hook zeigt auf das Bild selbst: die Leserin scannt die Gegenstaende, findet die
   // Antwort nicht und muss wischen. Aufloesung auf Slide 05. Die Behauptung stimmt,
   // die Blisterpackung liegt im Bild und Pseudoephedrin ist in Japan verboten.
-  { id: '01', photo: 'j1-flatlay-a', kind: 'object', cover: true,
+  // SECHS, nicht fuenf: die Info-Slides sind 02 bis 07. Alesya am 28.08. gefunden.
+  { id: '01', photo: 'o1-flatlay', light: true, cover: true, ty: 80,
     head: 'One thing in this bag is banned in Japan.',
-    body: 'Five things worth knowing before you fly.' },
+    body: 'Six things worth knowing before you fly.' },
 
-  { id: '02', photo: 'j2-train-b', kind: 'photo',
+  { id: '02', photo: 'j2-train-b',
     head: 'Japan is one of the safest countries in the world for women.',
     body: 'It also has women-only carriages on 87 train lines. Both of those are true.' },
 
-  { id: '03', photo: 'k3-pink-a', kind: 'photo',
+  { id: '03', photo: 'k3-pink-a',
     head: "The pink markings aren't decoration.",
-    body: 'Weekday rush hour, from the first train until around 9:30, and evenings on some lines. Pink paint on the platform, pink stickers on the door. Get on the wrong one by accident and nothing happens. It’s a social rule, not a law.' },
+    body: 'Weekday rush hour, from the first train until around 9:30, and evenings on some lines. Pink paint on the platform, pink stickers on the door. Get on the wrong one by accident and nothing happens. It\u2019s a social rule, not a law.' },
 
-  // ty: Textblock hoeher als die Mitte. Ohne das sitzt der Fliesstext auf ihrem
-  // Gesicht, geprueft am 28.08. an der ersten Fassung dieser Slide.
-  { id: '04', photo: 'm4-park-a', kind: 'photo', ty: 34,
+  // ty: ohne das sitzt der Fliesstext auf ihrem Gesicht, geprueft am 28.08.
+  { id: '04', photo: 'm4-park-a', ty: 34,
     head: "There's a police box within five minutes of you.",
-    body: 'In central Tokyo, usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110.' },
+    body: 'In central Tokyo, usually right by a JR exit. Search \u4EA4\u756A on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110.' },
 
-  { id: '05', photo: 'j5-meds-b', kind: 'object',
+  { id: '05', photo: 'o5-meds', light: true, ty: 78,
     head: 'Check your cold medicine before you fly.',
-    body: 'Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for in advance. Your prescription doesn’t override it.' },
+    body: 'Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for in advance. Your prescription doesn\u2019t override it.' },
 
-  { id: '06', photo: 'j6-carry-a', kind: 'object',
+  { id: '06', photo: 'o6-carry', light: true, ty: 80,
     head: 'Pack a hand towel and a plastic bag.',
     body: 'Most public toilets have no paper and no dryer. And there are almost no public bins, so you carry your rubbish to a konbini.' },
 
-  { id: '07', photo: 'n7-phone', kind: 'object',
+  // Text oben in den weichen Hintergrund, die Bank mit dem Handy bleibt frei.
+  { id: '07', photo: 'o7-phone', light: true, ty: 24,
     head: "Lose your phone here and you'll probably get it back.",
     body: 'In Tokyo about 83% of lost phones find their owner, the highest return rate of anything. Wallets are around 65%. They all go to the same police box, and about 7,700 things get handed in every day.' },
 
-  { id: 'end', photo: 'j7-end-a', kind: 'photo', endcard: true,
+  { id: 'end', photo: 'j7-end-a', endcard: true,
     head: 'Now go book it.' },
 ];
 
@@ -93,13 +99,23 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .mid{position:absolute;left:0;right:0;top:22%;height:58%;
   background:linear-gradient(180deg,rgba(6,29,21,0) 0%,rgba(6,29,21,.6) 26%,
     rgba(6,29,21,.6) 74%,rgba(6,29,21,0) 100%)}
-.bot{position:absolute;left:0;right:0;bottom:0;height:26%;
-  background:linear-gradient(0deg,rgba(6,29,21,.72) 0%,rgba(6,29,21,0) 100%)}
+.bot{position:absolute;left:0;right:0;bottom:0;height:46%;
+  background:linear-gradient(0deg,rgba(6,29,21,.9) 0%,rgba(6,29,21,.78) 34%,
+    rgba(6,29,21,0) 100%)}
+/* enge, kraeftige Verlaeufe fuer helle Objektbilder */
+.botlight{position:absolute;left:0;right:0;bottom:0;height:38%;
+  background:linear-gradient(0deg,rgba(6,29,21,.94) 0%,rgba(6,29,21,.88) 40%,
+    rgba(6,29,21,0) 100%)}
+.toplight{position:absolute;left:0;right:0;top:0;height:46%;
+  background:linear-gradient(180deg,rgba(6,29,21,.92) 0%,rgba(6,29,21,.82) 46%,
+    rgba(6,29,21,0) 100%)}
 .bar{position:absolute;left:80px;right:80px;top:88px;display:flex;align-items:center}
 .brand{display:flex;align-items:center;gap:14px}
 .brand svg{width:32px;height:32px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.95))}
 .brand span{font-family:'Archivo';font-weight:700;font-size:27px;letter-spacing:.01em;
   color:#f4ecdb;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.bar.dark .brand span{color:#0e3b2c;text-shadow:none}
+.bar.dark .brand svg{filter:none;opacity:.85}
 
 /* Fotoslides: Text mittig ueber dem Bild */
 .block{position:absolute;left:80px;right:80px;top:50%;transform:translateY(-50%);
@@ -110,18 +126,9 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .body{margin-top:26px;font-family:'Inter';font-weight:500;font-size:33px;line-height:1.5;
   color:#f4ecdb;text-wrap:pretty;text-shadow:0 2px 16px rgba(0,0,0,.9)}
 
-/* Objektslides: Emerald-Grund, Bild als Karte, Text darunter */
-.obj{position:absolute;inset:0;background:#0e3b2c}
-.card{position:absolute;left:120px;top:230px;width:840px;height:1050px;overflow:hidden;
-  border-radius:4px;box-shadow:0 18px 60px rgba(0,0,0,.45)}
-.card img{width:100%;height:100%;object-fit:cover;display:block}
-.objtext{position:absolute;left:100px;right:100px;top:1350px;text-align:center}
-.objtext .head{text-shadow:none}
-.objtext .body{text-shadow:none;opacity:.92}
 /* Titelkarte: Zeile groesser, Unterzeile kleiner */
 .cover .head{font-size:72px}
 .cover .body{font-size:31px;letter-spacing:.02em;opacity:.85}
-
 .lockup{position:absolute;left:0;right:0;bottom:150px;display:flex;align-items:center;
   justify-content:center;gap:16px}
 .lockup img{height:52px;filter:drop-shadow(0 3px 12px rgba(0,0,0,.9))}
@@ -142,11 +149,7 @@ beats.forEach((b) => {
   const f = join(PHOTOS, `${b.photo}.png`);
   if (!existsSync(f)) throw new Error('missing photo ' + f);
   const out = join(GRID, `${b.id}.png`);
-  const py = b.kind === 'object'
-    ? `
-from PIL import Image
-Image.new('RGB', (${W}, ${H}), (14, 59, 44)).save('${out}')`
-    : `
+  const py = `
 from PIL import Image
 im = Image.open('${f}').convert('RGB'); w, h = im.size
 s = max(${W} / w, ${H} / h)
@@ -164,18 +167,24 @@ beats.forEach((b) => {
   const mark = existsSync(MARK) ? `<img src="file://${MARK}">` : '';
   const text = `<div class="head">${esc(b.head)}</div>` +
     (b.body ? `<div class="body">${esc(b.body)}</div>` : '');
-  const inner = b.kind === 'object'
-    ? `<div class="obj"></div>
-  <div class="card"><img src="file://${join(PHOTOS, `${b.photo}.png`)}"></div>
-  <div class="objtext${b.cover ? ' cover' : ''}">${text}</div>`
-    : `<div class="grade"></div>
-  <div class="top"></div>
-  <div class="mid"></div>
-  ${b.endcard ? '<div class="bot"></div>' : ''}
-  <div class="block"${b.ty ? ` style="top:${b.ty}%"` : ''}>${text}</div>`;
+  // Sitzt der Text tief, braucht er den unteren Verlauf. Ohne ihn steht Creme auf
+  // hellem Leinen und ist unlesbar.
+  const low = (b.ty || 50) >= 65;
+  // Dunkle Kopfzeile nur, wenn der Bildkopf hell bleibt: helles Objektbild MIT
+  // tiefem Text. Sitzt der Text oben (Slide 07), verdunkelt .toplight den Kopf,
+  // dort bleibt die Kopfzeile creme.
+  const darkBar = Boolean(b.light) && low;
+  // Helle Objektbilder ohne Mittelverlauf und ohne Emerald-Gradierung, sonst
+  // versinken die Gegenstaende. Alesya am 28.08.: das Flatlay muss absuchbar
+  // bleiben, der Hook zeigt darauf.
+  const inner = `${b.light ? '' : '<div class="grade"></div>'}
+  ${b.light ? '' : '<div class="top"></div><div class="mid"></div>'}
+  ${b.light ? (low ? '<div class="botlight"></div>' : '<div class="toplight"></div>') : ''}
+  ${!b.light && (b.endcard || low) ? '<div class="bot"></div>' : ''}
+  <div class="block${b.cover ? ' cover' : ''}"${b.ty ? ` style="top:${b.ty}%"` : ''}>${text}</div>`;
   writeFileSync(htmlPath, head + `<div class="wrap">
   ${inner}
-  <div class="bar"><span class="brand">${GLYPH}<span>her.solotrip</span></span></div>
+  <div class="bar${darkBar ? ' dark' : ''}"><span class="brand">${glyph(darkBar ? '#0e3b2c' : '#f4ecdb')}<span>her.solotrip</span></span></div>
   ${b.endcard ? `<div class="lockup">${mark}<span class="word">Daya</span></div>` : ''}
   <div class="grain"></div>
 </div>` + foot);
@@ -194,5 +203,5 @@ Image.alpha_composite(g, o).convert('RGB').save('${join(SLIDES, `${n}-${b.id}.pn
   const pyPath = join(SLIDES, `${n}.py`);
   writeFileSync(pyPath, py);
   execSync(`python3 "${pyPath}"`, { stdio: 'inherit' });
-  console.log('slide', n, b.id, b.kind, 'ok');
+  console.log('slide', n, b.id, 'ok');
 });
