@@ -95,6 +95,13 @@ Serie ansehen und den Look treffen.
   Emerald-Gradierung machen Leinen zu Matsch und die Gegenstände unlesbar. Nur ein
   enger, kräftiger Verlauf hinter dem Textblock. Und die Kopfzeile dort in Emerald
   statt Creme, sonst steht Creme auf Creme.
+- **Behauptungen über das eigene Bild sind auch Behauptungen.** Bevor ein Text sagt
+  „this bag", „these shoes" oder „die Frau links", das Bild ansehen und auflisten,
+  was wirklich drauf ist. Am 28.08. stand „One thing in this bag is banned in Japan"
+  über einem Flatlay ganz ohne Tasche. Regel 0 gilt für die eigene Copy.
+- **Deutsche Präpositionen nicht mitübersetzen.** Es heißt „**in** this picture",
+  nicht „on this picture" (von „auf diesem Bild"). Gleiche Familie wie die
+  Verkürzungs-Regel: solche Kleinigkeiten verraten einen Text sofort.
 - **Modellwahl nach Schrift im Bild.** Braucht das Motiv lesbaren Text, etwa ein
   beschriftetes Kärtchen in einem Flatlay, dann `nano_banana_pro`. `soul_2` kann keine
   Buchstaben. Bei textfähigen Modellen jedes Wort einzeln buchstabieren und prüfen.

@@ -50,8 +50,8 @@ const BEATS = [
   // Antwort nicht und muss wischen. Aufloesung auf Slide 05. Die Behauptung stimmt,
   // die Blisterpackung liegt im Bild und Pseudoephedrin ist in Japan verboten.
   // SECHS, nicht fuenf: die Info-Slides sind 02 bis 07. Alesya am 28.08. gefunden.
-  { id: '01', photo: 'o1-flatlay', light: true, cover: true, ty: 80,
-    head: 'One thing in this bag is banned in Japan.',
+  { id: '01', photo: 'o1-flatlay', light: true, cover: true, ty: 80, zoom: 1.2, oy: 0.92,
+    head: 'One thing in this picture is banned in Japan.',
     body: 'Six things worth knowing before you fly.' },
 
   { id: '02', photo: 'j2-train-b',
@@ -143,18 +143,26 @@ if (!beats.length) throw new Error('ONLY matched no beat: ' + ONLY);
 if (!ONLY) rmSync(OUT, { recursive: true, force: true });
 [OV, GRID, SLIDES].forEach((d) => mkdirSync(d, { recursive: true }));
 
-// 1) Backplate. Fotoslides werden randlos beschnitten, Objektslides bekommen
-//    einen leeren Emerald-Grund, das Bild sitzt im Overlay als Karte.
+// 1) Backplate. Alle Slides randlos beschnitten.
+//    zoom: Vergroesserungsfaktor ueber das Nötige hinaus, schafft Spielraum zum
+//    Verschieben. oy: wo aus diesem Spielraum geschnitten wird, 0 = oben,
+//    0.5 = mittig (Standard), 1 = unten. Groesseres oy schiebt den Bildinhalt
+//    nach OBEN. Gebraucht auf dem Cover: dort stand oben leeres Leinen, waehrend
+//    der Textverlauf unten die Schuhe angeschnitten hat (Alesya, 28.08.).
 beats.forEach((b) => {
   const f = join(PHOTOS, `${b.photo}.png`);
   if (!existsSync(f)) throw new Error('missing photo ' + f);
   const out = join(GRID, `${b.id}.png`);
+  const zoom = b.zoom || 1;
+  const oy = b.oy === undefined ? 0.5 : b.oy;
   const py = `
 from PIL import Image
 im = Image.open('${f}').convert('RGB'); w, h = im.size
-s = max(${W} / w, ${H} / h)
+s = max(${W} / w, ${H} / h) * ${zoom}
 im = im.resize((int(w * s), int(h * s)), Image.LANCZOS); w, h = im.size
-im.crop(((w - ${W}) // 2, (h - ${H}) // 2, (w - ${W}) // 2 + ${W}, (h - ${H}) // 2 + ${H})).save('${out}')`;
+x = (w - ${W}) // 2
+y = int((h - ${H}) * ${oy})
+im.crop((x, y, x + ${W}, y + ${H})).save('${out}')`;
   const pyPath = join(GRID, `${b.id}.py`);
   writeFileSync(pyPath, py);
   execSync(`python3 "${pyPath}"`, { stdio: 'inherit' });

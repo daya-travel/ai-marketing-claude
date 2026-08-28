@@ -16,7 +16,7 @@ nicht bespielt. Albanien ist die Billig-Empfehlung von 2024/25.
 
 | # | Typ | Text |
 |---|---|---|
-| 1 | Objekt | **One thing in this bag is banned in Japan.** Six things worth knowing before you fly. |
+| 1 | Objekt | **One thing in this picture is banned in Japan.** Six things worth knowing before you fly. |
 | 2 | Foto | **Japan is one of the safest countries in the world for women.** It also has women-only carriages on 87 train lines. Both of those are true. |
 | 3 | Foto | **The pink markings aren't decoration.** Weekday rush hour, from the first train until around 9:30, and evenings on some lines. Pink paint on the platform, pink stickers on the door. Get on the wrong one by accident and nothing happens. It's a social rule, not a law. |
 | 4 | Foto | **There's a police box within five minutes of you.** In central Tokyo, usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110. |
@@ -68,6 +68,25 @@ Zwei Layout-Folgen daraus:
 - **Dunkle Kopfzeile.** Auf hellen Bildern mit tiefem Text steht `her.solotrip` in
   Emerald statt Creme, sonst ist es Creme auf Creme. Sitzt der Text oben (Slide 07),
   ist der Bildkopf ohnehin verdunkelt, dort bleibt die Kopfzeile creme.
+
+**Hook zeigte auf eine Tasche, die es nicht gibt.** Erste Fassung: „One thing in
+**this bag** is banned in Japan." Alesya am 28.08.: „da ist keine tasche auf dem
+foto, nur sachen?" Sie hat recht. Auf dem Flatlay liegen Handtuch, Zip-Beutel,
+Blisterpackung, Kraft-Kaertchen, IC-Karte, Muenzboerse und Schlupfschuhe flach auf
+Leinen. Kein Rucksack, kein Koffer, keine Tasche.
+
+Derselbe Fehlertyp wie das Superlativ oben, nur visuell: ein Satz ueber ein Bild
+geschrieben, ohne das Bild dabei anzusehen. Neu **„One thing in this picture is
+banned in Japan."** Formulierung von Alesya; sie schrieb „on this picture", im
+Englischen heisst es „in this picture", „on" gilt fuer Oberflaechen. Der Fehler
+kommt vom deutschen „auf diesem Bild".
+
+**Bildinhalt auf dem Cover nach oben geschoben.** Oben stand leeres Leinen, waehrend
+der Textverlauf unten die Schuhe angeschnitten hat. Geloest ueber zwei neue
+BEATS-Felder in `build-japan.mjs`: `zoom` (Vergroesserung ueber das Noetige hinaus,
+schafft Spielraum) und `oy` (wo aus diesem Spielraum geschnitten wird, groesser =
+Inhalt weiter oben). Cover laeuft mit `zoom: 1.2, oy: 0.92`. Kein neues Bild,
+nur der Ausschnitt.
 
 **Slide 4** hat einen Halbsatz Waerme bekommen. Belegt ist, dass Koban vor allem fuer
 Wegauskuenfte benutzt werden. Das senkt die Hemmschwelle, dort wirklich hineinzugehen.
@@ -142,7 +161,7 @@ sitzt dort jetzt bei 34 % statt 50 % (`ty` im BEATS-Array).
 
 **Instagram**
 
-One thing in this bag is banned in Japan. It's the cold medicine.
+One thing in this picture is banned in Japan. It's the cold medicine.
 
 Japan is one of the safest countries in the world for women, and it still has
 women-only carriages on 87 train lines. Both of those are true, and knowing why makes
@@ -178,7 +197,7 @@ Save it for the flight. Who's going this year?
 
 **TikTok**
 
-One thing in this bag is banned in Japan, and it's probably the most boring thing you
+One thing in this picture is banned in Japan, and it's probably the most boring thing you
 own.
 
 Five things worth knowing before you go, plus the one that will make you love the
