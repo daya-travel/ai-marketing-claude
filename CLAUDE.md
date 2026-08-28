@@ -44,6 +44,15 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
 - **Kein „nicht X, sondern Y".** Bekanntes KI-Muster, zerstört Vertrauen.
 - **Keine Dreierregel.** Zwei oder vier Aufzählungen, nie drei im gleichen Rhythmus.
 - **Keine erfundenen Zahlen.** Jede Zahl muss belegt sein oder raus.
+- **Keine Superlative ohne Index.** „Das sicherste Land der Welt für Frauen" stand am
+  28.08. fast im Japan-Post. Falsch: Island führt den Global Peace Index, Dänemark den
+  WPS Index, Japan steht auf Platz 9 bis 10. Wer „der/die/das sicherste, beste,
+  größte" schreibt, nennt die Rangliste dazu oder schreibt „eines der".
+- **Verkürzungen benutzen.** „I don't answer", nicht „I do not answer". Belegt an den
+  eigenen Posts (`grep` über `daya/content/*.md`: it's 10x, don't 9x). Vollformen
+  machen jeden Satz steif, das ist der häufigste Grund, warum ein Text „künstlich"
+  klingt. Dazu: jede Zeile laut lesen, Füllwörter wie „just" und „so" drinlassen, und
+  kein Sprichwort bauen, wo ein Satz hingehört (Alesya, 26.08.).
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 
@@ -71,6 +80,22 @@ Serie ansehen und den Look treffen.
 
 - **Auf jedem Bild ist ein Mensch**, außer es ist bewusst reine Landschaft. Ein Rückspiegel,
   ein Türgriff oder ein Stück Straße ist kein Motiv.
+  **Ausnahme, Alesya 26.08.2026:** Objektbilder und Flatlays sind erlaubt, wenn die
+  Gegenstände selbst der Inhalt sind und Information tragen. Die Regel richtet sich
+  gegen faule Ersatzmotive, nicht gegen ein bewusstes Objektbild. Ihre Begründung:
+  „Es ging um Sachen die man packt, was hat es mit Menschen zu tun?"
+- **Modellwahl nach Schrift im Bild.** Braucht das Motiv lesbaren Text, etwa ein
+  beschriftetes Kärtchen in einem Flatlay, dann `nano_banana_pro`. `soul_2` kann keine
+  Buchstaben. Bei textfähigen Modellen jedes Wort einzeln buchstabieren und prüfen.
+- **Keine Motive durch Glas oder Fensterscheiben.** `soul_2` legt dann Innen- und
+  Außenraum übereinander. Belegt am 25.08. an `x2-plane-b`: die Tragfläche läuft durch
+  ihre Schulter.
+- **Länder mit viel Beschilderung brauchen einen anderen Ort, nicht einen besseren
+  Prompt.** Für den Japan-Post scheiterten sechs Versuche an erfundenen Ladenschildern
+  („NeO", „PaohS", „AM SHRIP HORN"), obwohl „no signs, no lettering" im Prompt stand.
+  Gelöst erst durch Ortswechsel: Parkweg statt Einkaufsstraße. Genauso bei
+  Bodenmarkierungen - „a plain smooth band of paint only" statt einer Markierung, die
+  das Modell als Schriftzeichen malt (28.08.).
 - **Die Haltung ist frei** - von hinten, von der Seite, von vorn, sitzend, gehend.
   Entscheidung Alesya, 18.08.2026. Was bleibt: echte Reisende, keine Studio- oder
   Fashion-Models, keine Posen.
