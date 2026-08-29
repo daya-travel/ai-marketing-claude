@@ -18,14 +18,38 @@ nicht bespielt. Albanien ist die Billig-Empfehlung von 2024/25.
 |---|---|---|
 | 1 | Objekt | **One thing in this picture is banned in Japan.** Six things worth knowing before you fly. |
 | 2 | Foto | **Japan is one of the safest countries in the world for women.** It still has women-only carriages on 87 train lines. Both of those are true. |
-| 3 | Foto | **Pink means women only.** Pink paint on the platform shows where that carriage stops, and the door has pink stickers. It applies on weekdays in rush hour, from the first train until about 9:30, and in the evening on some lines. Outside those hours anyone can use it. Get on the wrong one and nothing happens, nobody is fined. |
-| 4 | Foto | **There's a police box within five minutes of you.** They're called koban. In central Tokyo there's usually one within a five minute walk, often right outside a station. Search 交番 on the map. Most people go in just to ask directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110. |
-| 5 | Objekt | **Check your cold medicine before you fly.** Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for before you travel. A prescription from home doesn't help. Check the ingredients on the box. |
-| 6 | Objekt | **Pack a hand towel and a plastic bag.** Most public toilets have no paper towels and no dryer, so everyone carries a small towel. And there are almost no bins on the street. Your rubbish goes in the bag until you reach a konbini, the convenience stores you'll see everywhere. |
-| 7 | Objekt | **Lose your phone here and you'll probably get it back.** In Tokyo about 83% of lost phones are returned to their owner. That's the highest of anything people lose. Wallets are around 65%. Everything goes to the same police box, and about 7,700 items get handed in every day. |
+| 3 | Foto | **Pink means women only.** · Pink paint on the platform, pink stickers on the door · Weekday rush hour, until about 9:30 · Any other time, anyone can use it · Get on the wrong one and nothing happens |
+| 4 | Foto | **There's a police box within five minutes of you.** · They're called koban, around 1,000 in Tokyo · Red lamp outside, sign in English too · Search "police box" on your map · Most people go in just to ask directions · Emergency is 110 |
+| 5 | Objekt | **Check your cold medicine before you fly.** · Sudafed, Actifed and Vicks inhalers are banned · Codeine needs a permit, applied for before you travel · A prescription from home doesn't help · Read the ingredients on the box |
+| 6 | Objekt | **Pack a hand towel and a plastic bag.** · Most public toilets have no paper towels and no dryer · Almost no bins on the street · Your rubbish goes with you to a konbini · A konbini is a convenience store, they're everywhere |
+| 7 | Objekt | **Lose your phone here and you'll probably get it back.** · About 83% of lost phones in Tokyo are returned · Wallets around 65% · It all goes to the same police box · About 7,700 items handed in every day |
 | 8 | Foto | **Now go book it.** · DAYA-Wortmarke |
 
-## Nachbesserung am 28.08. nach Alesyas Rueckmeldung
+## Durchgang am 29.08.: unbrauchbare Anweisung und Stichpunkte
+
+Alesya: „Und was ist das für japanisches Zeichen? Wie kann sie es eingeben oder
+kopieren? ... schreibe nicht zu viel, stichpunkte vllt am besten damit es nicht so
+klobig aussieht?"
+
+**Das Kanji war eine Anweisung, die niemand ausfuehren kann.** „Search 交番 on the
+map" steht in einem Bild. Man kann es weder mit einer deutschen Tastatur tippen noch
+aus einer Bilddatei kopieren. Nachrecherchiert, und es ist doppelt unnoetig:
+
+- **„police box" auf Englisch funktioniert** in Google Maps in Japan.
+- **Koban tragen aussen eine rote Lampe und ein Schild auf Englisch.** Das ist die
+  eigentliche Erkennungshilfe, und sie stand nirgends im Post.
+
+Das Zeichen ist raus, die rote Lampe ist drin.
+
+**Alle Fliesstexte auf den Info-Slides sind Stichpunkte geworden.** Vier bis fuenf
+kurze Zeilen statt eines Absatzes von vier bis sechs Zeilen. Die Liste ist
+linksbuendig, als Block mittig gesetzt, Punkte in Marigold. Slide 1, 2 und 8 bleiben
+Fliesstext, das sind Aussagen und keine Listen.
+
+Positionen nachgezogen, weil die Bloecke kuerzer geworden sind: Slide 5 auf `ty: 74`,
+Slide 6 auf `ty: 76`.
+
+## Nachbesserung am 28.08.## Nachbesserung am 28.08. nach Alesyas Rueckmeldung
 
 > „vllt stärkeren hook? ansonsten mir gefällt es. und am ende fehlt etwas cooles,
 > alles sehr trocken."
@@ -190,32 +214,28 @@ sitzt dort jetzt bei 34 % statt 50 % (`ty` im BEATS-Array).
 One thing in this picture is banned in Japan. It's the cold medicine.
 
 Japan is one of the safest countries in the world for women, and it still has
-women-only carriages on 87 train lines. Both of those are true, and knowing why makes
-the trip easier.
+women-only carriages on 87 train lines. Both of those are true.
 
-Five things that are genuinely different there.
+Six things worth knowing.
 
-Pink means women only. Pink paint on the platform shows where that carriage stops, and
-the door has pink stickers. It applies on weekdays in rush hour, until about 9:30.
-Outside those hours anyone can use it, and nobody is fined if you get it wrong.
+Pink means women only. Pink paint on the platform, pink stickers on the door, weekday
+rush hour until about 9:30. Any other time anyone can use it, and nobody is fined if
+you get it wrong.
 
-There's a police box within about five minutes of you in central Tokyo, often right
-outside a station. They're called koban. Search 交番 on the map. Most people go in just
-to ask directions. The emergency number is 110.
+There's a police box within five minutes of you in central Tokyo. They're called
+koban, around 1,000 in the city. Red lamp outside, sign in English. Search "police
+box" on your map. Most people go in just to ask directions. Emergency is 110.
 
-Check your cold medicine before you fly. Sudafed, Actifed and Vicks inhalers are
-banned, and anything with codeine needs a permit you apply for in advance.
+Sudafed, Actifed and Vicks inhalers are banned. Codeine needs a permit you apply for
+before you travel, and a prescription from home doesn't help. Read the ingredients on
+the box.
 
-Most public toilets have no paper and no dryer, so everyone carries a small hand towel.
+Most public toilets have no paper towels and no dryer, so pack a small hand towel.
+And there are almost no bins on the street, so your rubbish goes with you to a
+konbini, the convenience stores you'll find everywhere.
 
-And there are almost no bins on the street, so your rubbish goes with you until you
-reach a konbini, the convenience stores you'll see everywhere.
-
-Now the good part. Lose your phone and you'll probably get it back. In Tokyo about 83%
-of lost phones find their owner, and they go to the same police box.
-
-Two more from the picture: slip-on shoes, because you take them off constantly, and an
-IC card, which you tap for the train and at the konbini counter.
+Now the good part. Lose your phone and you'll probably get it back. About 83% of lost
+phones in Tokyo are returned to their owner.
 
 Save it for the flight. Who's going this year?
 
@@ -223,11 +243,10 @@ Save it for the flight. Who's going this year?
 
 **TikTok**
 
-One thing in this picture is banned in Japan, and it's probably the most boring thing you
-own.
+One thing in this picture is banned in Japan, and it's probably the most boring thing
+you own.
 
-Five things worth knowing before you go, plus the one that will make you love the
-place.
+Six things worth knowing before you go, plus the one that will make you love the place.
 
 Save it for the flight.
 

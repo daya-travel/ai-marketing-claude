@@ -53,6 +53,12 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
   machen jeden Satz steif, das ist der häufigste Grund, warum ein Text „künstlich"
   klingt. Dazu: jede Zeile laut lesen, Füllwörter wie „just" und „so" drinlassen, und
   kein Sprichwort bauen, wo ein Satz hingehört (Alesya, 26.08.).
+- **Keine Anweisung, die im Medium nicht ausführbar ist.** Am 29.08. stand „Search
+  交番 on the map" in einem Bild. Mit einer deutschen Tastatur tippt man das nicht,
+  und aus einem Bild kopiert man nichts. Bei jeder Handlungsanweisung prüfen: kann
+  die Leserin das genau dort tun, wo sie den Text liest? Die brauchbare Fassung war
+  „search police box on your map", auf Englisch, plus die rote Lampe als
+  Erkennungszeichen.
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 
