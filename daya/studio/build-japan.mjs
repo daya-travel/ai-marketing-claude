@@ -56,29 +56,29 @@ const BEATS = [
 
   { id: '02', photo: 'j2-train-b',
     head: 'Japan is one of the safest countries in the world for women.',
-    body: 'It also has women-only carriages on 87 train lines. Both of those are true.' },
+    body: 'It still has women-only carriages on 87 train lines. Both of those are true.' },
 
   { id: '03', photo: 'k3-pink-a',
-    head: "The pink markings aren't decoration.",
-    body: 'Weekday rush hour, from the first train until around 9:30, and evenings on some lines. Pink paint on the platform, pink stickers on the door. Get on the wrong one by accident and nothing happens. It\u2019s a social rule, not a law.' },
+    head: 'Pink means women only.',
+    body: 'Pink paint on the platform shows where that carriage stops, and the door has pink stickers. It applies on weekdays in rush hour, from the first train until about 9:30, and in the evening on some lines. Outside those hours anyone can use it. Get on the wrong one and nothing happens, nobody is fined.' },
 
   // ty: ohne das sitzt der Fliesstext auf ihrem Gesicht, geprueft am 28.08.
   { id: '04', photo: 'm4-park-a', ty: 34,
     head: "There's a police box within five minutes of you.",
-    body: 'In central Tokyo, usually right by a JR exit. Search \u4EA4\u756A on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110.' },
+    body: 'They\u2019re called koban. In central Tokyo there\u2019s usually one within a five minute walk, often right outside a station. Search \u4EA4\u756A on the map. Most people go in just to ask directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110.' },
 
-  { id: '05', photo: 'o5-meds', light: true, ty: 78,
+  { id: '05', photo: 'o5-meds', light: true, ty: 78, zoom: 1.2, oy: 0.92,
     head: 'Check your cold medicine before you fly.',
-    body: 'Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for in advance. Your prescription doesn\u2019t override it.' },
+    body: 'Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for before you travel. A prescription from home doesn\u2019t help. Check the ingredients on the box.' },
 
-  { id: '06', photo: 'o6-carry', light: true, ty: 80,
+  { id: '06', photo: 'o6-carry', light: true, ty: 80, zoom: 1.06, oy: 0.88,
     head: 'Pack a hand towel and a plastic bag.',
-    body: 'Most public toilets have no paper and no dryer. And there are almost no public bins, so you carry your rubbish to a konbini.' },
+    body: 'Most public toilets have no paper towels and no dryer, so everyone carries a small towel. And there are almost no bins on the street. Your rubbish goes in the bag until you reach a konbini, the convenience stores you\u2019ll see everywhere.' },
 
   // Text oben in den weichen Hintergrund, die Bank mit dem Handy bleibt frei.
   { id: '07', photo: 'o7-phone', light: true, ty: 24,
     head: "Lose your phone here and you'll probably get it back.",
-    body: 'In Tokyo about 83% of lost phones find their owner, the highest return rate of anything. Wallets are around 65%. They all go to the same police box, and about 7,700 things get handed in every day.' },
+    body: 'In Tokyo about 83% of lost phones are returned to their owner. That\u2019s the highest of anything people lose. Wallets are around 65%. Everything goes to the same police box, and about 7,700 items get handed in every day.' },
 
   { id: 'end', photo: 'j7-end-a', endcard: true,
     head: 'Now go book it.' },

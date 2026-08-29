@@ -17,12 +17,12 @@ nicht bespielt. Albanien ist die Billig-Empfehlung von 2024/25.
 | # | Typ | Text |
 |---|---|---|
 | 1 | Objekt | **One thing in this picture is banned in Japan.** Six things worth knowing before you fly. |
-| 2 | Foto | **Japan is one of the safest countries in the world for women.** It also has women-only carriages on 87 train lines. Both of those are true. |
-| 3 | Foto | **The pink markings aren't decoration.** Weekday rush hour, from the first train until around 9:30, and evenings on some lines. Pink paint on the platform, pink stickers on the door. Get on the wrong one by accident and nothing happens. It's a social rule, not a law. |
-| 4 | Foto | **There's a police box within five minutes of you.** In central Tokyo, usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110. |
-| 5 | Objekt | **Check your cold medicine before you fly.** Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for in advance. Your prescription doesn't override it. |
-| 6 | Objekt | **Pack a hand towel and a plastic bag.** Most public toilets have no paper and no dryer. And there are almost no public bins, so you carry your rubbish to a konbini. |
-| 7 | Objekt | **Lose your phone here and you'll probably get it back.** In Tokyo about 83% of lost phones find their owner, the highest return rate of anything. Wallets are around 65%. They all go to the same police box, and about 7,700 things get handed in every day. |
+| 2 | Foto | **Japan is one of the safest countries in the world for women.** It still has women-only carriages on 87 train lines. Both of those are true. |
+| 3 | Foto | **Pink means women only.** Pink paint on the platform shows where that carriage stops, and the door has pink stickers. It applies on weekdays in rush hour, from the first train until about 9:30, and in the evening on some lines. Outside those hours anyone can use it. Get on the wrong one and nothing happens, nobody is fined. |
+| 4 | Foto | **There's a police box within five minutes of you.** They're called koban. In central Tokyo there's usually one within a five minute walk, often right outside a station. Search 交番 on the map. Most people go in just to ask directions. Shibuya and Kabukicho have English speakers on every shift, and the emergency number is 110. |
+| 5 | Objekt | **Check your cold medicine before you fly.** Sudafed, Actifed and Vicks inhalers are banned. Anything with codeine needs a permit you apply for before you travel. A prescription from home doesn't help. Check the ingredients on the box. |
+| 6 | Objekt | **Pack a hand towel and a plastic bag.** Most public toilets have no paper towels and no dryer, so everyone carries a small towel. And there are almost no bins on the street. Your rubbish goes in the bag until you reach a konbini, the convenience stores you'll see everywhere. |
+| 7 | Objekt | **Lose your phone here and you'll probably get it back.** In Tokyo about 83% of lost phones are returned to their owner. That's the highest of anything people lose. Wallets are around 65%. Everything goes to the same police box, and about 7,700 items get handed in every day. |
 | 8 | Foto | **Now go book it.** · DAYA-Wortmarke |
 
 ## Nachbesserung am 28.08. nach Alesyas Rueckmeldung
@@ -87,6 +87,32 @@ BEATS-Felder in `build-japan.mjs`: `zoom` (Vergroesserung ueber das Noetige hina
 schafft Spielraum) und `oy` (wo aus diesem Spielraum geschnitten wird, groesser =
 Inhalt weiter oben). Cover laeuft mit `zoom: 1.2, oy: 0.92`. Kein neues Bild,
 nur der Ausschnitt.
+
+**Verstaendlichkeits-Durchgang am 29.08.** Alesya: „sie muessen leicht verstaendlich
+sein, ich weiss immer noch nicht wozu die pinken Markierungen sind?"
+
+Sie hat recht, und der Fehler ist eindeutig: Slide 3 sagte, was die Markierungen
+**nicht** sind (keine Dekoration), wann sie gelten, wo man sie sieht und was passiert,
+wenn man falsch einsteigt. **Sie sagte nie, was Rosa bedeutet.** Die Leserin musste
+das von Slide 2 herueberretten. Neue Ueberschrift: **„Pink means women only."**
+
+Nebenbei war „It's a social rule, not a law" das verbotene „nicht X, sondern Y" in
+Spiegelform. Ersetzt durch „nobody is fined".
+
+Weitere Klarstellungen im selben Durchgang:
+
+- **„koban"** wird jetzt benannt, vorher stand nur das Kanji im Text.
+- **„JR exit"** raus, weil JR ausserhalb Japans niemand kennt. Jetzt „outside a station".
+- **„konbini"** bekommt eine Erklaerung, vorher stand das Wort nackt da.
+- **„Your prescription doesn't override it"** war umstaendlich. Jetzt „A prescription
+  from home doesn't help", dazu die handfeste Anweisung „Check the ingredients on the box".
+- Slide 7 gestrafft: „find their owner, the highest return rate of anything" war
+  schwerfaellig, jetzt zwei kurze Saetze.
+
+**Bildinhalt auch auf Slide 5 und 6 nach oben.** Gleiche Ursache wie auf dem Cover:
+oben leeres Leinen, unten liefen die Gegenstaende in den Textverlauf. Slide 5 mit
+`zoom: 1.2, oy: 0.92`, Slide 6 mit `zoom: 1.06, oy: 0.88` - dort war 1.16 zu eng, die
+Tasche stiess an den Bildrand.
 
 **Slide 4** hat einen Halbsatz Waerme bekommen. Belegt ist, dass Koban vor allem fuer
 Wegauskuenfte benutzt werden. Das senkt die Hemmschwelle, dort wirklich hineinzugehen.
@@ -169,21 +195,21 @@ the trip easier.
 
 Five things that are genuinely different there.
 
-The pink markings on the platform are women-only carriages during weekday rush hour.
-Pink paint, pink stickers on the door. It's a social rule, so nothing happens if you
-board the wrong one.
+Pink means women only. Pink paint on the platform shows where that carriage stops, and
+the door has pink stickers. It applies on weekdays in rush hour, until about 9:30.
+Outside those hours anyone can use it, and nobody is fined if you get it wrong.
 
-There's a police box, a koban, within about five minutes of you in central Tokyo,
-usually right by a JR exit. Search 交番 on the map. Most people walk in to ask for
-directions. Emergency is 110.
+There's a police box within about five minutes of you in central Tokyo, often right
+outside a station. They're called koban. Search 交番 on the map. Most people go in just
+to ask directions. The emergency number is 110.
 
 Check your cold medicine before you fly. Sudafed, Actifed and Vicks inhalers are
 banned, and anything with codeine needs a permit you apply for in advance.
 
 Most public toilets have no paper and no dryer, so everyone carries a small hand towel.
 
-And there are almost no public bins, so your rubbish goes with you until you reach a
-konbini.
+And there are almost no bins on the street, so your rubbish goes with you until you
+reach a konbini, the convenience stores you'll see everywhere.
 
 Now the good part. Lose your phone and you'll probably get it back. In Tokyo about 83%
 of lost phones find their owner, and they go to the same police box.
