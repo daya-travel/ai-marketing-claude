@@ -25,6 +25,38 @@ nicht bespielt. Albanien ist die Billig-Empfehlung von 2024/25.
 | 7 | Objekt | **Lose your phone here and you'll probably get it back.** · About 83% of lost phones in Tokyo are returned · Wallets around 65% · It all goes to the same police box · About 7,700 items handed in every day |
 | 8 | Foto | **Now go book it.** · DAYA-Wortmarke |
 
+## Bilddurchgang am 29.08.: roh statt bearbeitet, keine Schrift auf Gegenstaenden
+
+Drei Punkte von Alesya:
+
+**1. Das Kaertchen „Japan - solo - before you fly" ist weg**, und mit ihm das zweite
+auf Slide 5 („check before you fly"). Ihre Regel: „keine buchstaben oder worte auf
+bilder tun, sie sind alle schief, also falsch halt." Klargestellt hat sie auch, dass
+der ueberlegte Text bleibt: „nur normalen text drauf wie immer, aber keine buchstaben
+auf den sachen."
+
+**2. Das Flatlay sah gestellt aus, und das war mein Prompt.** Er sagte woertlich
+„Pinterest editorial aesthetic" und „arranged with generous spacing". Ich hatte den
+Katalog-Look bestellt. Neu ueber `soul_2` statt `nano_banana_pro` - ohne Kaertchen
+braucht es kein textfaehiges Modell mehr, und `soul_2` ist der dokumentarische.
+Prompt jetzt: „casually dropped, not arranged", „items at different angles and some
+overlapping", „uneven spacing", „real creases in the sheet".
+
+Aussortiert dabei: Muenzboerse, Pass und beschriftete Hausschuhe erzeugten
+zuverlaessig Buchstabensalat („PASSGORT", „MARSSOFIT", „CUPPI M SINOCTAY"). Ein Pass
+laesst sich nicht sauber generieren, er ist rausgeflogen statt neu geprompted zu
+werden.
+
+**3. Der gruene Layer ist auf allen Fotos weg.** Alesya: „es sieht sehr bearbeitet
+aus, muss aber eher roh aussehen, nicht wie KI." Damit entfaellt die
+Emerald-Gradierung aus dem DESIGN-SYSTEM fuer Fotos, und alle Verlaeufe sind
+neutrales Schwarz statt emerald-getoent. Das Emerald bleibt in Wortmarke, Kopfzeile
+und Palette. Die dunkle Kopfzeile auf hellen Bildern hat einen hellen Schimmer
+bekommen, sonst verschwindet sie auf einem mitteltonigen Laken.
+
+Die Schuh- und IC-Karten-Zeile ist aus der Caption raus, beide sind im neuen Bild
+nicht mehr klar erkennbar.
+
 ## Durchgang am 29.08.: unbrauchbare Anweisung und Stichpunkte
 
 Alesya: „Und was ist das für japanisches Zeichen? Wie kann sie es eingeben oder

@@ -97,6 +97,16 @@ Serie ansehen und den Look treffen.
   sauber weiter und schafft nebenbei freie Fläche für den Text (28.08.). Ein
   farbiger Hintergrund hinter einer Bildkarte ist die schlechtere Lösung, Alesya
   hat sie sofort als störend erkannt.
+- **Kein Emerald-Layer über Fotos.** Alesya, 29.08.: „ich will diesen grünen layer
+  auf allen fotos weghaben, es sieht sehr bearbeitet aus, muss aber eher roh
+  aussehen, nicht wie KI." Die Emerald-Gradierung aus dem DESIGN-SYSTEM entfällt
+  damit für Fotos, und alle Verläufe sind neutrales Schwarz statt emerald-getönt.
+  Das Emerald bleibt in Wortmarke, Kopfzeile und Palette.
+- **Nicht das Gestellte bestellen.** „Pinterest editorial aesthetic", „arranged with
+  generous spacing" und „product photography" im Prompt erzeugen genau den
+  Katalog-Look, der nach KI aussieht. Was echt wirkt: „casually dropped, not
+  arranged", „items at different angles and some overlapping", „uneven spacing",
+  „real creases in the sheet", „warm natural window light from one side".
 - **Auf hellen Objektbildern keine Verläufe über das ganze Bild.** Mittelverlauf und
   Emerald-Gradierung machen Leinen zu Matsch und die Gegenstände unlesbar. Nur ein
   enger, kräftiger Verlauf hinter dem Textblock. Und die Kopfzeile dort in Emerald
@@ -108,9 +118,18 @@ Serie ansehen und den Look treffen.
 - **Deutsche Präpositionen nicht mitübersetzen.** Es heißt „**in** this picture",
   nicht „on this picture" (von „auf diesem Bild"). Gleiche Familie wie die
   Verkürzungs-Regel: solche Kleinigkeiten verraten einen Text sofort.
-- **Modellwahl nach Schrift im Bild.** Braucht das Motiv lesbaren Text, etwa ein
-  beschriftetes Kärtchen in einem Flatlay, dann `nano_banana_pro`. `soul_2` kann keine
-  Buchstaben. Bei textfähigen Modellen jedes Wort einzeln buchstabieren und prüfen.
+- **Gar keine Buchstaben auf den Gegenständen im Bild.** Festgelegt von Alesya,
+  29.08.2026: „keine buchstaben oder worte auf bilder tun, sie sind alle schief, also
+  falsch halt." Das gilt auch für Modelle, die Schrift können - selbst ein korrekt
+  geschriebenes Kärtchen wirkt gestellt. Der Text, der über das Bild gelegt wird,
+  bleibt davon unberührt: „nur normalen text drauf wie immer".
+  Praktisch heißt das: Gegenstände wählen, die von Natur aus unbedruckt sind. Pässe,
+  Münzbörsen, Verpackungen und Schuhe mit Label erzeugen zuverlässig Buchstabensalat
+  („PASSGORT", „MARSSOFIT", „CUPPI M SINOCTAY", alle am 29.08.). Ein Pass lässt sich
+  nicht sauber generieren, er fliegt raus statt neu geprompted zu werden.
+- **Damit ist die Modellwahl einfach:** `soul_2` für alles. Der textfähige
+  `nano_banana_pro` wurde nur wegen der Kärtchen gebraucht, die es nicht mehr gibt,
+  und `soul_2` ist ohnehin der dokumentarische von beiden.
 - **Keine Motive durch Glas oder Fensterscheiben.** `soul_2` legt dann Innen- und
   Außenraum übereinander. Belegt am 25.08. an `x2-plane-b`: die Tragfläche läuft durch
   ihre Schulter.

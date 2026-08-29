@@ -50,7 +50,7 @@ const BEATS = [
   // Antwort nicht und muss wischen. Aufloesung auf Slide 05. Die Behauptung stimmt,
   // die Blisterpackung liegt im Bild und Pseudoephedrin ist in Japan verboten.
   // SECHS, nicht fuenf: die Info-Slides sind 02 bis 07. Alesya am 28.08. gefunden.
-  { id: '01', photo: 'o1-flatlay', light: true, cover: true, ty: 80, zoom: 1.2, oy: 0.92,
+  { id: '01', photo: 's1-flatlay', light: true, cover: true, ty: 80,
     head: 'One thing in this picture is banned in Japan.',
     body: 'Six things worth knowing before you fly.' },
 
@@ -78,7 +78,7 @@ const BEATS = [
       'Emergency is 110',
     ] },
 
-  { id: '05', photo: 'o5-meds', light: true, ty: 74, zoom: 1.2, oy: 0.92,
+  { id: '05', photo: 's5-meds', light: true, ty: 74,
     head: 'Check your cold medicine before you fly.',
     bullets: [
       'Sudafed, Actifed and Vicks inhalers are banned',
@@ -117,31 +117,31 @@ ${FONT_CSS}
 html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .wrap{position:relative;width:${W}px;height:${H}px;overflow:hidden;color:#f4ecdb}
 /* Emerald-Gradierung plus Korn, DAYA-Signatur laut design-package/DAYA-DESIGN.md */
-.grade{position:absolute;inset:0;background:rgba(14,59,44,.12);mix-blend-mode:multiply}
+/* .grade (Emerald-Multiply) ist am 29.08. entfallen, siehe Kopfkommentar. */
 .grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")}
 .top{position:absolute;left:0;right:0;top:0;height:16%;
-  background:linear-gradient(180deg,rgba(6,29,21,.55) 0%,rgba(6,29,21,0) 100%)}
+  background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 100%)}
 .mid{position:absolute;left:0;right:0;top:22%;height:58%;
-  background:linear-gradient(180deg,rgba(6,29,21,0) 0%,rgba(6,29,21,.6) 26%,
-    rgba(6,29,21,.6) 74%,rgba(6,29,21,0) 100%)}
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 26%,
+    rgba(0,0,0,.55) 74%,rgba(0,0,0,0) 100%)}
 .bot{position:absolute;left:0;right:0;bottom:0;height:46%;
-  background:linear-gradient(0deg,rgba(6,29,21,.9) 0%,rgba(6,29,21,.78) 34%,
-    rgba(6,29,21,0) 100%)}
+  background:linear-gradient(0deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.72) 34%,
+    rgba(0,0,0,0) 100%)}
 /* enge, kraeftige Verlaeufe fuer helle Objektbilder */
 .botlight{position:absolute;left:0;right:0;bottom:0;height:38%;
-  background:linear-gradient(0deg,rgba(6,29,21,.94) 0%,rgba(6,29,21,.88) 40%,
-    rgba(6,29,21,0) 100%)}
+  background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.82) 40%,
+    rgba(0,0,0,0) 100%)}
 .toplight{position:absolute;left:0;right:0;top:0;height:46%;
-  background:linear-gradient(180deg,rgba(6,29,21,.92) 0%,rgba(6,29,21,.82) 46%,
-    rgba(6,29,21,0) 100%)}
+  background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.76) 46%,
+    rgba(0,0,0,0) 100%)}
 .bar{position:absolute;left:80px;right:80px;top:88px;display:flex;align-items:center}
 .brand{display:flex;align-items:center;gap:14px}
 .brand svg{width:32px;height:32px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.95))}
 .brand span{font-family:'Archivo';font-weight:700;font-size:27px;letter-spacing:.01em;
   color:#f4ecdb;text-shadow:0 2px 10px rgba(0,0,0,.8)}
-.bar.dark .brand span{color:#0e3b2c;text-shadow:none}
-.bar.dark .brand svg{filter:none;opacity:.85}
+.bar.dark .brand span{color:#0e3b2c;text-shadow:0 1px 4px rgba(255,255,255,.85)}
+.bar.dark .brand svg{filter:drop-shadow(0 1px 3px rgba(255,255,255,.9));opacity:.9}
 
 /* Fotoslides: Text mittig ueber dem Bild */
 .block{position:absolute;left:80px;right:80px;top:50%;transform:translateY(-50%);
@@ -220,7 +220,7 @@ beats.forEach((b) => {
   // Helle Objektbilder ohne Mittelverlauf und ohne Emerald-Gradierung, sonst
   // versinken die Gegenstaende. Alesya am 28.08.: das Flatlay muss absuchbar
   // bleiben, der Hook zeigt darauf.
-  const inner = `${b.light ? '' : '<div class="grade"></div>'}
+  const inner = `
   ${b.light ? '' : '<div class="top"></div><div class="mid"></div>'}
   ${b.light ? (low ? '<div class="botlight"></div>' : '<div class="toplight"></div>') : ''}
   ${!b.light && (b.endcard || low) ? '<div class="bot"></div>' : ''}
