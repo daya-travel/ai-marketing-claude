@@ -92,4 +92,99 @@ verstaendlich bleibt. Alesya muss damit in Instagram Edits nichts mehr nachregel
 
 ## Bilder
 
-Noch keine. Die Slides oder Clips fehlen, das Skript ist der erste Schritt.
+Neun Frames, gebaut mit `daya/studio/build-thailand.mjs`. Ausgeliefert:
+`daya/studio/reels/thailand/daya-reel-thailand-illegal.mp4`, 1080x1920, 30 fps,
+62,8 s Bild auf 60,9 s Ton. Der Schlussframe laeuft zwei Sekunden laenger als die
+Stimme, damit „Save this before you fly." lesbar bleibt.
+
+### Die Segmentgrenzen sind gemessen, nicht geschaetzt
+
+`ffmpeg -af silencedetect=noise=-32dB:d=0.30` hat 22 Sprechpausen in
+`thailand-isla-115.wav` gefunden. Aus der Wortzahl je Abschnitt kam eine Erwartung,
+die dann auf die naechstgelegene echte Pause gerastet wurde. Ergebnis in
+`daya/studio/audio/thailand/cuts.json`:
+
+| # | Abschnitt | von | bis | Dauer |
+|---|---|---|---|---|
+| 1 | Hook | 0,00 | 7,58 | 7,58 s |
+| 2 | Vapes | 7,58 | 14,46 | 6,88 s |
+| 3 | Strand | 14,46 | 22,39 | 7,93 s |
+| 4 | Drohne | 22,39 | 32,87 | 10,48 s |
+| 5 | Monarchie | 32,87 | 37,66 | 4,79 s |
+| 6 | Cannabis | 37,66 | 45,44 | 7,78 s |
+| 7 | Overstay | 45,44 | 54,12 | 8,68 s |
+| 8 | Korallen | 54,12 | 59,08 | 4,96 s |
+| 9 | Schluss | 59,08 | 60,87 | 1,79 s + 2,0 s Nachlauf |
+
+### Die neun Motive
+
+Alle mit `soul_2`. Thailand hat an jeder Strasse mehr Schrift als Japan, deshalb sind
+die Orte bewusst schriftfrei gewaehlt - Strand, Himmel, Unterwasser, Blatt, leere
+Halle. Keine Strassen, keine Maerkte, keine Laeden, keine Tempel.
+
+| # | Motiv | Textposition |
+|---|---|---|
+| 1 | Frau mit Rucksack am Strand, Blick aufs Meer | oben, ueber Meer und Landzunge |
+| 2 | blankes schwarzes Geraet auf Beton | unten, auf der freien Betonstufe |
+| 3 | Zigarettenstummel halb im Sand, Meer unscharf dahinter | unten |
+| 4 | Drohne klein gegen offenen Himmel ueber der Kueste | unten, vier Stichpunkte |
+| 5 | Frau am Handy, von der Seite, Laub dahinter | unten, Gesicht bleibt frei |
+| 6 | Cannabisblatt auf hellem Stein | unten, enger Verlauf, Kopfzeile in Emerald |
+| 7 | Frau allein in einer leeren Sitzreihe | oben, vier Stichpunkte |
+| 8 | flaches Korallenriff, klares Wasser | oben, im offenen Blau |
+| 9 | Frau klein am Strand vor Karstfelsen im Abendlicht | unten, darunter das DAYA-Lockup |
+
+### Was rausgeflogen ist, und warum
+
+27 Varianten erzeugt, neun benutzt. Die Ausfaelle folgen genau den bekannten Mustern:
+
+- **Buchstabensalat auf dem Gegenstand, sechsmal.** Ein Vape trug „worosiie" und
+  „AOTVG PIAIEINI", zwei Longtailboote „ND SASS" und „Majodore", ein T-Shirt einen
+  Aufdruck. Alle raus statt neu geprompted.
+- **Der Hintern in der Bildmitte, einmal.** Die zweite Strandvariante schnitt auf
+  Oberschenkelhoehe hinter einer Frau in kurzer Hose. Dazu ein weisser Scanrand.
+- **Kippen wie Pfosten, dreimal.** `soul_2` stellt Zigarettenstummel senkrecht in den
+  Sand, ordentlich verteilt. Das ist sofort als KI erkennbar, echte Kippen liegen.
+  Geloest mit „lying flat on their sides half buried in the sand, casually dropped,
+  not arranged, at different angles".
+- **Beschilderung in der Abflughalle, zweimal.** Auch eine Halle hat Schilder. Die
+  gewaehlte Variante hat nur Wandnotizen, die bei Anzeigegroesse kein Wort ergeben,
+  und der Textblock liegt ohnehin darueber.
+
+Neu erzeugt wurden daraufhin Strandrauchen, Abflughalle und Schlusskarte.
+
+### Zwei Layout-Entscheidungen
+
+- **Nicht drei Verlaeufe uebereinander.** Kopf-, Mittel- und Fussverlauf zusammen
+  machten die Fotos matschig, also genau den bearbeiteten Look, der am 29.08. weg
+  sollte. Liegt der Text tief, deckt der Fussverlauf ihn schon ab und der
+  Mittelverlauf faellt weg.
+- **Die DAYA-Wortmarke kommt aus dem eingecheckten Original**
+  `daya/brand/design-package/daya-brand/daya-horiz-cream.png`. Der frueher benutzte
+  Pfad unter `photos/daya-grid/` ist beim Container-Neustart verlorengegangen, und ein
+  nachgebautes Logo waere geraten gewesen.
+
+## Captions
+
+### Instagram
+
+> Seven things that are actually illegal in Thailand, and tourists do them every day.
+>
+> The vape one catches people at customs before they've even left the airport. Banned
+> since 2014, no exception for tourists, fines up to 30,000 baht.
+>
+> The one that got me was overstaying. 500 baht a day sounds survivable. But report
+> yourself and you just pay it, get stopped at the airport and there's a five-year ban
+> on top of the money.
+>
+> Every number here comes from Thai law and I checked each one twice. Save it before
+> you fly.
+>
+> #solofemaletravel #thailand #traveltips #solotravel #fyp
+
+### TikTok
+
+> Seven things that are actually illegal in Thailand. The vape alone runs to 30,000
+> baht, and there's no tourist exception. Save this before you fly.
+>
+> #solofemaletravel #thailand #traveltok #solotravel #fyp

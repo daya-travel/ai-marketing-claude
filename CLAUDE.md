@@ -158,6 +158,15 @@ Serie ansehen und den Look treffen.
   löst: „seen small in the frame from a distance, full figure, the view doing the work".
 - **Anatomie an Sitzmöbeln prüfen.** Übergeschlagene Beine an Stühlen erzeugt soul_2
   regelmäßig falsch - das Bein wächst dann aus der Lehne (25.08., `x4-dinner4-a`).
+- **Nicht drei Verlaeufe uebereinander legen.** Kopf-, Mittel- und Fussverlauf auf
+  demselben Slide machen das Foto matschig und erzeugen selbst den bearbeiteten Look,
+  der weg sollte. Belegt am 31.08. am Thailand-Reel: neun Slides sahen erst nach
+  Streichen des Mittelverlaufs wieder nach Foto aus. Regel: liegt der Text tief, deckt
+  der Fussverlauf ihn schon ab, der Mittelverlauf faellt dann weg.
+- **Kleinteiliger Abfall wird von soul_2 aufgestellt, nicht hingelegt.**
+  Zigarettenstummel standen dreimal senkrecht wie Pfosten im Sand, ordentlich
+  verteilt. Echte Kippen liegen. Prompt-Baustein, der es loest: „lying flat on their
+  sides half buried in the sand, casually dropped, not arranged, at different angles".
 - **Schrift im Bild:** soul_2 kann keine Buchstaben. Motive so rahmen, dass keine bedruckte
   Fläche scharf im Bild liegt. Bilder immer in echter Anzeigegröße prüfen, nicht in voller
   Auflösung - Buchstabensalat, der bei 100 % unsichtbar ist, wird in der Zelle zur Schlagzeile.
