@@ -1,7 +1,7 @@
 # Reel: „Seven things that are actually illegal in Thailand"
 
 Datum: 31.08.2026 · Kanal: Instagram Reel + TikTok · Account: @her.solotrip
-Tonspur: `daya/studio/audio/thailand/` (Isla 70 s, Maeve 81 s)
+Tonspur: `daya/studio/audio/thailand/` - **verwendet wird `thailand-isla-115.wav`, 61 s**
 
 ## Herkunft und warum es geprueft werden musste
 
@@ -72,8 +72,23 @@ Preset-Stimmen zum Vergleich, **Isla** und **Maeve**. Die von Alesya genannten
 ElevenLabs-Einstellungen (Rachel/Bella, Stability 50, Clarity 75, Style 30, Speed
 0.95) sind unveraendert geblieben, falls sie dort spaeter selbst einspricht.
 
-**Offen:** ich kann Audio nicht anhoeren. Die Stimmwahl ist geraten, Alesya
-entscheidet am Ohr.
+**Ich kann Audio nicht anhoeren.** Bei „angenehm" musste ich passen. Bei „nicht zu
+langsam" gibt es dagegen eine messbare Groesse, das Sprechtempo:
+
+| Datei | Laenge | Woerter/Minute |
+|---|---|---|
+| `thailand-maeve.wav` | 80,8 s | 127,7 |
+| `thailand-isla.wav` | 70,0 s | 147,4 |
+| **`thailand-isla-115.wav`** | **60,9 s** | **169,5** |
+| `thailand-isla-125.wav` | 56,0 s | 184,2 |
+
+Normale Erzaehlgeschwindigkeit liegt bei rund 150 bis 160 W/min. **Maeve ist damit
+messbar zu langsam, Isla sitzt fast auf Normaltempo.** Gewaehlt: Isla.
+
+Die beschleunigten Fassungen entstehen mit `ffmpeg -filter:a "atempo=1.15"`. `atempo`
+haelt die Tonhoehe, anders als reines Schnellerabspielen, das die Stimme quietschig
+macht. Empfehlung ist **1.15 mit 61 Sekunden**, weil 170 W/min zuegig klingt und
+verstaendlich bleibt. Alesya muss damit in Instagram Edits nichts mehr nachregeln.
 
 ## Bilder
 
