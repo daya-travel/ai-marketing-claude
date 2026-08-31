@@ -61,14 +61,14 @@ const BEATS = [
 
   // Frame 2 - Vapes. Bild: ein blankes schwarzes Geraet auf Beton, keine
   // Aufschrift. Die zweite Variante trug „worosiie" und flog raus.
-  { id: '02', photo: 'f2', ty: 84,
+  { id: '02', photo: 'f2', ty: 72,
     head: 'Vapes.',
-    body: 'Banned since 2014, and there’s no exception for tourists. Fines reach 30,000 baht.' },
+    body: 'Banned since 2014, and there’s no exception for tourists. Fines reach 30,000 baht, about $900.' },
 
   // Frame 3 - Strandrauchen. Zwanzig Straende, seit November 2017.
-  { id: '03', photo: 'f3', ty: 84,
+  { id: '03', photo: 'f3', ty: 72,
     head: 'Smoking on the beach.',
-    body: 'Twenty beaches, Phuket and Koh Samui among them. Up to a year, or 100,000 baht.' },
+    body: 'Twenty beaches, Phuket and Koh Samui among them. Up to a year, or 100,000 baht, about $3,000.' },
 
   // Frame 4 - Drohne. Laengstes Segment (10,5 s), deshalb vier Stichpunkte.
   // „Tempel" aus dem Original steht NICHT drin, das war unbelegt.
@@ -83,21 +83,30 @@ const BEATS = [
 
   // Frame 5 - Monarchie. §112. Das Beispiel „auf Geld treten" aus dem Original
   // liess sich nicht belegen und ist raus, der Punkt mit den Beitraegen ist belegt.
-  { id: '05', photo: 'f5', ty: 84,
+  { id: '05', photo: 'f5', ty: 72,
     head: 'Posting about the monarchy.',
     body: 'Three to fifteen years, and every single post counts separately.' },
 
-  // Frame 6 - Cannabis. Helles Objektbild: Emerald-Kopfzeile, enger Verlauf.
-  { id: '06', photo: 'f6', light: true, ty: 84,
-    head: 'Cannabis in or out.',
-    body: 'Thailand went medical-only in June 2025, and your prescription from home doesn’t count.' },
+  // Frame 6 - Cannabis. Erste Fassung warnte vor nichts: sie sagte „your prescription
+  // from home doesn't count", aber eine thailaendische Verschreibung bekommt man vor
+  // Ort, und genau deshalb kaufen Tourist:innen dort ohne Probleme ein (Alesya,
+  // 31.08.: „wovor warnen wir dann?"). Bestraft wird der oeffentliche Konsum und die
+  // Ausfuhr - Section 244 Customs Act, in Kraft seit 17.06.2026.
+  { id: '06', photo: 'f6', light: true, ty: 70,
+    head: 'Cannabis.',
+    bullets: [
+      'Buying is legal with a Thai prescription',
+      'Smoking in public costs up to 25,000 baht, about $750',
+      'Taking it out of the country is the serious one',
+      'Since June 2026 that’s ten years and 500,000 baht, about $15,000',
+    ] },
 
   // Frame 7 - Overstay. Helle Halle, Text oben in den .toplight-Verlauf.
   { id: '07', photo: 'f7', light: true, ty: 23,
     head: 'Overstaying.',
     bullets: [
-      '500 baht for every day you’re over',
-      'Capped at 20,000 after forty days',
+      '500 baht for every day you’re over, about $15',
+      'Capped at 20,000, about $600, after forty days',
       'Report yourself and you just pay it',
       'Get stopped at the airport and it’s a five-year ban',
     ] },
@@ -105,7 +114,7 @@ const BEATS = [
   // Frame 8 - Korallen. Text oben ins offene Wasser.
   { id: '08', photo: 'f8', ty: 26,
     head: 'Taking coral home.',
-    body: 'Inside a national park that runs to five years and 500,000 baht.' },
+    body: 'Inside a national park that runs to five years and 500,000 baht, about $15,000.' },
 
   // Frame 9 - Schlusskarte. Kein Link, kein Feature-Satz vor dem Launch.
   { id: 'end', photo: 'f9', endcard: true, ty: 72,
@@ -130,9 +139,11 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
   background:linear-gradient(0deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.72) 34%,
     rgba(0,0,0,0) 100%)}
 /* enge, kraeftige Verlaeufe fuer helle Bilder */
-.botlight{position:absolute;left:0;right:0;bottom:0;height:40%;
-  background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.82) 42%,
-    rgba(0,0,0,0) 100%)}
+/* 54 % statt 40 %: seit der Text hoeher sitzt (ty 70) begann der erste Stichpunkt
+   sonst oberhalb des Verlaufs, also creme auf hellem Stein. */
+.botlight{position:absolute;left:0;right:0;bottom:0;height:54%;
+  background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.84) 34%,
+    rgba(0,0,0,.6) 62%,rgba(0,0,0,0) 100%)}
 .toplight{position:absolute;left:0;right:0;top:0;height:48%;
   background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.78) 48%,
     rgba(0,0,0,0) 100%)}
@@ -165,7 +176,9 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .end .head{font-size:70px}
 .end .body{font-size:31px;letter-spacing:.02em;opacity:.85}
 /* Schlusskarte: das eingecheckte DAYA-Lockup, kein nachgebauter Schriftzug */
-.lockup{position:absolute;left:0;right:0;bottom:150px;display:flex;justify-content:center}
+/* bottom 300 statt 150: unter rund 78 % der Bildhoehe verdeckt die TikTok-Oberflaeche
+   alles, das gilt auch fuer die Wortmarke (Alesya, 31.08.) */
+.lockup{position:absolute;left:0;right:0;bottom:300px;display:flex;justify-content:center}
 .lockup img{height:78px;filter:drop-shadow(0 3px 14px rgba(0,0,0,.9))}
 </style></head><body>`;
 const foot = `</body></html>`;

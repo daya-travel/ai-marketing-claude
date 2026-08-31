@@ -22,7 +22,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT = join(__dirname, 'reels', 'thailand');
 const GRID = join(OUT, 'grids');
 const OV = join(OUT, 'overlays');
-const AUDIO = join(__dirname, 'audio', 'thailand', 'thailand-isla-115.wav');
+// Fassung 2: der Cannabis-Satz war inhaltlich unbrauchbar und wurde neu vertont.
+// Die neue Aufnahme wurde langsamer eingelesen (132 statt 147 W/min), deshalb
+// atempo 1.30 statt 1.15 - damit liegt sie wieder bei 172 W/min wie die
+// abgenommene Fassung.
+const AUDIO = join(__dirname, 'audio', 'thailand', 'thailand-isla-v2-130.wav');
 const CUTS = join(__dirname, 'audio', 'thailand', 'cuts.json');
 const W = 1080, H = 1920, FPS = 30;
 const HOLD = 2.0; // Nachlauf auf der Schlusskarte, in Sekunden

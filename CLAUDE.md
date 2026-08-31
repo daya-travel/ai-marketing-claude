@@ -59,6 +59,18 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
   die Leserin das genau dort tun, wo sie den Text liest? Die brauchbare Fassung war
   „search police box on your map", auf Englisch, plus die rote Lampe als
   Erkennungszeichen.
+- **Ein Verbot, das in der Praxis niemanden trifft, ist kein Warnhinweis.** Bei jedem
+  Punkt prüfen: kann die Leserin dafür tatsächlich belangt werden? Belegt am 31.08. am
+  Thailand-Reel. Dort stand „Cannabis in or out. Your prescription from home doesn't
+  count." Formal richtig, praktisch wertlos: eine thailändische Verschreibung bekommt
+  man vor Ort, und genau deshalb kaufen Alesyas Freunde dort ohne Probleme ein. Ihr
+  Einwand: „Also wovor warnen wir dann?" Der brauchbare Hinweis waren der öffentliche
+  Konsum und die Ausfuhr. Wer einen Verbotspunkt schreibt, sucht die Strafnorm, die
+  wirklich greift, statt die Formalie zu wiederholen.
+- **Fremdwährungen immer umrechnen und danebenstellen.** „30.000 Baht" ist für eine
+  deutsche Leserin keine Größe. Ins Bild gehört „30,000 baht, about $900", der Kurs mit
+  Datum ins Content-Doc. In die Tonspur gehört die Umrechnung nicht, das macht jeden
+  Satz schwerfällig (Alesya, 31.08.).
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 
@@ -175,6 +187,11 @@ Serie ansehen und den Look treffen.
   Zigarettenstummel standen dreimal senkrecht wie Pfosten im Sand, ordentlich
   verteilt. Echte Kippen liegen. Prompt-Baustein, der es loest: „lying flat on their
   sides half buried in the sand, casually dropped, not arranged, at different angles".
+- **Text nie tiefer als rund 78 % der Bildhöhe.** Auf TikTok verdeckt die Oberfläche
+  den unteren Rand, dort steht die Caption über dem Bild. Belegt am 31.08.: vier Slides
+  lagen auf `ty: 84` und waren damit im Zweifel nicht lesbar. Richtwert ist `ty: 72`,
+  Alesya hat den Drohnen-Slide als richtig platziert benannt. Das gilt auch für die
+  Wortmarke auf der Schlusskarte.
 - **Schrift im Bild:** soul_2 kann keine Buchstaben. Motive so rahmen, dass keine bedruckte
   Fläche scharf im Bild liegt. Bilder immer in echter Anzeigegröße prüfen, nicht in voller
   Auflösung - Buchstabensalat, der bei 100 % unsichtbar ist, wird in der Zelle zur Schlagzeile.
