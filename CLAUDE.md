@@ -127,6 +127,14 @@ Serie ansehen und den Look treffen.
   Münzbörsen, Verpackungen und Schuhe mit Label erzeugen zuverlässig Buchstabensalat
   („PASSGORT", „MARSSOFIT", „CUPPI M SINOCTAY", alle am 29.08.). Ein Pass lässt sich
   nicht sauber generieren, er fliegt raus statt neu geprompted zu werden.
+- **Das DAYA-Logo fuer Posts ist die flache Fassung, nicht das App-Icon.** Alesya,
+  31.08.2026: „das logo von daya muss aber anders sein". Im Repo lagen nur Dateien
+  mit der abgerundeten Emerald-Kachel und dem gepraegten Bogen - das ist das
+  App-Icon. Auf Slides gehoert die flache Strichzeichnung plus Wortmarke in einer
+  Farbe: `daya/brand/design-package/daya-brand/daya-lockup-flat-cream.png` auf
+  dunklem Grund, die Emerald-Fassung daneben fuer helle Slides. Beide sind aus
+  `daya-horiz-cream.png` geloest, also dieselbe Zeichnung, nur ohne Kachel und ohne
+  Praegung.
 - **Damit ist die Modellwahl einfach:** `soul_2` für alles. Der textfähige
   `nano_banana_pro` wurde nur wegen der Kärtchen gebraucht, die es nicht mehr gibt,
   und `soul_2` ist ohnehin der dokumentarische von beiden.

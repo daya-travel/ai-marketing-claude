@@ -35,7 +35,10 @@ import { FONT_CSS } from './fonts.mjs';
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PHOTOS = join(__dirname, 'photos', 'thailand');
-const LOCKUP = join(__dirname, '..', 'brand', 'design-package', 'daya-brand', 'daya-horiz-cream.png');
+// Flaches Lockup ohne die Emerald-Kachel - Alesya, 31.08.: die App-Icon-Fassung
+// ist nicht das Logo fuer Posts. Gebaut aus derselben Originaldatei, die
+// Strichzeichnung ist aus der Kachel geloest und flach eingefaerbt.
+const LOCKUP = join(__dirname, '..', 'brand', 'design-package', 'daya-brand', 'daya-lockup-flat-cream.png');
 const glyph = (stroke) => `<svg viewBox="0 0 24 24" fill="none" stroke="${stroke}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h9"/><path d="M11 9.5 13.5 12 11 14.5"/><path d="M16.5 7.2a7 7 0 0 1 0 9.6"/><path d="M19 5a10.5 10.5 0 0 1 0 14"/></svg>`;
 const OUT = join(__dirname, 'reels', 'thailand');
 const OV = join(OUT, 'overlays');
@@ -163,7 +166,7 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .end .body{font-size:31px;letter-spacing:.02em;opacity:.85}
 /* Schlusskarte: das eingecheckte DAYA-Lockup, kein nachgebauter Schriftzug */
 .lockup{position:absolute;left:0;right:0;bottom:150px;display:flex;justify-content:center}
-.lockup img{height:92px;filter:drop-shadow(0 3px 14px rgba(0,0,0,.9))}
+.lockup img{height:78px;filter:drop-shadow(0 3px 14px rgba(0,0,0,.9))}
 </style></head><body>`;
 const foot = `</body></html>`;
 
