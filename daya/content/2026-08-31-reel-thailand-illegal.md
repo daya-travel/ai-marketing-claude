@@ -164,7 +164,7 @@ Halle. Keine Strassen, keine Maerkte, keine Laeden, keine Tempel.
 
 | # | Motiv | Textposition |
 |---|---|---|
-| 1 | Frau mit Rucksack am Strand, Blick aufs Meer | oben, ueber Meer und Landzunge |
+| 1 | Frau mit Rucksack am Strand, Blick aufs Meer | oben; Kopfzeile mit Ziffer, '7 things' statt 'Seven things' (Alesya, 31.08.) - im Ton bleibt das Zahlwort |
 | 2 | blankes schwarzes Geraet auf Beton | unten, auf der freien Betonstufe |
 | 3 | Zigarettenstummel halb im Sand, Meer unscharf dahinter | unten |
 | 4 | Drohne klein gegen offenen Himmel ueber der Kueste | unten, vier Stichpunkte |

@@ -56,7 +56,7 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const BEATS = [
   // Frame 1 - Hook. Sie steht klein am Strand, die Kueste traegt das Bild.
   { id: '01', photo: 'f1', cover: true, ty: 24,
-    head: 'Seven things that are actually illegal in Thailand.',
+    head: '7 things that are actually illegal in Thailand.',
     body: 'And tourists do them every day.' },
 
   // Frame 2 - Vapes. Bild: ein blankes schwarzes Geraet auf Beton, keine
