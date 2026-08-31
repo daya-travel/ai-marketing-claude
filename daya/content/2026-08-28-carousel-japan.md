@@ -1,5 +1,18 @@
 # Karussell: „Before you fly to Japan alone"
 
+> **GEPOSTET am 31.08.2026.** Draussen ist der Stand von Commit `5704c6e`: acht
+> Slides, Stichpunkte, ohne Emerald-Layer, Flatlay ohne Kaertchen.
+>
+> **Zwei geplante Aenderungen sind nie ausgeliefert worden** und gelten als
+> erledigt, weil der Post live ist:
+> - Slide 5 (Tabletten) sollte im Bildinhalt nach oben, wie Cover und Slide 6.
+> - Die Schlusskarte sollte von „Now go book it." auf eine laengere Fassung mit
+>   Follow-Hinweis wechseln.
+>
+> Wer den Post spaeter neu rendern will: `daya/studio/photos/` ist gitignored, die
+> acht Motive liegen nicht im Repo und muessen vom Higgsfield-CDN zurueckgeholt
+> werden. Die URLs stehen im Sitzungsprotokoll vom 30.08.
+
 Datum: 28.08.2026 · Kanal: Instagram + TikTok Karussell · Account: @her.solotrip
 Build: `daya/studio/build-japan.mjs` · Ausgabe: `daya/studio/reels/carousel-japan/`
 
