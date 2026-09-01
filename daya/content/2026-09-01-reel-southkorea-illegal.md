@@ -1,4 +1,4 @@
-# Reel: „Seven things that are actually illegal in South Korea"
+# Reel: „One thing in your carry-on is a narcotics charge in South Korea"
 
 Datum: 01.09.2026 · Kanal: Instagram Reel + TikTok · Account: @her.solotrip
 Status: **Entwurf.** Texte stehen, Bilder und Tonspur fehlen.
@@ -14,19 +14,43 @@ Diana hat es vorgeschlagen. Die Zahlen geben ihr recht:
 
 Quellen: travelandtourworld.com (mehrere Stuecke 2026), mysouthkoreastay.com Q1 2026.
 
-## Die sieben Punkte, mit Beleg
+## Warum neun, und warum diese neun
+
+Alesya am 01.09.: „schon wieder 7..? mach 9 oder 11? und warum sind hier wieder
+vapes und dronen? alles gleich vom letzten post oder was?"
+
+**Beides war ein Konstruktionsfehler.** Der Meta-Auftrag gab feste Kategorien fuer
+jedes Land vor - Vapes, Strandrauchen, Drohne, Majestaetsbeleidigung, CBD, Overstay,
+Korallen - und ich habe das eins zu eins ins Schema gebaut. So gebaut sieht jedes
+Land zwangslaeufig gleich aus. Die erste Korea-Liste teilte **vier von sieben**
+Kategorien mit Thailand: Vapes, Drohne, Overstay, Cannabis.
+
+Rausgeflogen sind **Vapes** und **Overstay**, die generischsten. Fuenf Punkte sind
+neu recherchiert und belegt, die es so nur in Korea gibt. Zwei sind geblieben, aber
+mit anderem Fokus: die Drohne (die 15-km-Sperrzone entlang der Grenze gibt es sonst
+nirgends) und Cannabis (in Korea geht es um den Haartest bei der Einreise, in
+Thailand ging es um die Ausfuhr).
+
+**Systemische Loesung im Werkzeug.** `generate.py` hat jetzt `check_repeats`. Laender
+tragen ein `posted`-Datum, und wer mehr als zwei Themen mit einem schon geposteten
+Land teilt, bekommt beim Lauf eine Warnung mit den Namen der Doppelungen. Ausserdem
+ist die feste Sieben raus: die Anzahl kommt aus den Daten, Zahlwoerter bis elf.
+
+## Die neun Punkte, mit Beleg
 
 Kurs: **1 USD = 1.368,62 KRW**, Stand 01.09.2026 (tradingeconomics.com).
 
 | # | Punkt | Strafe | Quelle |
 |---|---|---|---|
-| 1 | **Fremde filmen** | Bis 5 Jahre, 7 beim Verbreiten, oder 50 Mio KRW (~36.500 $). Gilt auch im oeffentlichen Raum | Act on Special Cases Concerning the Punishment of Sexual Crimes Art. 14; Korea Herald; pureumlawoffice.com; eng.taeshinlaw.com |
-| 2 | **Vapen ausserhalb markierter Zonen** | Sofort 100.000 KRW (~73 $) | roafly.com |
-| 3 | **Nikotinliquid im Gepaeck** | Einfuhrgrenze 20 ml, ueber 1 % gilt als Giftstoff und wird einbehalten | roafly.com Customs |
-| 4 | **ADHS- und Schmerzmedikamente** | Adderall komplett verboten, keine Eigenbedarfsausnahme. Methylphenidat braucht MFDS-Genehmigung, 2 bis 3 Wochen vor Abflug beantragen | nomedic.co; insight-bridge.co.kr; tripbase.com |
-| 5 | **Drohne** | Bis 1 Jahr oder 10 Mio KRW (~7.300 $). Sperrzone 15 km zur Grenze im Osten, 10 km im Westen | drone-laws.com; dronesgator.com |
-| 6 | **Overstay** | Schon ein Tag ist ein Verstoss gegen das Immigration Control Act | visaskorea.com |
-| 7 | **Cannabis, auch vorher im Ausland geraucht** | Bis 5 Jahre oder 50 Mio KRW (~36.500 $). Zoll macht Haartests, Reisende wurden allein aufgrund des Tests festgehalten | Narcotics Control Act; UK FCDO; tripbase.com |
+| 1 | **Fremde filmen** | Bis 5 Jahre, 7 beim Verbreiten, oder 50 Mio KRW (~36.500 $). Gilt auch im oeffentlichen Raum | Act on Special Cases Concerning the Punishment of Sexual Crimes Art. 14; Korea Herald; pureumlawoffice.com |
+| 2 | **Nicht deklariertes Essen** | Bis 10 Mio KRW (~7.300 $) fuers Nichtdeklarieren. Jerky aus nicht zugelassenen Laendern ab 5 Mio. Gruener Ausgang erhoeht um 40 bis 60 % | APQA; trip.com Korea Customs 2026; haniseoul.com |
+| 3 | **Miet-E-Scooter** | Mopedfuehrerschein Pflicht, Helm Pflicht. Ohne Fuehrerschein bis 100.000 KRW (~75 $), ohne Helm 20.000 | Korea Herald (Seoul Lizenzpruefung); swapswap.kr; frontlens.io |
+| 4 | **Medikamente** ← Aufloesung | Adderall komplett verboten, keine Eigenbedarfsausnahme. Methylphenidat braucht MFDS-Genehmigung, 2 bis 3 Wochen vor Abflug | nomedic.co; insight-bridge.co.kr; tripbase.com |
+| 5 | **Weiterverkaufte Konzertkarten** | Bis 1 Jahr oder 10 Mio KRW (~7.300 $), dazu Bussgelder bis zum 50-fachen des Ticketpreises. **Kaufen zaehlt, nicht nur Verkaufen.** Durchsetzung seit August 2026 | Korea Herald; Korea Times 24.06.2026; korea.net |
+| 6 | **Han-Park** | Muell 30.000 KRW (~22 $), Laerm oder Betrunkenheit 70.000 (~51 $) | korea.net, verschaerfte Hangang-Park-Regeln |
+| 7 | **Jeju, Zahlung sofort** | Vor-Ort-Bussgelder gegen auslaendische Tourist:innen fuer Bei-Rot-Gehen, Muell, Rauchen auf rauchfreien Strassen | Korea Herald, Jeju-Polizei |
+| 8 | **Grenz-Sperrzone** | 15 km im Osten, 10 km im Westen. Bis 1 Jahr oder 10 Mio KRW (~7.300 $) nach dem Februar-2026-Gesetz | drone-laws.com; dronesgator.com |
+| 9 | **Der Haartest** | Bis 5 Jahre oder 50 Mio KRW (~36.500 $). Zoll macht Haartests, Reisende wurden allein aufgrund des Tests festgehalten | Narcotics Control Act; UK FCDO; tripbase.com |
 
 **Not legal advice.**
 
@@ -34,11 +58,10 @@ Kurs: **1 USD = 1.368,62 KRW**, Stand 01.09.2026 (tradingeconomics.com).
 
 Das Filmverbot ist der staerkste Haken und zugleich der einzige Punkt, der die
 Leserin **schuetzt** statt sie nur zu warnen. Die Molka-Gesetze existieren, weil
-Frauen in Korea heimlich gefilmt wurden. Auf einem Solo-Frauen-Account ist das
-kein Verbotstrivia, sondern der Grund, warum es die Norm gibt.
+Frauen in Korea heimlich gefilmt wurden.
 
-Punkt 7 steht am Schluss, weil „they can hair-test you at the airport" direkt in
-den Schlusssatz „Save this before you fly" laeuft.
+Der Haartest steht am Schluss, weil „they can prove what you smoked before you came"
+direkt in den Schlusssatz „Save this before you fly" laeuft.
 
 ## Hook: Raetsel statt Liste
 
@@ -55,12 +78,12 @@ this picture is banned in Japan", aufgeloest erst auf Slide 5.
 Gewaehlt:
 
 > **One thing in your carry-on is a narcotics charge in South Korea.**
-> *Seven things worth checking before you fly.*
+> *Nine things worth checking before you fly.*
 
 **Warum es auf den Koffer zeigt und nicht auf das Foto.** Bei Japan lag der verbotene
-Gegenstand wirklich im Bild, die Erkaeltungsmedizin. Bei Korea geht das nicht: alle
-sieben sind entweder bedruckt (Tabletten, Vape, und `soul_2` macht daraus
-Buchstabensalat) oder gar kein Gegenstand (Filmen, Overstay). Ein Bildraetsel waere
+Gegenstand wirklich im Bild, die Erkaeltungsmedizin. Bei Korea geht das nicht: die
+Punkte sind entweder bedruckt (Tabletten, Konzertkarte, und `soul_2` macht daraus
+Buchstabensalat) oder gar kein Gegenstand (Filmen, Jaywalking). Ein Bildraetsel waere
 genau der „this bag"-Fehler vom 28.08. gewesen, ein Satz ueber einen Gegenstand, der
 nicht im Bild liegt. Das Raetsel zeigt deshalb auf ihren eigenen Koffer.
 
@@ -79,48 +102,65 @@ Aus den eigenen Account-Daten (`2026-07-05-reel-02-phone-stolen.md`):
 **Instagram Reel** (Reels bringen dort die Reichweite). Gleicher Inhalt, zwei
 Verpackungen.
 
-## Skript, 104 Woerter, rund 36 Sekunden bei 172 W/min
+## Skript, 132 Woerter, rund 46 Sekunden bei 172 W/min
 
-Erzeugt mit `daya/tools/her-solo-banned-generator`, Hook liegt als Datenfeld im Land.
-
-One thing in your carry-on is a narcotics charge in South Korea. Here are seven things to check before you fly.
+One thing in your carry-on is a narcotics charge in South Korea. Here are nine things to check before you fly.
 
 One. Filming strangers. Up to five years, and it counts in public.
 
-Two. Vaping. Outside a marked smoking area that's an instant fine.
+Two. Undeclared food. Ten million won, and the dogs work arrivals.
 
-Three. Nicotine liquid. Twenty millilitres, then customs keeps it.
+Three. Rental scooters. You need a licence for those kickboards.
 
 Four. This one's the answer. Your medication. Adderall is banned, and the permit takes three weeks.
 
-Five. Drones. Fifteen kilometres of no-fly zone along the border.
+Five. Resold concert tickets. Buying one counts, not just selling.
 
-Six. Overstaying. One day over and it's already a criminal violation.
+Six. The river park. Getting loud there is a seventy thousand won fine.
 
-Seven. Cannabis. They can hair-test you at the airport.
+Seven. Jaywalking on Jeju. They fine tourists on the spot.
+
+Eight. The border. Fifteen kilometres of no-fly zone, and it's watched.
+
+Nine. The hair test. They can prove what you smoked before you came.
 
 Save this before you fly.
 
-**Zur Laenge:** die Vorgabe war 30 bis 32 Sekunden, es sind 36. Mit Raetsel-Hook und
-sieben Punkten geht es nicht kuerzer, ohne einen Punkt zu streichen. Geschaetzt ist
-nichts, 172 W/min sind an der Thailand-Tonspur gemessen.
+**Zur Laenge:** 46 Sekunden. Die urspruengliche Vorgabe von 30 bis 32 Sekunden ist
+mit neun Punkten nicht zu halten, das waeren rund 92 Woerter fuer alles. Elf Punkte
+kaemen auf ueber 55 Sekunden. Geschaetzt ist nichts, 172 W/min sind an der
+Thailand-Tonspur gemessen.
 
-## Neun Frames
+## Elf Frames
 
-| # | Text | Rolle |
-|---|---|---|
-| 1 | **One thing in your carry-on is a narcotics charge in South Korea.** · Seven things worth checking before you fly. | Raetsel |
-| 2 | **Filming strangers.** Up to five years, seven if you post it. It counts in public too. | staerkster Punkt, schuetzt statt nur zu warnen |
-| 3 | **Vaping.** An instant 100,000 won fine, about $73, outside a marked smoking area. | Alltag |
-| 4 | **Nicotine liquid.** Twenty millilitres, and anything above one percent is confiscated. | Zoll |
-| 5 | **It's your medication.** Adderall is banned outright. Concerta and Ritalin need a permit you apply for two to three weeks before you fly. | **Aufloesung** |
-| 6 | **Drones.** Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border. | |
-| 7 | **Overstaying.** One day over is already a criminal violation. | |
-| 8 | **Cannabis.** Up to five years, and customs can hair-test you on arrival. | Schluss, haengt sich an „before you fly" |
-| 9 | **Save this before you fly.** · DAYA-Wortmarke | Schlusskarte |
+Cover, neun Punkte, Schlusskarte. Aufloesung des Raetsels auf **Slide 5**, wie bei
+Japan.
+
+## Captions
+
+### Instagram
+
+> One thing in your carry-on is a narcotics charge in South Korea. It's your medication.
+>
+> Adderall is banned outright, and Concerta or Ritalin need a narcotics permit you apply for two to three weeks before you fly. A prescription from home doesn't substitute for it.
+>
+> The one that catches creators first is filming. Recording strangers without asking counts as a sexual offence here, and it applies in the street. Up to five years, seven if you post it.
+>
+> Every number here comes from Korean law and I checked each one this week. Save it before you fly.
+>
+> Not legal advice.
+>
+> #solofemaletravel #southkorea #traveltips #solotravel #fyp
+
+### TikTok
+
+> One thing in your carry-on is a narcotics charge in South Korea. Nine things to check before you fly.
+>
+> #solofemaletravel #southkorea #traveltok #solotravel #fyp
 
 ## Offen
 
 - Bilder. Korea hat viel Beschilderung, also schriftfreie Orte waehlen: Park,
   Kueste, Innenraum. Keine Einkaufsstrasse.
 - Reel mit Tonspur oder erst Karussell, entscheidet Alesya.
+
