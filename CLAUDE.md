@@ -71,6 +71,15 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
   deutsche Leserin keine Größe. Ins Bild gehört „30,000 baht, about $900", der Kurs mit
   Datum ins Content-Doc. In die Tonspur gehört die Umrechnung nicht, das macht jeden
   Satz schwerfällig (Alesya, 31.08.).
+- **Serienformate brauchen pro Folge andere Themen, nicht nur ein anderes Land.**
+  Belegt am 01.09.: der Südkorea-Post kam mit derselben Kategorienliste wie Thailand
+  (Vapes, Drohne, Overstay, Cannabis) und derselben Anzahl. Alesya: „warum sind hier
+  wieder vapes und dronen? alles gleich vom letzten post oder was?" Ursache war die
+  feste Kategorienvorgabe im Werkzeug, die jedem Land dieselben sieben Punkte gab.
+  Regel: die Punkte kommen aus dem, was **dieses** Land besonders macht. Auch die
+  Anzahl variieren, zweimal „7 things" hintereinander liest sich als Wiederholung.
+  `daya/tools/her-solo-banned-generator` prüft das jetzt selbst (`check_repeats`)
+  und warnt bei mehr als zwei gemeinsamen Themen mit einem schon geposteten Land.
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 
