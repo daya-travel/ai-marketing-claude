@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "rule": "The banned item NEVER appears in the image. It arrives as a text overlay afterwards. generate.py enforces this with a blocklist and refuses to write a prompt that names one.",
+    "why": "Two reasons. Legally a flatlay showing a vape reads as the account holding one. Practically soul_2 writes letter salad onto any printed surface, and every banned object in this niche is a printed object.",
+    "model": "soul_2 for all of it. Checked in daya/CLAUDE.md: the text-capable model was only ever needed for little cards, and those are gone."
+  },
+
+  "base_style": "Top-down flatlay on soft white linen, {country} solo travel aesthetic, {props}, soft daylight from one side, clean and bright, casually dropped and not arranged, items at different angles and some overlapping, uneven spacing, real creases in the linen, rich saturated colour, slight imperfection, realistic, vertical",
+
+  "negative": "no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers",
+
+  "detail_style": "Close photograph of {subject} on soft white linen, shallow depth of field, soft daylight from one side, nothing printed anywhere, no lettering, rich saturated colour, slight imperfection, realistic, vertical",
+
+  "countries": {
+    "Thailand": {
+      "props": "straw hat, round sunglasses, linen shirt, small notebook, seashell, frangipani flower, woven bag",
+      "details": ["a folded linen shirt and a straw hat brim", "a seashell and a frangipani flower resting on the linen"]
+    },
+    "Japan": {
+      "props": "folded cotton hand towel, round sunglasses, small notebook, fabric hair tie, sprig of blossom, canvas tote",
+      "details": ["a folded cotton hand towel and a fabric hair tie", "a sprig of blossom lying on the linen"]
+    },
+    "Bali": {
+      "props": "straw hat, woven rattan bag, sarong folded, sunglasses, frangipani flowers, small notebook",
+      "details": ["a folded sarong with the woven bag handle", "frangipani flowers scattered on the linen"]
+    },
+    "South Korea": {
+      "props": "small crossbody bag, round sunglasses, cotton socks folded, hair clip, notebook, sprig of blossom",
+      "details": ["a hair clip and folded cotton socks", "a small crossbody bag strap curled on the linen"]
+    },
+    "Singapore": {
+      "props": "linen shirt folded, sunglasses, small umbrella, notebook, orchid stem, canvas tote",
+      "details": ["an orchid stem on the linen", "a folded linen shirt and a compact umbrella"]
+    },
+    "Vietnam": {
+      "props": "conical straw hat, linen trousers folded, sunglasses, notebook, lotus flower, woven bag",
+      "details": ["a lotus flower resting on the linen", "the brim of a conical straw hat"]
+    },
+    "Sri Lanka": {
+      "props": "straw hat, cotton scarf folded, sunglasses, notebook, cinnamon sticks, woven bag",
+      "details": ["cinnamon sticks scattered on the linen", "a folded cotton scarf and a straw hat brim"]
+    }
+  },
+
+  "blocklist": [
+    "vape", "vaping", "e-cigarette", "ecigarette", "cigarette", "cigar", "tobacco",
+    "drone", "quadcopter",
+    "cannabis", "weed", "marijuana", "joint", "cbd", "hemp", "leaf of cannabis",
+    "pill", "pills", "medicine", "blister", "drug", "drugs", "syringe",
+    "money", "banknote", "bank note", "cash", "baht note", "coin", "currency",
+    "passport", "id card", "boarding pass", "ticket", "document",
+    "coral", "seahorse", "turtle shell", "ivory",
+    "gun", "knife", "weapon", "lighter", "ashtray",
+    "buddha", "statue of buddha", "religious statue"
+  ]
+}

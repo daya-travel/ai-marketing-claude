@@ -1,0 +1,63 @@
+{
+  "country": "Thailand",
+  "generated": "2026-09-01",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "Vapes",
+      "why": "Sold openly at home, so tourists pack one without thinking. Police in Bangkok and Phuket check for them specifically.",
+      "penalty": "Fines up to 30,000 baht, about $900. Bringing one through customs falls under the Customs Act.",
+      "source": "terms.law vaping-laws; iamkohchang.com; canibringto.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Smoking on the beach",
+      "why": "Nobody expects a beach to be a no-smoking zone, and the signs are easy to miss.",
+      "penalty": "Up to a year in prison, or 100,000 baht, about $3,000.",
+      "source": "SEATCA; Library of Congress Global Legal Monitor; beachnear.me - started at 20 beaches in Nov 2017, now 24 across 15 provinces",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Flying a drone",
+      "why": "Two separate registrations, and neither can be finished before you land.",
+      "penalty": "Up to 5 years or 100,000 baht, about $3,000, and your equipment seized.",
+      "source": "Drone Association Thailand (droneth.or.th); uavwiki.com - CAAT plus NBTC, no-fly 9 km around every airport",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Posting about the monarchy",
+      "why": "Section 112 applies to foreigners, and anyone at all can file the complaint.",
+      "penalty": "Three to fifteen years per count, and every post counts separately.",
+      "source": "ARTICLE 19; ilaw.or.th; thailawonline.com",
+      "checked": "2026-08-31",
+      "verified": true
+    },
+    {
+      "title": "Cannabis",
+      "why": "Buying it is genuinely easy, which is exactly why people misjudge the rest.",
+      "penalty": "Public use up to 25,000 baht, about $750. Taking it out of the country, since 17 June 2026, up to ten years and 500,000 baht, about $15,000.",
+      "source": "US Embassy Bangkok alert 2026-07-08 (Section 244 Customs Act); Khaosod English; terms.law; thailawonline.com",
+      "checked": "2026-08-31",
+      "verified": true
+    },
+    {
+      "title": "Overstaying",
+      "why": "The daily fine sounds survivable. Getting caught instead of reporting yourself is the expensive part.",
+      "penalty": "500 baht a day, about $15, capped at 20,000, about $600. Caught by immigration means a five-year ban.",
+      "source": "juslaws.com; tratimmigration.com; legal.co.th - voluntary under 90 days is fine only, no blacklist",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Taking coral home",
+      "why": "A shell in your bag looks like a souvenir until it is found in a national park.",
+      "penalty": "Up to five years and 500,000 baht, about $15,000, under the National Park Act 2019.",
+      "source": "National Park Act B.E. 2562 (2019); thailand.go.th; divephiphiisland.com",
+      "checked": "2026-09-01",
+      "verified": true
+    }
+  ]
+}

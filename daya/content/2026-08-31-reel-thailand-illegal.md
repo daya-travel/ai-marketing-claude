@@ -232,3 +232,28 @@ ueberraschendste ist: legal kaufen, aber die Ausfuhr kostet Jahre.
 > taking it home can cost you ten years. Save this before you fly.
 >
 > #solofemaletravel #thailand #traveltok #solotravel #fyp
+
+## Nachpruefung am 01.09.2026, nach Veroeffentlichung
+
+Alesya: „hast Du alle anderen Fakten auch geprueft. Stimmen die ueberhaupt?"
+
+Ich habe alle sieben noch einmal gegen 2026er Quellen gehalten. **Fuenf stimmen,
+zwei nicht.** Beide stehen im veroeffentlichten Post.
+
+| # | Befund |
+|---|---|
+| 1 Vapes | **Stimmt.** Bis 30.000 THB, keine Touristen-Ausnahme, Einfuhr ueber den Zoll deutlich haerter |
+| 2 Strand | **Zahl veraltet.** „Twenty beaches" war der Stand November 2017. Inzwischen 24 Straende in 15 Provinzen. Strafe unveraendert richtig |
+| 3 Drohne | **Falsch.** Im Post steht „Two registrations, within thirty days of landing". Es gibt keine 30-Tage-Frist zum Fliegen: CAAT und NBTC muessen **vor dem ersten Flug** erledigt sein, und beides geht erst nach der Einreise. Strafe laut Drone Association Thailand bis 5 Jahre oder 100.000 THB |
+| 4 Monarchie | **Stimmt** (Pruefung vom 31.08.) |
+| 5 Cannabis | Am 31.08. korrigiert, siehe oben |
+| 6 Overstay | **Stimmt**, inklusive der Fuenf-Jahres-Sperre: wer mit unter einem Jahr Overstay erwischt wird, bekommt 5 Jahre, ueber einem Jahr 10. Freiwillig unter 90 Tagen bleibt es bei der Gebuehr ohne Blacklist |
+| 7 Korallen | **Stimmt.** National Park Act B.E. 2562 (2019), bis 5 Jahre und 500.000 THB |
+
+Quellen: SEATCA, Library of Congress Global Legal Monitor, droneth.or.th,
+uavwiki.com, juslaws.com, legal.co.th, thailand.go.th.
+
+**Was daraus folgt.** Beide Fehler sind Fakten, die ich einmal geprueft und dann nicht
+mehr angefasst hatte. Genau dafuer hat die Faktendatenbank im neuen Tool
+(`daya/tools/her-solo-banned-generator/`) ein `checked`-Datum pro Fakt, und das Tool
+verweigert jeden Fakt ohne Quelle.
