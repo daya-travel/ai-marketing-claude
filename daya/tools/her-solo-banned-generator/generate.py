@@ -141,37 +141,76 @@ def build_prompts(country: str, cfg: dict) -> str:
 DEFAULT_HOOK = {
     "en": {
         "spoken": (
-            "Planning a solo trip to {country}? Here are seven things that are "
+            "Planning a solo trip to {country}? Here are {n} things that are "
             "actually illegal and tourists do them every single day."
         ),
-        "cover_head": "Seven things that are actually illegal in {country}.",
+        "cover_head": "{N} things that are actually illegal in {country}.",
         "cover_sub": "And tourists do them every day.",
         "close": "Save this before you fly.",
     },
     "de": {
         "spoken": (
-            "Du planst eine Solo-Reise nach {country}? Sieben Sachen, die dort "
+            "Du planst eine Solo-Reise nach {country}? {N} Sachen, die dort "
             "wirklich verboten sind. Und Tourist:innen machen sie jeden Tag."
         ),
-        "cover_head": "Sieben Sachen, die in {country} wirklich verboten sind.",
+        "cover_head": "{N} Sachen, die in {country} wirklich verboten sind.",
         "cover_sub": "Und Tourist:innen machen sie jeden Tag.",
         "close": "Speicher dir das, bevor du fliegst.",
     },
 }
 
 
-def get_hook(country: str, entry: dict, lang: str) -> dict:
-    """Hook aus den Daten, mit Rueckfall auf die Standardformulierung."""
+COUNT_WORDS = {
+    "en": {7: ("seven", "Seven"), 8: ("eight", "Eight"), 9: ("nine", "Nine"),
+           10: ("ten", "Ten"), 11: ("eleven", "Eleven")},
+    "de": {7: ("sieben", "Sieben"), 8: ("acht", "Acht"), 9: ("neun", "Neun"),
+           10: ("zehn", "Zehn"), 11: ("elf", "Elf")},
+}
+
+
+def get_hook(country: str, entry: dict, lang: str, n: int) -> dict:
+    """Hook aus den Daten, mit Rueckfall auf die Standardformulierung.
+
+    Die Anzahl kommt aus den Daten, nicht aus dem Text. Sonst steht irgendwann
+    "seven things" ueber neun Punkten.
+    """
+    lower, upper = COUNT_WORDS[lang].get(n, (str(n), str(n)))
     hook = dict(DEFAULT_HOOK[lang])
     hook.update({k: v for k, v in (entry.get("hook") or {}).items() if v})
-    return {k: (v.format(country=country) if isinstance(v, str) else v)
+    return {k: (v.format(country=country, n=lower, N=upper)
+                if isinstance(v, str) else v)
             for k, v in hook.items()}
+
+
+def check_repeats(country: str, facts: list[dict], countries: dict) -> None:
+    """Warnt, wenn ein Land dieselben Themen bringt wie ein schon geposteter Post.
+
+    Grund: der Meta-Auftrag gab feste Kategorien fuer jedes Land vor (Vapes,
+    Drohne, Overstay, ...). Genau so gebaut sieht jeder Post gleich aus. Alesya
+    am 01.09.: "warum sind hier wieder vapes und dronen? alles gleich vom
+    letzten post oder was?" Bei Korea waren fuenf von sieben dieselbe Kategorie
+    wie bei Thailand.
+    """
+    mine = {f["id"] for f in facts}
+    for name, entry in countries.items():
+        if name == country or not entry.get("posted"):
+            continue
+        shared = sorted(mine & {f["id"] for f in entry["facts"]})
+        if len(shared) > 2:
+            print(
+                f"! {len(shared)} Themen wie im geposteten {name}-Post "
+                f"({entry['posted']}): {', '.join(shared)}\n"
+                f"    Zwei Posts hintereinander mit denselben Kategorien lesen "
+                f"sich wie derselbe Post. Landesspezifische Punkte suchen."
+            )
 
 
 def build_script(country: str, facts: list[dict], lang: str, hook: dict) -> tuple[str, int, float]:
     template = (TEMPLATES / f"elevenlabs_{lang}.txt").read_text(encoding="utf-8")
-    numbers_en = ["One", "Two", "Three", "Four", "Five", "Six", "Seven"]
-    numbers_de = ["Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben"]
+    numbers_en = ["One", "Two", "Three", "Four", "Five", "Six", "Seven",
+                  "Eight", "Nine", "Ten", "Eleven"]
+    numbers_de = ["Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben",
+                  "Acht", "Neun", "Zehn", "Elf"]
     numbers = numbers_de if lang == "de" else numbers_en
 
     body = "\n\n".join(
@@ -216,7 +255,8 @@ def main() -> None:
     if args.list:
         for name, entry in countries.items():
             ready = sum(1 for f in entry["facts"] if usable(f))
-            print(f"{name:14s} {ready}/7 verified")
+            flag = "  gepostet " + entry["posted"] if entry.get("posted") else ""
+            print(f"{name:14s} {ready} von {len(entry['facts'])} belegt{flag}")
         return
 
     if not args.country:
@@ -241,10 +281,10 @@ def main() -> None:
         print("! --include-unverified is on. This output is a draft, not postable.")
     if not facts:
         sys.exit("nothing verified for this country yet. Research first.")
-    if len(facts) < 7:
+    if len(facts) < 5:
         print(
-            f"! only {len(facts)} usable facts, the format promises seven. "
-            "Research the rest or change the hook before posting."
+            f"! nur {len(facts)} belegte Fakten. Unter fuenf traegt das Format "
+            "nicht, erst weiter recherchieren."
         )
 
     stamp = date.today().isoformat()
@@ -280,7 +320,8 @@ def main() -> None:
         build_prompts(args.country, prompt_cfg), encoding="utf-8"
     )
 
-    hook = get_hook(args.country, countries[args.country], args.lang)
+    check_repeats(args.country, facts, countries)
+    hook = get_hook(args.country, countries[args.country], args.lang, len(facts))
     script, words, seconds = build_script(args.country, facts, args.lang, hook)
     (out / "elevenlabs_script.txt").write_text(script, encoding="utf-8")
 

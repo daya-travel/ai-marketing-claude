@@ -6,7 +6,8 @@
       "penalty_usd": "null when no source stated a USD figure and no dated rate exists for that currency. Never estimated.",
       "tts": "the spoken line. Keep under 18 words - the whole script has to fit ~92 words for 32 seconds.",
       "penalty_display": "Where the conversion belongs mid-sentence. Falls back to penalty_local plus the USD figure when absent.",
-      "hook": "Pro Land. cover_head und cover_sub gehen auf Slide 1, spoken in die Tonspur, close auf die Schlusskarte. Fehlt das Feld, nimmt generate.py die Standardformulierung - die aber pro Post variiert werden muss, sonst liest sich der naechste Post wie der letzte."
+      "hook": "Pro Land. cover_head und cover_sub gehen auf Slide 1, spoken in die Tonspur, close auf die Schlusskarte. Fehlt das Feld, nimmt generate.py die Standardformulierung - die aber pro Post variiert werden muss, sonst liest sich der naechste Post wie der letzte.",
+      "posted": "Datum der Veroeffentlichung. check_repeats vergleicht neue Laender dagegen."
     },
     "rates": {
       "THB": {
@@ -116,7 +117,8 @@
         "source": "National Park Act B.E. 2562 (2019); thailand.go.th; divephiphiisland.com",
         "penalty_display": "Up to five years and 500,000 baht, about $15,000, under the National Park Act 2019."
       }
-    ]
+    ],
+    "posted": "2026-08-31"
   },
   "Bali": {
     "facts": [
@@ -302,28 +304,28 @@
         "penalty_display": "Up to five years, seven if you post it, or 50 million won, about $36,500. It counts in public places too."
       },
       {
-        "id": "vapes",
-        "title": "Vaping outside a smoking area",
-        "why": "Vapes are treated exactly like cigarettes, and the designated areas are marked but easy to walk past.",
-        "penalty_local": "Instant 100,000 KRW fine. Nicotine liquid above 1 percent is treated as a toxic substance and confiscated, import limit 20 ml",
-        "penalty_usd": 73,
-        "tts": "Vaping. Outside a marked smoking area that's an instant fine.",
+        "id": "food",
+        "title": "Undeclared food in your bag",
+        "why": "Beef jerky, ham, a sausage from home. Sniffer dogs work the arrivals hall, and the fine is for not declaring it.",
+        "penalty_local": "Up to 10,000,000 KRW for failing to declare. Jerky from a non-approved country starts at 5,000,000 KRW. Walking the green channel adds 40 to 60 percent for untruthful declaration",
+        "penalty_usd": 7300,
+        "penalty_display": "Up to 10 million won, about $7,300, for not declaring it. Declare it and it is only confiscated, no fine.",
+        "tts": "Undeclared food. Ten million won, and the dogs work arrivals.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "roafly.com South Korea tourist laws; roafly.com customs rules",
-        "penalty_display": "An instant 100,000 won fine, about $73, outside a marked smoking area."
+        "source": "Animal and Plant Quarantine Agency (APQA); trip.com Korea customs 2026; haniseoul.com; roafly.com"
       },
       {
-        "id": "import",
-        "title": "Nicotine liquid in your bag",
-        "why": "Separate problem from where you vape. This one happens at the border.",
-        "penalty_local": "Import limit 20 ml. Anything above 1 percent (10 mg/ml) is treated as a toxic substance and confiscated",
-        "penalty_usd": null,
-        "tts": "Nicotine liquid. Twenty millilitres, then customs keeps it.",
+        "id": "escooter",
+        "title": "The rental e-scooter",
+        "why": "They stand on every corner in Seoul and need a licence, which is the part nobody expects.",
+        "penalty_local": "Moped-level driving licence required as a minimum, helmet mandatory. Riding without a licence up to 100,000 KRW, no helmet 20,000 KRW. Minimum age 16",
+        "penalty_usd": 75,
+        "penalty_display": "You need at least a moped licence and a helmet. Up to 100,000 won, about $75, without one.",
+        "tts": "Rental scooters. You need a licence for those kickboards.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "roafly.com South Korea airport customs rules",
-        "penalty_display": "Twenty millilitres maximum, and anything above one percent is confiscated as a toxic substance."
+        "source": "Korea Herald (Seoul licence check for rentals); swapswap.kr; frontlens.io; koreaquicktips.com"
       },
       {
         "id": "medication",
@@ -338,35 +340,60 @@
         "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process"
       },
       {
+        "id": "tickets",
+        "title": "Buying a resold concert ticket",
+        "why": "The new law punishes the buyer too, not only the scalper. Enforcement started in August 2026, right in the middle of the concert boom.",
+        "penalty_local": "Up to 1 year or 10,000,000 KRW, plus administrative fines up to 50 times the ticket price and confiscation of gains. Applies to fraudulent purchase as well as resale",
+        "penalty_usd": 7300,
+        "penalty_display": "Up to a year or 10 million won, about $7,300, and fines up to fifty times the ticket price. Buying counts, not only selling.",
+        "tts": "Resold concert tickets. Buying one counts, not just selling.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Korea Herald (scalping crackdown, enforcement from Aug 2026); Korea Times 2026-06-24; korea.net press release"
+      },
+      {
+        "id": "hangang",
+        "title": "The river park picnic",
+        "why": "Chimaek by the Han is on every Seoul itinerary. The rules there are stricter than the mood suggests.",
+        "penalty_local": "Littering 30,000 KRW. Noise or drunken behaviour 70,000 KRW, under the stricter Hangang Park rules",
+        "penalty_usd": 51,
+        "penalty_display": "Littering is 30,000 won, about $22. Noise or drunken behaviour is 70,000, about $51.",
+        "tts": "The river park. Getting loud there is a seventy thousand won fine.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "korea.net, stricter rules for Seoul's Hangang Park"
+      },
+      {
+        "id": "jeju",
+        "title": "Paying on the spot",
+        "why": "Jeju police run a crackdown aimed at foreign tourists, and the fine is due immediately.",
+        "penalty_local": "On-site fines for jaywalking, littering, smoking on cigarette-free streets and public urination. Foreigners are subject to the same law as residents and pay on the spot",
+        "penalty_usd": null,
+        "penalty_display": "Jaywalking, littering, smoking on the wrong street. The fine is issued on the spot and paid immediately.",
+        "tts": "Jaywalking on Jeju. They fine tourists on the spot.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Korea Herald, Jeju police on-site fines for foreign tourists"
+      },
+      {
         "id": "drone",
-        "title": "Flying a drone",
-        "why": "The border zones are far wider than any tourist expects.",
+        "title": "The border no-fly zone",
+        "why": "Fifteen kilometres is far wider than any tourist expects, and it follows the whole border.",
         "penalty_local": "No flights within 15 km of the DMZ in the east, 10 km in the west. Up to 1 year or 10 million KRW under February 2026 legislation. Other pilot-rule breaches up to 2 million KRW",
         "penalty_usd": 7300,
-        "tts": "Drones. Fifteen kilometres of no-fly zone along the border.",
+        "tts": "The border. Fifteen kilometres of no-fly zone, and it's watched.",
         "verified": true,
         "checked": "2026-09-01",
         "source": "drone-laws.com South Korea; dronesgator.com",
         "penalty_display": "Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border in the east."
       },
       {
-        "id": "overstay",
-        "title": "Overstaying",
-        "why": "One day over is already a violation of the Immigration Control Act.",
-        "penalty_local": "Fine scaled to the length of overstay, plus possible deportation and re-entry ban. Voluntary departure reduces it",
-        "penalty_usd": null,
-        "tts": "Overstaying. One day over and it's already a criminal violation.",
-        "verified": true,
-        "checked": "2026-09-01",
-        "source": "visaskorea.com overstay penalty guide"
-      },
-      {
         "id": "cannabis",
-        "title": "Cannabis, even if you smoked it before you came",
+        "title": "The hair test",
         "why": "Customs can hair-test you, and a legal smoke at home is still evidence here.",
         "penalty_local": "Up to 5 years or 50,000,000 KRW for possession or use. Customs run hair tests, and travellers have been detained on the test alone",
         "penalty_usd": 36500,
-        "tts": "Cannabis. They can hair-test you at the airport.",
+        "tts": "The hair test. They can prove what you smoked before you came.",
         "verified": true,
         "checked": "2026-09-01",
         "source": "Narcotics Control Act; tripbase.com South Korea cannabis; UK FCDO travel advice; cannabisregulations.ai",
@@ -375,8 +402,8 @@
     ],
     "hook": {
       "cover_head": "One thing in your carry-on is a narcotics charge in South Korea.",
-      "cover_sub": "Seven things worth checking before you fly.",
-      "spoken": "One thing in your carry-on is a narcotics charge in South Korea. Here are seven things to check before you fly.",
+      "cover_sub": "Nine things worth checking before you fly.",
+      "spoken": "One thing in your carry-on is a narcotics charge in South Korea. Here are nine things to check before you fly.",
       "close": "Save this before you fly.",
       "reveal_at": "medication",
       "note": "Raetsel-Hook nach dem Japan-Muster (48 Saves auf 2216 Views). Zeigt bewusst auf den Koffer der Leserin statt auf das Foto - bei Korea sind alle sieben verbotenen Dinge entweder bedruckt oder gar kein Gegenstand, ein Bildraetsel waere der 'this bag'-Fehler. Aufloesung auf Slide 5."
@@ -466,7 +493,8 @@
         "checked": "2026-08-28",
         "source": "Verified for the Japan carousel. No TTS line: it is not a criminal penalty, so it does not belong in a 'banned' script."
       }
-    ]
+    ],
+    "posted": "2026-08-31"
   },
   "Vietnam": {
     "facts": [
