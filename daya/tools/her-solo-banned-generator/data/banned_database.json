@@ -5,7 +5,8 @@
       "verified": "true only if a source was read on the 'checked' date. generate.py refuses to use false without --include-unverified.",
       "penalty_usd": "null when no source stated a USD figure and no dated rate exists for that currency. Never estimated.",
       "tts": "the spoken line. Keep under 18 words - the whole script has to fit ~92 words for 32 seconds.",
-      "penalty_display": "Where the conversion belongs mid-sentence. Falls back to penalty_local plus the USD figure when absent."
+      "penalty_display": "Where the conversion belongs mid-sentence. Falls back to penalty_local plus the USD figure when absent.",
+      "hook": "Pro Land. cover_head und cover_sub gehen auf Slide 1, spoken in die Tonspur, close auf die Schlusskarte. Fehlt das Feld, nimmt generate.py die Standardformulierung - die aber pro Post variiert werden muss, sonst liest sich der naechste Post wie der letzte."
     },
     "rates": {
       "THB": {
@@ -331,7 +332,7 @@
         "penalty_local": "Adderall and other amphetamines are banned outright with no personal-import exception. Methylphenidate needs an MFDS narcotics import permit applied for 2 to 3 weeks before departure. Without it, treated as narcotics importation",
         "penalty_usd": null,
         "penalty_display": "Adderall is banned outright. Concerta and Ritalin need a permit you apply for two to three weeks before you fly.",
-        "tts": "ADHD medication. Adderall is banned, and the permit takes three weeks.",
+        "tts": "This one's the answer. Your medication. Adderall is banned, and the permit takes three weeks.",
         "verified": true,
         "checked": "2026-09-01",
         "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process"
@@ -371,7 +372,15 @@
         "source": "Narcotics Control Act; tripbase.com South Korea cannabis; UK FCDO travel advice; cannabisregulations.ai",
         "penalty_display": "Up to five years or 50 million won, about $36,500. Customs can hair-test you on arrival."
       }
-    ]
+    ],
+    "hook": {
+      "cover_head": "One thing in your carry-on is a narcotics charge in South Korea.",
+      "cover_sub": "Seven things worth checking before you fly.",
+      "spoken": "One thing in your carry-on is a narcotics charge in South Korea. Here are seven things to check before you fly.",
+      "close": "Save this before you fly.",
+      "reveal_at": "medication",
+      "note": "Raetsel-Hook nach dem Japan-Muster (48 Saves auf 2216 Views). Zeigt bewusst auf den Koffer der Leserin statt auf das Foto - bei Korea sind alle sieben verbotenen Dinge entweder bedruckt oder gar kein Gegenstand, ein Bildraetsel waere der 'this bag'-Fehler. Aufloesung auf Slide 5."
+    }
   },
   "Japan": {
     "facts": [

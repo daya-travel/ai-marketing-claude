@@ -12,14 +12,6 @@
       "verified": true
     },
     {
-      "title": "Smoking on the beach",
-      "why": "Nobody expects a beach to be a no-smoking zone, and the signs are easy to miss.",
-      "penalty": "Up to a year in prison, or 100,000 baht, about $3,000.",
-      "source": "SEATCA; Library of Congress Global Legal Monitor; beachnear.me - started at 20 beaches in Nov 2017, now 24 across 15 provinces",
-      "checked": "2026-09-01",
-      "verified": true
-    },
-    {
       "title": "Flying a drone",
       "why": "Two separate registrations, and neither can be finished before you land.",
       "penalty": "Up to 5 years or 100,000 baht, about $3,000, and your equipment seized.",
@@ -28,11 +20,11 @@
       "verified": true
     },
     {
-      "title": "Posting about the monarchy",
-      "why": "Section 112 applies to foreigners, and anyone at all can file the complaint.",
-      "penalty": "Three to fifteen years per count, and every post counts separately.",
-      "source": "ARTICLE 19; ilaw.or.th; thailawonline.com",
-      "checked": "2026-08-31",
+      "title": "Overstaying",
+      "why": "The daily fine sounds survivable. Getting caught instead of reporting yourself is the expensive part.",
+      "penalty": "500 baht a day, about $15, capped at 20,000, about $600. Caught by immigration means a five-year ban.",
+      "source": "juslaws.com; tratimmigration.com; legal.co.th - voluntary under 90 days is fine only, no blacklist",
+      "checked": "2026-09-01",
       "verified": true
     },
     {
@@ -44,10 +36,18 @@
       "verified": true
     },
     {
-      "title": "Overstaying",
-      "why": "The daily fine sounds survivable. Getting caught instead of reporting yourself is the expensive part.",
-      "penalty": "500 baht a day, about $15, capped at 20,000, about $600. Caught by immigration means a five-year ban.",
-      "source": "juslaws.com; tratimmigration.com; legal.co.th - voluntary under 90 days is fine only, no blacklist",
+      "title": "Posting about the monarchy",
+      "why": "Section 112 applies to foreigners, and anyone at all can file the complaint.",
+      "penalty": "Three to fifteen years per count, and every post counts separately.",
+      "source": "ARTICLE 19; ilaw.or.th; thailawonline.com",
+      "checked": "2026-08-31",
+      "verified": true
+    },
+    {
+      "title": "Smoking on the beach",
+      "why": "Nobody expects a beach to be a no-smoking zone, and the signs are easy to miss.",
+      "penalty": "Up to a year in prison, or 100,000 baht, about $3,000.",
+      "source": "SEATCA; Library of Congress Global Legal Monitor; beachnear.me - started at 20 beaches in Nov 2017, now 24 across 15 provinces",
       "checked": "2026-09-01",
       "verified": true
     },

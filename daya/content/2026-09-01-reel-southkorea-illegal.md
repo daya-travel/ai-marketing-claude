@@ -40,11 +40,50 @@ kein Verbotstrivia, sondern der Grund, warum es die Norm gibt.
 Punkt 7 steht am Schluss, weil „they can hair-test you at the airport" direkt in
 den Schlusssatz „Save this before you fly" laeuft.
 
-## Skript, 101 Woerter, rund 35 Sekunden bei 172 W/min
+## Hook: Raetsel statt Liste
 
-Erzeugt mit `daya/tools/her-solo-banned-generator`.
+Der erste Entwurf lief mit demselben Listen-Hook wie Thailand. Alesya am 01.09.:
+„der hook ist aber gleich wie der hook auf dem post davor". Stimmt.
 
-Planning a solo trip to South Korea? Here are seven things that are actually illegal and tourists do them every single day.
+**Zwei Belege haben die Wahl entschieden.** Erstens die eigene Hook-Formel aus den
+Notion-Zahlen (`2026-07-05-reel-02-phone-stolen.md`): Zahl + Nische + Save-Trigger,
+poetische Hooks floppen messbar (24-61 Views), Listen-Hooks laufen (1.000-1.700).
+Zweitens der Japan-Post, der mit **48 Speicherungen auf 2216 Aufrufe** der beste
+war - und der hatte gar keinen Listen-Hook, sondern ein **Raetsel**: „One thing in
+this picture is banned in Japan", aufgeloest erst auf Slide 5.
+
+Gewaehlt:
+
+> **One thing in your carry-on is a narcotics charge in South Korea.**
+> *Seven things worth checking before you fly.*
+
+**Warum es auf den Koffer zeigt und nicht auf das Foto.** Bei Japan lag der verbotene
+Gegenstand wirklich im Bild, die Erkaeltungsmedizin. Bei Korea geht das nicht: alle
+sieben sind entweder bedruckt (Tabletten, Vape, und `soul_2` macht daraus
+Buchstabensalat) oder gar kein Gegenstand (Filmen, Overstay). Ein Bildraetsel waere
+genau der „this bag"-Fehler vom 28.08. gewesen, ein Satz ueber einen Gegenstand, der
+nicht im Bild liegt. Das Raetsel zeigt deshalb auf ihren eigenen Koffer.
+
+**Aufloesung auf Slide 5**, wie bei Japan: die Medikamente.
+
+**Eine Praezisionsfrage, offen fuer Alesya.** „is a narcotics charge" stimmt fuer
+jede, die ADHS-Mittel oder codeinhaltige Schmerzmittel dabeihat, fuer andere nicht.
+Slide 5 traegt die Einschraenkung im Fliesstext, damit der Post insgesamt nicht mehr
+behauptet als er belegen kann. Wer es ganz wasserdicht will, schreibt „could be"
+statt „is" - das kostet Schaerfe, deshalb steht es nicht als Voreinstellung drin.
+
+## Format: beides, und das ist belegt
+
+Aus den eigenen Account-Daten (`2026-07-05-reel-02-phone-stolen.md`):
+**TikTok Foto-Karussell** (Karussells laufen dort 30-50x besser als Video),
+**Instagram Reel** (Reels bringen dort die Reichweite). Gleicher Inhalt, zwei
+Verpackungen.
+
+## Skript, 104 Woerter, rund 36 Sekunden bei 172 W/min
+
+Erzeugt mit `daya/tools/her-solo-banned-generator`, Hook liegt als Datenfeld im Land.
+
+One thing in your carry-on is a narcotics charge in South Korea. Here are seven things to check before you fly.
 
 One. Filming strangers. Up to five years, and it counts in public.
 
@@ -52,7 +91,7 @@ Two. Vaping. Outside a marked smoking area that's an instant fine.
 
 Three. Nicotine liquid. Twenty millilitres, then customs keeps it.
 
-Four. ADHD medication. Adderall is banned, and the permit takes three weeks.
+Four. This one's the answer. Your medication. Adderall is banned, and the permit takes three weeks.
 
 Five. Drones. Fifteen kilometres of no-fly zone along the border.
 
@@ -62,31 +101,23 @@ Seven. Cannabis. They can hair-test you at the airport.
 
 Save this before you fly.
 
-**Zur Laenge:** die Vorgabe war 30 bis 32 Sekunden. Mit dem vorgegebenen Hook und
-sieben Punkten sind es 35. Wer unter 32 will, kuerzt den Hook oder streicht einen
-Punkt. Geschaetzt wird das nicht, 172 W/min ist an der Thailand-Tonspur gemessen.
+**Zur Laenge:** die Vorgabe war 30 bis 32 Sekunden, es sind 36. Mit Raetsel-Hook und
+sieben Punkten geht es nicht kuerzer, ohne einen Punkt zu streichen. Geschaetzt ist
+nichts, 172 W/min sind an der Thailand-Tonspur gemessen.
 
-## Captions
+## Neun Frames
 
-### Instagram
-
-> Seven things that are actually illegal in South Korea, and tourists do them every day.
->
-> The filming one catches creators first. Recording strangers without asking counts as a sexual offence here, and it applies in the street. Up to five years, seven if you post it.
->
-> The one nobody plans for is medication. Adderall is banned outright, and Concerta or Ritalin need a narcotics permit you apply for two to three weeks before you fly.
->
-> Every number here comes from Korean law and I checked each one this week. Save it before you fly.
->
-> Not legal advice.
->
-> #solofemaletravel #southkorea #traveltips #solotravel #fyp
-
-### TikTok
-
-> Seven things that are actually illegal in South Korea. They can hair-test you at the airport for cannabis you smoked legally at home. Save this before you fly.
->
-> #solofemaletravel #southkorea #traveltok #solotravel #fyp
+| # | Text | Rolle |
+|---|---|---|
+| 1 | **One thing in your carry-on is a narcotics charge in South Korea.** · Seven things worth checking before you fly. | Raetsel |
+| 2 | **Filming strangers.** Up to five years, seven if you post it. It counts in public too. | staerkster Punkt, schuetzt statt nur zu warnen |
+| 3 | **Vaping.** An instant 100,000 won fine, about $73, outside a marked smoking area. | Alltag |
+| 4 | **Nicotine liquid.** Twenty millilitres, and anything above one percent is confiscated. | Zoll |
+| 5 | **It's your medication.** Adderall is banned outright. Concerta and Ritalin need a permit you apply for two to three weeks before you fly. | **Aufloesung** |
+| 6 | **Drones.** Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border. | |
+| 7 | **Overstaying.** One day over is already a criminal violation. | |
+| 8 | **Cannabis.** Up to five years, and customs can hair-test you on arrival. | Schluss, haengt sich an „before you fly" |
+| 9 | **Save this before you fly.** · DAYA-Wortmarke | Schlusskarte |
 
 ## Offen
 

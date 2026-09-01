@@ -1,5 +1,5 @@
-Du planst eine Solo-Reise nach {country}? Sieben Sachen, die dort wirklich verboten sind. Und Tourist:innen machen sie jeden Tag.
+{hook}
 
 {facts}
 
-Speicher dir das, bevor du fliegst.
+{close}

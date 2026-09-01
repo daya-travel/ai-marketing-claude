@@ -1,5 +1,5 @@
-Planning a solo trip to {country}? Here are seven things that are actually illegal and tourists do them every single day.
+{hook}
 
 {facts}
 
-Save this before you fly.
+{close}

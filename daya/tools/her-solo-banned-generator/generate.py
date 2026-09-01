@@ -135,7 +135,40 @@ def build_prompts(country: str, cfg: dict) -> str:
     return "\n".join(lines)
 
 
-def build_script(country: str, facts: list[dict], lang: str) -> tuple[str, int, float]:
+# Fallback, wenn ein Land kein eigenes hook-Feld hat. Bewusst nuechtern, damit
+# auffaellt, dass noch keiner drueber nachgedacht hat: derselbe Listen-Hook zweimal
+# hintereinander liest sich sofort wie eine Wiederholung (Alesya, 01.09.).
+DEFAULT_HOOK = {
+    "en": {
+        "spoken": (
+            "Planning a solo trip to {country}? Here are seven things that are "
+            "actually illegal and tourists do them every single day."
+        ),
+        "cover_head": "Seven things that are actually illegal in {country}.",
+        "cover_sub": "And tourists do them every day.",
+        "close": "Save this before you fly.",
+    },
+    "de": {
+        "spoken": (
+            "Du planst eine Solo-Reise nach {country}? Sieben Sachen, die dort "
+            "wirklich verboten sind. Und Tourist:innen machen sie jeden Tag."
+        ),
+        "cover_head": "Sieben Sachen, die in {country} wirklich verboten sind.",
+        "cover_sub": "Und Tourist:innen machen sie jeden Tag.",
+        "close": "Speicher dir das, bevor du fliegst.",
+    },
+}
+
+
+def get_hook(country: str, entry: dict, lang: str) -> dict:
+    """Hook aus den Daten, mit Rueckfall auf die Standardformulierung."""
+    hook = dict(DEFAULT_HOOK[lang])
+    hook.update({k: v for k, v in (entry.get("hook") or {}).items() if v})
+    return {k: (v.format(country=country) if isinstance(v, str) else v)
+            for k, v in hook.items()}
+
+
+def build_script(country: str, facts: list[dict], lang: str, hook: dict) -> tuple[str, int, float]:
     template = (TEMPLATES / f"elevenlabs_{lang}.txt").read_text(encoding="utf-8")
     numbers_en = ["One", "Two", "Three", "Four", "Five", "Six", "Seven"]
     numbers_de = ["Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben"]
@@ -144,21 +177,18 @@ def build_script(country: str, facts: list[dict], lang: str) -> tuple[str, int, 
     body = "\n\n".join(
         f"{numbers[i]}. {fact['tts']}" for i, fact in enumerate(facts)
     )
-    script = template.format(country=country, facts=body)
+    script = template.format(hook=hook["spoken"], facts=body, close=hook["close"])
     words = len(script.split())
     seconds = words / WPM * 60
     return script, words, seconds
 
 
-def build_caption(country: str, facts: list[dict], checked: str) -> str:
+def build_caption(country: str, facts: list[dict], checked: str, hook: dict) -> str:
     template = (TEMPLATES / "caption.txt").read_text(encoding="utf-8")
     top = facts[0]
     second = facts[1] if len(facts) > 1 else facts[0]
     return template.format(
-        hook=(
-            f"Seven things that are actually illegal in {country}, "
-            "and tourists do them every day."
-        ),
+        hook=f"{hook['cover_head']} {hook['cover_sub']}",
         highlight=f"{top['title']}. {top['why']} {money(top)}.",
         second=f"The other one I'd watch is {second['title'].lower()}. {money(second)}.",
         country_law=f"{country}'s own law",
@@ -250,12 +280,17 @@ def main() -> None:
         build_prompts(args.country, prompt_cfg), encoding="utf-8"
     )
 
-    script, words, seconds = build_script(args.country, facts, args.lang)
+    hook = get_hook(args.country, countries[args.country], args.lang)
+    script, words, seconds = build_script(args.country, facts, args.lang, hook)
     (out / "elevenlabs_script.txt").write_text(script, encoding="utf-8")
 
     newest = max((f.get("checked") or "") for f in facts)
     (out / "caption.txt").write_text(
-        build_caption(args.country, facts, newest), encoding="utf-8"
+        build_caption(args.country, facts, newest, hook), encoding="utf-8"
+    )
+
+    (out / "cover.txt").write_text(
+        f"{hook['cover_head']}\n{hook['cover_sub']}\n", encoding="utf-8"
     )
 
     (out / "posting_time.txt").write_text(
