@@ -1,0 +1,63 @@
+{
+  "country": "South Korea",
+  "generated": "2026-09-01",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "Filming people without asking",
+      "why": "It is a sexual offence here, not a privacy nuisance, and it applies in the street.",
+      "penalty": "Up to five years, seven if you post it, or 50 million won, about $36,500. It counts in public places too.",
+      "source": "Act on Special Cases Concerning the Punishment of Sexual Crimes Art. 14; koreaherald.com; pureumlawoffice.com; eng.taeshinlaw.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Vaping outside a smoking area",
+      "why": "Vapes are treated exactly like cigarettes, and the designated areas are marked but easy to walk past.",
+      "penalty": "An instant 100,000 won fine, about $73, outside a marked smoking area.",
+      "source": "roafly.com South Korea tourist laws; roafly.com customs rules",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Nicotine liquid in your bag",
+      "why": "Separate problem from where you vape. This one happens at the border.",
+      "penalty": "Twenty millilitres maximum, and anything above one percent is confiscated as a toxic substance.",
+      "source": "roafly.com South Korea airport customs rules",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Your ADHD or painkiller prescription",
+      "why": "Ordinary prescriptions from home are controlled narcotics here, and the permit takes weeks.",
+      "penalty": "Adderall is banned outright. Concerta and Ritalin need a permit you apply for two to three weeks before you fly.",
+      "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Flying a drone",
+      "why": "The border zones are far wider than any tourist expects.",
+      "penalty": "Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border in the east.",
+      "source": "drone-laws.com South Korea; dronesgator.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Overstaying",
+      "why": "One day over is already a violation of the Immigration Control Act.",
+      "penalty": "Fine scaled to the length of overstay, plus possible deportation and re-entry ban. Voluntary departure reduces it",
+      "source": "visaskorea.com overstay penalty guide",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Cannabis, even if you smoked it before you came",
+      "why": "Customs can hair-test you, and a legal smoke at home is still evidence here.",
+      "penalty": "Up to five years or 50 million won, about $36,500. Customs can hair-test you on arrival.",
+      "source": "Narcotics Control Act; tripbase.com South Korea cannabis; UK FCDO travel advice; cannabisregulations.ai",
+      "checked": "2026-09-01",
+      "verified": true
+    }
+  ]
+}

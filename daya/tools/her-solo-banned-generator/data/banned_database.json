@@ -12,6 +12,16 @@
         "per_usd": 33.15,
         "checked": "2026-08-30",
         "source": "xe.com / wise mid-market"
+      },
+      "KRW": {
+        "per_usd": 1368.62,
+        "checked": "2026-09-01",
+        "source": "tradingeconomics.com USD/KRW"
+      },
+      "IDR": {
+        "per_usd": null,
+        "checked": null,
+        "source": "kein datierter Kurs. Bali-Betraege tragen nur die USD-Zahl, die die Quelle selbst nennt."
       }
     },
     "measured_wpm": {
@@ -34,18 +44,6 @@
         "penalty_display": "Fines up to 30,000 baht, about $900. Bringing one through customs falls under the Customs Act."
       },
       {
-        "id": "beach_smoking",
-        "title": "Smoking on the beach",
-        "why": "Nobody expects a beach to be a no-smoking zone, and the signs are easy to miss.",
-        "penalty_local": "Up to a year in prison or 100,000 THB",
-        "penalty_usd": 3000,
-        "tts": "Smoking on the beach. Twenty-four beaches. Up to a year.",
-        "verified": true,
-        "checked": "2026-09-01",
-        "source": "SEATCA; Library of Congress Global Legal Monitor; beachnear.me - started at 20 beaches in Nov 2017, now 24 across 15 provinces",
-        "penalty_display": "Up to a year in prison, or 100,000 baht, about $3,000."
-      },
-      {
         "id": "drone",
         "title": "Flying a drone",
         "why": "Two separate registrations, and neither can be finished before you land.",
@@ -58,16 +56,16 @@
         "penalty_display": "Up to 5 years or 100,000 baht, about $3,000, and your equipment seized."
       },
       {
-        "id": "monarchy",
-        "title": "Posting about the monarchy",
-        "why": "Section 112 applies to foreigners, and anyone at all can file the complaint.",
-        "penalty_local": "3 to 15 years per count, and every post counts separately",
-        "penalty_usd": null,
-        "tts": "Posting about the monarchy. Three to fifteen years, per post.",
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": "The daily fine sounds survivable. Getting caught instead of reporting yourself is the expensive part.",
+        "penalty_local": "500 THB a day, capped at 20,000 after 40 days. Caught by immigration under a year overstay means a 5-year ban",
+        "penalty_usd": 600,
+        "tts": "Overstaying. Report yourself and you pay. Get caught, five-year ban.",
         "verified": true,
-        "checked": "2026-08-31",
-        "source": "ARTICLE 19; ilaw.or.th; thailawonline.com",
-        "penalty_display": "Three to fifteen years per count, and every post counts separately."
+        "checked": "2026-09-01",
+        "source": "juslaws.com; tratimmigration.com; legal.co.th - voluntary under 90 days is fine only, no blacklist",
+        "penalty_display": "500 baht a day, about $15, capped at 20,000, about $600. Caught by immigration means a five-year ban."
       },
       {
         "id": "cannabis",
@@ -82,16 +80,28 @@
         "penalty_display": "Public use up to 25,000 baht, about $750. Taking it out of the country, since 17 June 2026, up to ten years and 500,000 baht, about $15,000."
       },
       {
-        "id": "overstay",
-        "title": "Overstaying",
-        "why": "The daily fine sounds survivable. Getting caught instead of reporting yourself is the expensive part.",
-        "penalty_local": "500 THB a day, capped at 20,000 after 40 days. Caught by immigration under a year overstay means a 5-year ban",
-        "penalty_usd": 600,
-        "tts": "Overstaying. Report yourself and you pay. Get caught, five-year ban.",
+        "id": "monarchy",
+        "title": "Posting about the monarchy",
+        "why": "Section 112 applies to foreigners, and anyone at all can file the complaint.",
+        "penalty_local": "3 to 15 years per count, and every post counts separately",
+        "penalty_usd": null,
+        "tts": "Posting about the monarchy. Three to fifteen years, per post.",
+        "verified": true,
+        "checked": "2026-08-31",
+        "source": "ARTICLE 19; ilaw.or.th; thailawonline.com",
+        "penalty_display": "Three to fifteen years per count, and every post counts separately."
+      },
+      {
+        "id": "beach_smoking",
+        "title": "Smoking on the beach",
+        "why": "Nobody expects a beach to be a no-smoking zone, and the signs are easy to miss.",
+        "penalty_local": "Up to a year in prison or 100,000 THB",
+        "penalty_usd": 3000,
+        "tts": "Smoking on the beach. Twenty-four beaches. Up to a year.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "juslaws.com; tratimmigration.com; legal.co.th - voluntary under 90 days is fine only, no blacklist",
-        "penalty_display": "500 baht a day, about $15, capped at 20,000, about $600. Caught by immigration means a five-year ban."
+        "source": "SEATCA; Library of Congress Global Legal Monitor; beachnear.me - started at 20 beaches in Nov 2017, now 24 across 15 provinces",
+        "penalty_display": "Up to a year in prison, or 100,000 baht, about $3,000."
       },
       {
         "id": "coral",
@@ -121,16 +131,16 @@
         "source": "vpz.co.uk Bali vaping laws"
       },
       {
-        "id": "beach_smoking",
-        "title": "Smoking where it is banned",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Not researched. Bali regulates smoke-free areas per regency - find the current Perda before using."
+        "id": "scooter",
+        "title": "Riding a scooter without the right permit",
+        "why": "An International Driving Permit for cars is not enough. It has to carry the motorcycle class.",
+        "penalty_local": "300,000 to 1,000,000 IDR per missing document. Task force Dharma Dewata has run zero tolerance since April 2026",
+        "penalty_usd": 70,
+        "penalty_display": "300,000 to 1,000,000 rupiah, about $20 to $70, per missing document. And without a valid permit your insurer can refuse the hospital bill, which runs past $20,000 for a serious crash.",
+        "tts": "Scooters. Your car permit doesn't count, and your insurance knows it.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "bali.com IDL guide; practicesource.com; shortstaybali.com; myadventuretrips.com"
       },
       {
         "id": "drone",
@@ -145,27 +155,28 @@
         "penalty_display": "Up to IDR 5 billion, about $308,000, and 5 years. A 5 km exclusion zone around sacred sites."
       },
       {
-        "id": "religion",
-        "title": "Sacred sites and temples",
-        "why": "The inner temple areas are closed to non-worshippers, and photos taken the wrong way get people deported.",
-        "penalty_local": "Deportation, entry ban, and required purification ceremony. Sarong and sash needed past any temple gate",
+        "id": "import",
+        "title": "Bringing any cannabis in",
+        "why": "CBD oil and a medical card from home count for nothing here. Cannabis sits in the same group as heroin.",
+        "penalty_local": "Group I narcotic. Possession 4 to 12 years. Over 1 kg plant material or 5 g synthetic: life or the death penalty",
         "penalty_usd": null,
-        "tts": "Temples. The inner courtyards are closed to you, and photos get people deported.",
+        "tts": "Cannabis. Same legal group as heroin. Possession is four years minimum.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "lovebali.baliprov.go.id (Governor Koster regulations); timeout.com 2025-03-28"
+        "source": "tripbase.com Indonesia drug laws; yourhappinesstours.com; baliholidaysecrets.com",
+        "penalty_display": "Possession alone is four to twelve years in Kerobokan. Above a kilo it is life or the firing squad."
       },
       {
-        "id": "import",
-        "title": "Bringing drugs in",
-        "why": null,
-        "penalty_local": null,
+        "id": "plastic",
+        "title": "Small plastic water bottles",
+        "why": "Every shop used to sell them, and since January they are gone for a reason.",
+        "penalty_local": "Full ban on bottled water under one litre across Bali since January 2026, plus bags, styrofoam and straws",
         "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Indonesia has the death penalty for trafficking. Do not write a line about this without reading a primary source first."
+        "penalty_display": "Banned island-wide since January 2026, along with bags, styrofoam and straws.",
+        "tts": "Small plastic bottles. Banned island-wide since January.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Ocean Gardener 2026 update; villabalisale.com; timeout.com"
       },
       {
         "id": "overstay",
@@ -180,16 +191,15 @@
         "penalty_display": "IDR 1,000,000 a day, about $65, up to 60 days. Then automatic deportation."
       },
       {
-        "id": "coral",
-        "title": "Taking coral or sand",
-        "why": null,
-        "penalty_local": null,
+        "id": "religion",
+        "title": "Sacred sites and temples",
+        "why": "The inner temple areas are closed to non-worshippers, and photos taken the wrong way get people deported.",
+        "penalty_local": "Deportation, entry ban, and required purification ceremony. Sarong and sash needed past any temple gate",
         "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Not researched."
+        "tts": "Temples. The inner courtyards are closed to you, and photos get people deported.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "lovebali.baliprov.go.id (Governor Koster regulations); timeout.com 2025-03-28"
       }
     ]
   },
@@ -207,17 +217,6 @@
         "source": "thevapersguide.com Singapore; ecigone.co.uk; airtraveler.club"
       },
       {
-        "id": "chewing_gum",
-        "title": "Bringing in chewing gum",
-        "why": "Chewing it is minor. Carrying a pack in counts as importing.",
-        "penalty_local": "Consuming: fine from S$500. Importing: up to S$10,000 or 2 years",
-        "penalty_usd": null,
-        "tts": "Chewing gum. Bringing a pack in counts as importing it.",
-        "verified": true,
-        "checked": "2026-09-01",
-        "source": "scansg.com penalties; Wikipedia chewing gum sales ban; fodors.com"
-      },
-      {
         "id": "drone",
         "title": "Flying a drone",
         "why": "Registration plus an online training certificate, before the first flight.",
@@ -227,6 +226,28 @@
         "verified": true,
         "checked": "2026-09-01",
         "source": "dronesgator.com Singapore; fitcationhq.com; propelrc.com"
+      },
+      {
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": "Caning enters the picture past 90 days.",
+        "penalty_local": "Up to 90 days: fine up to S$4,000 and up to 6 months. Beyond 90 days: up to 6 months and a minimum of 3 strokes of the cane, or up to S$6,000 if caning does not apply",
+        "penalty_usd": null,
+        "tts": "Overstaying. Past ninety days that means caning, not a fine.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "singaporelegaladvice.com"
+      },
+      {
+        "id": "chewing_gum",
+        "title": "Bringing in chewing gum",
+        "why": "Chewing it is minor. Carrying a pack in counts as importing.",
+        "penalty_local": "Consuming: fine from S$500. Importing: up to S$10,000 or 2 years",
+        "penalty_usd": null,
+        "tts": "Chewing gum. Bringing a pack in counts as importing it.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "scansg.com penalties; Wikipedia chewing gum sales ban; fodors.com"
       },
       {
         "id": "littering",
@@ -252,17 +273,6 @@
         "note": "Singapore has the death penalty for trafficking, and tests residents on return. Needs a primary source before it goes in a script."
       },
       {
-        "id": "overstay",
-        "title": "Overstaying",
-        "why": "Caning enters the picture past 90 days.",
-        "penalty_local": "Up to 90 days: fine up to S$4,000 and up to 6 months. Beyond 90 days: up to 6 months and a minimum of 3 strokes of the cane, or up to S$6,000 if caning does not apply",
-        "penalty_usd": null,
-        "tts": "Overstaying. Past ninety days that means caning, not a fine.",
-        "verified": true,
-        "checked": "2026-09-01",
-        "source": "singaporelegaladvice.com"
-      },
-      {
         "id": "public_conduct",
         "title": "Public conduct rules",
         "why": null,
@@ -279,26 +289,64 @@
   "South Korea": {
     "facts": [
       {
+        "id": "photography",
+        "title": "Filming people without asking",
+        "why": "It is a sexual offence here, not a privacy nuisance, and it applies in the street.",
+        "penalty_local": "Article 14, Act on Special Cases Concerning the Punishment of Sexual Crimes. Up to 5 years for filming, up to 7 for sharing it, or a fine up to 50,000,000 KRW",
+        "penalty_usd": 36500,
+        "tts": "Filming strangers. Up to five years, and it counts in public.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Act on Special Cases Concerning the Punishment of Sexual Crimes Art. 14; koreaherald.com; pureumlawoffice.com; eng.taeshinlaw.com",
+        "penalty_display": "Up to five years, seven if you post it, or 50 million won, about $36,500. It counts in public places too."
+      },
+      {
         "id": "vapes",
         "title": "Vaping outside a smoking area",
         "why": "Vapes are treated exactly like cigarettes, and the designated areas are marked but easy to walk past.",
         "penalty_local": "Instant 100,000 KRW fine. Nicotine liquid above 1 percent is treated as a toxic substance and confiscated, import limit 20 ml",
-        "penalty_usd": null,
+        "penalty_usd": 73,
         "tts": "Vaping. Outside a marked smoking area that's an instant fine.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "roafly.com South Korea tourist laws; roafly.com customs rules"
+        "source": "roafly.com South Korea tourist laws; roafly.com customs rules",
+        "penalty_display": "An instant 100,000 won fine, about $73, outside a marked smoking area."
+      },
+      {
+        "id": "import",
+        "title": "Nicotine liquid in your bag",
+        "why": "Separate problem from where you vape. This one happens at the border.",
+        "penalty_local": "Import limit 20 ml. Anything above 1 percent (10 mg/ml) is treated as a toxic substance and confiscated",
+        "penalty_usd": null,
+        "tts": "Nicotine liquid. Twenty millilitres, then customs keeps it.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "roafly.com South Korea airport customs rules",
+        "penalty_display": "Twenty millilitres maximum, and anything above one percent is confiscated as a toxic substance."
+      },
+      {
+        "id": "medication",
+        "title": "Your ADHD or painkiller prescription",
+        "why": "Ordinary prescriptions from home are controlled narcotics here, and the permit takes weeks.",
+        "penalty_local": "Adderall and other amphetamines are banned outright with no personal-import exception. Methylphenidate needs an MFDS narcotics import permit applied for 2 to 3 weeks before departure. Without it, treated as narcotics importation",
+        "penalty_usd": null,
+        "penalty_display": "Adderall is banned outright. Concerta and Ritalin need a permit you apply for two to three weeks before you fly.",
+        "tts": "ADHD medication. Adderall is banned, and the permit takes three weeks.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process"
       },
       {
         "id": "drone",
         "title": "Flying a drone",
         "why": "The border zones are far wider than any tourist expects.",
         "penalty_local": "No flights within 15 km of the DMZ in the east, 10 km in the west. Up to 1 year or 10 million KRW under February 2026 legislation. Other pilot-rule breaches up to 2 million KRW",
-        "penalty_usd": null,
+        "penalty_usd": 7300,
         "tts": "Drones. Fifteen kilometres of no-fly zone along the border.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "drone-laws.com South Korea; dronesgator.com"
+        "source": "drone-laws.com South Korea; dronesgator.com",
+        "penalty_display": "Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border in the east."
       },
       {
         "id": "overstay",
@@ -312,68 +360,21 @@
         "source": "visaskorea.com overstay penalty guide"
       },
       {
-        "id": "photography",
-        "title": "Filming people",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Korea's privacy rules around filming strangers are strict and often cited, but I have not read the statute. Research before use."
-      },
-      {
         "id": "cannabis",
-        "title": "Cannabis, even legally smoked abroad",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Korea prosecutes citizens for use abroad. Whether it reaches tourists needs checking before it goes in a post."
-      },
-      {
-        "id": "temple",
-        "title": "Temples and cultural property",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Searched, found no tourist-specific penalty. Do not invent one."
-      },
-      {
-        "id": "import",
-        "title": "Restricted imports",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Not researched beyond the nicotine limit already listed under vapes."
+        "title": "Cannabis, even if you smoked it before you came",
+        "why": "Customs can hair-test you, and a legal smoke at home is still evidence here.",
+        "penalty_local": "Up to 5 years or 50,000,000 KRW for possession or use. Customs run hair tests, and travellers have been detained on the test alone",
+        "penalty_usd": 36500,
+        "tts": "Cannabis. They can hair-test you at the airport.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Narcotics Control Act; tripbase.com South Korea cannabis; UK FCDO travel advice; cannabisregulations.ai",
+        "penalty_display": "Up to five years or 50 million won, about $36,500. Customs can hair-test you on arrival."
       }
     ]
   },
   "Japan": {
     "facts": [
-      {
-        "id": "medicines",
-        "title": "Cold and allergy medicine",
-        "why": "Ordinary pharmacy boxes from home contain ingredients Japan bans outright.",
-        "penalty_local": "Sudafed, Actifed and Vicks inhalers are banned. Codeine needs a permit applied for before you travel, and a prescription from home does not substitute",
-        "penalty_usd": null,
-        "tts": "Cold medicine. Sudafed and Vicks inhalers are banned outright.",
-        "verified": true,
-        "checked": "2026-08-28",
-        "source": "Verified for the Japan carousel, see daya/content/2026-08-28-carousel-japan.md"
-      },
       {
         "id": "vapes",
         "title": "Nicotine e-liquid",
@@ -399,6 +400,18 @@
         "note": "Not researched."
       },
       {
+        "id": "photography",
+        "title": "Filming people",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
         "id": "overstay",
         "title": "Overstaying",
         "why": null,
@@ -409,6 +422,17 @@
         "checked": null,
         "source": null,
         "note": "Not researched."
+      },
+      {
+        "id": "medicines",
+        "title": "Cold and allergy medicine",
+        "why": "Ordinary pharmacy boxes from home contain ingredients Japan bans outright.",
+        "penalty_local": "Sudafed, Actifed and Vicks inhalers are banned. Codeine needs a permit applied for before you travel, and a prescription from home does not substitute",
+        "penalty_usd": null,
+        "tts": "Cold medicine. Sudafed and Vicks inhalers are banned outright.",
+        "verified": true,
+        "checked": "2026-08-28",
+        "source": "Verified for the Japan carousel, see daya/content/2026-08-28-carousel-japan.md"
       },
       {
         "id": "temple",
@@ -432,18 +456,6 @@
         "verified": true,
         "checked": "2026-08-28",
         "source": "Verified for the Japan carousel. No TTS line: it is not a criminal penalty, so it does not belong in a 'banned' script."
-      },
-      {
-        "id": "photography",
-        "title": "Filming people",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Not researched."
       }
     ]
   },
@@ -484,6 +496,18 @@
         "penalty_display": "1 to 15 days: 500,000 to 2 million dong. Up to 40 million dong, about $1,519, at the top end."
       },
       {
+        "id": "coral",
+        "title": "Taking coral or shells",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
         "id": "politics",
         "title": "Posting about the state",
         "why": null,
@@ -508,18 +532,6 @@
         "note": "Only etiquette guidance found, no penalty. Do not invent one."
       },
       {
-        "id": "coral",
-        "title": "Taking coral or shells",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Not researched."
-      },
-      {
         "id": "currency",
         "title": "Money rules",
         "why": null,
@@ -536,17 +548,6 @@
   "Sri Lanka": {
     "facts": [
       {
-        "id": "religion",
-        "title": "Buddha tattoos and images",
-        "why": "A tattoo you have had for years can stop you at the border.",
-        "penalty_local": "Visitors with a visible Buddha tattoo have been refused entry, arrested or deported",
-        "penalty_usd": null,
-        "tts": "Buddha tattoos. People get refused entry at the border for them.",
-        "verified": true,
-        "checked": "2026-09-01",
-        "source": "UK FCDO travel advice Sri Lanka; tikalanka.com local laws"
-      },
-      {
         "id": "vapes",
         "title": "Vapes",
         "why": "Prohibited as an import, so it is a customs problem before it is anything else.",
@@ -556,6 +557,18 @@
         "verified": true,
         "checked": "2026-09-01",
         "source": "UK FCDO travel advice Sri Lanka"
+      },
+      {
+        "id": "drone",
+        "title": "Flying a drone",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Sri Lanka requires CAA permits, but I found no figure. Research before use."
       },
       {
         "id": "overstay",
@@ -570,8 +583,19 @@
         "note": "The daily figure is given as a range by the source. Prefer the consequence over the number on screen."
       },
       {
-        "id": "drone",
-        "title": "Flying a drone",
+        "id": "religion",
+        "title": "Buddha tattoos and images",
+        "why": "A tattoo you have had for years can stop you at the border.",
+        "penalty_local": "Visitors with a visible Buddha tattoo have been refused entry, arrested or deported",
+        "penalty_usd": null,
+        "tts": "Buddha tattoos. People get refused entry at the border for them.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "UK FCDO travel advice Sri Lanka; tikalanka.com local laws"
+      },
+      {
+        "id": "cannabis",
+        "title": "Cannabis",
         "why": null,
         "penalty_local": null,
         "penalty_usd": null,
@@ -579,7 +603,7 @@
         "verified": false,
         "checked": null,
         "source": null,
-        "note": "Sri Lanka requires CAA permits, but I found no figure. Research before use."
+        "note": "Not researched."
       },
       {
         "id": "coral",
@@ -604,18 +628,6 @@
         "checked": null,
         "source": null,
         "note": "Widely repeated as a selfie offence. Find the actual charge before using it."
-      },
-      {
-        "id": "cannabis",
-        "title": "Cannabis",
-        "why": null,
-        "penalty_local": null,
-        "penalty_usd": null,
-        "tts": null,
-        "verified": false,
-        "checked": null,
-        "source": null,
-        "note": "Not researched."
       }
     ]
   }
