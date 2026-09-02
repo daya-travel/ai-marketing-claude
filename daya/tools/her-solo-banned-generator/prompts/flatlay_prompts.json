@@ -39,6 +39,10 @@
     "Sri Lanka": {
       "props": "straw hat, cotton scarf folded, sunglasses, notebook, cinnamon sticks, woven bag",
       "details": ["cinnamon sticks scattered on the linen", "a folded cotton scarf and a straw hat brim"]
+    },
+    "Italy": {
+      "props": "wide straw hat, round sunglasses, folded linen dress, plain leather sandals, small notebook, sprig of olive leaves, lemon, woven market basket",
+      "details": ["a sprig of olive leaves and a lemon on the linen", "the brim of a straw hat beside plain leather sandals"]
     }
   },
 

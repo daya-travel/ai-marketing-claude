@@ -7,7 +7,8 @@
       "tts": "the spoken line. Keep under 18 words - the whole script has to fit ~92 words for 32 seconds.",
       "penalty_display": "Where the conversion belongs mid-sentence. Falls back to penalty_local plus the USD figure when absent.",
       "hook": "Pro Land. cover_head und cover_sub gehen auf Slide 1, spoken in die Tonspur, close auf die Schlusskarte. Fehlt das Feld, nimmt generate.py die Standardformulierung - die aber pro Post variiert werden muss, sonst liest sich der naechste Post wie der letzte.",
-      "posted": "Datum der Veroeffentlichung. check_repeats vergleicht neue Laender dagegen."
+      "posted": "Datum der Veroeffentlichung. check_repeats vergleicht neue Laender dagegen.",
+      "bullets": "Stichpunkte fuer den Slide. Alesya, 01.09.: auf dem Bild muss genug Text stehen wie bei Japan, lieber Stichpunkte als langer Fliesstext."
     },
     "rates": {
       "THB": {
@@ -292,16 +293,22 @@
   "South Korea": {
     "facts": [
       {
-        "id": "photography",
-        "title": "Filming people without asking",
-        "why": "It is a sexual offence here, not a privacy nuisance, and it applies in the street.",
-        "penalty_local": "Article 14, Act on Special Cases Concerning the Punishment of Sexual Crimes. Up to 5 years for filming, up to 7 for sharing it, or a fine up to 50,000,000 KRW",
-        "penalty_usd": 36500,
-        "tts": "Filming strangers. Up to five years, and it counts in public.",
+        "id": "defamation",
+        "title": "A bad review",
+        "why": "Truth is not a defence here. Saying something true about a person or a business can still be a crime.",
+        "penalty_local": "Cyber defamation: up to 3 years if what you wrote is true, up to 7 if it is false. Truth only helps if the statement was solely in the public interest, and the burden is on you. For foreigners a conviction usually means deportation or an entry ban",
+        "penalty_usd": null,
+        "penalty_display": "Up to three years even when it's true. Truth only counts as a defence if it served the public interest, and you have to prove that.",
+        "bullets": [
+          "Being right is not a defence",
+          "Up to 3 years if it's true, 7 if it isn't",
+          "Applies to reviews, posts and comments",
+          "For foreigners it usually ends in deportation"
+        ],
+        "tts": "A bad review. In Korea it's a crime even when it's true.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "Act on Special Cases Concerning the Punishment of Sexual Crimes Art. 14; koreaherald.com; pureumlawoffice.com; eng.taeshinlaw.com",
-        "penalty_display": "Up to five years, seven if you post it, or 50 million won, about $36,500. It counts in public places too."
+        "source": "Information and Communications Network Act (cyber defamation); ARTICLE 19; Open Net Korea; thekoreanlawblog.com"
       },
       {
         "id": "food",
@@ -313,7 +320,13 @@
         "tts": "Undeclared food. Ten million won, and the dogs work arrivals.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "Animal and Plant Quarantine Agency (APQA); trip.com Korea customs 2026; haniseoul.com; roafly.com"
+        "source": "Animal and Plant Quarantine Agency (APQA); trip.com Korea customs 2026; haniseoul.com; roafly.com",
+        "bullets": [
+          "Beef jerky, ham, sausage, all of it",
+          "Sniffer dogs work the arrivals hall",
+          "Declare it and it's only confiscated",
+          "Don't declare it and it's up to 10 million won, about $7,300"
+        ]
       },
       {
         "id": "escooter",
@@ -325,7 +338,13 @@
         "tts": "Rental scooters. You need a licence for those kickboards.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "Korea Herald (Seoul licence check for rentals); swapswap.kr; frontlens.io; koreaquicktips.com"
+        "source": "Korea Herald (Seoul licence check for rentals); swapswap.kr; frontlens.io; koreaquicktips.com",
+        "bullets": [
+          "A moped licence at minimum, a car IDP won't do",
+          "Helmet is mandatory",
+          "Seoul now checks the licence at rental",
+          "Up to 100,000 won, about $75"
+        ]
       },
       {
         "id": "medication",
@@ -337,7 +356,13 @@
         "tts": "This one's the answer. Your medication. Adderall is banned, and the permit takes three weeks.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process"
+        "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process",
+        "bullets": [
+          "Adderall is banned outright, no exceptions",
+          "Concerta and Ritalin need an MFDS permit",
+          "Apply two to three weeks before you fly",
+          "A prescription from home doesn't substitute"
+        ]
       },
       {
         "id": "tickets",
@@ -349,7 +374,13 @@
         "tts": "Resold concert tickets. Buying one counts, not just selling.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "Korea Herald (scalping crackdown, enforcement from Aug 2026); Korea Times 2026-06-24; korea.net press release"
+        "source": "Korea Herald (scalping crackdown, enforcement from Aug 2026); Korea Times 2026-06-24; korea.net press release",
+        "bullets": [
+          "Buying counts, not only selling",
+          "Up to a year, or 10 million won, about $7,300",
+          "Fines can run to fifty times the ticket price",
+          "Enforced since August 2026"
+        ]
       },
       {
         "id": "hangang",
@@ -361,7 +392,12 @@
         "tts": "The river park. Getting loud there is a seventy thousand won fine.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "korea.net, stricter rules for Seoul's Hangang Park"
+        "source": "korea.net, stricter rules for Seoul's Hangang Park",
+        "bullets": [
+          "Littering is 30,000 won, about $22",
+          "Noise or drunken behaviour is 70,000, about $51",
+          "The rules got stricter this year"
+        ]
       },
       {
         "id": "jeju",
@@ -373,7 +409,29 @@
         "tts": "Jaywalking on Jeju. They fine tourists on the spot.",
         "verified": true,
         "checked": "2026-09-01",
-        "source": "Korea Herald, Jeju police on-site fines for foreign tourists"
+        "source": "Korea Herald, Jeju police on-site fines for foreign tourists",
+        "bullets": [
+          "Jaywalking, littering, smoking on the wrong street",
+          "Police target foreign tourists specifically",
+          "The fine is issued and paid on the spot"
+        ]
+      },
+      {
+        "id": "import",
+        "title": "Nicotine liquid in your bag",
+        "why": "Separate from where you vape. This one happens at the border.",
+        "penalty_local": "Import limit 20 ml. Anything above 1 percent (10 mg/ml) is treated as a toxic substance and confiscated",
+        "penalty_usd": null,
+        "penalty_display": "Twenty millilitres maximum, and anything above one percent is confiscated as a toxic substance.",
+        "bullets": [
+          "20 ml is the limit",
+          "Above 1 percent counts as a toxic substance",
+          "Confiscated at the border, not at the shop"
+        ],
+        "tts": "Nicotine liquid. Twenty millilitres, then customs keeps it.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "roafly.com South Korea airport customs rules"
       },
       {
         "id": "drone",
@@ -385,7 +443,12 @@
         "verified": true,
         "checked": "2026-09-01",
         "source": "drone-laws.com South Korea; dronesgator.com",
-        "penalty_display": "Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border in the east."
+        "penalty_display": "Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border in the east.",
+        "bullets": [
+          "15 km from the border in the east, 10 in the west",
+          "Registration needed either way",
+          "Up to a year, or 10 million won, about $7,300"
+        ]
       },
       {
         "id": "cannabis",
@@ -397,13 +460,19 @@
         "verified": true,
         "checked": "2026-09-01",
         "source": "Narcotics Control Act; tripbase.com South Korea cannabis; UK FCDO travel advice; cannabisregulations.ai",
-        "penalty_display": "Up to five years or 50 million won, about $36,500. Customs can hair-test you on arrival."
+        "penalty_display": "Up to five years or 50 million won, about $36,500. Customs can hair-test you on arrival.",
+        "bullets": [
+          "Customs can hair-test you on arrival",
+          "Legal where you smoked it doesn't matter",
+          "Travellers have been held on the test alone",
+          "Up to five years, or 50 million won, about $36,500"
+        ]
       }
     ],
     "hook": {
       "cover_head": "One thing in your carry-on is a narcotics charge in South Korea.",
-      "cover_sub": "Nine things worth checking before you fly.",
-      "spoken": "One thing in your carry-on is a narcotics charge in South Korea. Here are nine things to check before you fly.",
+      "cover_sub": "Ten things worth checking before you fly.",
+      "spoken": "One thing in your carry-on is a narcotics charge in South Korea. Here are ten things to check before you fly.",
       "close": "Save this before you fly.",
       "reveal_at": "medication",
       "note": "Raetsel-Hook nach dem Japan-Muster (48 Saves auf 2216 Views). Zeigt bewusst auf den Koffer der Leserin statt auf das Foto - bei Korea sind alle sieben verbotenen Dinge entweder bedruckt oder gar kein Gegenstand, ein Bildraetsel waere der 'this bag'-Fehler. Aufloesung auf Slide 5."
@@ -665,6 +734,216 @@
         "checked": null,
         "source": null,
         "note": "Widely repeated as a selfie offence. Find the actual charge before using it."
+      }
+    ]
+  },
+  "Italy": {
+    "hook": {
+      "cover_head": "Italy will fine you for sitting down.",
+      "cover_sub": "Eleven things worth knowing before you go.",
+      "spoken": "Italy will fine you for sitting down. Eleven things worth knowing before you go.",
+      "close": "Save this before you go.",
+      "reveal_at": "steps",
+      "note": "Vierte Mechanik der Reihe. Japan war ein Bildraetsel, Thailand eine Liste, Korea ein Raetsel auf den Koffer der Leserin. Italien ist eine absurde, wahre Behauptung: man wird fuers Hinsetzen bestraft. Aufloesung auf Slide 4, die Spanische Treppe. Schlusszeile bewusst 'before you go' statt 'before you fly' - Italien faehrt man auch mit dem Zug, und die Zeile darf sich nicht wiederholen."
+    },
+    "facts": [
+      {
+        "id": "sand",
+        "title": "Sand from the beach",
+        "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
+        "penalty_local": "Regional Law 16/2017: 500 to 3,000 euros for removing sand, pebbles or shells from any Sardinian beach. X-ray checks run at Olbia, Cagliari and Alghero airports and at the ferry terminals",
+        "penalty_usd": null,
+        "penalty_display": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
+        "bullets": [
+          "500 to 3,000 euros",
+          "Sand, pebbles and shells all count",
+          "X-ray checks at Olbia, Cagliari and Alghero",
+          "4 tonnes seized at one airport in two years"
+        ],
+        "tts": "Sand from a Sardinian beach. They X-ray your bag for it.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com"
+      },
+      {
+        "id": "trail_shoes",
+        "title": "Flip-flops on the trails",
+        "why": "The Cinque Terre paths look like a coastal stroll from the village. They are a marked mountain trail and the rock is polished smooth.",
+        "penalty_local": "Cinque Terre National Park: fines from 50 euros, up to 2,500 in serious cases or when a rescue is needed. Rangers check footwear at the trailheads and can refuse access",
+        "penalty_usd": null,
+        "penalty_display": "50 euros at the low end and up to 2,500 if it ends in a rescue.",
+        "bullets": [
+          "Flip-flops, sandals and smooth soles",
+          "50 euros, up to 2,500 if they have to rescue you",
+          "Rangers check at the trailhead",
+          "Only on the marked trails, the villages are fine"
+        ],
+        "tts": "Flip-flops on the Cinque Terre trails. Rangers check at the gate.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Cinque Terre National Park rules (in force since 2019); idealista.it 16.06.2026; afar.com; travel.yahoo.com 2026"
+      },
+      {
+        "id": "fakes",
+        "title": "The bag on the beach towel",
+        "why": "Someone lays out twenty handbags in front of you while you're lying on the sand. It feels like shopping, and the seller is the one breaking the law. Not only him.",
+        "penalty_local": "Under the 2005 anti-counterfeiting decree the buyer is liable too, on the presumption that the goods were obviously fake. Reported fines run into the thousands; an Austrian tourist in Venice paid 1,000 euros for a single bag",
+        "penalty_usd": null,
+        "penalty_display": "The buyer pays, not only the seller. An Austrian tourist in Venice paid 1,000 euros for one bag.",
+        "bullets": [
+          "The buyer is liable too",
+          "One documented case: 1,000 euros for one bag",
+          "It applies on the beach and in the street",
+          "The bag gets confiscated either way"
+        ],
+        "tts": "Buying a fake bag. The buyer pays too, not just the seller.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Italian anti-counterfeiting decree of 2005 (buyer liability); italymagazine.com (Austrian tourist fined 1,000 euros); thelocal.it 25.06.2018; europeforvisitors.com"
+      },
+      {
+        "id": "steps",
+        "title": "Sitting on the Spanish Steps",
+        "why": "Everyone has seen the photo of people sitting on them. That photo is older than the rule.",
+        "penalty_local": "Rome, in force since 2019: 250 euros for sitting on the Spanish Steps, rising to 400 if the steps are stained or damaged. Officers in high-vis patrol the staircase and move people on with whistles",
+        "penalty_usd": null,
+        "penalty_display": "250 euros for sitting, 400 if you leave a mark.",
+        "bullets": [
+          "Sitting alone is enough, no food needed",
+          "250 euros, 400 if you stain them",
+          "Officers patrol the steps and whistle you off",
+          "The rule has been enforced since 2019"
+        ],
+        "tts": "This one's the answer. Sitting on the Spanish Steps. Two fifty.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Comune di Roma decorum rules 2019; CNN travel; ABC News 08.08.2019; NBC News (enforcement patrols)"
+      },
+      {
+        "id": "ztl",
+        "title": "The camera at the end of the street",
+        "why": "Historic centres are closed to traffic and the sign is small, in Italian, and often the same shape as the one before it. The car in front of you may live there.",
+        "penalty_local": "Zona a Traffico Limitato: roughly 80 to 130 euros per passage, and every gate counts separately. The rental company adds a processing fee of up to 50 euros for passing your details to the police, and the notice reaches you months later",
+        "penalty_usd": null,
+        "penalty_display": "About 80 to 130 euros per gate, and every camera you pass is a separate fine.",
+        "bullets": [
+          "80 to 130 euros per gate",
+          "Every camera counts separately",
+          "Your rental company adds its own fee",
+          "The letter arrives months after the trip"
+        ],
+        "tts": "Driving into a ZTL. Every camera you pass is its own fine.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "European Consumer Centre (evz.de / europe-consommateurs.eu) on Italian ZTL fines; Art. 7 Codice della Strada"
+      },
+      {
+        "id": "permit",
+        "title": "Your licence on its own",
+        "why": "The rental desk hands over the keys without asking. The police at the roadside are a different conversation.",
+        "penalty_local": "Article 135 of the Italian Highway Code: a licence issued outside the EU must be accompanied by an International Driving Permit or a certified translation. Fine from 408 to 1,634 euros, payable on the spot, and the car can be held",
+        "penalty_usd": null,
+        "penalty_display": "408 to 1,634 euros under Article 135 of the Highway Code, payable on the spot.",
+        "bullets": [
+          "Only for licences from outside the EU",
+          "408 to 1,634 euros",
+          "The rental desk won't ask. The police will",
+          "You apply for it at home, not in Italy"
+        ],
+        "tts": "A non-EU licence alone. It needs the international permit with it.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Art. 135 Codice della Strada; internationaldrivingpermit.org country page Italy; vipcars.com non-EU licence guide"
+      },
+      {
+        "id": "venice_sit",
+        "title": "Lunch on a bridge",
+        "why": "There is nowhere to sit in Venice that isn't a bridge, a step or a monument. That's the point of the rule.",
+        "penalty_local": "Comune di Venezia, forbidden behaviour: 100 to 200 euros for eating or drinking while sitting on the ground, and for sitting or lying on banks, foundations, monuments, bridges, steps and walkways. An urban Daspo can be added, which bars you from the spot",
+        "penalty_usd": null,
+        "penalty_display": "100 to 200 euros, and they can add an urban Daspo that bars you from the spot.",
+        "bullets": [
+          "Bridges, steps, monument bases, quaysides",
+          "100 to 200 euros",
+          "Sitting on the ground to eat counts",
+          "Swimming in a canal is 350"
+        ],
+        "tts": "Sitting down to eat in Venice. Not the bridges, not the ground.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Comune di Venezia, comune.venezia.it 'Forbidden behaviour' (decorum rules 2019)"
+      },
+      {
+        "id": "swimwear",
+        "title": "Swimwear in town",
+        "why": "Sorrento is built above its beaches, so the walk back to your room goes straight through the centre.",
+        "penalty_local": "Sorrento ordinance of July 2022: 25 to 500 euros for walking through the centre bare-chested or in swimwear. It doesn't apply at the beach clubs or pools. Venice fines the same thing at 250 euros",
+        "penalty_usd": null,
+        "penalty_display": "25 to 500 euros in Sorrento, and Venice fines the same thing at 250.",
+        "bullets": [
+          "Sorrento centre, 25 to 500 euros",
+          "Bikinis, swimsuits and bare chests",
+          "Beach clubs and pools are exempt",
+          "Venice charges 250 for the same thing"
+        ],
+        "tts": "Swimwear in town in Sorrento. The beach ends at the street.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Sorrento mayoral ordinance 06.07.2022 (Mayor Massimo Coppola); CNN travel; thelocal.it 11.07.2022; Comune di Venezia forbidden behaviour"
+      },
+      {
+        "id": "venice_fee",
+        "title": "Walking into Venice",
+        "why": "It only applies on certain days, so most people arrive having never heard of it, and the checks are random.",
+        "penalty_local": "Contributo di accesso: 5 euros booked more than four days ahead, 10 euros after that, for day visitors on Fridays to Sundays from April to July, 8:30 to 16:00. Anyone overnighting is exempt. Without one: 50 to 300 euros on top of the fee itself",
+        "penalty_usd": null,
+        "penalty_display": "5 or 10 euros to book, and 50 to 300 euros on top of it if you're checked without one.",
+        "bullets": [
+          "Day visitors only, hotel guests are exempt",
+          "5 euros booked early, 10 euros late",
+          "Fridays to Sundays, April to July, 8:30 to 16:00",
+          "Without it: 50 to 300 euros"
+        ],
+        "tts": "Walking into Venice on a control day without the ticket.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Venezia Unica / cda.ve.it official access fee pages, 2026 calendar; euronews 30.03.2026"
+      },
+      {
+        "id": "beach_spot",
+        "title": "The towel you left out",
+        "why": "You walk down at eight to find every free stretch already taken by empty umbrellas. Putting yours out the night before is how that started.",
+        "penalty_local": "Leaving umbrellas, chairs or towels unattended on a public beach counts as occupying public land. Items are confiscated and fines land around 200 euros for a private individual. Dawn clearances happen: about 40 items were removed in one operation at Torre del Greco",
+        "penalty_usd": null,
+        "penalty_display": "Around 200 euros for a private individual, and the towel or umbrella is taken away.",
+        "bullets": [
+          "Umbrellas, chairs and towels left overnight",
+          "Around 200 euros, and the item is confiscated",
+          "Dawn clearances on public beaches",
+          "Only free beaches, not the paid clubs"
+        ],
+        "tts": "Leaving a towel out overnight to hold your spot. They take it.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Italian coastal enforcement against 'furbetti dell'ombrellone', summer 2026; Forbes 09.07.2026 (Italy's new beach rules); thelocal.it 12.08.2026; Coast Guard operation Torre del Greco"
+      },
+      {
+        "id": "fountain",
+        "title": "One foot in the fountain",
+        "why": "It's forty degrees, the water is right there, and someone in front of you is already doing it for a video.",
+        "penalty_local": "Rome: about 450 to 500 euros for entering a fountain, plus an urban Daspo that orders you out of the area immediately and can run to a lifetime ban. Breaking the Daspo turns an administrative fine into a criminal matter",
+        "penalty_usd": null,
+        "penalty_display": "About 500 euros plus a Daspo, the city ban. A traveller from New Zealand got a lifetime one in May 2026.",
+        "bullets": [
+          "Wading counts, you don't have to swim",
+          "About 450 to 500 euros",
+          "Plus a Daspo, a ban from the area",
+          "One lifetime ban handed out in May 2026"
+        ],
+        "tts": "Stepping into a fountain. Five hundred euros and a city ban.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Comune di Roma fountain regulation (2017, urban Daspo); idealista.it 05.09.2025 legal guide; Euro Weekly News 29.05.2026 (lifetime ban); wantedinrome.com"
       }
     ]
   }

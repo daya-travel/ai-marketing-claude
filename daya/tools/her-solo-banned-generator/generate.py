@@ -44,7 +44,23 @@ OUTPUT = ROOT / "output"
 # atempo 1.30). Every earlier estimate for that post was too optimistic, so
 # this number comes from a file we actually timed, not from a rule of thumb.
 WPM = 172
-TARGET_SECONDS = (30, 32)
+
+# Das Laengenziel haengt an der Anzahl der Punkte, nicht an einer festen Zahl.
+# Der Meta-Auftrag gab "30 bis 32 Sekunden" vor, das galt fuer sieben Punkte.
+# Seit Alesya am 01.09. neun und elf verlangt hat, war die feste Vorgabe eine
+# Warnung, die bei jedem Lauf ansprang und nichts mehr aussagte.
+#
+# Beide Zahlen sind an der Thailand-Tonspur gemessen: 98 Woerter auf sieben
+# Punkte, davon rund 21 fuer Hook und Schlusszeile, der Rest verteilt sich mit
+# etwa elf Woertern auf jeden Punkt samt Zaehlwort.
+OVERHEAD_WORDS = 21
+WORDS_PER_POINT = 11
+TOLERANCE = 0.10
+
+
+def word_budget(n: int) -> int:
+    """Wie viele Woerter ein Skript mit n Punkten realistisch braucht."""
+    return OVERHEAD_WORDS + WORDS_PER_POINT * n
 
 HASHTAGS = {
     "instagram": "#solofemaletravel #{tag} #traveltips #solotravel #fyp",
@@ -226,12 +242,25 @@ def build_caption(country: str, facts: list[dict], checked: str, hook: dict) -> 
     template = (TEMPLATES / "caption.txt").read_text(encoding="utf-8")
     top = facts[0]
     second = facts[1] if len(facts) > 1 else facts[0]
+    # money() liefert seinen eigenen Schlusspunkt, wenn penalty_display gesetzt
+    # ist. Ohne das Abschneiden steht am Satzende ".." - stand so in der ersten
+    # Italien-Caption.
+    def sentence(text: str) -> str:
+        return text.rstrip().rstrip(".") + "."
+
     return template.format(
         hook=f"{hook['cover_head']} {hook['cover_sub']}",
-        highlight=f"{top['title']}. {top['why']} {money(top)}.",
-        second=f"The other one I'd watch is {second['title'].lower()}. {money(second)}.",
+        highlight=f"{top['title']}. {top['why']} {sentence(money(top))}",
+        second=(
+            f"The other one I'd watch is {second['title'].lower()}. "
+            f"{sentence(money(second))}"
+        ),
         country_law=f"{country}'s own law",
         checked=checked,
+        # Die Schlusszeile kommt aus dem Hook des Landes. Vorher stand "Save it
+        # before you fly" fest in der Vorlage und widersprach jedem Land, das
+        # man nicht anfliegt.
+        close=hook["close"].replace("Save this", "Save it"),
         hashtags=HASHTAGS["instagram"].format(tag=country.lower().replace(" ", "")),
     )
 
@@ -341,12 +370,16 @@ def main() -> None:
 
     print(f"\n-> {out}")
     print(f"   {len(facts)} facts, script {words} words, about {seconds:.0f} s at {WPM} wpm")
-    lo, hi = TARGET_SECONDS
-    if seconds > hi:
-        over = seconds - hi
+    budget = word_budget(len(facts))
+    print(
+        f"   Budget fuer {len(facts)} Punkte: {budget} Woerter, "
+        f"rund {budget / WPM * 60:.0f} s"
+    )
+    if words > budget * (1 + TOLERANCE):
+        over = words - budget
         print(
-            f"!  {over:.0f} s over the {lo}-{hi} s target. Shorten the 'tts' lines "
-            f"in the database, roughly {int(over / 60 * WPM)} words."
+            f"!  {over} Woerter ueber dem Budget ({over / WPM * 60:.0f} s). "
+            f"Die 'tts'-Zeilen in der Datenbank kuerzen."
         )
 
 

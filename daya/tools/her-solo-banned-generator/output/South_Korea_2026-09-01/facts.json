@@ -4,10 +4,10 @@
   "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
   "facts": [
     {
-      "title": "Filming people without asking",
-      "why": "It is a sexual offence here, not a privacy nuisance, and it applies in the street.",
-      "penalty": "Up to five years, seven if you post it, or 50 million won, about $36,500. It counts in public places too.",
-      "source": "Act on Special Cases Concerning the Punishment of Sexual Crimes Art. 14; koreaherald.com; pureumlawoffice.com; eng.taeshinlaw.com",
+      "title": "A bad review",
+      "why": "Truth is not a defence here. Saying something true about a person or a business can still be a crime.",
+      "penalty": "Up to three years even when it's true. Truth only counts as a defence if it served the public interest, and you have to prove that.",
+      "source": "Information and Communications Network Act (cyber defamation); ARTICLE 19; Open Net Korea; thekoreanlawblog.com",
       "checked": "2026-09-01",
       "verified": true
     },
@@ -56,6 +56,14 @@
       "why": "Jeju police run a crackdown aimed at foreign tourists, and the fine is due immediately.",
       "penalty": "Jaywalking, littering, smoking on the wrong street. The fine is issued on the spot and paid immediately.",
       "source": "Korea Herald, Jeju police on-site fines for foreign tourists",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Nicotine liquid in your bag",
+      "why": "Separate from where you vape. This one happens at the border.",
+      "penalty": "Twenty millilitres maximum, and anything above one percent is confiscated as a toxic substance.",
+      "source": "roafly.com South Korea airport customs rules",
       "checked": "2026-09-01",
       "verified": true
     },
