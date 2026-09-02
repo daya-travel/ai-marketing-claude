@@ -1,7 +1,26 @@
-// Reel „Italy will fine you for sitting down" - her.solotrip.
+// Reel „Taking this home is a 3,000 euro fine" - her.solotrip.
 //
-// Dreizehn Frames. Cover, elf Punkte, Schlusskarte. Aufloesung des Hooks auf
-// Slide 5, der Spanischen Treppe - dieselbe Mechanik wie beim Japan-Karussell.
+// Dreizehn Frames. Cover, elf Punkte, Schlusskarte. Aufloesung des Raetsels auf
+// Slide 6, dem Sand - dieselbe Mechanik wie beim Japan-Karussell.
+//
+// DER HOOK, ZWEITE FASSUNG. Die erste war eine Behauptung, „Italy will fine you
+// for sitting down". Alesya am 02.09.: „der hook ist scheisse - so haben wir es
+// nicht entschieden! es muss ein raetsel sein". Der zweite Vorschlag war zwar
+// ein Raetsel, aber verschachtelt: „der hook past nicht ganz. es muss einfach zu
+// lesen sein". Diese Fassung hat acht Woerter und keinen Nebensatz, genau wie
+// der Japan-Hook („One thing in this picture is banned in Japan"), der mit 48
+// Speicherungen auf 2216 Aufrufe der beste Post war. „this" zeigt auf das
+// Coverfoto, einen Strand. Deshalb steht der Sand nicht mehr an erster Stelle,
+// sondern in der Mitte, wo er den Hook aufloest.
+//
+// DER TEXTSTIL kommt vom Japan-Karussell, das Alesya am 02.09. als Referenz
+// geschickt hat: Ueberschrift in Creme, nur einzelne Woerter in Marigold. Vorher
+// war die ganze Ueberschrift marigold, damit hebt nichts mehr etwas hervor.
+// Ausgezeichnet wird mit *Sternchen*, dieselbe Konvention wie in
+// build-carousel.mjs. Die Schrift ist ausserdem groesser (Ueberschrift 74 statt
+// 64, Zeilen 37 statt 32) und linksbuendig, beides nachgemessen an den
+// Japan-Slides. Die Punkte vor den Zeilen sind weg, dort stehen einfache
+// Zeilen.
 //
 // JEDE ZAHL IN DIESEM POST IST BELEGT. Die Quellen stehen in
 // daya/content/2026-09-02-reel-italy-illegal.md und in der Datenbank unter
@@ -51,140 +70,147 @@ const W = 1080, H = 1920, RESERVE = 87;
 const ONLY = process.env.ONLY || '';
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+// *Sternchen* markieren die Woerter, die marigold werden. Konvention aus
+// build-carousel.mjs. Alles andere bleibt creme - das ist der Unterschied zur
+// ersten Fassung, in der die ganze Ueberschrift marigold war.
+const fmt = (s) => esc(s).replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>');
 
 // ty  = vertikale Mitte des Textblocks in Prozent. 68 bei vier Stichpunkten,
 //       72 bei Fliesstext - beides so gewaehlt, dass die letzte Zeile ueber
 //       78 % bleibt.
 // light = helles Foto: kein Mittelverlauf, enger Verlauf hinter dem Text
 const BEATS = [
-  // Frame 1 - Hook. Sie sitzt auf breiten Steinstufen, die Treppe traegt das
-  // Bild. Die erste Variante hatte oben ein Gebaeude mit erfundener Schrift
-  // („KAFCKXS", „RR") und flog raus.
-  { id: '01', photo: 'f01-cover', cover: true, ty: 26,
-    head: 'Italy will fine you for sitting down.',
-    body: 'Eleven things worth knowing before you go.' },
+  // Frame 1 - Das Raetsel. Coverfoto ist ein Strand, „this" zeigt darauf.
+  // Aufgeloest auf Slide 6.
+  { id: '01', photo: 'f00-cover', cover: true, light: true, ty: 27,
+    head: 'Taking this home is a *3,000 euro* fine.',
+    body: 'Eleven things Italy fines you for.' },
 
-  // Frame 2 - Sardinien. Regionalgesetz 16/2017. Die vier Tonnen sind aus dem
-  // Bericht zum Projekt „Take Me Back to the Sea", nicht geschaetzt.
-  { id: '02', photo: 'f02-sand', light: true, ty: 68,
-    head: 'Sand from the beach.',
-    bullets: [
-      '500 to 3,000 euros',
-      'Sand, pebbles and shells all count',
-      'X-ray checks at Olbia, Cagliari and Alghero',
-      'Four tonnes came out of one airport in two years',
-    ] },
-
-  // Frame 3 - Cinque Terre. Gilt nur auf den markierten Wegen, das gehoert
+  // Frame 2 - Cinque Terre. Gilt nur auf den markierten Wegen, das gehoert
   // dazu, sonst ist es ein Verbot, das niemanden trifft.
-  { id: '03', photo: 'f03-trail', ty: 68,
-    head: 'Flip-flops on the trails.',
-    bullets: [
+  { id: '02', photo: 'f03-trail', ty: 63,
+    head: 'Flip-flops on the *trails*.',
+    lines: [
       'The marked coastal paths in the Cinque Terre',
-      '50 euros, up to 2,500 if they have to rescue you',
+      '*50 to 2,500 euros*, more if they rescue you',
       'Rangers check your shoes at the trailhead',
       'The villages themselves are fine',
     ] },
 
-  // Frame 4 - Faelschungen. Der interessante Teil ist die Haftung der
+  // Frame 3 - Faelschungen. Der interessante Teil ist die Haftung der
   // Kaeuferin, nicht die strittige Obergrenze. Deshalb steht hier der belegte
   // Einzelfall und keine Spanne bis 10.000.
-  { id: '04', photo: 'f04-fake', light: true, ty: 68,
-    head: 'The bag on the beach towel.',
-    bullets: [
-      'The buyer is liable, not only the seller',
-      'One documented case: 1,000 euros for one bag',
+  { id: '03', photo: 'f04-fake', light: true, ty: 63,
+    head: 'The bag on the *beach towel*.',
+    lines: [
+      'The *buyer* is liable, not only the seller',
+      'One case in Venice: *1,000 euros* for one bag',
       'It applies on the beach and in the street',
       'The bag gets confiscated either way',
     ] },
 
-  // Frame 5 - AUFLOESUNG des Hooks. Rom, seit 2019 durchgesetzt.
-  // oy 0.82: der mittige Zuschnitt schnitt sie fast heraus und uebrig blieben
-  // nackte Stufen. Groesseres oy schiebt den Inhalt nach oben, also zeigt der
-  // Ausschnitt den unteren Teil des Fotos, in dem sie sitzt.
-  // Text nach oben: bei ty 70 stand er genau auf ihrem Kopf.
-  { id: '05', photo: 'f05-steps', light: true, ty: 30, oy: 0.82,
-    head: 'This is the one.',
-    body: 'Sitting on the Spanish Steps is 250 euros, and 400 if you leave a mark. Sitting is enough. No food needed.' },
+  // Frame 4 - Rom, seit 2019 durchgesetzt. War in der ersten Fassung die
+  // Aufloesung, jetzt ein Punkt wie jeder andere.
+  { id: '04', photo: 'f05-steps', light: true, ty: 27, oy: 0.82,
+    head: 'Sitting on the *Spanish Steps*.',
+    lines: [
+      'Sitting alone is enough, no food needed',
+      '*250 euros*, 400 if you leave a mark',
+      'Officers patrol the steps and whistle you off',
+      'Enforced since 2019',
+    ] },
 
-  // Frame 6 - ZTL. Der teuerste Punkt fuer alle, die einen Wagen mieten, und
+  // Frame 5 - ZTL. Der teuerste Punkt fuer alle, die einen Wagen mieten, und
   // der einzige, der erst Monate spaeter auffaellt.
-  { id: '06', photo: 'f06-ztl', ty: 68,
-    head: 'The camera at the end of the street.',
-    bullets: [
-      '80 to 130 euros per gate',
+  { id: '05', photo: 'f06-ztl', ty: 63,
+    head: 'The *camera* at the end of the street.',
+    lines: [
+      '*80 to 130 euros* per gate',
       'Every camera you pass counts separately',
       'Your rental company adds its own fee',
       'The letter arrives months after the trip',
     ] },
 
+  // Frame 6 - AUFLOESUNG. Regionalgesetz Sardinien 16/2017. Die vier Tonnen
+  // sind aus dem Bericht zum Projekt „Take Me Back to the Sea", nicht
+  // geschaetzt.
+  { id: '06', photo: 'f02-sand', light: true, ty: 62,
+    eyebrow: 'THIS IS THE ONE',
+    head: 'Sand from the *beach*.',
+    lines: [
+      'Free to pick up, *up to 3,000 euros* to take home',
+      'Sand, pebbles and shells all count',
+      'X-ray checks at Olbia, Cagliari and Alghero',
+      '*Four tonnes* came out of one airport in two years',
+    ] },
+
   // Frame 7 - Internationaler Fuehrerschein, Art. 135 Codice della Strada.
-  { id: '07', photo: 'f07-road', ty: 68,
-    head: 'Your licence on its own.',
-    bullets: [
+  { id: '07', photo: 'f07-road', ty: 63,
+    head: 'Your licence *on its own*.',
+    lines: [
       'Only for licences issued outside the EU',
-      '408 to 1,634 euros, payable on the spot',
-      'The rental desk won’t ask. The police will',
+      '*408 to 1,634 euros*, payable on the spot',
+      'The rental desk won\u2019t ask. The police will',
       'You apply for the permit at home',
     ] },
 
   // Frame 8 - Venedig, Anstandsregeln 2019.
-  { id: '08', photo: 'f08-bridge', ty: 68,
-    head: 'Lunch on a bridge.',
-    bullets: [
-      'Bridges, steps, monument bases, quaysides',
-      '100 to 200 euros',
+  { id: '08', photo: 'f08-bridge', ty: 63,
+    head: 'Lunch on a *bridge*.',
+    lines: [
+      'Venice: bridges, steps, monuments, quaysides',
+      '*100 to 200 euros*',
       'Sitting on the ground to eat counts too',
-      'Swimming in a canal is 350',
+      'Swimming in a canal is *350*',
     ] },
 
   // Frame 9 - Sorrent, Anordnung vom 06.07.2022.
-  { id: '09', photo: 'f09-amalfi', ty: 68,
-    head: 'Swimwear in town.',
-    bullets: [
-      'Sorrento centre, 25 to 500 euros',
+  { id: '09', photo: 'f09-amalfi', ty: 63,
+    head: 'Swimwear *in town*.',
+    lines: [
+      'Sorrento centre, *25 to 500 euros*',
       'Bikinis, swimsuits and bare chests',
       'Beach clubs and pools are exempt',
-      'Venice charges 250 for the same thing',
+      'Venice charges *250* for the same thing',
     ] },
 
   // Frame 10 - Contributo di accesso. Der Kalender wechselt jaehrlich, deshalb
   // steht hier der Stand 2026 und im Content-Doc das Pruefdatum.
-  { id: '10', photo: 'f10-lagoon', light: true, ty: 68,
-    head: 'Walking into Venice.',
-    bullets: [
+  { id: '10', photo: 'f10-lagoon', light: true, ty: 63,
+    head: '*Walking into* Venice.',
+    lines: [
       'Day visitors only, hotel guests are exempt',
-      '5 euros booked early, 10 euros late',
+      '*5 euros* booked early, *10* late',
       'Fridays to Sundays, April to July',
-      'Without one: 50 to 300 euros',
+      'Without one: *50 to 300 euros*',
     ] },
 
   // Frame 11 - Handtuch. Objektbild ohne Menschen, erlaubt seit Alesyas
   // Entscheidung vom 26.08.: der Gegenstand ist hier der Inhalt.
-  { id: '11', photo: 'f11-towel', light: true, ty: 68,
-    head: 'The towel you left out.',
-    bullets: [
+  { id: '11', photo: 'f11-towel', light: true, ty: 63,
+    head: 'The towel you *left out*.',
+    lines: [
       'Umbrellas, chairs and towels left overnight',
-      'Around 200 euros, and it’s confiscated',
+      '*Around 200 euros*, and it\u2019s confiscated',
       'Dawn clearances on the free beaches',
-      'The paid clubs aren’t affected',
+      'The paid clubs aren\u2019t affected',
     ] },
 
   // Frame 12 - Brunnen. Staerkster Schluss: der Daspo laeuft weiter, wenn das
   // Bussgeld laengst bezahlt ist.
-  { id: '12', photo: 'f12-fountain', ty: 68,
-    head: 'One foot in the fountain.',
-    bullets: [
-      'Wading counts, you don’t have to swim',
-      'About 500 euros in Rome',
-      'Plus a Daspo, a ban from the area',
+  { id: '12', photo: 'f12-fountain', ty: 63,
+    head: 'One foot in the *fountain*.',
+    lines: [
+      'Wading counts, you don\u2019t have to swim',
+      '*About 500 euros* in Rome',
+      'Plus a *Daspo*, a ban from the area',
       'One lifetime ban handed out in May 2026',
     ] },
 
   // Frame 13 - Schlusskarte. „before you go" statt „before you fly": nach
   // Italien faehrt man auch, und die Zeile darf sich nicht wiederholen.
   { id: 'end', photo: 'f13-end', endcard: true, ty: 60,
-    head: 'Save this before you go.',
+    head: 'Save this *before you go*.',
     body: 'Follow for more.' },
 ];
 
@@ -201,16 +227,31 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .mid{position:absolute;left:0;right:0;top:12%;height:68%;
   background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 22%,
     rgba(0,0,0,.55) 78%,rgba(0,0,0,0) 100%)}
-.bot{position:absolute;left:0;right:0;bottom:0;height:46%;
-  background:linear-gradient(0deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.72) 34%,
+/* BAND statt Rampe. Ein vom unteren Rand hochlaufender Verlauf muss unten fast
+   undurchsichtig sein, damit er oben am Textanfang noch traegt - und macht das
+   untere Drittel des Fotos schwarz. Gemessen und angesehen am 02.09.: genau der
+   bearbeitete Look, der laut Alesya (29.08.) weg sollte.
+   Das Band liegt stattdessen hinter dem Textblock, ist dort am kraeftigsten und
+   faellt nach oben UND nach unten ab. Darunter haelt ein schwacher Fussverlauf
+   den Bildrand ruhig. Der Textblock liegt bei rund 50 bis 78 % der Bildhoehe,
+   das Band spannt 40 bis 88 %. */
+.bot{position:absolute;left:0;right:0;top:40%;height:48%;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.62) 18%,
+    rgba(0,0,0,.76) 40%,rgba(0,0,0,.76) 78%,rgba(0,0,0,.4) 94%,
     rgba(0,0,0,0) 100%)}
+.foot{position:absolute;left:0;right:0;bottom:0;height:22%;
+  background:linear-gradient(0deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,0) 100%)}
 /* enge, kraeftige Verlaeufe fuer helle Bilder */
-.botlight{position:absolute;left:0;right:0;bottom:0;height:54%;
-  background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.84) 34%,
-    rgba(0,0,0,.6) 62%,rgba(0,0,0,0) 100%)}
-.toplight{position:absolute;left:0;right:0;top:0;height:48%;
-  background:linear-gradient(180deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.78) 48%,
+/* Dasselbe Band, nur kraeftiger. Sand und Wasser sind heller als jeder Stein,
+   belegt an Slide 3, 6, 10 und 11: dort lag der hellste Bildbereich hinter dem
+   Text bei 171 bis 198 von 255, creme darauf war nicht zu lesen. */
+.botlight{position:absolute;left:0;right:0;top:40%;height:48%;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.74) 18%,
+    rgba(0,0,0,.87) 40%,rgba(0,0,0,.87) 78%,rgba(0,0,0,.5) 94%,
     rgba(0,0,0,0) 100%)}
+.toplight{position:absolute;left:0;right:0;top:0;height:52%;
+  background:linear-gradient(180deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.9) 55%,
+    rgba(0,0,0,.8) 76%,rgba(0,0,0,.4) 92%,rgba(0,0,0,0) 100%)}
 .bar{position:absolute;left:80px;right:80px;top:88px;display:flex;align-items:center}
 .brand{display:flex;align-items:center;gap:14px}
 .brand svg{width:32px;height:32px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.95))}
@@ -219,26 +260,33 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .bar.dark .brand span{color:#0e3b2c;text-shadow:0 1px 4px rgba(255,255,255,.85)}
 .bar.dark .brand svg{filter:drop-shadow(0 1px 3px rgba(255,255,255,.9));opacity:.9}
 
-.block{position:absolute;left:80px;right:80px;top:50%;transform:translateY(-50%);
-  text-align:center}
-.head{font-family:'Archivo';font-weight:800;font-size:64px;line-height:1.1;
-  letter-spacing:-.02em;text-wrap:balance;color:#efc05a;
+/* Linksbuendig und groesser, nachgemessen an den Japan-Slides: dort ist die
+   Ueberschrift rund 78 px auf 1080 Breite, hier standen vorher 64. */
+.block{position:absolute;left:90px;right:110px;top:50%;transform:translateY(-50%);
+  text-align:left}
+/* Ueberschrift in CREME. Marigold traegt nur, was .hl auszeichnet - vorher war
+   die ganze Zeile marigold und hob damit nichts mehr hervor (Alesya, 02.09.:
+   „weiße und gelbe worte - gelb hebt etwas hervor"). */
+.head{font-family:'Archivo';font-weight:800;font-size:74px;line-height:1.08;
+  letter-spacing:-.02em;text-wrap:balance;color:#f4ecdb;
   text-shadow:0 4px 22px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.85)}
-.body{margin-top:26px;font-family:'Inter';font-weight:500;font-size:34px;line-height:1.45;
+.hl{color:#efc05a}
+.eyebrow{font-family:'Archivo';font-weight:800;text-transform:uppercase;
+  letter-spacing:.22em;font-size:27px;color:#efc05a;margin-bottom:18px;
+  text-shadow:0 2px 12px rgba(0,0,0,.9)}
+.body{margin-top:26px;font-family:'Inter';font-weight:500;font-size:40px;line-height:1.42;
   color:#f4ecdb;text-wrap:pretty;text-shadow:0 2px 16px rgba(0,0,0,.9)}
-/* Stichpunkte: Zeilen linksbuendig, die Liste als Ganzes mittig */
-.list{margin-top:30px;display:inline-block;text-align:left;
-  font-family:'Inter';font-weight:500;font-size:32px;line-height:1.4;color:#f4ecdb;
-  text-shadow:0 2px 16px rgba(0,0,0,.9)}
-.list div{position:relative;padding-left:34px;margin-bottom:16px}
+/* Einfache Zeilen statt Stichpunkte mit Punkten - so steht es auf den
+   Japan-Slides, die Alesya als Referenz geschickt hat. */
+.list{margin-top:28px;font-family:'Inter';font-weight:500;font-size:37px;
+  line-height:1.34;color:#f4ecdb;text-shadow:0 2px 16px rgba(0,0,0,.9)}
+.list div{margin-bottom:14px}
 .list div:last-child{margin-bottom:0}
-.list div::before{content:'';position:absolute;left:6px;top:.62em;width:9px;height:9px;
-  border-radius:50%;background:#efc05a}
 
-.cover .head{font-size:78px}
-.cover .body{margin-top:30px;font-size:33px;letter-spacing:.02em;opacity:.88}
-.end .head{font-size:70px}
-.end .body{font-size:31px;letter-spacing:.02em;opacity:.85}
+.cover .head{font-size:86px;line-height:1.04}
+.cover .body{margin-top:28px;font-size:38px;letter-spacing:.01em;opacity:.92}
+.end .head{font-size:80px}
+.end .body{font-size:36px;letter-spacing:.01em;opacity:.9}
 /* Schlusskarte: das eingecheckte DAYA-Lockup, kein nachgebauter Schriftzug */
 /* bottom 440 statt 300. Nachgemessen am 02.09.: bei 300 px sass die Unterkante
    der Wortmarke auf 84,3 % der Bildhoehe, also unter der 78-%-Linie, die genau
@@ -283,18 +331,25 @@ beats.forEach((b) => {
   const pngPath = join(OV, `${b.id}.png`);
   const lock = existsSync(LOCKUP) ? `<img src="file://${LOCKUP}">` : '';
   if (b.endcard && !lock) throw new Error('missing DAYA lockup ' + LOCKUP);
-  const text = `<div class="head">${esc(b.head)}</div>` +
-    (b.body ? `<div class="body">${esc(b.body)}</div>` : '') +
-    (b.bullets ? `<div class="list">${b.bullets.map((l) => `<div>${esc(l)}</div>`).join('')}</div>` : '');
+  const text =
+    (b.eyebrow ? `<div class="eyebrow">${esc(b.eyebrow)}</div>` : '') +
+    `<div class="head">${fmt(b.head)}</div>` +
+    (b.body ? `<div class="body">${fmt(b.body)}</div>` : '') +
+    (b.lines ? `<div class="list">${b.lines.map((l) => `<div>${fmt(l)}</div>`).join('')}</div>` : '');
   // Sitzt der Text tief, braucht er den unteren Verlauf.
-  const low = (b.ty || 50) >= 65;
+  // Schwelle 60 statt 65. Seit die Schrift groesser ist, liegen die Textbloecke
+  // auf ty 62 bis 63 statt 68 bis 72 - mit der alten Schwelle galten sie als
+  // "oben" und bekamen den Kopfverlauf, waehrend der Text auf ungeschuetztem
+  // hellem Sand stand. Gemessen am 02.09.: der hellste Bildbereich hinter dem
+  // Text lag auf Slide 6, 10 und 11 zwischen 171 und 196 von 255.
+  const low = (b.ty || 50) >= 60;
   const darkBar = Boolean(b.light) && low;
   // Nur so viel Verlauf wie noetig. Drei uebereinander machen das Foto matschig.
   const inner = `
   ${b.light ? '' : '<div class="top"></div>'}
   ${!b.light && !low && !b.endcard ? '<div class="mid"></div>' : ''}
-  ${b.light ? (low ? '<div class="botlight"></div>' : '<div class="toplight"></div>') : ''}
-  ${!b.light && (b.endcard || low) ? '<div class="bot"></div>' : ''}
+  ${b.light ? (low ? '<div class="botlight"></div><div class="foot"></div>' : '<div class="toplight"></div>') : ''}
+  ${!b.light && (b.endcard || low) ? '<div class="bot"></div><div class="foot"></div>' : ''}
   <div class="block${b.cover ? ' cover' : ''}${b.endcard ? ' end' : ''}"${b.ty ? ` style="top:${b.ty}%"` : ''}>${text}</div>`;
   writeFileSync(htmlPath, style + `<div class="wrap">
   ${inner}

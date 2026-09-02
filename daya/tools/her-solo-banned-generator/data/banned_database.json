@@ -739,32 +739,14 @@
   },
   "Italy": {
     "hook": {
-      "cover_head": "Italy will fine you for sitting down.",
-      "cover_sub": "Eleven things worth knowing before you go.",
-      "spoken": "Italy will fine you for sitting down. Eleven things worth knowing before you go.",
+      "cover_head": "Taking this home is a 3,000 euro fine.",
+      "cover_sub": "Eleven things Italy fines you for.",
+      "spoken": "Taking this home is a 3,000 euro fine. Eleven things Italy fines you for.",
       "close": "Save this before you go.",
-      "reveal_at": "steps",
-      "note": "Vierte Mechanik der Reihe. Japan war ein Bildraetsel, Thailand eine Liste, Korea ein Raetsel auf den Koffer der Leserin. Italien ist eine absurde, wahre Behauptung: man wird fuers Hinsetzen bestraft. Aufloesung auf Slide 4, die Spanische Treppe. Schlusszeile bewusst 'before you go' statt 'before you fly' - Italien faehrt man auch mit dem Zug, und die Zeile darf sich nicht wiederholen."
+      "reveal_at": "sand",
+      "note": "Zweite Fassung. Die erste war eine Behauptung („Italy will fine you for sitting down\"), und Alesya am 02.09.: „der hook ist scheisse - so haben wir es nicht entschieden! es muss ein raetsel sein\". Danach war die zweite Fassung zu verschachtelt: „der hook past nicht ganz. es muss einfach zu lesen sein\". Diese hier hat acht Woerter und keinen Nebensatz, wie der Japan-Hook, der 48 Speicherungen auf 2216 Aufrufe brachte. „this\" zeigt auf das Coverbild, einen Strand. Aufgeloest auf Slide 6, dem Sand - deshalb steht der Sand nicht mehr an erster Stelle, sondern in der Mitte."
     },
     "facts": [
-      {
-        "id": "sand",
-        "title": "Sand from the beach",
-        "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
-        "penalty_local": "Regional Law 16/2017: 500 to 3,000 euros for removing sand, pebbles or shells from any Sardinian beach. X-ray checks run at Olbia, Cagliari and Alghero airports and at the ferry terminals",
-        "penalty_usd": null,
-        "penalty_display": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
-        "bullets": [
-          "500 to 3,000 euros",
-          "Sand, pebbles and shells all count",
-          "X-ray checks at Olbia, Cagliari and Alghero",
-          "4 tonnes seized at one airport in two years"
-        ],
-        "tts": "Sand from a Sardinian beach. They X-ray your bag for it.",
-        "verified": true,
-        "checked": "2026-09-02",
-        "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com"
-      },
       {
         "id": "trail_shoes",
         "title": "Flip-flops on the trails",
@@ -814,7 +796,7 @@
           "Officers patrol the steps and whistle you off",
           "The rule has been enforced since 2019"
         ],
-        "tts": "This one's the answer. Sitting on the Spanish Steps. Two fifty.",
+        "tts": "Sitting on the Spanish Steps. Two hundred and fifty euros.",
         "verified": true,
         "checked": "2026-09-02",
         "source": "Comune di Roma decorum rules 2019; CNN travel; ABC News 08.08.2019; NBC News (enforcement patrols)"
@@ -838,6 +820,24 @@
         "source": "European Consumer Centre (evz.de / europe-consommateurs.eu) on Italian ZTL fines; Art. 7 Codice della Strada"
       },
       {
+        "id": "sand",
+        "title": "Sand from the beach",
+        "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
+        "penalty_local": "Regional Law 16/2017: 500 to 3,000 euros for removing sand, pebbles or shells from any Sardinian beach. X-ray checks run at Olbia, Cagliari and Alghero airports and at the ferry terminals",
+        "penalty_usd": null,
+        "penalty_display": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
+        "bullets": [
+          "500 to 3,000 euros",
+          "Sand, pebbles and shells all count",
+          "X-ray checks at Olbia, Cagliari and Alghero",
+          "4 tonnes seized at one airport in two years"
+        ],
+        "tts": "This is the one. Sand from a Sardinian beach. They X-ray your bag for it.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com"
+      },
+      {
         "id": "permit",
         "title": "Your licence on its own",
         "why": "The rental desk hands over the keys without asking. The police at the roadside are a different conversation.",
@@ -850,7 +850,7 @@
           "The rental desk won't ask. The police will",
           "You apply for it at home, not in Italy"
         ],
-        "tts": "A non-EU licence alone. It needs the international permit with it.",
+        "tts": "A non-EU licence alone. It needs the international permit.",
         "verified": true,
         "checked": "2026-09-02",
         "source": "Art. 135 Codice della Strada; internationaldrivingpermit.org country page Italy; vipcars.com non-EU licence guide"
@@ -868,7 +868,7 @@
           "Sitting on the ground to eat counts",
           "Swimming in a canal is 350"
         ],
-        "tts": "Sitting down to eat in Venice. Not the bridges, not the ground.",
+        "tts": "Eating on a bridge in Venice. Or on the ground.",
         "verified": true,
         "checked": "2026-09-02",
         "source": "Comune di Venezia, comune.venezia.it 'Forbidden behaviour' (decorum rules 2019)"
@@ -886,7 +886,7 @@
           "Beach clubs and pools are exempt",
           "Venice charges 250 for the same thing"
         ],
-        "tts": "Swimwear in town in Sorrento. The beach ends at the street.",
+        "tts": "Swimwear in Sorrento town. The beach ends at the street.",
         "verified": true,
         "checked": "2026-09-02",
         "source": "Sorrento mayoral ordinance 06.07.2022 (Mayor Massimo Coppola); CNN travel; thelocal.it 11.07.2022; Comune di Venezia forbidden behaviour"
@@ -922,7 +922,7 @@
           "Dawn clearances on public beaches",
           "Only free beaches, not the paid clubs"
         ],
-        "tts": "Leaving a towel out overnight to hold your spot. They take it.",
+        "tts": "Leaving a towel out overnight to hold your spot. It's gone.",
         "verified": true,
         "checked": "2026-09-02",
         "source": "Italian coastal enforcement against 'furbetti dell'ombrellone', summer 2026; Forbes 09.07.2026 (Italy's new beach rules); thelocal.it 12.08.2026; Coast Guard operation Torre del Greco"

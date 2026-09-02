@@ -4,14 +4,6 @@
   "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
   "facts": [
     {
-      "title": "Sand from the beach",
-      "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
-      "penalty": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
-      "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com",
-      "checked": "2026-09-02",
-      "verified": true
-    },
-    {
       "title": "Flip-flops on the trails",
       "why": "The Cinque Terre paths look like a coastal stroll from the village. They are a marked mountain trail and the rock is polished smooth.",
       "penalty": "50 euros at the low end and up to 2,500 if it ends in a rescue.",
@@ -40,6 +32,14 @@
       "why": "Historic centres are closed to traffic and the sign is small, in Italian, and often the same shape as the one before it. The car in front of you may live there.",
       "penalty": "About 80 to 130 euros per gate, and every camera you pass is a separate fine.",
       "source": "European Consumer Centre (evz.de / europe-consommateurs.eu) on Italian ZTL fines; Art. 7 Codice della Strada",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Sand from the beach",
+      "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
+      "penalty": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
+      "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com",
       "checked": "2026-09-02",
       "verified": true
     },

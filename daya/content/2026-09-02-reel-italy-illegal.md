@@ -1,4 +1,4 @@
-# Reel: „Italy will fine you for sitting down"
+# Reel: „Taking this home is a 3,000 euro fine"
 
 Datum: 02.09.2026 · Kanal: Instagram Reel + TikTok Karussell · Account: @her.solotrip
 Status: **Bilder fertig.** Dreizehn Slides liegen in
@@ -45,11 +45,11 @@ Keine Umrechnung noetig, alles in Euro.
 
 | # | Punkt | Strafe | Quelle |
 |---|---|---|---|
-| 1 | **Sand vom Strand** | 500 bis 3.000 €. Roentgenkontrolle in Olbia, Cagliari und Alghero. In zwei Jahren kamen allein in Olbia vier Tonnen aus dem Abfluggepaeck | Regionalgesetz Sardinien 16/2017; L'Unione Sarda 2026 zum Projekt „Take Me Back to the Sea" |
-| 2 | **Flipflops auf den Wegen** | Ab 50 €, bis 2.500 € bei Bergung. Ranger kontrollieren am Wegeingang. Gilt nur auf den markierten Wegen, nicht in den Doerfern | Nationalpark Cinque Terre, in Kraft seit 2019; idealista.it 16.06.2026; afar.com |
-| 3 | **Die Tasche am Strand** | Die **Kaeuferin** haftet mit, nicht nur der Verkaeufer. Belegter Einzelfall: eine oesterreichische Touristin zahlte in Venedig 1.000 € fuer eine Tasche | Anti-Faelschungsdekret 2005; italymagazine.com; thelocal.it 25.06.2018 |
-| 4 | **Sitzen auf der Spanischen Treppe** ← Aufloesung | 250 €, 400 € bei Flecken oder Schaeden. Ordner pfeifen die Leute herunter | Comune di Roma, Anstandsregeln 2019; CNN Travel; ABC News 08.08.2019 |
-| 5 | **Die Kamera am Strassenende** | Rund 80 bis 130 € pro Durchfahrt, **jedes Tor zaehlt einzeln**. Die Autovermietung legt bis zu 50 € Bearbeitungsgebuehr drauf, der Bescheid kommt Monate spaeter | Europaeisches Verbraucherzentrum (evz.de) zu ZTL-Bussgeldern; Art. 7 Codice della Strada |
+| 1 | **Flipflops auf den Wegen** | Ab 50 €, bis 2.500 € bei Bergung. Ranger kontrollieren am Wegeingang. Gilt nur auf den markierten Wegen, nicht in den Doerfern | Nationalpark Cinque Terre, in Kraft seit 2019; idealista.it 16.06.2026; afar.com |
+| 2 | **Die Tasche am Strand** | Die **Kaeuferin** haftet mit, nicht nur der Verkaeufer. Belegter Einzelfall: eine oesterreichische Touristin zahlte in Venedig 1.000 € fuer eine Tasche | Anti-Faelschungsdekret 2005; italymagazine.com; thelocal.it 25.06.2018 |
+| 3 | **Sitzen auf der Spanischen Treppe** | 250 €, 400 € bei Flecken oder Schaeden. Ordner pfeifen die Leute herunter | Comune di Roma, Anstandsregeln 2019; CNN Travel; ABC News 08.08.2019 |
+| 4 | **Die Kamera am Strassenende** | Rund 80 bis 130 € pro Durchfahrt, **jedes Tor zaehlt einzeln**. Die Autovermietung legt bis zu 50 € Bearbeitungsgebuehr drauf, der Bescheid kommt Monate spaeter | Europaeisches Verbraucherzentrum (evz.de) zu ZTL-Bussgeldern; Art. 7 Codice della Strada |
+| 5 | **Sand vom Strand** ← Aufloesung | 500 bis 3.000 €. Roentgenkontrolle in Olbia, Cagliari und Alghero. In zwei Jahren kamen allein in Olbia vier Tonnen aus dem Abfluggepaeck | Regionalgesetz Sardinien 16/2017; L'Unione Sarda 2026 zum Projekt „Take Me Back to the Sea" |
 | 6 | **Der Fuehrerschein allein** | 408 bis 1.634 €, sofort zahlbar, das Auto kann festgehalten werden. Betrifft nur Fuehrerscheine von ausserhalb der EU | Art. 135 Codice della Strada; internationaldrivingpermit.org Laenderseite Italien |
 | 7 | **Mittagessen auf einer Bruecke** | 100 bis 200 € fuers Sitzen oder Essen auf Bruecken, Stufen, Monumenten und Kaimauern. Dazu moeglich: ein urbaner Daspo. Schwimmen im Kanal 350 € | Comune di Venezia, „Forbidden behaviour", Anstandsregeln 2019 |
 | 8 | **Badekleidung im Ort** | 25 bis 500 € in Sorrent, seit Juli 2022. Strandclubs und Pools ausgenommen. Venedig ahndet dasselbe mit 250 € | Buergermeisterliche Anordnung Sorrent 06.07.2022; CNN Travel; thelocal.it 11.07.2022 |
@@ -77,35 +77,39 @@ Italien ohne Warnung durch. Bewusst draussen geblieben:
   kein Punkt.
 - **Vorhaengeschloesser an Bruecken.** Nur Foren als Quelle.
 
-Zwei Punkte sind absichtlich verwandt und stehen weit auseinander: Punkt 4 ist
+Zwei Punkte sind absichtlich verwandt und stehen weit auseinander: Punkt 3 ist
 Sitzen an sich, Punkt 7 ist Essen am Boden, andere Stadt, andere Norm.
 
-## Der Hook: die vierte Mechanik
+## Der Hook: zwei verworfene Fassungen, dann diese
 
 Japan war ein **Bildraetsel**, Thailand eine **Liste**, Korea ein **Raetsel auf den
-Koffer der Leserin**. Vier Posts mit derselben Mechanik waeren wieder der Einwand
-vom 01.09. gewesen: „der hook ist aber gleich wie der hook auf dem post davor".
+Koffer der Leserin**.
 
-Italien laeuft ueber eine **absurde, wahre Behauptung**:
+**Erste Fassung, verworfen.** „Italy will fine you for sitting down." Das war eine
+Behauptung, kein Raetsel. Alesya am 02.09.: „der hook ist scheisse - so haben wir es
+nicht entschieden! es muss ein raetsel sein." Sie hatte recht, im Plan stand ein
+Raetsel.
 
-> **Italy will fine you for sitting down.**
-> *Eleven things worth knowing before you go.*
+**Zweite Fassung, verworfen.** „The souvenir that costs 3,000 euros is free to pick
+up." Ein Raetsel, aber verschachtelt: „der hook past nicht ganz. es muss einfach zu
+lesen sein."
 
-Sie klingt nach Uebertreibung und stimmt woertlich. Aufgeloest wird sie auf
-**Slide 5** - Cover plus drei Punkte, dann die Spanische Treppe. Dieselbe Stelle
-wie bei Japan, wo die Aufloesung auf Slide 5 von 8 kam.
+**Gewaehlt:**
+
+> **Taking this home is a 3,000 euro fine.**
+> *Eleven things Italy fines you for.*
+
+Acht Woerter, kein Nebensatz, ein einziger Gedanke - dieselbe Bauart wie der
+Japan-Hook „One thing in this picture is banned in Japan", der mit 48 Speicherungen
+auf 2216 Aufrufe der beste Post des Accounts war.
+
+**„this" zeigt auf das Coverfoto**, einen Strand. Damit funktioniert das Bildraetsel,
+ohne die Japan-Zeile zu wiederholen. Deshalb steht der Sand nicht mehr an erster
+Stelle, sondern auf **Slide 6**, wo er den Hook aufloest.
 
 Die Schlusszeile heisst **„Save this before you go"**, nicht „before you fly".
 Nach Italien faehrt man auch, und dieselbe Zeile zum dritten Mal waere selbst eine
 Wiederholung.
-
-### Alternativen, falls sie eine andere will
-
-1. *Four tonnes of sand. That's what one Italian airport took out of tourists' bags.*
-   Belegt, aber die Zahl gehoert eigentlich zu Punkt 1 und verraet ihn zu frueh.
-2. *The cheapest thing on this list costs 200 euros. It's a beach towel.*
-   Guter Rhythmus, aber die 200 € sind nicht die guenstigste Zahl der Liste, das
-   waeren die 25 € in Sorrent. Also so nicht belegbar.
 
 ## Format
 
@@ -113,43 +117,42 @@ Wiederholung.
 Zahlen (`2026-07-05-reel-02-phone-stolen.md`): Karussells laufen auf TikTok 30 bis
 50x besser als Video, Reels bringen auf Instagram die Reichweite.
 
-## Skript, 154 Woerter, rund 54 Sekunden bei 172 W/min
+## Skript, 151 Woerter, rund 53 Sekunden bei 172 W/min
 
-Italy will fine you for sitting down. Eleven things worth knowing before you go.
+Taking this home is a 3,000 euro fine. Eleven things Italy fines you for.
 
-One. Sand from a Sardinian beach. They X-ray your bag for it.
+One. Flip-flops on the Cinque Terre trails. Rangers check at the gate.
 
-Two. Flip-flops on the Cinque Terre trails. Rangers check at the gate.
+Two. Buying a fake bag. The buyer pays too, not just the seller.
 
-Three. Buying a fake bag. The buyer pays too, not just the seller.
+Three. Sitting on the Spanish Steps. Two hundred and fifty euros.
 
-Four. This one's the answer. Sitting on the Spanish Steps. Two fifty.
+Four. Driving into a ZTL. Every camera you pass is its own fine.
 
-Five. Driving into a ZTL. Every camera you pass is its own fine.
+Five. This is the one. Sand from a Sardinian beach. They X-ray your bag for it.
 
-Six. A non-EU licence alone. It needs the international permit with it.
+Six. A non-EU licence alone. It needs the international permit.
 
-Seven. Sitting down to eat in Venice. Not the bridges, not the ground.
+Seven. Eating on a bridge in Venice. Or on the ground.
 
-Eight. Swimwear in town in Sorrento. The beach ends at the street.
+Eight. Swimwear in Sorrento town. The beach ends at the street.
 
 Nine. Walking into Venice on a control day without the ticket.
 
-Ten. Leaving a towel out overnight to hold your spot. They take it.
+Ten. Leaving a towel out overnight to hold your spot. It's gone.
 
 Eleven. Stepping into a fountain. Five hundred euros and a city ban.
 
 Save this before you go.
 
-**Zur Laenge.** 54 Sekunden. Elf Punkte gehen nicht kuerzer: das Werkzeug rechnet
+**Zur Laenge.** 53 Sekunden. Elf Punkte gehen nicht kuerzer: das Werkzeug rechnet
 mit 21 Woertern fuer Hook und Schluss plus elf je Punkt, beides an der
-Thailand-Tonspur gemessen. Das Budget liegt damit bei 142 Woertern und 50 Sekunden,
-das Skript liegt innerhalb der Toleranz. Wer 30 Sekunden will, braucht sieben
-Punkte, nicht kuerzere Saetze.
+Thailand-Tonspur gemessen. Wer 30 Sekunden will, braucht sieben Punkte, nicht
+kuerzere Saetze.
 
 ## Dreizehn Frames
 
-Cover, elf Punkte, Schlusskarte. Aufloesung auf Slide 5.
+Cover, elf Punkte, Schlusskarte. Aufloesung auf Slide 6, dem Sand.
 
 Gebaut mit `daya/studio/build-italy.mjs`, Muster von `build-thailand.mjs`.
 Slides in `daya/studio/reels/italy/slides/`, Fotos in
@@ -159,9 +162,9 @@ Slides in `daya/studio/reels/italy/slides/`, Fotos in
 
 ### Instagram
 
-> Italy will fine you for sitting down. Eleven things worth knowing before you go.
+> Taking this home is a 3,000 euro fine. It's the sand.
 >
-> The one that gets people is the Spanish Steps. Sitting on them has been 250 euros since 2019, and officers walk the staircase and whistle you off. No food needed, sitting is enough.
+> Sardinia has been losing tonnes of it a year, so taking sand, pebbles or shells off any beach there runs 500 to 3,000 euros under regional law. Four tonnes came out of departing luggage at Olbia airport alone in two years.
 >
 > The expensive one is quieter. Drive into a ZTL, one of the camera-controlled zones in almost every historic centre, and it's around 80 to 130 euros per gate. Every camera counts separately, your rental company adds its own fee, and the letter reaches you months after you're home.
 >
@@ -173,7 +176,7 @@ Slides in `daya/studio/reels/italy/slides/`, Fotos in
 
 ### TikTok
 
-> Italy will fine you for sitting down. Eleven things worth knowing before you go.
+> Taking this home is a 3,000 euro fine. Eleven things Italy fines you for.
 >
 > #solofemaletravel #italy #traveltok #solotravel #fyp
 
@@ -201,17 +204,50 @@ durch einen anderen Ort statt einen besseren Prompt:
 Dazu zwei Varianten, bei denen die Kamera hinter einer sitzenden Frau auf
 Huefthoehe stand. Raus nach derselben Regel wie am 14.08. und 25.08.
 
-**Slide 5 zweimal korrigiert.** Der mittige Zuschnitt schnitt die Frau fast
-heraus, uebrig blieben nackte Stufen - ausgerechnet auf der Aufloesung. Mit
-`oy: 0.82` war sie wieder da, aber der Text bei `ty: 70` stand auf ihrem Kopf.
-Jetzt steht der Text oben und sie sitzt frei darunter.
+## Der Textstil, zweiter Anlauf
 
-**Ein Fund, der ueber diesen Post hinausgeht.** Die 78-%-Regel habe ich
-nachgemessen statt geschaetzt: alle Textbloecke liegen zwischen 75,8 und 78,1 %.
-Die DAYA-Wortmarke auf der Schlusskarte lag dagegen bei **84,3 %**. Der
-Kommentar in `build-thailand.mjs` behauptet, `bottom: 300px` setze sie ueber die
-Linie - gerechnet wurde das nie, 300 px ueber dem Rand eines 1920er-Bildes sind
-84 %. Bei Italien steht sie jetzt auf 77,0 %.
+Alesya am 02.09., mit drei Japan-Slides als Referenz: „bitte mach die texte wie
+hier also weiße und gelbe worte - gelb hebt etwas hervor. und kann sein dass die
+buchstaben bei japan größer sind?"
+
+**Beides stimmte.** Nachgemessen an den Japan-Slides:
+
+| | vorher | jetzt |
+|---|---|---|
+| Ueberschrift | 64 px, **komplett marigold** | 74 px, **creme mit marigold-Auszeichnung** |
+| Zeilen | 32 px, mit Punkten davor | 37 px, einfache Zeilen |
+| Cover | 78 px | 86 px |
+| Satz | zentriert | linksbuendig |
+
+Eine durchgehend marigold Ueberschrift hebt nichts mehr hervor - das war der
+eigentliche Fehler, nicht die Farbe an sich. Ausgezeichnet wird jetzt mit
+`*Sternchen*` im Beat, dieselbe Konvention wie in `build-carousel.mjs`.
+
+## Der Verlauf: von der Rampe zum Band
+
+Mit der groesseren Schrift beginnt der Textblock hoeher, bei rund 50 % statt
+54 %. Das hat zwei Fehler nacheinander sichtbar gemacht.
+
+**Erst ein Logikfehler.** Die Schwelle „Text liegt tief" stand auf `ty >= 65`,
+die neuen Bloecke liegen aber auf 62 und 63. Damit bekamen ausgerechnet die
+hellen Slides den Verlauf **oben**, waehrend der Text unten auf ungeschuetztem
+Sand stand. Gemessen: der hellste Bildbereich hinter dem Text lag auf Slide 6,
+10 und 11 zwischen 171 und 198 von 255. Schwelle jetzt 60.
+
+**Dann ein Gestaltungsfehler.** Ein vom unteren Rand hochlaufender Verlauf muss
+unten fast undurchsichtig sein, damit er oben am Textanfang noch traegt - und
+macht dabei das untere Drittel des Fotos schwarz. Genau der bearbeitete Look,
+der laut Alesya (29.08.) weg sollte. Der Verlauf liegt jetzt als **Band hinter
+dem Textblock**, 40 bis 88 % der Bildhoehe, am kraeftigsten in der Mitte und nach
+oben wie nach unten abfallend. Darunter haelt ein schwacher Fussverlauf den
+Bildrand ruhig. Auf den fertigen Slides ist das Foto ueber und unter dem Text
+wieder zu sehen.
+
+**Ein Fund, der ueber diesen Post hinausgeht.** Alle Textbloecke liegen jetzt
+zwischen 71 und 78 % der Bildhoehe. Die DAYA-Wortmarke auf der Schlusskarte lag
+dagegen bei **84,3 %**. Der Kommentar in `build-thailand.mjs` behauptet,
+`bottom: 300px` setze sie ueber die Linie - gerechnet wurde das nie, 300 px ueber
+dem Rand eines 1920er-Bildes sind 84 %. Bei Italien steht sie jetzt auf 77,0 %.
 
 **Der Thailand-Post ist damit betroffen.** Er ist raus, dort sitzt die
 Wortmarke auf denselben 84,3 % und kann auf TikTok von der Oberflaeche verdeckt
