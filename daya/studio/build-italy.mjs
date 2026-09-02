@@ -138,10 +138,10 @@ const BEATS = [
     eyebrow: 'THIS IS THE ONE',
     head: 'Sand from the *beach*.',
     lines: [
-      'Free to pick up, *up to 3,000 euros* to take home',
+      'Free to pick up. *Up to 3,000 euros* to keep',
       'Sand, pebbles and shells all count',
       'X-ray checks at Olbia, Cagliari and Alghero',
-      '*Four tonnes* came out of one airport in two years',
+      '*Four tonnes* seized in two years, one airport',
     ] },
 
   // Frame 7 - Internationaler Fuehrerschein, Art. 135 Codice della Strada.
@@ -158,7 +158,7 @@ const BEATS = [
   { id: '08', photo: 'f08-bridge', ty: 63,
     head: 'Lunch on a *bridge*.',
     lines: [
-      'Venice: bridges, steps, monuments, quaysides',
+      'Venice: bridges, steps, monuments, quays',
       '*100 to 200 euros*',
       'Sitting on the ground to eat counts too',
       'Swimming in a canal is *350*',
@@ -187,7 +187,11 @@ const BEATS = [
 
   // Frame 11 - Handtuch. Objektbild ohne Menschen, erlaubt seit Alesyas
   // Entscheidung vom 26.08.: der Gegenstand ist hier der Inhalt.
-  { id: '11', photo: 'f11-towel', light: true, darkBar: true, ty: 63,
+  // ty 50 statt 63: bei 63 lagen die Zeilen auf hellem Sand und waren
+  // schwaecher als auf jedem anderen Slide. Weiter oben liegt das ruhige,
+  // dunklere Meer. Alesya, 02.09.: „bild 11 - text im bild etwas nach oben
+  // schieben."
+  { id: '11', photo: 'f11-towel', light: true, darkBar: true, ty: 50,
     head: 'The towel you *left out*.',
     lines: [
       'Umbrellas, chairs and towels left overnight',
@@ -207,10 +211,15 @@ const BEATS = [
       'One lifetime ban handed out in May 2026',
     ] },
 
-  // Frame 13 - Schlusskarte. „before you go" statt „before you fly": nach
-  // Italien faehrt man auch, und die Zeile darf sich nicht wiederholen.
+  // Frame 13 - Schlusskarte. „Save this for your Italy trip" statt „before you
+  // go". Alesya, 02.09.: „bitte nicht einfach - before you go, sondern save
+  // this for your italy trip oder so. ich glaube das war in japan auch".
+  // Japans Schlusskarte hiess „Now go book it.", die Form kommt aber sehr wohl
+  // aus ihren eigenen Posts: „Save this for your next hotel" (14.08.), „Save
+  // this before your next transfer" (18.08.), „save this for your next trip"
+  // (06.07.). Ein Ziel im Satz schlaegt ein blosses „before you go".
   { id: 'end', photo: 'f13-end', endcard: true, ty: 60,
-    head: 'Save this *before you go*.',
+    head: 'Save this for your *Italy trip*.',
     body: 'Follow for more.' },
 ];
 
@@ -261,32 +270,35 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .bar.dark .brand svg{filter:drop-shadow(0 1px 3px rgba(255,255,255,.9));opacity:.9}
 
 /* Linksbuendig und groesser, nachgemessen an den Japan-Slides: dort ist die
-   Ueberschrift rund 78 px auf 1080 Breite, hier standen vorher 64. */
+   Ueberschrift rund 78 px auf 1080 Breite, hier standen vorher 64. Am 02.09.
+   noch einmal um 3 px angehoben, auf Alesyas Bitte („um 1-3 mehr? sodass man
+   den text besser lesen kann ohne etwas auf das bild zu klatschen") - seit die
+   Verlaeufe weg sind, traegt die Groesse die Lesbarkeit mit. */
 .block{position:absolute;left:90px;right:110px;top:50%;transform:translateY(-50%);
   text-align:left}
 /* Ueberschrift in CREME. Marigold traegt nur, was .hl auszeichnet - vorher war
    die ganze Zeile marigold und hob damit nichts mehr hervor (Alesya, 02.09.:
    „weiße und gelbe worte - gelb hebt etwas hervor"). */
-.head{font-family:'Archivo';font-weight:800;font-size:74px;line-height:1.08;
+.head{font-family:'Archivo';font-weight:800;font-size:77px;line-height:1.08;
   letter-spacing:-.02em;text-wrap:balance;color:#f4ecdb;
   text-shadow:0 4px 22px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.85)}
 .hl{color:#efc05a}
 .eyebrow{font-family:'Archivo';font-weight:800;text-transform:uppercase;
-  letter-spacing:.22em;font-size:27px;color:#efc05a;margin-bottom:18px;
+  letter-spacing:.22em;font-size:29px;color:#efc05a;margin-bottom:18px;
   text-shadow:0 2px 12px rgba(0,0,0,.9)}
-.body{margin-top:26px;font-family:'Inter';font-weight:500;font-size:40px;line-height:1.42;
+.body{margin-top:26px;font-family:'Inter';font-weight:500;font-size:43px;line-height:1.42;
   color:#f4ecdb;text-wrap:pretty;text-shadow:0 2px 16px rgba(0,0,0,.9)}
 /* Einfache Zeilen statt Stichpunkte mit Punkten - so steht es auf den
    Japan-Slides, die Alesya als Referenz geschickt hat. */
-.list{margin-top:28px;font-family:'Inter';font-weight:500;font-size:37px;
+.list{margin-top:28px;font-family:'Inter';font-weight:500;font-size:40px;
   line-height:1.34;color:#f4ecdb;text-shadow:0 2px 16px rgba(0,0,0,.9)}
 .list div{margin-bottom:14px}
 .list div:last-child{margin-bottom:0}
 
-.cover .head{font-size:86px;line-height:1.04}
-.cover .body{margin-top:28px;font-size:38px;letter-spacing:.01em;opacity:.92}
-.end .head{font-size:80px}
-.end .body{font-size:36px;letter-spacing:.01em;opacity:.9}
+.cover .head{font-size:89px;line-height:1.04}
+.cover .body{margin-top:28px;font-size:41px;letter-spacing:.01em;opacity:.92}
+.end .head{font-size:83px}
+.end .body{font-size:39px;letter-spacing:.01em;opacity:.9}
 /* Schlusskarte: das eingecheckte DAYA-Lockup, kein nachgebauter Schriftzug */
 /* bottom 440 statt 300. Nachgemessen am 02.09.: bei 300 px sass die Unterkante
    der Wortmarke auf 84,3 % der Bildhoehe, also unter der 78-%-Linie, die genau

@@ -107,9 +107,16 @@ auf 2216 Aufrufe der beste Post des Accounts war.
 ohne die Japan-Zeile zu wiederholen. Deshalb steht der Sand nicht mehr an erster
 Stelle, sondern auf **Slide 6**, wo er den Hook aufloest.
 
-Die Schlusszeile heisst **„Save this before you go"**, nicht „before you fly".
-Nach Italien faehrt man auch, und dieselbe Zeile zum dritten Mal waere selbst eine
-Wiederholung.
+Die Schlusskarte heisst **„Save this for your Italy trip."** Alesya am 02.09.:
+„bitte nicht einfach - before you go, sondern save this for your italy trip oder
+so. ich glaube das war in japan auch." Bei Japan hiess die Schlusskarte „Now go
+book it.", aber die Form steht sehr wohl in ihren eigenen Posts: „Save this for
+your next hotel" (14.08.), „Save this before your next transfer" (18.08.), „save
+this for your next trip" (06.07.). Ein Ziel im Satz schlaegt ein blosses „before
+you go".
+
+In der Tonspur bleibt die kuerzere Zeile „Save this before you go", dort gibt es
+kein Bild, das den Bezug traegt.
 
 ## Format
 
@@ -256,9 +263,16 @@ der Kopfzeile: ueber 120 von 255 verschwindet Creme, darunter reicht es. Slide
 steht jetzt als `darkBar` am Beat statt an `b.light`, weil helle Fotos einen
 dunklen Bildkopf haben koennen und umgekehrt.
 
-**Wo es eng bleibt.** Auf Slide 3 und 11 liegen die Zeilen auf hellem Sand und
-sind in echter Anzeigegroesse schwaecher als der Rest. Geaendert habe ich daran
-nichts, Alesyas Entscheidung steht.
+**Wo es eng blieb, und was dagegen half.** Auf Slide 3 und 11 lagen die Zeilen
+auf hellem Sand und waren schwaecher als der Rest. Zwei Aenderungen am 02.09.,
+beide von Alesya: die Schrift drei Pixel groesser („um 1-3 mehr? sodass man den
+text besser lesen kann ohne etwas auf das bild zu klatschen"), und auf Slide 11
+der Text nach oben aufs ruhige Meer statt auf den Sand. Damit sind Ueberschrift
+77 px, Zeilen 40 px, Cover 89 px.
+
+Drei Zeilen brachen durch die groessere Schrift um und sind gekuerzt: der Sand
+(„Free to pick up. Up to 3,000 euros to keep", „Four tonnes seized in two years,
+one airport") und Venedig („bridges, steps, monuments, quays").
 
 **Ein Fund, der ueber diesen Post hinausgeht.** Alle Textbloecke liegen zwischen
 71 und 78 % der Bildhoehe. Die DAYA-Wortmarke auf der Schlusskarte lag dagegen
