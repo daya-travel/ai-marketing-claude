@@ -223,7 +223,7 @@ Eine durchgehend marigold Ueberschrift hebt nichts mehr hervor - das war der
 eigentliche Fehler, nicht die Farbe an sich. Ausgezeichnet wird jetzt mit
 `*Sternchen*` im Beat, dieselbe Konvention wie in `build-carousel.mjs`.
 
-## Der Verlauf: von der Rampe zum Band
+## Der Verlauf: erst repariert, dann ganz gestrichen
 
 Mit der groesseren Schrift beginnt der Textblock hoeher, bei rund 50 % statt
 54 %. Das hat zwei Fehler nacheinander sichtbar gemacht.
@@ -232,28 +232,40 @@ Mit der groesseren Schrift beginnt der Textblock hoeher, bei rund 50 % statt
 die neuen Bloecke liegen aber auf 62 und 63. Damit bekamen ausgerechnet die
 hellen Slides den Verlauf **oben**, waehrend der Text unten auf ungeschuetztem
 Sand stand. Gemessen: der hellste Bildbereich hinter dem Text lag auf Slide 6,
-10 und 11 zwischen 171 und 198 von 255. Schwelle jetzt 60.
+10 und 11 zwischen 171 und 198 von 255. Schwelle danach 60.
 
 **Dann ein Gestaltungsfehler.** Ein vom unteren Rand hochlaufender Verlauf muss
 unten fast undurchsichtig sein, damit er oben am Textanfang noch traegt - und
-macht dabei das untere Drittel des Fotos schwarz. Genau der bearbeitete Look,
-der laut Alesya (29.08.) weg sollte. Der Verlauf liegt jetzt als **Band hinter
-dem Textblock**, 40 bis 88 % der Bildhoehe, am kraeftigsten in der Mitte und nach
-oben wie nach unten abfallend. Darunter haelt ein schwacher Fussverlauf den
-Bildrand ruhig. Auf den fertigen Slides ist das Foto ueber und unter dem Text
-wieder zu sehen.
+macht dabei das untere Drittel des Fotos schwarz. Umgebaut zu einem Band hinter
+dem Textblock.
 
-**Ein Fund, der ueber diesen Post hinausgeht.** Alle Textbloecke liegen jetzt
-zwischen 71 und 78 % der Bildhoehe. Die DAYA-Wortmarke auf der Schlusskarte lag
-dagegen bei **84,3 %**. Der Kommentar in `build-thailand.mjs` behauptet,
-`bottom: 300px` setze sie ueber die Linie - gerechnet wurde das nie, 300 px ueber
-dem Rand eines 1920er-Bildes sind 84 %. Bei Italien steht sie jetzt auf 77,0 %.
+**Und dann raus.** Alesya, 02.09., nachdem sie das Band gesehen hatte: „Lass
+alle Verdunklungen hinter dem Text bitte weg. Alle Fotos bleiben so, wie sie
+sind." Sie hat Cover, Schlusskarte, Spanische Treppe und Strand einzeln genannt.
+Ihr Argument: „Ich finde, man kann es gut lesen."
 
-**Der Thailand-Post ist damit betroffen.** Er ist raus, dort sitzt die
-Wortmarke auf denselben 84,3 % und kann auf TikTok von der Oberflaeche verdeckt
-sein. Aendern laesst sich der veroeffentlichte Post nicht, aber
-`build-thailand.mjs` muss dieselbe Korrektur bekommen, bevor daraus noch einmal
-etwas gebaut wird.
+Es gibt jetzt **keinen einzigen Verlauf** mehr auf den Slides. Was den Text
+traegt, ist allein der Schlagschatten an `.head`, `.body` und `.list`. Die
+Klassen stehen noch im Stylesheet, werden aber nicht ausgegeben - eine Zeile in
+`build-italy.mjs` holt sie zurueck, falls die Entscheidung je kippt.
+
+**Eine Folge davon musste ich entscheiden.** Ohne Kopfverlauf steht die
+Kopfzeile „her.solotrip" auf sechs Slides auf hellem Grund. Gemessen im Rechteck
+der Kopfzeile: ueber 120 von 255 verschwindet Creme, darunter reicht es. Slide
+1, 2, 3, 6, 10 und 11 tragen sie deshalb in Emerald, der Rest in Creme. Das
+steht jetzt als `darkBar` am Beat statt an `b.light`, weil helle Fotos einen
+dunklen Bildkopf haben koennen und umgekehrt.
+
+**Wo es eng bleibt.** Auf Slide 3 und 11 liegen die Zeilen auf hellem Sand und
+sind in echter Anzeigegroesse schwaecher als der Rest. Geaendert habe ich daran
+nichts, Alesyas Entscheidung steht.
+
+**Ein Fund, der ueber diesen Post hinausgeht.** Alle Textbloecke liegen zwischen
+71 und 78 % der Bildhoehe. Die DAYA-Wortmarke auf der Schlusskarte lag dagegen
+bei **84,3 %**. Der Kommentar in `build-thailand.mjs` behauptet, `bottom: 300px`
+setze sie ueber die Linie - gerechnet wurde das nie, 300 px ueber dem Rand eines
+1920er-Bildes sind 84 %. Bei Italien steht sie jetzt auf 77,0 %. Der
+Thailand-Post ist raus, dort sitzt sie noch auf 84,3 %.
 
 ## Offen
 

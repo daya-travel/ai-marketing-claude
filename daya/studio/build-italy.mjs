@@ -82,13 +82,13 @@ const fmt = (s) => esc(s).replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>');
 const BEATS = [
   // Frame 1 - Das Raetsel. Coverfoto ist ein Strand, „this" zeigt darauf.
   // Aufgeloest auf Slide 6.
-  { id: '01', photo: 'f00-cover', cover: true, light: true, ty: 27,
+  { id: '01', photo: 'f00-cover', cover: true, light: true, darkBar: true, ty: 27,
     head: 'Taking this home is a *3,000 euro* fine.',
     body: 'Eleven things Italy fines you for.' },
 
   // Frame 2 - Cinque Terre. Gilt nur auf den markierten Wegen, das gehoert
   // dazu, sonst ist es ein Verbot, das niemanden trifft.
-  { id: '02', photo: 'f03-trail', ty: 63,
+  { id: '02', photo: 'f03-trail', darkBar: true, ty: 63,
     head: 'Flip-flops on the *trails*.',
     lines: [
       'The marked coastal paths in the Cinque Terre',
@@ -100,7 +100,7 @@ const BEATS = [
   // Frame 3 - Faelschungen. Der interessante Teil ist die Haftung der
   // Kaeuferin, nicht die strittige Obergrenze. Deshalb steht hier der belegte
   // Einzelfall und keine Spanne bis 10.000.
-  { id: '03', photo: 'f04-fake', light: true, ty: 63,
+  { id: '03', photo: 'f04-fake', light: true, darkBar: true, ty: 63,
     head: 'The bag on the *beach towel*.',
     lines: [
       'The *buyer* is liable, not only the seller',
@@ -134,7 +134,7 @@ const BEATS = [
   // Frame 6 - AUFLOESUNG. Regionalgesetz Sardinien 16/2017. Die vier Tonnen
   // sind aus dem Bericht zum Projekt „Take Me Back to the Sea", nicht
   // geschaetzt.
-  { id: '06', photo: 'f02-sand', light: true, ty: 62,
+  { id: '06', photo: 'f02-sand', light: true, darkBar: true, ty: 62,
     eyebrow: 'THIS IS THE ONE',
     head: 'Sand from the *beach*.',
     lines: [
@@ -176,7 +176,7 @@ const BEATS = [
 
   // Frame 10 - Contributo di accesso. Der Kalender wechselt jaehrlich, deshalb
   // steht hier der Stand 2026 und im Content-Doc das Pruefdatum.
-  { id: '10', photo: 'f10-lagoon', light: true, ty: 63,
+  { id: '10', photo: 'f10-lagoon', light: true, darkBar: true, ty: 63,
     head: '*Walking into* Venice.',
     lines: [
       'Day visitors only, hotel guests are exempt',
@@ -187,7 +187,7 @@ const BEATS = [
 
   // Frame 11 - Handtuch. Objektbild ohne Menschen, erlaubt seit Alesyas
   // Entscheidung vom 26.08.: der Gegenstand ist hier der Inhalt.
-  { id: '11', photo: 'f11-towel', light: true, ty: 63,
+  { id: '11', photo: 'f11-towel', light: true, darkBar: true, ty: 63,
     head: 'The towel you *left out*.',
     lines: [
       'Umbrellas, chairs and towels left overnight',
@@ -343,13 +343,24 @@ beats.forEach((b) => {
   // hellem Sand stand. Gemessen am 02.09.: der hellste Bildbereich hinter dem
   // Text lag auf Slide 6, 10 und 11 zwischen 171 und 196 von 255.
   const low = (b.ty || 50) >= 60;
-  const darkBar = Boolean(b.light) && low;
-  // Nur so viel Verlauf wie noetig. Drei uebereinander machen das Foto matschig.
+  // Ohne Kopfverlauf entscheidet allein das Foto, welche Farbe die Kopfzeile
+  // braucht. Gemessen am 02.09. an der Backplate, im Rechteck der Kopfzeile:
+  // ueber 120 von 255 steht Creme auf Hell und verschwindet, darunter tut es
+  // Emerald. Deshalb steht die Entscheidung als Flag am Beat und nicht mehr an
+  // b.light - Slide 4 und 8 sind helle Fotos mit dunklem Bildkopf, Slide 2 ein
+  // dunkles mit hellem.
+  const darkBar = Boolean(b.darkBar);
+  // KEINE VERLAEUFE MEHR. Entscheidung Alesya, 02.09.2026, nachdem sie die
+  // Fassung mit Band gesehen hatte: „Lass alle Verdunklungen hinter dem Text
+  // bitte weg. Alle Fotos bleiben so, wie sie sind." Genannt hatte sie das
+  // Cover, die Schlusskarte, die Spanische Treppe und den Strand - dort war es
+  // ihr zu dunkel, und lesen liess es sich auch ohne.
+  //
+  // Was den Text jetzt traegt, ist allein der Schlagschatten an .head, .body
+  // und .list. Die Klassen .top, .mid, .bot, .botlight, .toplight und .foot
+  // stehen noch im Stylesheet, werden aber nicht mehr ausgegeben - falls die
+  // Entscheidung je zurueckgenommen wird, reicht eine Zeile hier.
   const inner = `
-  ${b.light ? '' : '<div class="top"></div>'}
-  ${!b.light && !low && !b.endcard ? '<div class="mid"></div>' : ''}
-  ${b.light ? (low ? '<div class="botlight"></div><div class="foot"></div>' : '<div class="toplight"></div>') : ''}
-  ${!b.light && (b.endcard || low) ? '<div class="bot"></div><div class="foot"></div>' : ''}
   <div class="block${b.cover ? ' cover' : ''}${b.endcard ? ' end' : ''}"${b.ty ? ` style="top:${b.ty}%"` : ''}>${text}</div>`;
   writeFileSync(htmlPath, style + `<div class="wrap">
   ${inner}
