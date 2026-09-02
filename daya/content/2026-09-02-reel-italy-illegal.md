@@ -119,9 +119,15 @@ schon, nur an der falschen Stelle - das Bild im Repo ist nicht die Fassung, die
 draussen war.
 
 Damit gilt die Zeile auch fuer die **Tonspur**, nicht nur fuers Bild. Das Skript
-endet auf „Save this for your Italy trip." Der Schlussslide ist ausserdem
-**mittig gesetzt** statt linksbuendig, die elf Punkte-Slides bleiben
-linksbuendig.
+endet auf „Save this for your Italy trip."
+
+**Cover und Schlusskarte stehen mittig**, die elf Punkte-Slides linksbuendig.
+Alesya, 02.09.: „mach den text auf dem letzten bild mittig, nicht seitlich" und
+„text auf dem cover groesser und zentrierter wie in japan". Die Cover-Zeile ist
+dafuer von 89 auf 102 px gewachsen und laeuft jetzt ueber drei Zeilen wie beim
+Japan-Cover. Beide Karten tragen nur zwei Zeilen ohne Aufzaehlung darunter, dort
+steht zentriert besser; die Punkte-Slides brauchen die linke Kante, damit die
+Zeilen untereinander fluchten.
 
 ## Format
 

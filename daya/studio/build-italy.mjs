@@ -278,6 +278,7 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
    Verlaeufe weg sind, traegt die Groesse die Lesbarkeit mit. */
 .block{position:absolute;left:90px;right:110px;top:50%;transform:translateY(-50%);
   text-align:left}
+/* .block.cover und .block.end ueberschreiben left/right weiter unten */
 /* Ueberschrift in CREME. Marigold traegt nur, was .hl auszeichnet - vorher war
    die ganze Zeile marigold und hob damit nichts mehr hervor (Alesya, 02.09.:
    „weiße und gelbe worte - gelb hebt etwas hervor"). */
@@ -297,12 +298,13 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .list div{margin-bottom:14px}
 .list div:last-child{margin-bottom:0}
 
-/* Schlusskarte mittig. Die Punkte-Slides bleiben linksbuendig wie bei Japan,
-   die Schlusskarte hat keine Zeilen darunter und steht zentriert besser
-   (Alesya, 02.09.: „mach den text auf dem letzten bild mittig, nicht
-   seitlich"). */
-.block.end{text-align:center}
-.cover .head{font-size:89px;line-height:1.04}
+/* Cover und Schlusskarte mittig, die elf Punkte-Slides bleiben linksbuendig.
+   Alesya, 02.09.: „mach den text auf dem letzten bild mittig, nicht seitlich"
+   und „text auf dem cover groesser und zentrierter wie in japan". Beide Karten
+   tragen nur zwei Zeilen ohne Aufzaehlung darunter, zentriert steht das besser.
+   Die Raender werden dafuer symmetrisch, sonst sitzt der Block optisch links. */
+.block.cover,.block.end{text-align:center;left:80px;right:80px}
+.cover .head{font-size:102px;line-height:1.02}
 .cover .body{margin-top:28px;font-size:41px;letter-spacing:.01em;opacity:.92}
 .end .head{font-size:83px}
 .end .body{font-size:39px;letter-spacing:.01em;opacity:.9}
