@@ -1,7 +1,8 @@
 # Reel: „Italy will fine you for sitting down"
 
 Datum: 02.09.2026 · Kanal: Instagram Reel + TikTok Karussell · Account: @her.solotrip
-Status: **Entwurf.** Texte und Belege stehen, Bilder und Tonspur fehlen.
+Status: **Bilder fertig.** Dreizehn Slides liegen in
+`daya/studio/reels/italy/slides/`. Tonspur fehlt, erst nach Abnahme der Texte.
 
 ## Warum Italien und nicht Korea
 
@@ -91,8 +92,8 @@ Italien laeuft ueber eine **absurde, wahre Behauptung**:
 > *Eleven things worth knowing before you go.*
 
 Sie klingt nach Uebertreibung und stimmt woertlich. Aufgeloest wird sie auf
-**Slide 4**, der Spanischen Treppe - dieselbe Stelle wie bei Japan, wo die
-Aufloesung auf Slide 5 von 8 kam.
+**Slide 5** - Cover plus drei Punkte, dann die Spanische Treppe. Dieselbe Stelle
+wie bei Japan, wo die Aufloesung auf Slide 5 von 8 kam.
 
 Die Schlusszeile heisst **„Save this before you go"**, nicht „before you fly".
 Nach Italien faehrt man auch, und dieselbe Zeile zum dritten Mal waere selbst eine
@@ -148,7 +149,11 @@ Punkte, nicht kuerzere Saetze.
 
 ## Dreizehn Frames
 
-Cover, elf Punkte, Schlusskarte. Aufloesung auf Slide 4.
+Cover, elf Punkte, Schlusskarte. Aufloesung auf Slide 5.
+
+Gebaut mit `daya/studio/build-italy.mjs`, Muster von `build-thailand.mjs`.
+Slides in `daya/studio/reels/italy/slides/`, Fotos in
+`daya/studio/photos/italy/final/`.
 
 ## Captions
 
@@ -182,10 +187,41 @@ Beschilderung ist hier das Hauptrisiko, also schriftfreie Orte: Treppe, Kieselst
 Kreuzgang, Zypressenweg, Kanal von oben, Marmorboden. Keine Einkaufsstrasse, kein
 Bahnhof, kein Cafe mit Tafel.
 
+## Was beim Bauen der Bilder passiert ist
+
+**Vier von dreissig Varianten flogen wegen Schrift raus**, jedes Mal geloest
+durch einen anderen Ort statt einen besseren Prompt:
+
+- Ein Gebaeude ueber der Treppe trug „KAFCKXS" und „RR"
+- Am Campo hing ein Strassenschild mit Salat darauf
+- Das gestreifte Handtuch war laengs bedruckt
+- Eine Lagunen-Variante kam als Postkarte mit der Ueberschrift
+  „VENETIA / YETOMDE PEVCRETR GOUT"
+
+Dazu zwei Varianten, bei denen die Kamera hinter einer sitzenden Frau auf
+Huefthoehe stand. Raus nach derselben Regel wie am 14.08. und 25.08.
+
+**Slide 5 zweimal korrigiert.** Der mittige Zuschnitt schnitt die Frau fast
+heraus, uebrig blieben nackte Stufen - ausgerechnet auf der Aufloesung. Mit
+`oy: 0.82` war sie wieder da, aber der Text bei `ty: 70` stand auf ihrem Kopf.
+Jetzt steht der Text oben und sie sitzt frei darunter.
+
+**Ein Fund, der ueber diesen Post hinausgeht.** Die 78-%-Regel habe ich
+nachgemessen statt geschaetzt: alle Textbloecke liegen zwischen 75,8 und 78,1 %.
+Die DAYA-Wortmarke auf der Schlusskarte lag dagegen bei **84,3 %**. Der
+Kommentar in `build-thailand.mjs` behauptet, `bottom: 300px` setze sie ueber die
+Linie - gerechnet wurde das nie, 300 px ueber dem Rand eines 1920er-Bildes sind
+84 %. Bei Italien steht sie jetzt auf 77,0 %.
+
+**Der Thailand-Post ist damit betroffen.** Er ist raus, dort sitzt die
+Wortmarke auf denselben 84,3 % und kann auf TikTok von der Oberflaeche verdeckt
+sein. Aendern laesst sich der veroeffentlichte Post nicht, aber
+`build-thailand.mjs` muss dieselbe Korrektur bekommen, bevor daraus noch einmal
+etwas gebaut wird.
+
 ## Offen
 
-- Dreizehn Motive generieren und einzeln in echter Anzeigegroesse pruefen
-- `build-italy.mjs` nach dem Muster von `build-thailand.mjs`
 - Tonspur erst nach Abnahme der Texte
+- `build-thailand.mjs` auf `bottom: 440px` nachziehen
 
 Notion: https://app.notion.com/p/3cf01d1d696b8152b443ca4ff12288b4

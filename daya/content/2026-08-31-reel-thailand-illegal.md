@@ -257,3 +257,19 @@ uavwiki.com, juslaws.com, legal.co.th, thailand.go.th.
 mehr angefasst hatte. Genau dafuer hat die Faktendatenbank im neuen Tool
 (`daya/tools/her-solo-banned-generator/`) ein `checked`-Datum pro Fakt, und das Tool
 verweigert jeden Fakt ohne Quelle.
+
+
+## Nachtrag 02.09.2026: Wortmarke auf der Schlusskarte zu tief
+
+Beim Italien-Post habe ich die 78-%-Regel zum ersten Mal nachgemessen statt
+geschaetzt. Ergebnis fuer diesen Post: die Textbloecke sind in Ordnung, die
+**DAYA-Wortmarke auf der Schlusskarte sitzt auf 84,3 %** der Bildhoehe und kann
+damit auf TikTok von der Oberflaeche verdeckt sein.
+
+Der Kommentar in `build-thailand.mjs` behauptet, `bottom: 300px` loese das. Das
+stimmt nicht: 300 px ueber dem unteren Rand eines 1920 px hohen Bildes sind
+84 %, nicht 78. Gerechnet wurde es damals nie. `build-italy.mjs` steht jetzt auf
+`bottom: 440px`, das sind 77,0 %.
+
+Der Post ist raus, daran ist nichts mehr zu aendern. `build-thailand.mjs` sollte
+die Korrektur trotzdem bekommen, bevor daraus noch einmal etwas gebaut wird.
