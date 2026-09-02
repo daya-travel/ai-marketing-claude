@@ -82,9 +82,15 @@ const fmt = (s) => esc(s).replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>');
 const BEATS = [
   // Frame 1 - Das Raetsel. Coverfoto ist ein Strand, „this" zeigt darauf.
   // Aufgeloest auf Slide 6.
+  //
+  // ZAHLEN ALS ZIFFERN, ueberall wo sie gelesen werden. Alesya zweimal: am
+  // 31.08. „schreib seven als 7 im cover bild", am 02.09. „eleven - bitte als
+  // zahl schreiben immer! man sieht es besser". Beim Ueberfliegen springt eine
+  // Ziffer ins Auge, ein Zahlwort liest sich wie jedes andere Wort. In der
+  // Tonspur bleibt das Wort, dort gibt es nichts zu sehen.
   { id: '01', photo: 'f00-cover', cover: true, light: true, darkBar: true, ty: 27,
     head: 'Taking this home is a *3,000 euro* fine.',
-    body: 'Eleven things Italy fines you for.' },
+    body: '11 things Italy fines you for.' },
 
   // Frame 2 - Cinque Terre. Gilt nur auf den markierten Wegen, das gehoert
   // dazu, sonst ist es ein Verbot, das niemanden trifft.
@@ -104,7 +110,7 @@ const BEATS = [
     head: 'The bag on the *beach towel*.',
     lines: [
       'The *buyer* is liable, not only the seller',
-      'One case in Venice: *1,000 euros* for one bag',
+      '*1,000 euros* for one bag, in a Venice case',
       'It applies on the beach and in the street',
       'The bag gets confiscated either way',
     ] },
@@ -141,7 +147,7 @@ const BEATS = [
       'Free to pick up. *Up to 3,000 euros* to keep',
       'Sand, pebbles and shells all count',
       'X-ray checks at Olbia, Cagliari and Alghero',
-      '*Four tonnes* seized in two years, one airport',
+      '*4 tonnes* seized at one airport in 2 years',
     ] },
 
   // Frame 7 - Internationaler Fuehrerschein, Art. 135 Codice della Strada.
@@ -208,7 +214,7 @@ const BEATS = [
       'Wading counts, you don\u2019t have to swim',
       '*About 500 euros* in Rome',
       'Plus a *Daspo*, a ban from the area',
-      'One lifetime ban handed out in May 2026',
+      '*1 lifetime ban* handed out in May 2026',
     ] },
 
   // Frame 13 - Schlusskarte, mittig gesetzt. „Save this for your Italy trip"

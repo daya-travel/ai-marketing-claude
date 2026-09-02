@@ -471,7 +471,7 @@
     ],
     "hook": {
       "cover_head": "One thing in your carry-on is a narcotics charge in South Korea.",
-      "cover_sub": "Ten things worth checking before you fly.",
+      "cover_sub": "10 things worth checking before you fly.",
       "spoken": "One thing in your carry-on is a narcotics charge in South Korea. Here are ten things to check before you fly.",
       "close": "Save this before you fly.",
       "reveal_at": "medication",
@@ -740,11 +740,11 @@
   "Italy": {
     "hook": {
       "cover_head": "Taking this home is a 3,000 euro fine.",
-      "cover_sub": "Eleven things Italy fines you for.",
+      "cover_sub": "11 things Italy fines you for.",
       "spoken": "Taking this home is a 3,000 euro fine. Eleven things Italy fines you for.",
       "close": "Save this for your Italy trip.",
       "reveal_at": "sand",
-      "note": "Zweite Fassung. Die erste war eine Behauptung („Italy will fine you for sitting down\"), und Alesya am 02.09.: „der hook ist scheisse - so haben wir es nicht entschieden! es muss ein raetsel sein\". Danach war die zweite Fassung zu verschachtelt: „der hook past nicht ganz. es muss einfach zu lesen sein\". Diese hier hat acht Woerter und keinen Nebensatz, wie der Japan-Hook, der 48 Speicherungen auf 2216 Aufrufe brachte. „this\" zeigt auf das Coverbild, einen Strand. Aufgeloest auf Slide 6, dem Sand - deshalb steht der Sand nicht mehr an erster Stelle, sondern in der Mitte."
+      "note": "Zweite Fassung. Die erste war eine Behauptung („Italy will fine you for sitting down\"), und Alesya am 02.09.: „der hook ist scheisse - so haben wir es nicht entschieden! es muss ein raetsel sein\". Danach war die zweite Fassung zu verschachtelt: „der hook past nicht ganz. es muss einfach zu lesen sein\". Diese hier hat acht Woerter und keinen Nebensatz, wie der Japan-Hook, der 48 Speicherungen auf 2216 Aufrufe brachte. „this\" zeigt auf das Coverbild, einen Strand. Aufgeloest auf Slide 6, dem Sand - deshalb steht der Sand nicht mehr an erster Stelle, sondern in der Mitte. Zahl als Ziffer im Cover, ausgeschrieben in der Tonspur - Alesya, 02.09.: „eleven - bitte als zahl schreiben immer! man sieht es besser."
     },
     "facts": [
       {

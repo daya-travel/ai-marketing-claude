@@ -176,11 +176,19 @@ DEFAULT_HOOK = {
 }
 
 
+# Gelesen wird die Ziffer, gesprochen das Wort.
+#
+# Alesya zweimal, am 31.08. („schreib seven als 7 im cover bild") und am
+# 02.09. („eleven - bitte als zahl schreiben immer! man sieht es besser").
+# Beim Ueberfliegen springt eine Ziffer ins Auge, ein ausgeschriebenes Zahlwort
+# liest sich wie jedes andere Wort. Deshalb steht in Cover und Caption die
+# Ziffer, und nur in der Tonspur das Wort - dort gibt es nichts zu sehen, und
+# TTS spricht ein Zahlwort zuverlaessiger aus als eine Ziffer.
+#
+# Im Template heisst {n} das gesprochene Wort und {N} die Ziffer.
 COUNT_WORDS = {
-    "en": {7: ("seven", "Seven"), 8: ("eight", "Eight"), 9: ("nine", "Nine"),
-           10: ("ten", "Ten"), 11: ("eleven", "Eleven")},
-    "de": {7: ("sieben", "Sieben"), 8: ("acht", "Acht"), 9: ("neun", "Neun"),
-           10: ("zehn", "Zehn"), 11: ("elf", "Elf")},
+    "en": {7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven"},
+    "de": {7: "sieben", 8: "acht", 9: "neun", 10: "zehn", 11: "elf"},
 }
 
 
@@ -189,11 +197,13 @@ def get_hook(country: str, entry: dict, lang: str, n: int) -> dict:
 
     Die Anzahl kommt aus den Daten, nicht aus dem Text. Sonst steht irgendwann
     "seven things" ueber neun Punkten.
+
+    {N} ist die Ziffer fuer alles Gelesene, {n} das Wort fuer die Tonspur.
     """
-    lower, upper = COUNT_WORDS[lang].get(n, (str(n), str(n)))
+    word = COUNT_WORDS[lang].get(n, str(n))
     hook = dict(DEFAULT_HOOK[lang])
     hook.update({k: v for k, v in (entry.get("hook") or {}).items() if v})
-    return {k: (v.format(country=country, n=lower, N=upper)
+    return {k: (v.format(country=country, n=word, N=str(n))
                 if isinstance(v, str) else v)
             for k, v in hook.items()}
 

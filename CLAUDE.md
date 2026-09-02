@@ -80,6 +80,14 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
   Anzahl variieren, zweimal „7 things" hintereinander liest sich als Wiederholung.
   `daya/tools/her-solo-banned-generator` prüft das jetzt selbst (`check_repeats`)
   und warnt bei mehr als zwei gemeinsamen Themen mit einem schon geposteten Land.
+- **Zahlen als Ziffern, überall wo sie gelesen werden.** „7 things", nicht „seven
+  things". Alesya zweimal: am 31.08. („schreib seven als 7 im cover bild") und am
+  02.09. („eleven - bitte als zahl schreiben immer! man sieht es besser"). Beim
+  Überfliegen springt eine Ziffer ins Auge, ein ausgeschriebenes Zahlwort liest sich
+  wie jedes andere Wort. Gilt für Cover, Slides und Captions. **Ausnahme ist die
+  Tonspur**: dort gibt es nichts zu sehen, und TTS spricht ein Zahlwort zuverlässiger
+  aus als eine Ziffer. `daya/tools/her-solo-banned-generator` trennt das selbst,
+  `{N}` ist die Ziffer, `{n}` das gesprochene Wort.
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 

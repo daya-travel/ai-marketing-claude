@@ -97,7 +97,7 @@ lesen sein."
 **Gewaehlt:**
 
 > **Taking this home is a 3,000 euro fine.**
-> *Eleven things Italy fines you for.*
+> *11 things Italy fines you for.*
 
 Acht Woerter, kein Nebensatz, ein einziger Gedanke - dieselbe Bauart wie der
 Japan-Hook „One thing in this picture is banned in Japan", der mit 48 Speicherungen
@@ -120,6 +120,14 @@ draussen war.
 
 Damit gilt die Zeile auch fuer die **Tonspur**, nicht nur fuers Bild. Das Skript
 endet auf „Save this for your Italy trip."
+
+**Zahlen stehen als Ziffern**, ueberall wo sie gelesen werden: „11 things Italy
+fines you for" auf dem Cover und in den Captions, „4 tonnes seized at one airport
+in 2 years" auf Slide 6. Alesya zweimal, am 31.08. („schreib seven als 7 im cover
+bild") und am 02.09. („eleven - bitte als zahl schreiben immer! man sieht es
+besser"). In der **Tonspur** bleibt das Wort - dort gibt es nichts zu sehen, und
+TTS spricht ein Zahlwort zuverlaessiger aus als eine Ziffer. `generate.py` trennt
+das jetzt selbst: `{N}` ist die Ziffer, `{n}` das gesprochene Wort.
 
 **Cover und Schlusskarte stehen mittig**, die elf Punkte-Slides linksbuendig.
 Alesya, 02.09.: „mach den text auf dem letzten bild mittig, nicht seitlich" und
@@ -194,7 +202,7 @@ Slides in `daya/studio/reels/italy/slides/`, Fotos in
 
 ### TikTok
 
-> Taking this home is a 3,000 euro fine. Eleven things Italy fines you for.
+> Taking this home is a 3,000 euro fine. 11 things Italy fines you for.
 >
 > #solofemaletravel #italy #traveltok #solotravel #fyp
 
