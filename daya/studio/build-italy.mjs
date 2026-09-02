@@ -211,13 +211,15 @@ const BEATS = [
       'One lifetime ban handed out in May 2026',
     ] },
 
-  // Frame 13 - Schlusskarte. „Save this for your Italy trip" statt „before you
-  // go". Alesya, 02.09.: „bitte nicht einfach - before you go, sondern save
-  // this for your italy trip oder so. ich glaube das war in japan auch".
-  // Japans Schlusskarte hiess „Now go book it.", die Form kommt aber sehr wohl
-  // aus ihren eigenen Posts: „Save this for your next hotel" (14.08.), „Save
-  // this before your next transfer" (18.08.), „save this for your next trip"
-  // (06.07.). Ein Ziel im Satz schlaegt ein blosses „before you go".
+  // Frame 13 - Schlusskarte, mittig gesetzt. „Save this for your Italy trip"
+  // statt „before you go". Alesya, 02.09.: „bitte nicht einfach - before you
+  // go, sondern save this for your italy trip oder so."
+  //
+  // Ich hatte dagegengehalten, das habe es bei Japan nicht gegeben - im Repo
+  // steht als Schlusskarte „Now go book it.". Sie hat richtiggestellt: die
+  // Datei war veraltet, in der ElevenLabs-Fassung stand „save this for your
+  // japan trip". Also gilt die Zeile auch fuer die Tonspur, nicht nur fuers
+  // Bild. Nachgesehen im Repo hatte ich, nur an der falschen Stelle.
   { id: 'end', photo: 'f13-end', endcard: true, ty: 60,
     head: 'Save this for your *Italy trip*.',
     body: 'Follow for more.' },
@@ -295,6 +297,11 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .list div{margin-bottom:14px}
 .list div:last-child{margin-bottom:0}
 
+/* Schlusskarte mittig. Die Punkte-Slides bleiben linksbuendig wie bei Japan,
+   die Schlusskarte hat keine Zeilen darunter und steht zentriert besser
+   (Alesya, 02.09.: „mach den text auf dem letzten bild mittig, nicht
+   seitlich"). */
+.block.end{text-align:center}
 .cover .head{font-size:89px;line-height:1.04}
 .cover .body{margin-top:28px;font-size:41px;letter-spacing:.01em;opacity:.92}
 .end .head{font-size:83px}

@@ -109,14 +109,19 @@ Stelle, sondern auf **Slide 6**, wo er den Hook aufloest.
 
 Die Schlusskarte heisst **„Save this for your Italy trip."** Alesya am 02.09.:
 „bitte nicht einfach - before you go, sondern save this for your italy trip oder
-so. ich glaube das war in japan auch." Bei Japan hiess die Schlusskarte „Now go
-book it.", aber die Form steht sehr wohl in ihren eigenen Posts: „Save this for
-your next hotel" (14.08.), „Save this before your next transfer" (18.08.), „save
-this for your next trip" (06.07.). Ein Ziel im Satz schlaegt ein blosses „before
-you go".
+so. ich glaube das war in japan auch."
 
-In der Tonspur bleibt die kuerzere Zeile „Save this before you go", dort gibt es
-kein Bild, das den Bezug traegt.
+**Ich habe dagegengehalten und lag falsch.** Im Repo steht als Japan-Schlusskarte
+„Now go book it.", und daraus habe ich geschlossen, es habe die Zeile dort nie
+gegeben. Ihre Richtigstellung: „ich habe in elevenlabs save this for your japan
+trip gemacht, das bild war veraltet, mehr nicht." Nachgesehen hatte ich also
+schon, nur an der falschen Stelle - das Bild im Repo ist nicht die Fassung, die
+draussen war.
+
+Damit gilt die Zeile auch fuer die **Tonspur**, nicht nur fuers Bild. Das Skript
+endet auf „Save this for your Italy trip." Der Schlussslide ist ausserdem
+**mittig gesetzt** statt linksbuendig, die elf Punkte-Slides bleiben
+linksbuendig.
 
 ## Format
 
@@ -150,7 +155,7 @@ Ten. Leaving a towel out overnight to hold your spot. It's gone.
 
 Eleven. Stepping into a fountain. Five hundred euros and a city ban.
 
-Save this before you go.
+Save this for your Italy trip.
 
 **Zur Laenge.** 53 Sekunden. Elf Punkte gehen nicht kuerzer: das Werkzeug rechnet
 mit 21 Woertern fuer Hook und Schluss plus elf je Punkt, beides an der
