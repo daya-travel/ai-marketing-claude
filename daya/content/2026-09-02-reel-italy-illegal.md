@@ -198,7 +198,7 @@ Slides in `daya/studio/reels/italy/slides/`, Fotos in
 >
 > Not legal advice.
 >
-> #solofemaletravel #italy #traveltips #solotravel #fyp
+> #italytravel #solofemaletravel #solotravel #traveltips #travelalone
 
 ### TikTok
 

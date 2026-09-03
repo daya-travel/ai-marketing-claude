@@ -62,8 +62,20 @@ def word_budget(n: int) -> int:
     """Wie viele Woerter ein Skript mit n Punkten realistisch braucht."""
     return OVERHEAD_WORDS + WORDS_PER_POINT * n
 
+# #fyp gehoert auf TikTok und nur dorthin. „For you page" ist TikToks eigener
+# Begriff, Instagram hat keine FYP - dort landet man in Reels und Explore.
+#
+# Alesya, 03.09.: „Warum ist hashtag fyp fuer Insta???" Nachgesehen: vor dieser
+# Serie hatte kein einziger Post der Account-Historie ein #fyp. Japan lief mit
+# #japantravel #solofemaletravel #solotravel #japantips #travelalone, das
+# Hoteltuer-Reel mit #travelsafety #hotelhacks. Das #fyp kam mit dem
+# Meta-Auftrag und stand ab da fest in dieser Liste, also auch im
+# Thailand-Post, der damit schon draussen ist.
+#
+# Instagram bekommt stattdessen einen zweiten Landes-Tag, das ist das Muster
+# des Accounts: Land + Nische + zwei allgemeine Reise-Tags.
 HASHTAGS = {
-    "instagram": "#solofemaletravel #{tag} #traveltips #solotravel #fyp",
+    "instagram": "#{tag}travel #solofemaletravel #solotravel #traveltips #travelalone",
     "tiktok": "#solofemaletravel #{tag} #traveltok #solotravel #fyp",
 }
 

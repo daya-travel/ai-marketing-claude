@@ -163,7 +163,7 @@ Japan.
 >
 > Not legal advice.
 >
-> #solofemaletravel #southkorea #traveltips #solotravel #fyp
+> #southkoreatravel #solofemaletravel #solotravel #traveltips #travelalone
 
 ### TikTok
 

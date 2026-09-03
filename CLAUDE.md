@@ -88,6 +88,15 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
   Tonspur**: dort gibt es nichts zu sehen, und TTS spricht ein Zahlwort zuverlässiger
   aus als eine Ziffer. `daya/tools/her-solo-banned-generator` trennt das selbst,
   `{N}` ist die Ziffer, `{n}` das gesprochene Wort.
+- **#fyp gehört auf TikTok und nur dorthin.** „For you page" ist TikToks eigener
+  Begriff, Instagram hat keine FYP - dort landet man in Reels und Explore. Alesya,
+  03.09.: „Warum ist hashtag fyp für Insta???" Nachgesehen: vor der „illegal"-Serie
+  hatte kein Post der Historie ein #fyp. Japan lief mit `#japantravel
+  #solofemaletravel #solotravel #japantips #travelalone`, das Hoteltür-Reel mit
+  `#travelsafety #hotelhacks`. Das #fyp kam aus dem Meta-Auftrag und stand ab da
+  fest in `generate.py`, deshalb ist es auch im schon veröffentlichten
+  Thailand-Post. Muster für Instagram: **Land + Nische + zwei allgemeine
+  Reise-Tags**.
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 
