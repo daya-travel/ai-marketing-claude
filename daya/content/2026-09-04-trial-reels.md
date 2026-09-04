@@ -31,11 +31,11 @@ Alle Zahlen aus der Instagram-App, abgelesen am 03.09.2026.
 Japan-Zahl zitiert, ohne Beleg - die Zahl stand nur in Dokumenten, die ich
 selbst geschrieben hatte. Die echten sind 3.202 und 89.
 
-**Zweite Korrektur:** Ich hatte behauptet, der Japan-Post habe sechs Punkte
-gehabt. Alesya am 04.09.: „Nein! Es wurden dann am Ende nur 3 Punkte! Hörst du
-mir zu??" Ich hatte im Karussell-Doc nachgesehen, das acht Slides und sechs
-Punkte beschreibt - aber das Reel, das rausging, hat sie gebaut, und es hatte
-drei. Das Doc beschreibt den Plan, nicht die Fassung, die 3.202 Aufrufe holte.
+**Zweite Korrektur: der Japan-Post hatte 3 Punkte.** Alesya am 04.09.: „Nein!
+Es wurden dann am Ende nur 3 Punkte!" Ich hatte im Karussell-Doc nachgesehen und
+eine hoehere Zahl behauptet - aber das Doc beschreibt den Plan, nicht das Reel,
+das rausging. Gebaut hat es Alesya, und es hatte drei. Die Fassung mit 3.202
+Aufrufen ist die mit drei Punkten. Alle drei Trials haben deshalb drei.
 
 ## Die Diagnose
 
