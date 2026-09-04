@@ -81,9 +81,12 @@ Der erste Entwurf lief mit demselben Listen-Hook wie Thailand. Alesya am 01.09.:
 **Zwei Belege haben die Wahl entschieden.** Erstens die eigene Hook-Formel aus den
 Notion-Zahlen (`2026-07-05-reel-02-phone-stolen.md`): Zahl + Nische + Save-Trigger,
 poetische Hooks floppen messbar (24-61 Views), Listen-Hooks laufen (1.000-1.700).
-Zweitens der Japan-Post, der mit **48 Speicherungen auf 2216 Aufrufe** der beste
-war - und der hatte gar keinen Listen-Hook, sondern ein **Raetsel**: „One thing in
-this picture is banned in Japan", aufgeloest erst auf Slide 5.
+Zweitens der Japan-Post, der mit **3.202 Aufrufen und 89 Speicherungen** der
+beste war - und der hatte gar keinen Listen-Hook, sondern ein **Raetsel**: „One
+thing in this picture is banned in Japan", aufgeloest erst auf Slide 5. (Zahlen
+aus der Instagram-App, 03.09.2026. Bis dahin stand hier „48 Speicherungen auf
+2216 Aufrufe" - das war eine Zahl ohne Beleg, die ich selbst in Umlauf gebracht
+hatte.)
 
 Gewaehlt:
 

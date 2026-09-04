@@ -3,7 +3,8 @@
 Baut ein komplettes Post-Kit für das Format „seven things that are actually illegal
 in X" für @her.solotrip. Lokale JSON-Datenbank, keine API-Keys, kein Netz.
 
-Das Format hat sich beim Japan-Post bewährt: 48 Speicherungen auf 2216 Aufrufe.
+Das Format hat sich beim Japan-Post bewährt: 3.202 Aufrufe, 89 Speicherungen,
+11 neue Follower, 97,1 % davon Nicht-Follower (Instagram-App, 03.09.2026).
 Zielmetrik ist Speichern, nicht Reposten.
 
 ## Benutzen

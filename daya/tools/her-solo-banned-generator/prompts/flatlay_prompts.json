@@ -4,57 +4,133 @@
     "why": "Two reasons. Legally a flatlay showing a vape reads as the account holding one. Practically soul_2 writes letter salad onto any printed surface, and every banned object in this niche is a printed object.",
     "model": "soul_2 for all of it. Checked in daya/CLAUDE.md: the text-capable model was only ever needed for little cards, and those are gone."
   },
-
   "base_style": "Top-down flatlay on soft white linen, {country} solo travel aesthetic, {props}, soft daylight from one side, clean and bright, casually dropped and not arranged, items at different angles and some overlapping, uneven spacing, real creases in the linen, rich saturated colour, slight imperfection, realistic, vertical",
-
   "negative": "no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers",
-
   "detail_style": "Close photograph of {subject} on soft white linen, shallow depth of field, soft daylight from one side, nothing printed anywhere, no lettering, rich saturated colour, slight imperfection, realistic, vertical",
-
   "countries": {
     "Thailand": {
       "props": "straw hat, round sunglasses, linen shirt, small notebook, seashell, frangipani flower, woven bag",
-      "details": ["a folded linen shirt and a straw hat brim", "a seashell and a frangipani flower resting on the linen"]
+      "details": [
+        "a folded linen shirt and a straw hat brim",
+        "a seashell and a frangipani flower resting on the linen"
+      ]
     },
     "Japan": {
       "props": "folded cotton hand towel, round sunglasses, small notebook, fabric hair tie, sprig of blossom, canvas tote",
-      "details": ["a folded cotton hand towel and a fabric hair tie", "a sprig of blossom lying on the linen"]
+      "details": [
+        "a folded cotton hand towel and a fabric hair tie",
+        "a sprig of blossom lying on the linen"
+      ]
     },
     "Bali": {
       "props": "straw hat, woven rattan bag, sarong folded, sunglasses, frangipani flowers, small notebook",
-      "details": ["a folded sarong with the woven bag handle", "frangipani flowers scattered on the linen"]
+      "details": [
+        "a folded sarong with the woven bag handle",
+        "frangipani flowers scattered on the linen"
+      ]
     },
     "South Korea": {
       "props": "small crossbody bag, round sunglasses, cotton socks folded, hair clip, notebook, sprig of blossom",
-      "details": ["a hair clip and folded cotton socks", "a small crossbody bag strap curled on the linen"]
+      "details": [
+        "a hair clip and folded cotton socks",
+        "a small crossbody bag strap curled on the linen"
+      ]
     },
     "Singapore": {
       "props": "linen shirt folded, sunglasses, small umbrella, notebook, orchid stem, canvas tote",
-      "details": ["an orchid stem on the linen", "a folded linen shirt and a compact umbrella"]
+      "details": [
+        "an orchid stem on the linen",
+        "a folded linen shirt and a compact umbrella"
+      ]
     },
     "Vietnam": {
       "props": "conical straw hat, linen trousers folded, sunglasses, notebook, lotus flower, woven bag",
-      "details": ["a lotus flower resting on the linen", "the brim of a conical straw hat"]
+      "details": [
+        "a lotus flower resting on the linen",
+        "the brim of a conical straw hat"
+      ]
     },
     "Sri Lanka": {
       "props": "straw hat, cotton scarf folded, sunglasses, notebook, cinnamon sticks, woven bag",
-      "details": ["cinnamon sticks scattered on the linen", "a folded cotton scarf and a straw hat brim"]
+      "details": [
+        "cinnamon sticks scattered on the linen",
+        "a folded cotton scarf and a straw hat brim"
+      ]
     },
     "Italy": {
-      "props": "wide straw hat, round sunglasses, folded linen dress, plain leather sandals, small notebook, sprig of olive leaves, lemon, woven market basket",
-      "details": ["a sprig of olive leaves and a lemon on the linen", "the brim of a straw hat beside plain leather sandals"]
+      "props": "wide straw hat, round sunglasses, folded linen dress, plain leather sandals, sprig of olive leaves, lemon, halved lemon, woven market basket, a few small seashells and smooth grey pebbles",
+      "details": [
+        "a few small seashells and smooth grey pebbles on the linen",
+        "a sprig of olive leaves and a lemon beside a straw hat brim"
+      ],
+      "note": "Muscheln und Kieselsteine sind bewusst drin: das Cover-Raetsel zeigt auf sie. Sand ist als Gegenstand nicht erkennbar, Muscheln und Kieselsteine sind vom selben Regionalgesetz 16/2017 erfasst und man sieht sie. Regel aus dem CLAUDE.md: wer ein Raetsel stellt, legt das Gesuchte ins Bild. Der Notizblock ist am 03.09. rausgeflogen: soul_2 hat ihn zuverlaessig bedruckt („SCOLIC\"). Gleiche Familie wie Pass und Verpackung - ein Gegenstand, der von Natur aus eine Schreibflaeche hat, wird bedruckt."
     }
   },
-
   "blocklist": [
-    "vape", "vaping", "e-cigarette", "ecigarette", "cigarette", "cigar", "tobacco",
-    "drone", "quadcopter",
-    "cannabis", "weed", "marijuana", "joint", "cbd", "hemp", "leaf of cannabis",
-    "pill", "pills", "medicine", "blister", "drug", "drugs", "syringe",
-    "money", "banknote", "bank note", "cash", "baht note", "coin", "currency",
-    "passport", "id card", "boarding pass", "ticket", "document",
-    "coral", "seahorse", "turtle shell", "ivory",
-    "gun", "knife", "weapon", "lighter", "ashtray",
-    "buddha", "statue of buddha", "religious statue"
-  ]
+    "vape",
+    "vaping",
+    "e-cigarette",
+    "ecigarette",
+    "cigarette",
+    "cigar",
+    "tobacco",
+    "drone",
+    "quadcopter",
+    "cannabis",
+    "weed",
+    "marijuana",
+    "joint",
+    "cbd",
+    "hemp",
+    "leaf of cannabis",
+    "pill",
+    "pills",
+    "medicine",
+    "blister",
+    "drug",
+    "drugs",
+    "syringe",
+    "money",
+    "banknote",
+    "bank note",
+    "cash",
+    "baht note",
+    "coin",
+    "currency",
+    "passport",
+    "id card",
+    "boarding pass",
+    "ticket",
+    "document",
+    "coral",
+    "seahorse",
+    "turtle shell",
+    "ivory",
+    "gun",
+    "knife",
+    "weapon",
+    "lighter",
+    "ashtray",
+    "buddha",
+    "statue of buddha",
+    "religious statue"
+  ],
+  "countries_useful": {
+    "Japan": {
+      "props": "a small cabin suitcase lying on its side, folded cotton hand towel, round sunglasses, fabric hair tie, sprig of blossom, canvas tote bag, a folded cotton shirt",
+      "details": [
+        "a small cabin suitcase lying on its side on the linen",
+        "a folded cotton hand towel and a fabric hair tie"
+      ],
+      "note": "Das Cover-Raetsel zeigt auf den Koffer. Keine Bankkarte und keine Uhr im Bild: beides ist von Natur aus bedruckt oder beziffert, und soul_2 macht daraus Buchstabensalat (Regel vom 29.08.)."
+    },
+    "Italy": {
+      "props": "a folded linen scarf, wide straw hat, round sunglasses, folded linen dress, plain leather sandals, a plain unmarked metal water bottle, sprig of olive leaves, lemon, woven market basket",
+      "details": [
+        "a folded linen scarf and a plain unmarked metal water bottle on the linen",
+        "a sprig of olive leaves and a lemon beside a straw hat brim"
+      ],
+      "note": "Das Cover-Raetsel zeigt auf den Schal. Die Flasche ausdruecklich als 'plain unmarked' bestellt, sonst setzt soul_2 ein Label drauf."
+    }
+  }
 }

@@ -97,6 +97,21 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
   fest in `generate.py`, deshalb ist es auch im schon veröffentlichten
   Thailand-Post. Muster für Instagram: **Land + Nische + zwei allgemeine
   Reise-Tags**.
+- **Ein Raetsel-Hook braucht ein Cover, das man absuchen kann.** Gemessen am
+  03.09.2026 an drei Reels derselben Reihe: Japan 3.202 Aufrufe bei 22 Sekunden
+  durchschnittlicher Wiedergabe, Thailand 197 bei 14, Italien 65 bei 11. Alle drei
+  liefen rund eine Minute, alle drei hatten dieselbe Machart. Der auffälligste
+  Unterschied: Japans Cover war ein **Flatlay mit Gegenständen** und der Hook
+  („One thing in this picture is banned in Japan") schickte den Blick auf
+  Wanderschaft. Thailand und Italien zeigten eine Frau am Strand - in einer halben
+  Sekunde erfasst, dann wischt man weg. Wer ein Rätsel stellt, legt das Gesuchte
+  ins Bild. Ist ein Punkt kein Gegenstand, gehört er nicht ins Cover-Rätsel.
+- **Ein Reel bleibt unter 30 Sekunden.** Wer mehr Punkte hat, macht mehrere Reels.
+  Die Wiedergabezeit ist 2026 das Hauptsignal für die Verbreitung, und Skip Rate
+  (wegwischen in den ersten drei Sekunden) ist ein eigenes negatives Signal. Die
+  drei Ein-Minuten-Reels lagen bei 21 bis 37 % Wiedergabe, solide wären 40 bis
+  50 %. Die lange Fassung gehört ins **Karussell**: dort kostet Zurückhalten nur
+  einen Wisch, in einem Reel kostet es Wartezeit.
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 

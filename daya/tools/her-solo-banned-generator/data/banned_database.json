@@ -8,7 +8,8 @@
       "penalty_display": "Where the conversion belongs mid-sentence. Falls back to penalty_local plus the USD figure when absent.",
       "hook": "Pro Land. cover_head und cover_sub gehen auf Slide 1, spoken in die Tonspur, close auf die Schlusskarte. Fehlt das Feld, nimmt generate.py die Standardformulierung - die aber pro Post variiert werden muss, sonst liest sich der naechste Post wie der letzte.",
       "posted": "Datum der Veroeffentlichung. check_repeats vergleicht neue Laender dagegen.",
-      "bullets": "Stichpunkte fuer den Slide. Alesya, 01.09.: auf dem Bild muss genug Text stehen wie bei Japan, lieber Stichpunkte als langer Fliesstext."
+      "bullets": "Stichpunkte fuer den Slide. Alesya, 01.09.: auf dem Bild muss genug Text stehen wie bei Japan, lieber Stichpunkte als langer Fliesstext.",
+      "useful": "Zweite Spur pro Land: Vorbereitungspunkte statt Strafen. Gleiche Pflichtfelder (verified, checked, source, tts), aber 'detail' statt 'penalty_local' und 'detail_display' statt 'penalty_display'. Angelegt am 04.09.2026: der Japan-Post, der 3.202 Aufrufe holte, war nie eine Verbotsliste, sondern nuetzliche Vorbereitung. generate.py --track useful liest diesen Block."
     },
     "rates": {
       "THB": {
@@ -25,11 +26,62 @@
         "per_usd": null,
         "checked": null,
         "source": "kein datierter Kurs. Bali-Betraege tragen nur die USD-Zahl, die die Quelle selbst nennt."
+      },
+      "JPY": {
+        "per_usd": 156.01,
+        "checked": "2026-09-03",
+        "source": "frankfurter.dev (EZB-Referenzkurs), 1 JPY = 0.00641 USD"
+      },
+      "EUR": {
+        "per_usd": 0.861,
+        "checked": "2026-09-03",
+        "source": "frankfurter.dev (EZB-Referenzkurs), 1 EUR = 1.1615 USD"
       }
     },
     "measured_wpm": {
       "value": 172,
       "note": "Measured on the real Thailand reel: Higgsfield seed_audio, voice Isla, atempo 1.30. Do not assume faster - the first three length estimates for that post were all too optimistic."
+    },
+    "reel_test": {
+      "why": "Drei Trial Reels an Nicht-Follower. Angelegt am 03.09.2026 nach dem Italien-Reel (65 Aufrufe, 11 Sekunden Wiedergabe), am 04.09. umgebaut. Die erste Fassung testete drei Cover-Varianten fuer Italien und uebersah dabei einen Kandidaten: das Thema selbst. Alesyas Vorschlag, auch ein Japan-Reel zu testen, trennt genau das.",
+      "constant": "In allen drei gleich, also nicht getestet: Flatlay-Cover, 3 Punkte, unter 25 Sekunden, Untertitel, Aufloesung im ersten Punkt. Das kommt aus dem, was bei Japan schon drin war, und aus den 2026-Richtwerten.",
+      "measure": "Verglichen wird die Wiedergabequote, nicht die Aufrufe - bei diesen Groessenordnungen schwanken Aufrufe zu stark. Zielmarke ueber 40 Prozent. Ein Trial pro Tag, je 24 bis 48 Stunden.",
+      "trials": {
+        "1": {
+          "country": "Japan",
+          "track": "useful",
+          "facts": [
+            "luggage",
+            "atm",
+            "last_train"
+          ],
+          "cover": "flatlay-japan-useful",
+          "tests": "Zusammen mit 2: das Thema. Format identisch, nur das Land wechselt."
+        },
+        "2": {
+          "country": "Italy",
+          "track": "useful",
+          "facts": [
+            "dress_code",
+            "fountains",
+            "airport_taxi"
+          ],
+          "cover": "flatlay-italy-useful",
+          "tests": "Zusammen mit 3: der Inhalt. Land identisch, nur der Blickwinkel wechselt."
+        },
+        "3": {
+          "country": "Italy",
+          "track": "banned",
+          "facts": [
+            "sand",
+            "steps",
+            "ztl"
+          ],
+          "cover": "daya/studio/photos/italy/final/f00-flatlay.png",
+          "tests": "Die Kontrolle: die Bussgeld-Liste, auf dasselbe Format gekuerzt."
+        }
+      },
+      "limits": "Speicherungen und Weiterleitungen sind im Trial kaum aussagekraeftig, die Stichprobe ist klein und niemand aus dem eigenen Umfeld ist dabei. Der Test misst den Anfang, nicht den Wert des ganzen Posts. Wiederholungsmuedigkeit laesst sich damit nicht von Cover-Wirkung trennen."
     }
   },
   "Thailand": {
@@ -563,7 +615,70 @@
         "source": "Verified for the Japan carousel. No TTS line: it is not a criminal penalty, so it does not belong in a 'banned' script."
       }
     ],
-    "posted": "2026-08-31"
+    "posted": "2026-08-31",
+    "useful": {
+      "hook": {
+        "cover_head": "One thing in this picture costs you a whole day in Japan.",
+        "cover_sub": "3 things to sort before you land.",
+        "spoken": "One thing in this picture costs you a whole day in Japan.",
+        "close": "Save this for your Japan trip.",
+        "reveal_at": "luggage",
+        "note": "Erste Fassung zeigte auf die Bankkarte. Verworfen: eine Karte ist von Natur aus bedruckt, und soul_2 schreibt dann Buchstabensalat drauf (Regel vom 29.08.). Der Koffer traegt nichts und liegt wirklich im Flatlay. Aufgeloest im ersten Punkt, nicht bei Sekunde 25 wie in Italien."
+      },
+      "facts": [
+        {
+          "id": "luggage",
+          "title": "Your suitcase",
+          "why": "You don't have to drag it through a single station. Hand it in at the hotel desk and it's at the next hotel tomorrow.",
+          "detail": "About 3,000 yen inside greater Tokyo and 3,200 yen from Tokyo to Kyoto for a case under 25 kilos, next-day delivery. Hotel receptions and convenience stores take it",
+          "detail_display": "About 3,000 yen inside Tokyo, about $19, and it's there the next day.",
+          "bullets": [
+            "Hotel desk or any convenience store",
+            "About 3,000 yen inside Tokyo, about $19",
+            "Tokyo to Kyoto about 3,200 yen, about $21",
+            "Under 25 kilos, arrives the next day"
+          ],
+          "tts": "Your suitcase. Hand it to the hotel desk and it meets you at the next one.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "japan-guide.com/e/e2278.html (suitcase under 25 kg: 3,000 yen within Greater Tokyo, 3,200 yen Tokyo-Osaka/Kyoto, usually next day, hotel-to-hotel possible); Yamato Transport 'Hands-Free Travel', global-yamato.com/en/hands-free-travel/. Kurs 2026-09-03"
+        },
+        {
+          "id": "atm",
+          "title": "Your bank card",
+          "why": "Most Japanese bank ATMs simply don't take a card issued outside Japan.",
+          "detail": "7-Eleven has over 28,000 machines, open all night, and they take Visa, Mastercard, Maestro, Amex and JCB. Post offices work too, but they close overnight",
+          "detail_display": "7-Eleven has over 28,000 machines and they run all night.",
+          "bullets": [
+            "Bank ATMs mostly refuse foreign cards",
+            "7-Eleven: over 28,000 machines, open all night",
+            "Visa, Mastercard, Maestro, Amex, JCB",
+            "Post offices work too, but they shut overnight"
+          ],
+          "tts": "Your bank card. Japanese bank machines refuse it. Go to a seven eleven.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Seven Bank, sevenbank.co.jp/intlcard/index2.html (over 28,000 ATMs, card marks accepted); japan-guide.com/e/e2208.html ('A considerable number of ATMs in Japan do not accept credit, debit and ATM cards that are issued outside of Japan')"
+        },
+        {
+          "id": "last_train",
+          "title": "The last train",
+          "why": "The whole network stops overnight, and the taxi meter goes up while it's stopped.",
+          "detail": "Trains stop around midnight and don't run again until about five. From 10pm to 5am Tokyo taxis add 20 percent to the meter, and a seven kilometre ride is already 2,500 to 3,000 yen before that",
+          "detail_display": "Taxis add 20 percent from 10pm, and there's no train to fall back on.",
+          "bullets": [
+            "Trains stop around midnight, back around 5",
+            "Taxi meter plus 20 percent from 10pm to 5am",
+            "7 km already costs 2,500 to 3,000 yen, about $16 to $19",
+            "Check your last train before you go out"
+          ],
+          "tts": "The last train. Nothing runs till five, and taxis cost twenty percent more after ten.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Tokyo Hire-Taxi Association, taxi-tokyo.or.jp/call/pricelist.html ('22時～5時まで　2割増', Grundpreis 500 Yen bis 1,0 km); JNTO, japan.travel/en/plan/getting-around/taxis/ ('A late-night surcharge is added between 10 p.m. and 5 a.m.', 7-km-Fahrt in Tokio 2.500-3.000 Yen tagsueber, Taxis noetig 'after public transportation shuts down'). Kurs 2026-09-03"
+        }
+      ]
+    }
   },
   "Vietnam": {
     "facts": [
@@ -832,7 +947,7 @@
           "X-ray checks at Olbia, Cagliari and Alghero",
           "4 tonnes seized at one airport in two years"
         ],
-        "tts": "This is the one. Sand from a Sardinian beach. They X-ray your bag for it.",
+        "tts": "Sand from a Sardinian beach. They X-ray your bag for it at the airport.",
         "verified": true,
         "checked": "2026-09-02",
         "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com"
@@ -945,6 +1060,77 @@
         "checked": "2026-09-02",
         "source": "Comune di Roma fountain regulation (2017, urban Daspo); idealista.it 05.09.2025 legal guide; Euro Weekly News 29.05.2026 (lifetime ban); wantedinrome.com"
       }
-    ]
+    ],
+    "useful": {
+      "hook": {
+        "cover_head": "One thing in this picture gets you into the Vatican.",
+        "cover_sub": "3 things to sort before you land.",
+        "spoken": "One thing in this picture gets you into the Vatican.",
+        "close": "Save this for your Italy trip.",
+        "reveal_at": "dress_code",
+        "note": "Gleiche Mechanik wie das Japan-Raetsel, anderes Land - genau das ist die Variable, die Trial 1 gegen Trial 2 misst. Der Schal liegt wirklich im Flatlay."
+      },
+      "facts": [
+        {
+          "id": "dress_code",
+          "title": "A scarf",
+          "why": "St Peter's and the Vatican Museums turn you away at the door, and it's a long way back to the hotel.",
+          "detail": "No sleeveless tops, nothing low-cut, no shorts above the knee, no miniskirts and no hats. A scarf over your shoulders is enough",
+          "detail_display": "A scarf over your shoulders is enough, and it lives in your bag.",
+          "bullets": [
+            "No sleeveless tops, nothing low-cut",
+            "No shorts above the knee, no miniskirts",
+            "Hats off inside",
+            "A scarf covers it and weighs nothing"
+          ],
+          "tts": "A scarf. No bare shoulders at the Vatican, and they turn you away at the door.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Vatikanische Museen, museivaticani.va/content/museivaticani/en/organizza-visita/consigli-utili.html: 'Sleeveless and / or low-cut garments, shorts above the knee, miniskirts and hats are not permitted.' Gilt fuer Museen, Sixtinische Kapelle und den Petersdom"
+        },
+        {
+          "id": "fountains",
+          "title": "A water bottle",
+          "why": "Rome hands out cold drinking water on almost every corner, for nothing, all day and all night.",
+          "detail": "Over 3,000 public fountains, the same water that comes out of the taps at home. Cover the little hole on top of the spout with a finger and the water arcs up so you can drink from it",
+          "detail_display": "Over 3,000 public fountains, running day and night.",
+          "bullets": [
+            "Over 3,000 public fountains in Rome",
+            "Same drinking water as the taps, free",
+            "Running 24 hours, over 200 in the old centre",
+            "Cover the hole on top and it arcs up to drink"
+          ],
+          "tts": "A water bottle. Rome has over three thousand public fountains and they're free.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Acea, acea.it/en/water/nasoni-drinking-fountains: 'There are over 3,000 drinking fountains throughout Rome', ueber 200 im historischen Zentrum, 'provide drinking water to the city 24 hours a day', Trinktrick mit dem Loch im Auslauf"
+        },
+        {
+          "id": "airport_taxi",
+          "title": "The taxi from the airport",
+          "why": "The price is fixed before you get in, so nobody can invent one for you at eleven at night.",
+          "detail": "Fiumicino to anywhere inside the Aurelian Walls is a fixed 55 euros, Ciampino 31 euros. The car is white with a TAXI sign on the roof and the licence number on the doors. Anyone offering you a lift inside the terminal is not a taxi",
+          "detail_display": "Fiumicino to the centre is a fixed 55 euros, about $64.",
+          "bullets": [
+            "Fiumicino to the centre: fixed 55 euros, about $64",
+            "Ciampino: fixed 31 euros, about $36",
+            "White car, TAXI sign on the roof, number on the door",
+            "Anyone offering a ride inside the terminal isn't a taxi"
+          ],
+          "tts": "The taxi from the airport. Fiumicino into Rome is a fixed fifty five euros.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Aeroporti di Roma, adr.it/web/aeroporti-di-roma-en/pax-fco-taxi (55,00 Euro 'Rome city centre, within the Aurelian Walls', weisse Wagen mit TAXI-Schild und Lizenznummer, Warnung vor Faellen ohne Genehmigung); Roma Capitale Tariffario Taxi (Ciampino 31,00 Euro). Kurs 2026-09-03"
+        }
+      ]
+    },
+    "hook_trial": {
+      "cover_head": "One thing in this picture is a 3,000 euro fine.",
+      "cover_sub": "3 things Italy fines you for.",
+      "spoken": "One thing in this picture is a three thousand euro fine in Italy.",
+      "close": "Save this for your Italy trip.",
+      "reveal_at": "sand",
+      "note": "Der Elf-Punkte-Hook zeigte auf ein Strandfoto, auf dem der Sand kein Gegenstand war, und loeste erst nach 25 Sekunden auf. Hier zeigt er auf Muscheln und Kieselsteine, die wirklich im Flatlay liegen, und loest im ersten Punkt auf."
+    }
   }
 }

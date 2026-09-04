@@ -100,8 +100,9 @@ lesen sein."
 > *11 things Italy fines you for.*
 
 Acht Woerter, kein Nebensatz, ein einziger Gedanke - dieselbe Bauart wie der
-Japan-Hook „One thing in this picture is banned in Japan", der mit 48 Speicherungen
-auf 2216 Aufrufe der beste Post des Accounts war.
+Japan-Hook „One thing in this picture is banned in Japan", der mit **3.202
+Aufrufen und 89 Speicherungen** der beste Post des Accounts war (Instagram-App,
+03.09.2026).
 
 **„this" zeigt auf das Coverfoto**, einen Strand. Damit funktioniert das Bildraetsel,
 ohne die Japan-Zeile zu wiederholen. Deshalb steht der Sand nicht mehr an erster

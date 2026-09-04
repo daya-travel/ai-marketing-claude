@@ -1,0 +1,31 @@
+{
+  "country": "Japan",
+  "generated": "2026-09-04",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "Your suitcase",
+      "why": "You don't have to drag it through a single station. Hand it in at the hotel desk and it's at the next hotel tomorrow.",
+      "detail": "About 3,000 yen inside Tokyo, about $19, and it's there the next day.",
+      "source": "japan-guide.com/e/e2278.html (suitcase under 25 kg: 3,000 yen within Greater Tokyo, 3,200 yen Tokyo-Osaka/Kyoto, usually next day, hotel-to-hotel possible); Yamato Transport 'Hands-Free Travel', global-yamato.com/en/hands-free-travel/. Kurs 2026-09-03",
+      "checked": "2026-09-04",
+      "verified": true
+    },
+    {
+      "title": "Your bank card",
+      "why": "Most Japanese bank ATMs simply don't take a card issued outside Japan.",
+      "detail": "7-Eleven has over 28,000 machines and they run all night.",
+      "source": "Seven Bank, sevenbank.co.jp/intlcard/index2.html (over 28,000 ATMs, card marks accepted); japan-guide.com/e/e2208.html ('A considerable number of ATMs in Japan do not accept credit, debit and ATM cards that are issued outside of Japan')",
+      "checked": "2026-09-04",
+      "verified": true
+    },
+    {
+      "title": "The last train",
+      "why": "The whole network stops overnight, and the taxi meter goes up while it's stopped.",
+      "detail": "Taxis add 20 percent from 10pm, and there's no train to fall back on.",
+      "source": "Tokyo Hire-Taxi Association, taxi-tokyo.or.jp/call/pricelist.html ('22時～5時まで　2割増', Grundpreis 500 Yen bis 1,0 km); JNTO, japan.travel/en/plan/getting-around/taxis/ ('A late-night surcharge is added between 10 p.m. and 5 a.m.', 7-km-Fahrt in Tokio 2.500-3.000 Yen tagsueber, Taxis noetig 'after public transportation shuts down'). Kurs 2026-09-03",
+      "checked": "2026-09-04",
+      "verified": true
+    }
+  ]
+}

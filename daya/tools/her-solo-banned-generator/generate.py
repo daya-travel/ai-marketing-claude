@@ -57,6 +57,13 @@ OVERHEAD_WORDS = 21
 WORDS_PER_POINT = 11
 TOLERANCE = 0.10
 
+# Harte Obergrenze, seit dem 03.09.2026 im CLAUDE.md: ein Reel bleibt unter 30
+# Sekunden, die Trials unter 25. Gemessen an drei eigenen Reels: die drei
+# Ein-Minuten-Fassungen lagen bei 21 bis 37 Prozent Wiedergabe, solide waeren
+# 40 bis 50. Das Wort-Budget oben ist ein Richtwert fuer die Listenfassung, das
+# hier ist die Regel.
+MAX_SECONDS = 25
+
 
 def word_budget(n: int) -> int:
     """Wie viele Woerter ein Skript mit n Punkten realistisch braucht."""
@@ -76,6 +83,13 @@ def word_budget(n: int) -> int:
 # des Accounts: Land + Nische + zwei allgemeine Reise-Tags.
 HASHTAGS = {
     "instagram": "#{tag}travel #solofemaletravel #solotravel #traveltips #travelalone",
+    "tiktok": "#solofemaletravel #{tag} #traveltok #solotravel #fyp",
+}
+
+# Die nuetzliche Spur ist kein Verbotsposting, deshalb ein anderer Nischen-Tag.
+# Muster bleibt: Land + Nische + zwei allgemeine Reise-Tags.
+HASHTAGS_USEFUL = {
+    "instagram": "#{tag}travel #solofemaletravel #{tag}tips #traveltips #travelalone",
     "tiktok": "#solofemaletravel #{tag} #traveltok #solotravel #fyp",
 }
 
@@ -109,16 +123,19 @@ def usable(fact: dict) -> bool:
     return bool(fact.get("verified")) and bool(fact.get("tts")) and bool(fact.get("source"))
 
 
-def money(fact: dict) -> str:
-    """Penalty text with the dollar figure appended when one is sourced.
+def fact_line(fact: dict) -> str:
+    """Die Zeile, die im Text landet - Strafe oder Hinweis, je nach Spur.
 
-    Never estimates. A currency with no dated rate and no USD figure from the
-    source simply gets no conversion.
+    Bussgeld-Spur: penalty_display, sonst penalty_local plus die USD-Zahl, wenn
+    die Quelle eine genannt hat. Nuetzlich-Spur: detail_display, sonst detail.
+
+    Nie geschaetzt. Eine Waehrung ohne datierten Kurs und ohne USD-Zahl aus der
+    Quelle bekommt gar keine Umrechnung.
     """
-    display = fact.get("penalty_display")
-    if display:
-        return display
-    local = fact.get("penalty_local") or ""
+    for key in ("penalty_display", "detail_display"):
+        if fact.get(key):
+            return fact[key]
+    local = fact.get("penalty_local") or fact.get("detail") or ""
     usd = fact.get("penalty_usd")
     if usd is None:
         return local
@@ -136,10 +153,13 @@ def check_prompt(text: str, blocklist: list[str]) -> None:
         )
 
 
-def build_prompts(country: str, cfg: dict) -> str:
-    entry = cfg["countries"].get(country)
+def build_prompts(country: str, cfg: dict, track: str = "banned") -> str:
+    # Die nuetzliche Spur zeigt auf andere Gegenstaende als die Bussgeld-Spur.
+    # Regel aus dem CLAUDE.md: wer ein Raetsel stellt, legt das Gesuchte ins Bild.
+    key = "countries_useful" if track == "useful" else "countries"
+    entry = (cfg.get(key) or {}).get(country)
     if entry is None:
-        sys.exit(f"no flatlay props for {country} in prompts/flatlay_prompts.json")
+        sys.exit(f"no flatlay props for {country} under '{key}' in prompts/flatlay_prompts.json")
     blocklist = cfg["blocklist"]
 
     main = cfg["base_style"].format(country=country, props=entry["props"])
@@ -199,12 +219,14 @@ DEFAULT_HOOK = {
 #
 # Im Template heisst {n} das gesprochene Wort und {N} die Ziffer.
 COUNT_WORDS = {
-    "en": {7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven"},
-    "de": {7: "sieben", 8: "acht", 9: "neun", 10: "zehn", 11: "elf"},
+    "en": {3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight",
+           9: "nine", 10: "ten", 11: "eleven"},
+    "de": {3: "drei", 4: "vier", 5: "fünf", 6: "sechs", 7: "sieben", 8: "acht",
+           9: "neun", 10: "zehn", 11: "elf"},
 }
 
 
-def get_hook(country: str, entry: dict, lang: str, n: int) -> dict:
+def get_hook(country: str, entry: dict, lang: str, n: int, hook_key: str = "hook") -> dict:
     """Hook aus den Daten, mit Rueckfall auf die Standardformulierung.
 
     Die Anzahl kommt aus den Daten, nicht aus dem Text. Sonst steht irgendwann
@@ -214,7 +236,7 @@ def get_hook(country: str, entry: dict, lang: str, n: int) -> dict:
     """
     word = COUNT_WORDS[lang].get(n, str(n))
     hook = dict(DEFAULT_HOOK[lang])
-    hook.update({k: v for k, v in (entry.get("hook") or {}).items() if v})
+    hook.update({k: v for k, v in (entry.get(hook_key) or {}).items() if v})
     return {k: (v.format(country=country, n=word, N=str(n))
                 if isinstance(v, str) else v)
             for k, v in hook.items()}
@@ -233,7 +255,7 @@ def check_repeats(country: str, facts: list[dict], countries: dict) -> None:
     for name, entry in countries.items():
         if name == country or not entry.get("posted"):
             continue
-        shared = sorted(mine & {f["id"] for f in entry["facts"]})
+        shared = sorted(mine & {f["id"] for f in entry.get("facts", [])})
         if len(shared) > 2:
             print(
                 f"! {len(shared)} Themen wie im geposteten {name}-Post "
@@ -260,30 +282,70 @@ def build_script(country: str, facts: list[dict], lang: str, hook: dict) -> tupl
     return script, words, seconds
 
 
-def build_caption(country: str, facts: list[dict], checked: str, hook: dict) -> str:
-    template = (TEMPLATES / "caption.txt").read_text(encoding="utf-8")
-    top = facts[0]
-    second = facts[1] if len(facts) > 1 else facts[0]
-    # money() liefert seinen eigenen Schlusspunkt, wenn penalty_display gesetzt
-    # ist. Ohne das Abschneiden steht am Satzende ".." - stand so in der ersten
-    # Italien-Caption.
+def build_caption(country: str, facts: list[dict], checked: str, hook: dict,
+                  track: str = "banned", trial: bool = False) -> str:
+    # fact_line() liefert seinen eigenen Schlusspunkt, wenn ein *_display-Feld
+    # gesetzt ist. Ohne das Abschneiden steht am Satzende ".." - stand so in der
+    # ersten Italien-Caption.
     def sentence(text: str) -> str:
         return text.rstrip().rstrip(".") + "."
 
+    def para(fact: dict) -> str:
+        return f"{fact['title']}. {fact['why']} {sentence(fact_line(fact))}"
+
+    tag = country.lower().replace(" ", "")
+    # Die Schlusszeile kommt aus dem Hook des Landes. Vorher stand "Save it
+    # before you fly" fest in der Vorlage und widersprach jedem Land, das man
+    # nicht anfliegt.
+    close = hook["close"].replace("Save this", "Save it")
+
+    if track == "useful":
+        template = (TEMPLATES / "caption_useful.txt").read_text(encoding="utf-8")
+        # Jeder Punkt bekommt seinen eigenen Absatz. Bei drei Punkten passt das,
+        # und die Leserin sieht sofort, dass es drei sind.
+        return template.format(
+            hook=f"{hook['cover_head']} {hook['cover_sub']}",
+            highlight=para(facts[0]),
+            second=para(facts[1]) if len(facts) > 1 else "",
+            third=para(facts[2]) if len(facts) > 2 else "",
+            checked=checked,
+            close=close,
+            hashtags=HASHTAGS_USEFUL["instagram"].format(tag=tag),
+        )
+
+    # Ein Trial hat drei Punkte, dann bekommt jeder seinen Absatz - wie in der
+    # nuetzlichen Spur, sonst laesst sich der Vergleich nicht lesen. Die lange
+    # Liste behaelt ihre Auswahl aus zwei Punkten, elf Absaetze liest niemand.
+    if trial:
+        template = (TEMPLATES / "caption_trial.txt").read_text(encoding="utf-8")
+        return template.format(
+            hook=f"{hook['cover_head']} {hook['cover_sub']}",
+            highlight=para(facts[0]),
+            second=para(facts[1]) if len(facts) > 1 else "",
+            third=para(facts[2]) if len(facts) > 2 else "",
+            country_law=f"{country}'s own law",
+            checked=checked,
+            close=close,
+            hashtags=HASHTAGS["instagram"].format(tag=tag),
+        )
+
+    template = (TEMPLATES / "caption.txt").read_text(encoding="utf-8")
+    top = facts[0]
+    second = facts[1] if len(facts) > 1 else facts[0]
+    # .lower() machte aus "Sitting on the Spanish Steps" ein "spanish steps".
+    # Nur der erste Buchstabe wird klein, Eigennamen bleiben stehen.
+    lead = second["title"][0].lower() + second["title"][1:]
     return template.format(
         hook=f"{hook['cover_head']} {hook['cover_sub']}",
-        highlight=f"{top['title']}. {top['why']} {sentence(money(top))}",
+        highlight=para(top),
         second=(
-            f"The other one I'd watch is {second['title'].lower()}. "
-            f"{sentence(money(second))}"
+            f"The other one I'd watch is {lead}. "
+            f"{sentence(fact_line(second))}"
         ),
         country_law=f"{country}'s own law",
         checked=checked,
-        # Die Schlusszeile kommt aus dem Hook des Landes. Vorher stand "Save it
-        # before you fly" fest in der Vorlage und widersprach jedem Land, das
-        # man nicht anfliegt.
-        close=hook["close"].replace("Save this", "Save it"),
-        hashtags=HASHTAGS["instagram"].format(tag=country.lower().replace(" ", "")),
+        close=close,
+        hashtags=HASHTAGS["instagram"].format(tag=tag),
     )
 
 
@@ -297,6 +359,26 @@ def main() -> None:
         help="use facts with no source. Only for drafting, never for posting.",
     )
     ap.add_argument("--list", action="store_true", help="show countries and readiness")
+    ap.add_argument(
+        "--track",
+        default="banned",
+        choices=["banned", "useful"],
+        help="banned = die Bussgeld-Liste, useful = Vorbereitungspunkte. "
+        "Angelegt am 04.09.2026: der Japan-Post mit 3.202 Aufrufen war nie eine "
+        "Verbotsliste.",
+    )
+    ap.add_argument(
+        "--only",
+        help="Komma-Liste von Fakten-IDs, in genau dieser Reihenfolge. Fuer die "
+        "Trial Reels, die drei von elf Punkten nehmen.",
+    )
+    ap.add_argument(
+        "--hook",
+        default=None,
+        help="Schluessel des Hook-Felds im Land, z.B. hook_trial. Standard: hook "
+        "in der Bussgeld-Spur, useful.hook in der nuetzlichen.",
+    )
+    ap.add_argument("--label", help="Ordnername statt {country}_{datum}, z.B. trial1-japan")
     args = ap.parse_args()
 
     db = load(DATA)
@@ -305,9 +387,13 @@ def main() -> None:
 
     if args.list:
         for name, entry in countries.items():
-            ready = sum(1 for f in entry["facts"] if usable(f))
+            banned = entry.get("facts", [])
+            useful = (entry.get("useful") or {}).get("facts", [])
+            ready = sum(1 for f in banned if usable(f))
+            uready = sum(1 for f in useful if usable(f))
             flag = "  gepostet " + entry["posted"] if entry.get("posted") else ""
-            print(f"{name:14s} {ready} von {len(entry['facts'])} belegt{flag}")
+            extra = f"   nuetzlich {uready}/{len(useful)}" if useful else ""
+            print(f"{name:14s} {ready} von {len(banned)} belegt{extra}{flag}")
         return
 
     if not args.country:
@@ -317,7 +403,33 @@ def main() -> None:
             f"unknown country: {args.country}\nhave: {', '.join(sorted(countries))}"
         )
 
-    all_facts = countries[args.country]["facts"]
+    entry = countries[args.country]
+    if args.track == "useful":
+        source_block = entry.get("useful")
+        if not source_block:
+            sys.exit(
+                f"{args.country} hat keinen 'useful'-Block. "
+                "Erst drei belegte Vorbereitungspunkte recherchieren."
+            )
+        all_facts = source_block["facts"]
+        hook_source = source_block
+        hook_key = args.hook or "hook"
+    else:
+        all_facts = entry["facts"]
+        hook_source = entry
+        hook_key = args.hook or "hook"
+
+    if args.only:
+        wanted = [i.strip() for i in args.only.split(",") if i.strip()]
+        by_id = {f["id"]: f for f in all_facts}
+        unknown = [i for i in wanted if i not in by_id]
+        if unknown:
+            sys.exit(
+                f"unbekannte IDs in --only: {', '.join(unknown)}\n"
+                f"vorhanden: {', '.join(by_id)}"
+            )
+        all_facts = [by_id[i] for i in wanted]
+
     good = [f for f in all_facts if usable(f)]
     missing = [f for f in all_facts if not usable(f)]
 
@@ -332,14 +444,19 @@ def main() -> None:
         print("! --include-unverified is on. This output is a draft, not postable.")
     if not facts:
         sys.exit("nothing verified for this country yet. Research first.")
-    if len(facts) < 5:
+    # Die Fuenf-Punkte-Schwelle galt fuer die lange Fassung. Ein Trial Reel hat
+    # bewusst drei - Japan hatte drei und lief am besten. Deshalb nur warnen,
+    # wenn niemand die Auswahl selbst getroffen hat.
+    if len(facts) < 5 and not args.only:
         print(
-            f"! nur {len(facts)} belegte Fakten. Unter fuenf traegt das Format "
-            "nicht, erst weiter recherchieren."
+            f"! nur {len(facts)} belegte Fakten. Unter fuenf traegt die lange "
+            "Fassung nicht, erst weiter recherchieren. Fuer ein Trial Reel mit "
+            "drei Punkten stattdessen --only setzen."
         )
 
     stamp = date.today().isoformat()
-    out = OUTPUT / f"{args.country.replace(' ', '_')}_{stamp}"
+    name = args.label or f"{args.country.replace(' ', '_')}_{stamp}"
+    out = OUTPUT / name
     out.mkdir(parents=True, exist_ok=True)
 
     (out / "facts.json").write_text(
@@ -352,7 +469,7 @@ def main() -> None:
                     {
                         "title": f["title"],
                         "why": f.get("why"),
-                        "penalty": money(f),
+                        "detail": fact_line(f),
                         "source": f.get("source"),
                         "checked": f.get("checked"),
                         "verified": bool(f.get("verified")),
@@ -368,17 +485,18 @@ def main() -> None:
     )
 
     (out / "flatlay_prompts.txt").write_text(
-        build_prompts(args.country, prompt_cfg), encoding="utf-8"
+        build_prompts(args.country, prompt_cfg, args.track), encoding="utf-8"
     )
 
     check_repeats(args.country, facts, countries)
-    hook = get_hook(args.country, countries[args.country], args.lang, len(facts))
+    hook = get_hook(args.country, hook_source, args.lang, len(facts), hook_key)
     script, words, seconds = build_script(args.country, facts, args.lang, hook)
     (out / "elevenlabs_script.txt").write_text(script, encoding="utf-8")
 
     newest = max((f.get("checked") or "") for f in facts)
     (out / "caption.txt").write_text(
-        build_caption(args.country, facts, newest, hook), encoding="utf-8"
+        build_caption(args.country, facts, newest, hook, args.track, bool(args.only)),
+        encoding="utf-8"
     )
 
     (out / "cover.txt").write_text(
@@ -397,6 +515,12 @@ def main() -> None:
         f"   Budget fuer {len(facts)} Punkte: {budget} Woerter, "
         f"rund {budget / WPM * 60:.0f} s"
     )
+    if seconds > MAX_SECONDS:
+        cut = int((seconds - MAX_SECONDS) / 60 * WPM) + 1
+        print(
+            f"!  {seconds:.0f} s, ueber der Grenze von {MAX_SECONDS} s. "
+            f"Rund {cut} Woerter raus, oder einen Punkt in ein zweites Reel."
+        )
     if words > budget * (1 + TOLERANCE):
         over = words - budget
         print(
