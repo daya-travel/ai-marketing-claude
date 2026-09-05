@@ -1,7 +1,8 @@
 # Drei Trial Reels - der Test nach dem Italien-Absturz
 
 **Angelegt:** 04.09.2026
-**Status:** Texte und Slides fertig (je 5 Bilder), Tonspur und Untertitel offen
+**Status:** Trial 1 Japan fertig als MP4 (25,9 s). Trial 2 und 3: Slides fertig,
+Tonspur offen.
 **Plan:** `/root/.claude/plans/piped-percolating-bunny.md`
 
 ---
@@ -129,17 +130,18 @@ added between 10 p.m. and 5 a.m.", 7-km-Fahrt 2.500-3.000 Yen, Taxi noetig
 ```
 One thing in this picture costs you a whole day in Japan.
 
-One. Your suitcase. Hand it to the hotel desk and it meets you at the next one.
+One. Your suitcase. The hotel desk sends it to your next hotel.
 
-Two. Your bank card. Japanese bank machines refuse it. Go to a seven eleven.
+Two. Your bank card. Bank machines refuse it. Use a seven eleven.
 
-Three. The last train. Nothing runs till five, and taxis cost twenty percent
-more after ten.
+Three. The last train. Nothing runs till five, and taxis add twenty percent
+after ten.
 
 Save this for your Japan trip.
 ```
 
-65 Woerter, rund 23 Sekunden bei 172 WPM.
+57 Woerter. Zweite Fassung, am 05.09. an der ersten Aufnahme gekuerzt - warum,
+steht unten unter „Vertonung".
 
 ---
 
@@ -386,3 +388,66 @@ Etiketten auf Koffer und Korb.
    ruecktragen, danach jeden Trial als eigene Zeile.
 4. `build-thailand.mjs` traegt die Wortmarke noch auf `bottom: 300px`, das sind
    84,3 % statt der 77 %, die die Regel verlangt.
+
+## Vertonung Trial 1
+
+Stimme **Isla** ueber Higgsfield `seed_audio`, dieselbe wie beim Thailand-Reel.
+Ergebnis: `daya/studio/reels/trial1/daya-trial1-japan.mp4`, 1080x1920, 30 fps,
+**25,9 s Bild auf 24,7 s Ton**. Der Schlussframe laeuft 1,2 s laenger als die
+Stimme, damit „Save this for your Japan trip." lesbar bleibt.
+
+**Ich kann Audio nicht anhoeren.** Bei „klingt gut" muss ich passen. Was ich
+messen kann, ist Tempo und Laenge, und daran haengen alle Entscheidungen unten.
+
+### Zwei Aufnahmen sind rausgeflogen
+
+**Erste Aufnahme, 65 Woerter am Stueck: 35,9 s.** Viel zu lang. Gemessen:
+12,2 s davon waren Stille. Das Skript auf 57 Woerter gekuerzt.
+
+**Zweite Aufnahme, 57 Woerter am Stueck: 36,3 s.** Kein Gewinn - dieselben
+Pausen, dazu langsamer gelesen (142 statt 165 W/min netto). Damit war klar,
+dass die Laenge nicht am Text haengt.
+
+**Beschleunigen war der falsche Hebel.** Die reine Sprechzeit lag bei 21,3 s
+auf 57 Woerter, also **161 W/min** - genau im normalen Bereich von 150 bis 160.
+Ein `atempo 1.35`, das rechnerisch unter 25 Sekunden gekommen waere, haette die
+Stimme auf ueber 200 W/min gehetzt, obwohl nur die Stille zu lang war.
+
+### Abschnittsweise vertont statt am Stueck
+
+Fuenf Clips, einer je Slide, danach zusammengesetzt mit
+`daya/studio/build-voice.py`:
+
+- jede Pause **innerhalb** eines Abschnitts auf 0,24 s gekuerzt
+- Stille am Anfang und Ende jedes Clips faellt weg
+- zwischen zwei Abschnitten genau 0,30 s
+- **nach dem Hook 0,90 s.** Das Cover stellt ein Raetsel und will abgesucht
+  werden; mit der normalen Pause stand es 3,7 s, jetzt 4,5 s
+- die Schnittgrenze liegt am **Ende** der Pause, nicht in ihrer Mitte. Das Bild
+  wechselt, wenn der naechste Satz einsetzt
+
+Damit steht die Gesamtlaenge fest, statt sich zu ergeben, und **die
+Segmentgrenzen sind exakt statt gemessen**. `measure-cuts.py` bleibt fuer
+durchgehende Aufnahmen, taugt hier aber nicht: bei fuenf Abschnitten und elf
+Pausen liegen Satz- und Absatzpausen zu dicht beieinander.
+
+| Slide | Dauer |
+|---|---|
+| Cover, Raetsel | 4,49 s |
+| Koffer | 5,37 s |
+| Bankkarte | 5,15 s |
+| Letzter Zug | 6,70 s |
+| Schlusskarte | 2,97 s + 1,2 s Nachlauf |
+
+**25,9 s statt der geplanten 25.** Unter der 30-Sekunden-Regel, aber ueber
+meiner eigenen Zielmarke. Die letzte Sekunde waere nur mit gehetzter Stimme
+oder einem Punkt weniger zu holen gewesen, und beides kostet mehr als es
+bringt.
+
+### Untertitel
+
+Liegen als `daya/studio/audio/trial1/subtitles.srt` daneben, aus denselben
+exakten Grenzen. **Nicht ins Bild gebrannt**, und dazu ein Einwand: auf diesen
+Slides steht der Text schon, gross und mittig. Instagram-Untertitel sitzen
+unten mittig und wuerden ihn verdoppeln. Bei Italien war das so, und Italien
+lief schlechter als Japan ohne.

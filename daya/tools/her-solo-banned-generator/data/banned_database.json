@@ -638,7 +638,7 @@
             "Tokyo to Kyoto about 3,200 yen, about $21",
             "Under 25 kilos, arrives the next day"
           ],
-          "tts": "Your suitcase. Hand it to the hotel desk and it meets you at the next one.",
+          "tts": "Your suitcase. The hotel desk sends it to your next hotel.",
           "verified": true,
           "checked": "2026-09-04",
           "source": "japan-guide.com/e/e2278.html (suitcase under 25 kg: 3,000 yen within Greater Tokyo, 3,200 yen Tokyo-Osaka/Kyoto, usually next day, hotel-to-hotel possible); Yamato Transport 'Hands-Free Travel', global-yamato.com/en/hands-free-travel/. Kurs 2026-09-03"
@@ -655,7 +655,7 @@
             "Visa, Mastercard, Maestro, Amex, JCB",
             "Post offices work too, but they shut overnight"
           ],
-          "tts": "Your bank card. Japanese bank machines refuse it. Go to a seven eleven.",
+          "tts": "Your bank card. Bank machines refuse it. Use a seven eleven.",
           "verified": true,
           "checked": "2026-09-04",
           "source": "Seven Bank, sevenbank.co.jp/intlcard/index2.html (over 28,000 ATMs, card marks accepted); japan-guide.com/e/e2208.html ('A considerable number of ATMs in Japan do not accept credit, debit and ATM cards that are issued outside of Japan')"
@@ -672,7 +672,7 @@
             "7 km already costs 2,500 to 3,000 yen, about $16 to $19",
             "Check your last train before you go out"
           ],
-          "tts": "The last train. Nothing runs till five, and taxis cost twenty percent more after ten.",
+          "tts": "The last train. Nothing runs till five, and taxis add twenty percent after ten.",
           "verified": true,
           "checked": "2026-09-04",
           "source": "Tokyo Hire-Taxi Association, taxi-tokyo.or.jp/call/pricelist.html ('22時～5時まで　2割増', Grundpreis 500 Yen bis 1,0 km); JNTO, japan.travel/en/plan/getting-around/taxis/ ('A late-night surcharge is added between 10 p.m. and 5 a.m.', 7-km-Fahrt in Tokio 2.500-3.000 Yen tagsueber, Taxis noetig 'after public transportation shuts down'). Kurs 2026-09-03"
