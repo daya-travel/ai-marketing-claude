@@ -40,6 +40,10 @@ const CUTS = join(__dirname, 'audio', TRIAL, 'cuts.json');
 const NAMES = { trial1: 'daya-trial1-japan', trial2: 'daya-trial2-italy-useful', trial3: 'daya-trial3-italy-fines' };
 
 const W = 1080, H = 1920, FPS = 30;
+// crf 21 statt 18: bei 18 kam Trial 1 auf 31 MB und liess sich nicht mehr
+// verschicken. Instagram kodiert ohnehin neu, der Unterschied ist dort nicht
+// mehr zu sehen - die Dateigroesse dagegen schon.
+
 const HOLD = 1.2;
 
 const ids = ['01', '02', '03', '04', 'end'];
@@ -65,7 +69,7 @@ segs.forEach((s) => {
   const filter = `[0:v]scale=${W * 2}:${H * 2}:flags=lanczos,` +
     `zoompan=z='min(1+0.0009*on,1.09)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':` +
     `d=${s.frames}:s=${W}x${H}:fps=${FPS}[v];[v][1:v]overlay=0:0,format=yuv420p[out]`;
-  execSync(`ffmpeg -y -loglevel error -loop 1 -i "${grid}" -i "${ov}" -filter_complex "${filter}" -map "[out]" -frames:v ${s.frames} -an -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p "${out}"`, { stdio: 'inherit' });
+  execSync(`ffmpeg -y -loglevel error -loop 1 -i "${grid}" -i "${ov}" -filter_complex "${filter}" -map "[out]" -frames:v ${s.frames} -an -c:v libx264 -crf 21 -preset slow -pix_fmt yuv420p "${out}"`, { stdio: 'inherit' });
 });
 
 // 2) zusammensetzen
