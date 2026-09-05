@@ -1,0 +1,31 @@
+{
+  "country": "Italy",
+  "generated": "2026-09-04",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "Sand from the beach",
+      "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
+      "detail": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
+      "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Sitting on the Spanish Steps",
+      "why": "Everyone has seen the photo of people sitting on them. That photo is older than the rule.",
+      "detail": "250 euros for sitting, 400 if you leave a mark.",
+      "source": "Comune di Roma decorum rules 2019; CNN travel; ABC News 08.08.2019; NBC News (enforcement patrols)",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "The camera at the end of the street",
+      "why": "Historic centres are closed to traffic and the sign is small, in Italian, and often the same shape as the one before it. The car in front of you may live there.",
+      "detail": "About 80 to 130 euros per gate, and every camera you pass is a separate fine.",
+      "source": "European Consumer Centre (evz.de / europe-consommateurs.eu) on Italian ZTL fines; Art. 7 Codice della Strada",
+      "checked": "2026-09-02",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "country": "Italy",
+  "generated": "2026-09-04",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "A scarf",
+      "why": "St Peter's and the Vatican Museums turn you away at the door, and it's a long way back to the hotel.",
+      "detail": "A scarf over your shoulders is enough, and it lives in your bag.",
+      "source": "Vatikanische Museen, museivaticani.va/content/museivaticani/en/organizza-visita/consigli-utili.html: 'Sleeveless and / or low-cut garments, shorts above the knee, miniskirts and hats are not permitted.' Gilt fuer Museen, Sixtinische Kapelle und den Petersdom",
+      "checked": "2026-09-04",
+      "verified": true
+    },
+    {
+      "title": "A water bottle",
+      "why": "Rome hands out cold drinking water on almost every corner, for nothing, all day and all night.",
+      "detail": "Over 3,000 public fountains, running day and night.",
+      "source": "Acea, acea.it/en/water/nasoni-drinking-fountains: 'There are over 3,000 drinking fountains throughout Rome', ueber 200 im historischen Zentrum, 'provide drinking water to the city 24 hours a day', Trinktrick mit dem Loch im Auslauf",
+      "checked": "2026-09-04",
+      "verified": true
+    },
+    {
+      "title": "The taxi from the airport",
+      "why": "The price is fixed before you get in, so nobody can invent one for you at eleven at night.",
+      "detail": "Fiumicino to the centre is a fixed 55 euros, about $64.",
+      "source": "Aeroporti di Roma, adr.it/web/aeroporti-di-roma-en/pax-fco-taxi (55,00 Euro 'Rome city centre, within the Aurelian Walls', weisse Wagen mit TAXI-Schild und Lizenznummer, Warnung vor Faellen ohne Genehmigung); Roma Capitale Tariffario Taxi (Ciampino 31,00 Euro). Kurs 2026-09-03",
+      "checked": "2026-09-04",
+      "verified": true
+    }
+  ]
+}

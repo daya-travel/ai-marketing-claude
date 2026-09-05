@@ -1,0 +1,63 @@
+{
+  "country": "Bali",
+  "generated": "2026-09-01",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "Vaping in the wrong place",
+      "why": "Vapes are legal to own but count as smoking, and the smoke-free zones are wider than people expect.",
+      "penalty": "Import limits: 30 ml open-system or 12 ml closed-system e-liquid. Vaping in a smoke-free area is penalised like smoking",
+      "source": "vpz.co.uk Bali vaping laws",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Riding a scooter without the right permit",
+      "why": "An International Driving Permit for cars is not enough. It has to carry the motorcycle class.",
+      "penalty": "300,000 to 1,000,000 rupiah, about $20 to $70, per missing document. And without a valid permit your insurer can refuse the hospital bill, which runs past $20,000 for a serious crash.",
+      "source": "bali.com IDL guide; practicesource.com; shortstaybali.com; myadventuretrips.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Flying a drone",
+      "why": "Registration is required for every drone since January 2025, including sub-250 gram models.",
+      "penalty": "Up to IDR 5 billion, about $308,000, and 5 years. A 5 km exclusion zone around sacred sites.",
+      "source": "yourhappinesstours.com Bali drone laws 2026; drone-laws.com Indonesia",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Bringing any cannabis in",
+      "why": "CBD oil and a medical card from home count for nothing here. Cannabis sits in the same group as heroin.",
+      "penalty": "Possession alone is four to twelve years in Kerobokan. Above a kilo it is life or the firing squad.",
+      "source": "tripbase.com Indonesia drug laws; yourhappinesstours.com; baliholidaysecrets.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Small plastic water bottles",
+      "why": "Every shop used to sell them, and since January they are gone for a reason.",
+      "penalty": "Banned island-wide since January 2026, along with bags, styrofoam and straws.",
+      "source": "Ocean Gardener 2026 update; villabalisale.com; timeout.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Overstaying",
+      "why": "One single day over triggers the full daily rate.",
+      "penalty": "IDR 1,000,000 a day, about $65, up to 60 days. Then automatic deportation.",
+      "source": "absvisa.com; visa.balieasy.com - USD figure is the source's own",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Sacred sites and temples",
+      "why": "The inner temple areas are closed to non-worshippers, and photos taken the wrong way get people deported.",
+      "penalty": "Deportation, entry ban, and required purification ceremony. Sarong and sash needed past any temple gate",
+      "source": "lovebali.baliprov.go.id (Governor Koster regulations); timeout.com 2025-03-28",
+      "checked": "2026-09-01",
+      "verified": true
+    }
+  ]
+}

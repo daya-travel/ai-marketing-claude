@@ -1,0 +1,4 @@
+main: Tuesday or Friday, 13:30 CET
+test: Thursday, 19:30 CET
+
+13:00-14:00 CET Tue/Fri is this account's own best window. The Thursday evening slot tests the EU-wide reel peak (14:00-17:00 and after 18:00, Thursday 21:00 highest). Post the main one first, only move the schedule once the test beats it twice.

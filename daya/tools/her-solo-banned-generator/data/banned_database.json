@@ -1,0 +1,1136 @@
+{
+  "_meta": {
+    "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+    "schema": {
+      "verified": "true only if a source was read on the 'checked' date. generate.py refuses to use false without --include-unverified.",
+      "penalty_usd": "null when no source stated a USD figure and no dated rate exists for that currency. Never estimated.",
+      "tts": "the spoken line. Keep under 18 words - the whole script has to fit ~92 words for 32 seconds.",
+      "penalty_display": "Where the conversion belongs mid-sentence. Falls back to penalty_local plus the USD figure when absent.",
+      "hook": "Pro Land. cover_head und cover_sub gehen auf Slide 1, spoken in die Tonspur, close auf die Schlusskarte. Fehlt das Feld, nimmt generate.py die Standardformulierung - die aber pro Post variiert werden muss, sonst liest sich der naechste Post wie der letzte.",
+      "posted": "Datum der Veroeffentlichung. check_repeats vergleicht neue Laender dagegen.",
+      "bullets": "Stichpunkte fuer den Slide. Alesya, 01.09.: auf dem Bild muss genug Text stehen wie bei Japan, lieber Stichpunkte als langer Fliesstext.",
+      "useful": "Zweite Spur pro Land: Vorbereitungspunkte statt Strafen. Gleiche Pflichtfelder (verified, checked, source, tts), aber 'detail' statt 'penalty_local' und 'detail_display' statt 'penalty_display'. Angelegt am 04.09.2026: der Japan-Post, der 3.202 Aufrufe holte, war nie eine Verbotsliste, sondern nuetzliche Vorbereitung. generate.py --track useful liest diesen Block."
+    },
+    "rates": {
+      "THB": {
+        "per_usd": 33.15,
+        "checked": "2026-08-30",
+        "source": "xe.com / wise mid-market"
+      },
+      "KRW": {
+        "per_usd": 1368.62,
+        "checked": "2026-09-01",
+        "source": "tradingeconomics.com USD/KRW"
+      },
+      "IDR": {
+        "per_usd": null,
+        "checked": null,
+        "source": "kein datierter Kurs. Bali-Betraege tragen nur die USD-Zahl, die die Quelle selbst nennt."
+      },
+      "JPY": {
+        "per_usd": 156.01,
+        "checked": "2026-09-03",
+        "source": "frankfurter.dev (EZB-Referenzkurs), 1 JPY = 0.00641 USD"
+      },
+      "EUR": {
+        "per_usd": 0.861,
+        "checked": "2026-09-03",
+        "source": "frankfurter.dev (EZB-Referenzkurs), 1 EUR = 1.1615 USD"
+      }
+    },
+    "measured_wpm": {
+      "value": 172,
+      "note": "Measured on the real Thailand reel: Higgsfield seed_audio, voice Isla, atempo 1.30. Do not assume faster - the first three length estimates for that post were all too optimistic."
+    },
+    "reel_test": {
+      "why": "Drei Trial Reels an Nicht-Follower. Angelegt am 03.09.2026 nach dem Italien-Reel (65 Aufrufe, 11 Sekunden Wiedergabe), am 04.09. umgebaut. Die erste Fassung testete drei Cover-Varianten fuer Italien und uebersah dabei einen Kandidaten: das Thema selbst. Alesyas Vorschlag, auch ein Japan-Reel zu testen, trennt genau das.",
+      "constant": "In allen drei gleich, also nicht getestet: Flatlay-Cover, 3 Punkte, unter 25 Sekunden, Untertitel, Aufloesung im ersten Punkt. Das kommt aus dem, was bei Japan schon drin war, und aus den 2026-Richtwerten.",
+      "measure": "Verglichen wird die Wiedergabequote, nicht die Aufrufe - bei diesen Groessenordnungen schwanken Aufrufe zu stark. Zielmarke ueber 40 Prozent. Ein Trial pro Tag, je 24 bis 48 Stunden.",
+      "trials": {
+        "1": {
+          "country": "Japan",
+          "track": "useful",
+          "facts": [
+            "luggage",
+            "atm",
+            "last_train"
+          ],
+          "cover": "flatlay-japan-useful",
+          "tests": "Zusammen mit 2: das Thema. Format identisch, nur das Land wechselt."
+        },
+        "2": {
+          "country": "Italy",
+          "track": "useful",
+          "facts": [
+            "dress_code",
+            "fountains",
+            "airport_taxi"
+          ],
+          "cover": "flatlay-italy-useful",
+          "tests": "Zusammen mit 3: der Inhalt. Land identisch, nur der Blickwinkel wechselt."
+        },
+        "3": {
+          "country": "Italy",
+          "track": "banned",
+          "facts": [
+            "sand",
+            "steps",
+            "ztl"
+          ],
+          "cover": "daya/studio/photos/italy/final/f00-flatlay.png",
+          "tests": "Die Kontrolle: die Bussgeld-Liste, auf dasselbe Format gekuerzt."
+        }
+      },
+      "limits": "Speicherungen und Weiterleitungen sind im Trial kaum aussagekraeftig, die Stichprobe ist klein und niemand aus dem eigenen Umfeld ist dabei. Der Test misst den Anfang, nicht den Wert des ganzen Posts. Wiederholungsmuedigkeit laesst sich damit nicht von Cover-Wirkung trennen."
+    }
+  },
+  "Thailand": {
+    "facts": [
+      {
+        "id": "vapes",
+        "title": "Vapes",
+        "why": "Sold openly at home, so tourists pack one without thinking. Police in Bangkok and Phuket check for them specifically.",
+        "penalty_local": "Fines up to 30,000 THB, and bringing one through customs falls under the Customs Act",
+        "penalty_usd": 900,
+        "tts": "Vapes. Banned since twenty fourteen. Thirty thousand baht.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "terms.law vaping-laws; iamkohchang.com; canibringto.com",
+        "penalty_display": "Fines up to 30,000 baht, about $900. Bringing one through customs falls under the Customs Act."
+      },
+      {
+        "id": "drone",
+        "title": "Flying a drone",
+        "why": "Two separate registrations, and neither can be finished before you land.",
+        "penalty_local": "Up to 5 years or 100,000 THB, equipment seized",
+        "penalty_usd": 3000,
+        "tts": "Flying a drone. Two registrations, or five years.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Drone Association Thailand (droneth.or.th); uavwiki.com - CAAT plus NBTC, no-fly 9 km around every airport",
+        "penalty_display": "Up to 5 years or 100,000 baht, about $3,000, and your equipment seized."
+      },
+      {
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": "The daily fine sounds survivable. Getting caught instead of reporting yourself is the expensive part.",
+        "penalty_local": "500 THB a day, capped at 20,000 after 40 days. Caught by immigration under a year overstay means a 5-year ban",
+        "penalty_usd": 600,
+        "tts": "Overstaying. Report yourself and you pay. Get caught, five-year ban.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "juslaws.com; tratimmigration.com; legal.co.th - voluntary under 90 days is fine only, no blacklist",
+        "penalty_display": "500 baht a day, about $15, capped at 20,000, about $600. Caught by immigration means a five-year ban."
+      },
+      {
+        "id": "cannabis",
+        "title": "Cannabis",
+        "why": "Buying it is genuinely easy, which is exactly why people misjudge the rest.",
+        "penalty_local": "Public consumption up to 25,000 THB and 3 months. Taking it out of the country, since 17 June 2026, up to 10 years and 500,000 THB",
+        "penalty_usd": 15000,
+        "tts": "Cannabis. Buying is legal. Taking it home is ten years.",
+        "verified": true,
+        "checked": "2026-08-31",
+        "source": "US Embassy Bangkok alert 2026-07-08 (Section 244 Customs Act); Khaosod English; terms.law; thailawonline.com",
+        "penalty_display": "Public use up to 25,000 baht, about $750. Taking it out of the country, since 17 June 2026, up to ten years and 500,000 baht, about $15,000."
+      },
+      {
+        "id": "monarchy",
+        "title": "Posting about the monarchy",
+        "why": "Section 112 applies to foreigners, and anyone at all can file the complaint.",
+        "penalty_local": "3 to 15 years per count, and every post counts separately",
+        "penalty_usd": null,
+        "tts": "Posting about the monarchy. Three to fifteen years, per post.",
+        "verified": true,
+        "checked": "2026-08-31",
+        "source": "ARTICLE 19; ilaw.or.th; thailawonline.com",
+        "penalty_display": "Three to fifteen years per count, and every post counts separately."
+      },
+      {
+        "id": "beach_smoking",
+        "title": "Smoking on the beach",
+        "why": "Nobody expects a beach to be a no-smoking zone, and the signs are easy to miss.",
+        "penalty_local": "Up to a year in prison or 100,000 THB",
+        "penalty_usd": 3000,
+        "tts": "Smoking on the beach. Twenty-four beaches. Up to a year.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "SEATCA; Library of Congress Global Legal Monitor; beachnear.me - started at 20 beaches in Nov 2017, now 24 across 15 provinces",
+        "penalty_display": "Up to a year in prison, or 100,000 baht, about $3,000."
+      },
+      {
+        "id": "coral",
+        "title": "Taking coral home",
+        "why": "A shell in your bag looks like a souvenir until it is found in a national park.",
+        "penalty_local": "Up to 5 years and 500,000 THB under the National Park Act 2019",
+        "penalty_usd": 15000,
+        "tts": "Taking coral home. In a national park, five years.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "National Park Act B.E. 2562 (2019); thailand.go.th; divephiphiisland.com",
+        "penalty_display": "Up to five years and 500,000 baht, about $15,000, under the National Park Act 2019."
+      }
+    ],
+    "posted": "2026-08-31"
+  },
+  "Bali": {
+    "facts": [
+      {
+        "id": "vapes",
+        "title": "Vaping in the wrong place",
+        "why": "Vapes are legal to own but count as smoking, and the smoke-free zones are wider than people expect.",
+        "penalty_local": "Import limits: 30 ml open-system or 12 ml closed-system e-liquid. Vaping in a smoke-free area is penalised like smoking",
+        "penalty_usd": null,
+        "tts": "Vaping. Legal to own, fined in any smoke-free zone.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "vpz.co.uk Bali vaping laws"
+      },
+      {
+        "id": "scooter",
+        "title": "Riding a scooter without the right permit",
+        "why": "An International Driving Permit for cars is not enough. It has to carry the motorcycle class.",
+        "penalty_local": "300,000 to 1,000,000 IDR per missing document. Task force Dharma Dewata has run zero tolerance since April 2026",
+        "penalty_usd": 70,
+        "penalty_display": "300,000 to 1,000,000 rupiah, about $20 to $70, per missing document. And without a valid permit your insurer can refuse the hospital bill, which runs past $20,000 for a serious crash.",
+        "tts": "Scooters. Your car permit doesn't count, and your insurance knows it.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "bali.com IDL guide; practicesource.com; shortstaybali.com; myadventuretrips.com"
+      },
+      {
+        "id": "drone",
+        "title": "Flying a drone",
+        "why": "Registration is required for every drone since January 2025, including sub-250 gram models.",
+        "penalty_local": "Up to IDR 5 billion and 5 years for restricted airspace. Perda Bali 12/2024 adds a 5 km exclusion around sacred sites, needing written consent from the local banjar",
+        "penalty_usd": 308000,
+        "tts": "Drones. Every one needs registering, even the tiny ones.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "yourhappinesstours.com Bali drone laws 2026; drone-laws.com Indonesia",
+        "penalty_display": "Up to IDR 5 billion, about $308,000, and 5 years. A 5 km exclusion zone around sacred sites."
+      },
+      {
+        "id": "import",
+        "title": "Bringing any cannabis in",
+        "why": "CBD oil and a medical card from home count for nothing here. Cannabis sits in the same group as heroin.",
+        "penalty_local": "Group I narcotic. Possession 4 to 12 years. Over 1 kg plant material or 5 g synthetic: life or the death penalty",
+        "penalty_usd": null,
+        "tts": "Cannabis. Same legal group as heroin. Possession is four years minimum.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "tripbase.com Indonesia drug laws; yourhappinesstours.com; baliholidaysecrets.com",
+        "penalty_display": "Possession alone is four to twelve years in Kerobokan. Above a kilo it is life or the firing squad."
+      },
+      {
+        "id": "plastic",
+        "title": "Small plastic water bottles",
+        "why": "Every shop used to sell them, and since January they are gone for a reason.",
+        "penalty_local": "Full ban on bottled water under one litre across Bali since January 2026, plus bags, styrofoam and straws",
+        "penalty_usd": null,
+        "penalty_display": "Banned island-wide since January 2026, along with bags, styrofoam and straws.",
+        "tts": "Small plastic bottles. Banned island-wide since January.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Ocean Gardener 2026 update; villabalisale.com; timeout.com"
+      },
+      {
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": "One single day over triggers the full daily rate.",
+        "penalty_local": "IDR 1,000,000 per day up to 60 days. Past 60 days, automatic deportation order",
+        "penalty_usd": 65,
+        "tts": "Overstaying. One day over costs a million rupiah.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "absvisa.com; visa.balieasy.com - USD figure is the source's own",
+        "penalty_display": "IDR 1,000,000 a day, about $65, up to 60 days. Then automatic deportation."
+      },
+      {
+        "id": "religion",
+        "title": "Sacred sites and temples",
+        "why": "The inner temple areas are closed to non-worshippers, and photos taken the wrong way get people deported.",
+        "penalty_local": "Deportation, entry ban, and required purification ceremony. Sarong and sash needed past any temple gate",
+        "penalty_usd": null,
+        "tts": "Temples. The inner courtyards are closed to you, and photos get people deported.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "lovebali.baliprov.go.id (Governor Koster regulations); timeout.com 2025-03-28"
+      }
+    ]
+  },
+  "Singapore": {
+    "facts": [
+      {
+        "id": "vapes",
+        "title": "Vapes",
+        "why": "The ban reaches passengers who never leave the airport.",
+        "penalty_local": "Fine raised to S$10,000, with longer maximum jail terms and mandatory caning for importers and traffickers. Applies in transit at Changi",
+        "penalty_usd": null,
+        "tts": "Vapes. Ten thousand dollar fine, and it applies in transit.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "thevapersguide.com Singapore; ecigone.co.uk; airtraveler.club"
+      },
+      {
+        "id": "drone",
+        "title": "Flying a drone",
+        "why": "Registration plus an online training certificate, before the first flight.",
+        "penalty_local": "S$50,000 and up to 2 years for a first offence, S$100,000 and 5 years for repeats. Registration required above 250 g",
+        "penalty_usd": null,
+        "tts": "Drones. Fifty thousand dollars and two years without the permit.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "dronesgator.com Singapore; fitcationhq.com; propelrc.com"
+      },
+      {
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": "Caning enters the picture past 90 days.",
+        "penalty_local": "Up to 90 days: fine up to S$4,000 and up to 6 months. Beyond 90 days: up to 6 months and a minimum of 3 strokes of the cane, or up to S$6,000 if caning does not apply",
+        "penalty_usd": null,
+        "tts": "Overstaying. Past ninety days that means caning, not a fine.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "singaporelegaladvice.com"
+      },
+      {
+        "id": "chewing_gum",
+        "title": "Bringing in chewing gum",
+        "why": "Chewing it is minor. Carrying a pack in counts as importing.",
+        "penalty_local": "Consuming: fine from S$500. Importing: up to S$10,000 or 2 years",
+        "penalty_usd": null,
+        "tts": "Chewing gum. Bringing a pack in counts as importing it.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "scansg.com penalties; Wikipedia chewing gum sales ban; fodors.com"
+      },
+      {
+        "id": "littering",
+        "title": "Littering",
+        "why": "A dropped receipt is enough.",
+        "penalty_local": "Up to S$2,000 first offence, up to S$10,000 for each repeat",
+        "penalty_usd": null,
+        "tts": "Littering. Two thousand dollars for a dropped receipt.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "worldnomads.com; scansg.com penalties"
+      },
+      {
+        "id": "drugs",
+        "title": "Drugs",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Singapore has the death penalty for trafficking, and tests residents on return. Needs a primary source before it goes in a script."
+      },
+      {
+        "id": "public_conduct",
+        "title": "Public conduct rules",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Unflushed toilets, eating on the MRT and similar are widely repeated online but the amounts vary by source. Check before use."
+      }
+    ]
+  },
+  "South Korea": {
+    "facts": [
+      {
+        "id": "defamation",
+        "title": "A bad review",
+        "why": "Truth is not a defence here. Saying something true about a person or a business can still be a crime.",
+        "penalty_local": "Cyber defamation: up to 3 years if what you wrote is true, up to 7 if it is false. Truth only helps if the statement was solely in the public interest, and the burden is on you. For foreigners a conviction usually means deportation or an entry ban",
+        "penalty_usd": null,
+        "penalty_display": "Up to three years even when it's true. Truth only counts as a defence if it served the public interest, and you have to prove that.",
+        "bullets": [
+          "Being right is not a defence",
+          "Up to 3 years if it's true, 7 if it isn't",
+          "Applies to reviews, posts and comments",
+          "For foreigners it usually ends in deportation"
+        ],
+        "tts": "A bad review. In Korea it's a crime even when it's true.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Information and Communications Network Act (cyber defamation); ARTICLE 19; Open Net Korea; thekoreanlawblog.com"
+      },
+      {
+        "id": "food",
+        "title": "Undeclared food in your bag",
+        "why": "Beef jerky, ham, a sausage from home. Sniffer dogs work the arrivals hall, and the fine is for not declaring it.",
+        "penalty_local": "Up to 10,000,000 KRW for failing to declare. Jerky from a non-approved country starts at 5,000,000 KRW. Walking the green channel adds 40 to 60 percent for untruthful declaration",
+        "penalty_usd": 7300,
+        "penalty_display": "Up to 10 million won, about $7,300, for not declaring it. Declare it and it is only confiscated, no fine.",
+        "tts": "Undeclared food. Ten million won, and the dogs work arrivals.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Animal and Plant Quarantine Agency (APQA); trip.com Korea customs 2026; haniseoul.com; roafly.com",
+        "bullets": [
+          "Beef jerky, ham, sausage, all of it",
+          "Sniffer dogs work the arrivals hall",
+          "Declare it and it's only confiscated",
+          "Don't declare it and it's up to 10 million won, about $7,300"
+        ]
+      },
+      {
+        "id": "escooter",
+        "title": "The rental e-scooter",
+        "why": "They stand on every corner in Seoul and need a licence, which is the part nobody expects.",
+        "penalty_local": "Moped-level driving licence required as a minimum, helmet mandatory. Riding without a licence up to 100,000 KRW, no helmet 20,000 KRW. Minimum age 16",
+        "penalty_usd": 75,
+        "penalty_display": "You need at least a moped licence and a helmet. Up to 100,000 won, about $75, without one.",
+        "tts": "Rental scooters. You need a licence for those kickboards.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Korea Herald (Seoul licence check for rentals); swapswap.kr; frontlens.io; koreaquicktips.com",
+        "bullets": [
+          "A moped licence at minimum, a car IDP won't do",
+          "Helmet is mandatory",
+          "Seoul now checks the licence at rental",
+          "Up to 100,000 won, about $75"
+        ]
+      },
+      {
+        "id": "medication",
+        "title": "Your ADHD or painkiller prescription",
+        "why": "Ordinary prescriptions from home are controlled narcotics here, and the permit takes weeks.",
+        "penalty_local": "Adderall and other amphetamines are banned outright with no personal-import exception. Methylphenidate needs an MFDS narcotics import permit applied for 2 to 3 weeks before departure. Without it, treated as narcotics importation",
+        "penalty_usd": null,
+        "penalty_display": "Adderall is banned outright. Concerta and Ritalin need a permit you apply for two to three weeks before you fly.",
+        "tts": "This one's the answer. Your medication. Adderall is banned, and the permit takes three weeks.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process",
+        "bullets": [
+          "Adderall is banned outright, no exceptions",
+          "Concerta and Ritalin need an MFDS permit",
+          "Apply two to three weeks before you fly",
+          "A prescription from home doesn't substitute"
+        ]
+      },
+      {
+        "id": "tickets",
+        "title": "Buying a resold concert ticket",
+        "why": "The new law punishes the buyer too, not only the scalper. Enforcement started in August 2026, right in the middle of the concert boom.",
+        "penalty_local": "Up to 1 year or 10,000,000 KRW, plus administrative fines up to 50 times the ticket price and confiscation of gains. Applies to fraudulent purchase as well as resale",
+        "penalty_usd": 7300,
+        "penalty_display": "Up to a year or 10 million won, about $7,300, and fines up to fifty times the ticket price. Buying counts, not only selling.",
+        "tts": "Resold concert tickets. Buying one counts, not just selling.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Korea Herald (scalping crackdown, enforcement from Aug 2026); Korea Times 2026-06-24; korea.net press release",
+        "bullets": [
+          "Buying counts, not only selling",
+          "Up to a year, or 10 million won, about $7,300",
+          "Fines can run to fifty times the ticket price",
+          "Enforced since August 2026"
+        ]
+      },
+      {
+        "id": "hangang",
+        "title": "The river park picnic",
+        "why": "Chimaek by the Han is on every Seoul itinerary. The rules there are stricter than the mood suggests.",
+        "penalty_local": "Littering 30,000 KRW. Noise or drunken behaviour 70,000 KRW, under the stricter Hangang Park rules",
+        "penalty_usd": 51,
+        "penalty_display": "Littering is 30,000 won, about $22. Noise or drunken behaviour is 70,000, about $51.",
+        "tts": "The river park. Getting loud there is a seventy thousand won fine.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "korea.net, stricter rules for Seoul's Hangang Park",
+        "bullets": [
+          "Littering is 30,000 won, about $22",
+          "Noise or drunken behaviour is 70,000, about $51",
+          "The rules got stricter this year"
+        ]
+      },
+      {
+        "id": "jeju",
+        "title": "Paying on the spot",
+        "why": "Jeju police run a crackdown aimed at foreign tourists, and the fine is due immediately.",
+        "penalty_local": "On-site fines for jaywalking, littering, smoking on cigarette-free streets and public urination. Foreigners are subject to the same law as residents and pay on the spot",
+        "penalty_usd": null,
+        "penalty_display": "Jaywalking, littering, smoking on the wrong street. The fine is issued on the spot and paid immediately.",
+        "tts": "Jaywalking on Jeju. They fine tourists on the spot.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Korea Herald, Jeju police on-site fines for foreign tourists",
+        "bullets": [
+          "Jaywalking, littering, smoking on the wrong street",
+          "Police target foreign tourists specifically",
+          "The fine is issued and paid on the spot"
+        ]
+      },
+      {
+        "id": "import",
+        "title": "Nicotine liquid in your bag",
+        "why": "Separate from where you vape. This one happens at the border.",
+        "penalty_local": "Import limit 20 ml. Anything above 1 percent (10 mg/ml) is treated as a toxic substance and confiscated",
+        "penalty_usd": null,
+        "penalty_display": "Twenty millilitres maximum, and anything above one percent is confiscated as a toxic substance.",
+        "bullets": [
+          "20 ml is the limit",
+          "Above 1 percent counts as a toxic substance",
+          "Confiscated at the border, not at the shop"
+        ],
+        "tts": "Nicotine liquid. Twenty millilitres, then customs keeps it.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "roafly.com South Korea airport customs rules"
+      },
+      {
+        "id": "drone",
+        "title": "The border no-fly zone",
+        "why": "Fifteen kilometres is far wider than any tourist expects, and it follows the whole border.",
+        "penalty_local": "No flights within 15 km of the DMZ in the east, 10 km in the west. Up to 1 year or 10 million KRW under February 2026 legislation. Other pilot-rule breaches up to 2 million KRW",
+        "penalty_usd": 7300,
+        "tts": "The border. Fifteen kilometres of no-fly zone, and it's watched.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "drone-laws.com South Korea; dronesgator.com",
+        "penalty_display": "Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border in the east.",
+        "bullets": [
+          "15 km from the border in the east, 10 in the west",
+          "Registration needed either way",
+          "Up to a year, or 10 million won, about $7,300"
+        ]
+      },
+      {
+        "id": "cannabis",
+        "title": "The hair test",
+        "why": "Customs can hair-test you, and a legal smoke at home is still evidence here.",
+        "penalty_local": "Up to 5 years or 50,000,000 KRW for possession or use. Customs run hair tests, and travellers have been detained on the test alone",
+        "penalty_usd": 36500,
+        "tts": "The hair test. They can prove what you smoked before you came.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "Narcotics Control Act; tripbase.com South Korea cannabis; UK FCDO travel advice; cannabisregulations.ai",
+        "penalty_display": "Up to five years or 50 million won, about $36,500. Customs can hair-test you on arrival.",
+        "bullets": [
+          "Customs can hair-test you on arrival",
+          "Legal where you smoked it doesn't matter",
+          "Travellers have been held on the test alone",
+          "Up to five years, or 50 million won, about $36,500"
+        ]
+      }
+    ],
+    "hook": {
+      "cover_head": "One thing in your carry-on is a narcotics charge in South Korea.",
+      "cover_sub": "10 things worth checking before you fly.",
+      "spoken": "One thing in your carry-on is a narcotics charge in South Korea. Here are ten things to check before you fly.",
+      "close": "Save this before you fly.",
+      "reveal_at": "medication",
+      "note": "Raetsel-Hook nach dem Japan-Muster (48 Saves auf 2216 Views). Zeigt bewusst auf den Koffer der Leserin statt auf das Foto - bei Korea sind alle sieben verbotenen Dinge entweder bedruckt oder gar kein Gegenstand, ein Bildraetsel waere der 'this bag'-Fehler. Aufloesung auf Slide 5."
+    }
+  },
+  "Japan": {
+    "facts": [
+      {
+        "id": "vapes",
+        "title": "Nicotine e-liquid",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Japan regulates nicotine liquid as a pharmaceutical while heated tobacco is sold openly. Needs its own check."
+      },
+      {
+        "id": "drone",
+        "title": "Flying a drone",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
+        "id": "photography",
+        "title": "Filming people",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
+        "id": "medicines",
+        "title": "Cold and allergy medicine",
+        "why": "Ordinary pharmacy boxes from home contain ingredients Japan bans outright.",
+        "penalty_local": "Sudafed, Actifed and Vicks inhalers are banned. Codeine needs a permit applied for before you travel, and a prescription from home does not substitute",
+        "penalty_usd": null,
+        "tts": "Cold medicine. Sudafed and Vicks inhalers are banned outright.",
+        "verified": true,
+        "checked": "2026-08-28",
+        "source": "Verified for the Japan carousel, see daya/content/2026-08-28-carousel-japan.md"
+      },
+      {
+        "id": "temple",
+        "title": "Temples and shrines",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
+        "id": "littering",
+        "title": "Rubbish",
+        "why": "Almost no public bins, so your rubbish travels with you to a convenience store.",
+        "penalty_local": "Not a fine in practice, a social rule. Listed because it is the thing tourists get wrong daily",
+        "penalty_usd": null,
+        "tts": null,
+        "verified": true,
+        "checked": "2026-08-28",
+        "source": "Verified for the Japan carousel. No TTS line: it is not a criminal penalty, so it does not belong in a 'banned' script."
+      }
+    ],
+    "posted": "2026-08-31",
+    "useful": {
+      "hook": {
+        "cover_head": "One thing in this picture costs you a whole day.",
+        "cover_sub": "3 things to sort before Japan.",
+        "spoken": "One thing in this picture costs you a whole day in Japan.",
+        "close": "Save this for your Japan trip.",
+        "reveal_at": "luggage",
+        "note": "Erste Fassung zeigte auf die Bankkarte. Verworfen: eine Karte ist von Natur aus bedruckt, und soul_2 schreibt dann Buchstabensalat drauf (Regel vom 29.08.). Der Koffer traegt nichts und liegt wirklich im Flatlay. Aufgeloest im ersten Punkt, nicht bei Sekunde 25 wie in Italien. Cover auf neun Woerter gekuerzt, nachdem die lange Fassung auf dem gebauten Slide fuenf Zeilen brauchte und den Koffer verdeckte. In der Tonspur steht weiter „in Japan\", dort gibt es nichts zu verdecken."
+      },
+      "facts": [
+        {
+          "id": "luggage",
+          "title": "Your suitcase",
+          "why": "You don't have to drag it through a single station. Hand it in at the hotel desk and it's at the next hotel tomorrow.",
+          "detail": "About 3,000 yen inside greater Tokyo and 3,200 yen from Tokyo to Kyoto for a case under 25 kilos, next-day delivery. Hotel receptions and convenience stores take it",
+          "detail_display": "About 3,000 yen inside Tokyo, about $19, and it's there the next day.",
+          "bullets": [
+            "Hotel desk or any convenience store",
+            "About 3,000 yen inside Tokyo, about $19",
+            "Tokyo to Kyoto about 3,200 yen, about $21",
+            "Under 25 kilos, arrives the next day"
+          ],
+          "tts": "Your suitcase. The hotel desk sends it to your next hotel.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "japan-guide.com/e/e2278.html (suitcase under 25 kg: 3,000 yen within Greater Tokyo, 3,200 yen Tokyo-Osaka/Kyoto, usually next day, hotel-to-hotel possible); Yamato Transport 'Hands-Free Travel', global-yamato.com/en/hands-free-travel/. Kurs 2026-09-03"
+        },
+        {
+          "id": "atm",
+          "title": "Your bank card",
+          "why": "Most Japanese bank ATMs simply don't take a card issued outside Japan.",
+          "detail": "7-Eleven has over 28,000 machines, open all night, and they take Visa, Mastercard, Maestro, Amex and JCB. Post offices work too, but they close overnight",
+          "detail_display": "7-Eleven has over 28,000 machines and they run all night.",
+          "bullets": [
+            "Bank ATMs mostly refuse foreign cards",
+            "7-Eleven: over 28,000 machines, open all night",
+            "Visa, Mastercard, Maestro, Amex, JCB",
+            "Post offices work too, but they shut overnight"
+          ],
+          "tts": "Your bank card. Bank machines refuse it. Use a seven eleven.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Seven Bank, sevenbank.co.jp/intlcard/index2.html (over 28,000 ATMs, card marks accepted); japan-guide.com/e/e2208.html ('A considerable number of ATMs in Japan do not accept credit, debit and ATM cards that are issued outside of Japan')"
+        },
+        {
+          "id": "last_train",
+          "title": "The last train",
+          "why": "The whole network stops overnight, and the taxi meter goes up while it's stopped.",
+          "detail": "Trains stop around midnight and don't run again until about five. From 10pm to 5am Tokyo taxis add 20 percent to the meter, and a seven kilometre ride is already 2,500 to 3,000 yen before that",
+          "detail_display": "Taxis add 20 percent from 10pm, and there's no train to fall back on.",
+          "bullets": [
+            "Trains stop around midnight, back around 5",
+            "Taxi meter plus 20 percent from 10pm to 5am",
+            "7 km already costs 2,500 to 3,000 yen, about $16 to $19",
+            "Check your last train before you go out"
+          ],
+          "tts": "The last train. Nothing runs till five, and taxis add twenty percent after ten.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Tokyo Hire-Taxi Association, taxi-tokyo.or.jp/call/pricelist.html ('22時～5時まで　2割増', Grundpreis 500 Yen bis 1,0 km); JNTO, japan.travel/en/plan/getting-around/taxis/ ('A late-night surcharge is added between 10 p.m. and 5 a.m.', 7-km-Fahrt in Tokio 2.500-3.000 Yen tagsueber, Taxis noetig 'after public transportation shuts down'). Kurs 2026-09-03"
+        }
+      ]
+    }
+  },
+  "Vietnam": {
+    "facts": [
+      {
+        "id": "vapes",
+        "title": "E-cigarettes",
+        "why": "A full ban, and it covers carrying and using, not only selling.",
+        "penalty_local": "Resolution 173/2024/QH15 bans production, transport, storage and use from 14 January 2025. From March 2026 all business and investment activity in e-cigarettes and heated tobacco is banned under the amended Investment Law",
+        "penalty_usd": null,
+        "tts": "E-cigarettes. Banned outright, including just carrying one.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "vietcetera.com; vinapouches.vn; vietnamck.cz"
+      },
+      {
+        "id": "drone",
+        "title": "Flying a drone",
+        "why": "The permit comes from the Ministry of Defence and takes weeks.",
+        "penalty_local": "Flight permit mandatory, up to 3 weeks to approve, costs roughly 350 to 700 USD. Flying without it: about 20 to 30 million VND",
+        "penalty_usd": null,
+        "tts": "Drones. The permit comes from the Ministry of Defence and takes weeks.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "authentiktravel.com; ethosspirit.com; drone-laws.com Vietnam"
+      },
+      {
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": "Fines rise steeply and deportation is automatic for longer overstays.",
+        "penalty_local": "1 to 15 days: 500,000 to 2 million VND and a formal warning. Up to 40 million VND at the top end, with mandatory deportation for serious cases",
+        "penalty_usd": 1519,
+        "tts": "Overstaying. Up to forty million dong, then deportation.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "vietcetera.com - USD figure is the source's own",
+        "penalty_display": "1 to 15 days: 500,000 to 2 million dong. Up to 40 million dong, about $1,519, at the top end."
+      },
+      {
+        "id": "coral",
+        "title": "Taking coral or shells",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
+        "id": "politics",
+        "title": "Posting about the state",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Vietnam prosecutes online speech, but I have no tourist-specific source. Do not write this line unresearched."
+      },
+      {
+        "id": "temple",
+        "title": "Temples and pagodas",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Only etiquette guidance found, no penalty. Do not invent one."
+      },
+      {
+        "id": "currency",
+        "title": "Money rules",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      }
+    ]
+  },
+  "Sri Lanka": {
+    "facts": [
+      {
+        "id": "vapes",
+        "title": "Vapes",
+        "why": "Prohibited as an import, so it is a customs problem before it is anything else.",
+        "penalty_local": "E-cigarettes and vaping devices are prohibited items on entry",
+        "penalty_usd": null,
+        "tts": "Vapes. A prohibited import, taken off you at customs.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "UK FCDO travel advice Sri Lanka"
+      },
+      {
+        "id": "drone",
+        "title": "Flying a drone",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Sri Lanka requires CAA permits, but I found no figure. Research before use."
+      },
+      {
+        "id": "overstay",
+        "title": "Overstaying",
+        "why": "The ETA is only 30 days and the daily fine adds up fast.",
+        "penalty_local": "Roughly LKR 5,000 to 10,000 per day, possible detention, deportation at your own expense and a future entry ban",
+        "penalty_usd": null,
+        "tts": "Overstaying. Deportation at your own expense, plus an entry ban.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "akbartravels.com Sri Lanka visa rules; UK FCDO travel advice",
+        "note": "The daily figure is given as a range by the source. Prefer the consequence over the number on screen."
+      },
+      {
+        "id": "religion",
+        "title": "Buddha tattoos and images",
+        "why": "A tattoo you have had for years can stop you at the border.",
+        "penalty_local": "Visitors with a visible Buddha tattoo have been refused entry, arrested or deported",
+        "penalty_usd": null,
+        "tts": "Buddha tattoos. People get refused entry at the border for them.",
+        "verified": true,
+        "checked": "2026-09-01",
+        "source": "UK FCDO travel advice Sri Lanka; tikalanka.com local laws"
+      },
+      {
+        "id": "cannabis",
+        "title": "Cannabis",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
+        "id": "coral",
+        "title": "Taking coral or shells",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Not researched."
+      },
+      {
+        "id": "temple",
+        "title": "Turning your back on a Buddha statue",
+        "why": null,
+        "penalty_local": null,
+        "penalty_usd": null,
+        "tts": null,
+        "verified": false,
+        "checked": null,
+        "source": null,
+        "note": "Widely repeated as a selfie offence. Find the actual charge before using it."
+      }
+    ]
+  },
+  "Italy": {
+    "hook": {
+      "cover_head": "Taking this home is a 3,000 euro fine.",
+      "cover_sub": "11 things Italy fines you for.",
+      "spoken": "Taking this home is a 3,000 euro fine. Eleven things Italy fines you for.",
+      "close": "Save this for your Italy trip.",
+      "reveal_at": "sand",
+      "note": "Zweite Fassung. Die erste war eine Behauptung („Italy will fine you for sitting down\"), und Alesya am 02.09.: „der hook ist scheisse - so haben wir es nicht entschieden! es muss ein raetsel sein\". Danach war die zweite Fassung zu verschachtelt: „der hook past nicht ganz. es muss einfach zu lesen sein\". Diese hier hat acht Woerter und keinen Nebensatz, wie der Japan-Hook, der 48 Speicherungen auf 2216 Aufrufe brachte. „this\" zeigt auf das Coverbild, einen Strand. Aufgeloest auf Slide 6, dem Sand - deshalb steht der Sand nicht mehr an erster Stelle, sondern in der Mitte. Zahl als Ziffer im Cover, ausgeschrieben in der Tonspur - Alesya, 02.09.: „eleven - bitte als zahl schreiben immer! man sieht es besser."
+    },
+    "facts": [
+      {
+        "id": "trail_shoes",
+        "title": "Flip-flops on the trails",
+        "why": "The Cinque Terre paths look like a coastal stroll from the village. They are a marked mountain trail and the rock is polished smooth.",
+        "penalty_local": "Cinque Terre National Park: fines from 50 euros, up to 2,500 in serious cases or when a rescue is needed. Rangers check footwear at the trailheads and can refuse access",
+        "penalty_usd": null,
+        "penalty_display": "50 euros at the low end and up to 2,500 if it ends in a rescue.",
+        "bullets": [
+          "Flip-flops, sandals and smooth soles",
+          "50 euros, up to 2,500 if they have to rescue you",
+          "Rangers check at the trailhead",
+          "Only on the marked trails, the villages are fine"
+        ],
+        "tts": "Flip-flops on the Cinque Terre trails. Rangers check at the gate.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Cinque Terre National Park rules (in force since 2019); idealista.it 16.06.2026; afar.com; travel.yahoo.com 2026"
+      },
+      {
+        "id": "fakes",
+        "title": "The bag on the beach towel",
+        "why": "Someone lays out twenty handbags in front of you while you're lying on the sand. It feels like shopping, and the seller is the one breaking the law. Not only him.",
+        "penalty_local": "Under the 2005 anti-counterfeiting decree the buyer is liable too, on the presumption that the goods were obviously fake. Reported fines run into the thousands; an Austrian tourist in Venice paid 1,000 euros for a single bag",
+        "penalty_usd": null,
+        "penalty_display": "The buyer pays, not only the seller. An Austrian tourist in Venice paid 1,000 euros for one bag.",
+        "bullets": [
+          "The buyer is liable too",
+          "One documented case: 1,000 euros for one bag",
+          "It applies on the beach and in the street",
+          "The bag gets confiscated either way"
+        ],
+        "tts": "Buying a fake bag. The buyer pays too, not just the seller.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Italian anti-counterfeiting decree of 2005 (buyer liability); italymagazine.com (Austrian tourist fined 1,000 euros); thelocal.it 25.06.2018; europeforvisitors.com"
+      },
+      {
+        "id": "steps",
+        "title": "Sitting on the Spanish Steps",
+        "why": "Everyone has seen the photo of people sitting on them. That photo is older than the rule.",
+        "penalty_local": "Rome, in force since 2019: 250 euros for sitting on the Spanish Steps, rising to 400 if the steps are stained or damaged. Officers in high-vis patrol the staircase and move people on with whistles",
+        "penalty_usd": null,
+        "penalty_display": "250 euros for sitting, 400 if you leave a mark.",
+        "bullets": [
+          "Sitting alone is enough, no food needed",
+          "250 euros, 400 if you stain them",
+          "Officers patrol the steps and whistle you off",
+          "The rule has been enforced since 2019"
+        ],
+        "tts": "Sitting on the Spanish Steps. Two hundred and fifty euros.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Comune di Roma decorum rules 2019; CNN travel; ABC News 08.08.2019; NBC News (enforcement patrols)"
+      },
+      {
+        "id": "ztl",
+        "title": "The camera at the end of the street",
+        "why": "Historic centres are closed to traffic and the sign is small, in Italian, and often the same shape as the one before it. The car in front of you may live there.",
+        "penalty_local": "Zona a Traffico Limitato: roughly 80 to 130 euros per passage, and every gate counts separately. The rental company adds a processing fee of up to 50 euros for passing your details to the police, and the notice reaches you months later",
+        "penalty_usd": null,
+        "penalty_display": "About 80 to 130 euros per gate, and every camera you pass is a separate fine.",
+        "bullets": [
+          "80 to 130 euros per gate",
+          "Every camera counts separately",
+          "Your rental company adds its own fee",
+          "The letter arrives months after the trip"
+        ],
+        "tts": "Driving into a ZTL. Every camera you pass is its own fine.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "European Consumer Centre (evz.de / europe-consommateurs.eu) on Italian ZTL fines; Art. 7 Codice della Strada"
+      },
+      {
+        "id": "sand",
+        "title": "Sand from the beach",
+        "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
+        "penalty_local": "Regional Law 16/2017: 500 to 3,000 euros for removing sand, pebbles or shells from any Sardinian beach. X-ray checks run at Olbia, Cagliari and Alghero airports and at the ferry terminals",
+        "penalty_usd": null,
+        "penalty_display": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
+        "bullets": [
+          "500 to 3,000 euros",
+          "Sand, pebbles and shells all count",
+          "X-ray checks at Olbia, Cagliari and Alghero",
+          "4 tonnes seized at one airport in two years"
+        ],
+        "tts": "Sand from a Sardinian beach. They X-ray your bag for it at the airport.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com"
+      },
+      {
+        "id": "permit",
+        "title": "Your licence on its own",
+        "why": "The rental desk hands over the keys without asking. The police at the roadside are a different conversation.",
+        "penalty_local": "Article 135 of the Italian Highway Code: a licence issued outside the EU must be accompanied by an International Driving Permit or a certified translation. Fine from 408 to 1,634 euros, payable on the spot, and the car can be held",
+        "penalty_usd": null,
+        "penalty_display": "408 to 1,634 euros under Article 135 of the Highway Code, payable on the spot.",
+        "bullets": [
+          "Only for licences from outside the EU",
+          "408 to 1,634 euros",
+          "The rental desk won't ask. The police will",
+          "You apply for it at home, not in Italy"
+        ],
+        "tts": "A non-EU licence alone. It needs the international permit.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Art. 135 Codice della Strada; internationaldrivingpermit.org country page Italy; vipcars.com non-EU licence guide"
+      },
+      {
+        "id": "venice_sit",
+        "title": "Lunch on a bridge",
+        "why": "There is nowhere to sit in Venice that isn't a bridge, a step or a monument. That's the point of the rule.",
+        "penalty_local": "Comune di Venezia, forbidden behaviour: 100 to 200 euros for eating or drinking while sitting on the ground, and for sitting or lying on banks, foundations, monuments, bridges, steps and walkways. An urban Daspo can be added, which bars you from the spot",
+        "penalty_usd": null,
+        "penalty_display": "100 to 200 euros, and they can add an urban Daspo that bars you from the spot.",
+        "bullets": [
+          "Bridges, steps, monument bases, quaysides",
+          "100 to 200 euros",
+          "Sitting on the ground to eat counts",
+          "Swimming in a canal is 350"
+        ],
+        "tts": "Eating on a bridge in Venice. Or on the ground.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Comune di Venezia, comune.venezia.it 'Forbidden behaviour' (decorum rules 2019)"
+      },
+      {
+        "id": "swimwear",
+        "title": "Swimwear in town",
+        "why": "Sorrento is built above its beaches, so the walk back to your room goes straight through the centre.",
+        "penalty_local": "Sorrento ordinance of July 2022: 25 to 500 euros for walking through the centre bare-chested or in swimwear. It doesn't apply at the beach clubs or pools. Venice fines the same thing at 250 euros",
+        "penalty_usd": null,
+        "penalty_display": "25 to 500 euros in Sorrento, and Venice fines the same thing at 250.",
+        "bullets": [
+          "Sorrento centre, 25 to 500 euros",
+          "Bikinis, swimsuits and bare chests",
+          "Beach clubs and pools are exempt",
+          "Venice charges 250 for the same thing"
+        ],
+        "tts": "Swimwear in Sorrento town. The beach ends at the street.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Sorrento mayoral ordinance 06.07.2022 (Mayor Massimo Coppola); CNN travel; thelocal.it 11.07.2022; Comune di Venezia forbidden behaviour"
+      },
+      {
+        "id": "venice_fee",
+        "title": "Walking into Venice",
+        "why": "It only applies on certain days, so most people arrive having never heard of it, and the checks are random.",
+        "penalty_local": "Contributo di accesso: 5 euros booked more than four days ahead, 10 euros after that, for day visitors on Fridays to Sundays from April to July, 8:30 to 16:00. Anyone overnighting is exempt. Without one: 50 to 300 euros on top of the fee itself",
+        "penalty_usd": null,
+        "penalty_display": "5 or 10 euros to book, and 50 to 300 euros on top of it if you're checked without one.",
+        "bullets": [
+          "Day visitors only, hotel guests are exempt",
+          "5 euros booked early, 10 euros late",
+          "Fridays to Sundays, April to July, 8:30 to 16:00",
+          "Without it: 50 to 300 euros"
+        ],
+        "tts": "Walking into Venice on a control day without the ticket.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Venezia Unica / cda.ve.it official access fee pages, 2026 calendar; euronews 30.03.2026"
+      },
+      {
+        "id": "beach_spot",
+        "title": "The towel you left out",
+        "why": "You walk down at eight to find every free stretch already taken by empty umbrellas. Putting yours out the night before is how that started.",
+        "penalty_local": "Leaving umbrellas, chairs or towels unattended on a public beach counts as occupying public land. Items are confiscated and fines land around 200 euros for a private individual. Dawn clearances happen: about 40 items were removed in one operation at Torre del Greco",
+        "penalty_usd": null,
+        "penalty_display": "Around 200 euros for a private individual, and the towel or umbrella is taken away.",
+        "bullets": [
+          "Umbrellas, chairs and towels left overnight",
+          "Around 200 euros, and the item is confiscated",
+          "Dawn clearances on public beaches",
+          "Only free beaches, not the paid clubs"
+        ],
+        "tts": "Leaving a towel out overnight to hold your spot. It's gone.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Italian coastal enforcement against 'furbetti dell'ombrellone', summer 2026; Forbes 09.07.2026 (Italy's new beach rules); thelocal.it 12.08.2026; Coast Guard operation Torre del Greco"
+      },
+      {
+        "id": "fountain",
+        "title": "One foot in the fountain",
+        "why": "It's forty degrees, the water is right there, and someone in front of you is already doing it for a video.",
+        "penalty_local": "Rome: about 450 to 500 euros for entering a fountain, plus an urban Daspo that orders you out of the area immediately and can run to a lifetime ban. Breaking the Daspo turns an administrative fine into a criminal matter",
+        "penalty_usd": null,
+        "penalty_display": "About 500 euros plus a Daspo, the city ban. A traveller from New Zealand got a lifetime one in May 2026.",
+        "bullets": [
+          "Wading counts, you don't have to swim",
+          "About 450 to 500 euros",
+          "Plus a Daspo, a ban from the area",
+          "One lifetime ban handed out in May 2026"
+        ],
+        "tts": "Stepping into a fountain. Five hundred euros and a city ban.",
+        "verified": true,
+        "checked": "2026-09-02",
+        "source": "Comune di Roma fountain regulation (2017, urban Daspo); idealista.it 05.09.2025 legal guide; Euro Weekly News 29.05.2026 (lifetime ban); wantedinrome.com"
+      }
+    ],
+    "useful": {
+      "hook": {
+        "cover_head": "One thing in this picture gets you into the Vatican.",
+        "cover_sub": "3 things to sort before you land.",
+        "spoken": "One thing in this picture gets you into the Vatican.",
+        "close": "Save this for your Italy trip.",
+        "reveal_at": "dress_code",
+        "note": "Gleiche Mechanik wie das Japan-Raetsel, anderes Land - genau das ist die Variable, die Trial 1 gegen Trial 2 misst. Der Schal liegt wirklich im Flatlay."
+      },
+      "facts": [
+        {
+          "id": "dress_code",
+          "title": "A scarf",
+          "why": "St Peter's and the Vatican Museums turn you away at the door, and it's a long way back to the hotel.",
+          "detail": "No sleeveless tops, nothing low-cut, no shorts above the knee, no miniskirts and no hats. A scarf over your shoulders is enough",
+          "detail_display": "A scarf over your shoulders is enough, and it lives in your bag.",
+          "bullets": [
+            "No sleeveless tops, nothing low-cut",
+            "No shorts above the knee, no miniskirts",
+            "Hats off inside",
+            "A scarf covers it and weighs nothing"
+          ],
+          "tts": "A scarf. No bare shoulders at the Vatican, and they turn you away at the door.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Vatikanische Museen, museivaticani.va/content/museivaticani/en/organizza-visita/consigli-utili.html: 'Sleeveless and / or low-cut garments, shorts above the knee, miniskirts and hats are not permitted.' Gilt fuer Museen, Sixtinische Kapelle und den Petersdom"
+        },
+        {
+          "id": "fountains",
+          "title": "A water bottle",
+          "why": "Rome hands out cold drinking water on almost every corner, for nothing, all day and all night.",
+          "detail": "Over 3,000 public fountains, the same water that comes out of the taps at home. Cover the little hole on top of the spout with a finger and the water arcs up so you can drink from it",
+          "detail_display": "Over 3,000 public fountains, running day and night.",
+          "bullets": [
+            "Over 3,000 public fountains in Rome",
+            "Same drinking water as the taps, free",
+            "Running 24 hours, over 200 in the old centre",
+            "Cover the hole on top and it arcs up to drink"
+          ],
+          "tts": "A water bottle. Rome has over three thousand public fountains and they're free.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Acea, acea.it/en/water/nasoni-drinking-fountains: 'There are over 3,000 drinking fountains throughout Rome', ueber 200 im historischen Zentrum, 'provide drinking water to the city 24 hours a day', Trinktrick mit dem Loch im Auslauf"
+        },
+        {
+          "id": "airport_taxi",
+          "title": "The taxi from the airport",
+          "why": "The price is fixed before you get in, so nobody can invent one for you at eleven at night.",
+          "detail": "Fiumicino to anywhere inside the Aurelian Walls is a fixed 55 euros, Ciampino 31 euros. The car is white with a TAXI sign on the roof and the licence number on the doors. Anyone offering you a lift inside the terminal is not a taxi",
+          "detail_display": "Fiumicino to the centre is a fixed 55 euros, about $64.",
+          "bullets": [
+            "Fiumicino to the centre: fixed 55 euros, about $64",
+            "Ciampino: fixed 31 euros, about $36",
+            "White car, TAXI sign on the roof, number on the door",
+            "Anyone offering a ride inside the terminal isn't a taxi"
+          ],
+          "tts": "The taxi from the airport. Fiumicino into Rome is a fixed fifty five euros.",
+          "verified": true,
+          "checked": "2026-09-04",
+          "source": "Aeroporti di Roma, adr.it/web/aeroporti-di-roma-en/pax-fco-taxi (55,00 Euro 'Rome city centre, within the Aurelian Walls', weisse Wagen mit TAXI-Schild und Lizenznummer, Warnung vor Faellen ohne Genehmigung); Roma Capitale Tariffario Taxi (Ciampino 31,00 Euro). Kurs 2026-09-03"
+        }
+      ]
+    },
+    "hook_trial": {
+      "cover_head": "One thing in this picture is a 3,000 euro fine.",
+      "cover_sub": "3 things Italy fines you for.",
+      "spoken": "One thing in this picture is a three thousand euro fine in Italy.",
+      "close": "Save this for your Italy trip.",
+      "reveal_at": "sand",
+      "note": "Der Elf-Punkte-Hook zeigte auf ein Strandfoto, auf dem der Sand kein Gegenstand war, und loeste erst nach 25 Sekunden auf. Hier zeigt er auf Muscheln und Kieselsteine, die wirklich im Flatlay liegen, und loest im ersten Punkt auf."
+    }
+  }
+}

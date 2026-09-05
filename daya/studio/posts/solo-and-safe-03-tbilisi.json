@@ -1,0 +1,75 @@
+{
+  "slug": "solo-and-safe-03-tbilisi",
+  "series": "SOLO & SAFE",
+  "city": "Tbilisi, Georgia",
+  "slides": [
+    {
+      "type": "cover",
+      "photo": "01.png",
+      "label": "START HERE",
+      "kicker": "SOLO & SAFE · GEORGIA",
+      "lead": "\"the guest is a gift\" is a real rule here.",
+      "headline": "the safe little\ncapital nobody\nbooks *first*",
+      "body": "five reasons georgia is a great *first solo trip*. save this post."
+    },
+    {
+      "type": "credential",
+      "photo": "02.png",
+      "kicker": "TBILISI, GEORGIA",
+      "text": "low crime and\n*legendary* hospitality"
+    },
+    {
+      "type": "tip",
+      "photo": "03.png",
+      "num": "01",
+      "head": "why women travel here *alone*",
+      "body": "crime is low, prices are tiny - and solo guests get *adopted*. you will not eat dinner *alone* here unless you want to."
+    },
+    {
+      "type": "tip",
+      "photo": "04.png",
+      "num": "02",
+      "head": "the old town fits in *one walk*",
+      "body": "carved balconies, cobblestones, steaming sulfur domes. *pushkin bathed here* and called it the best bath of his life."
+    },
+    {
+      "type": "tip",
+      "photo": "05.png",
+      "num": "03",
+      "head": "the best *view*",
+      "body": "from narikala fortress the whole city lies under your feet. next to you: the mother of georgia statue - *wine for guests, a sword for enemies*."
+    },
+    {
+      "type": "tip",
+      "photo": "06.png",
+      "num": "04",
+      "head": "a tip most people *miss*",
+      "body": "skip taxis, the metro costs *cents*. and eat khinkali like a local: hold the topknot, *never use a knife*."
+    },
+    {
+      "type": "tip",
+      "photo": "07.png",
+      "num": "05",
+      "head": "one *easy* day trip",
+      "body": "mtskheta, the ancient capital, is 30 minutes away. taste amber wine from clay qvevri jars - georgians have made wine for *8,000 years*."
+    },
+    {
+      "type": "endcard",
+      "photo": "08.png",
+      "credit": false,
+      "lead": "five simple tips. one easier trip.",
+      "headline": "*save this* for your next trip",
+      "ctas": [
+        {
+          "icon": "bookmark",
+          "text": "save it for your first solo trip"
+        },
+        {
+          "icon": "send",
+          "text": "send it to a friend who travels alone"
+        }
+      ],
+      "tagline": "solo travel, minus the fear"
+    }
+  ]
+}
