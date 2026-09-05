@@ -308,16 +308,74 @@ erzeugen.
 
 ## Was auf hellen Slides anders ist
 
-Das Cover ist ein Flatlay auf weissem Leinen, und Verdunkeln ist seit dem 02.09.
-gestrichen. Also kehrt sich die Schrift um: Emerald statt Creme, Amber statt
-Marigold, heller Schlagschatten statt dunklem. Das steht so schon im CLAUDE.md.
+Erste Fassung setzte auf den hellen Covern Emerald mit Amber-Auszeichnung, weil
+Creme auf Creme unlesbar ist und Verdunkeln seit dem 02.09. gestrichen war.
+Alesya am 05.09.: „textfarbe im post fuer japan auf weiss und gold setzen, nicht
+orange und gruen, sieht nicht gut aus."
 
-Gemessen und nachgebessert: Amber `#cf8a1d` auf cremefarbenem Leinen ergibt rund
-2,6:1 Kontrast und ist damit unlesbar. In `build-trials.mjs` steht dafuer
-`#8a5209`, dieselbe Farbe zwei Stufen dunkler, rund 5,5:1.
+Auf die Rueckfrage, wie weisse Schrift auf hellem Leinen lesbar wird: „in
+unserem erfolgreichen post fuer japan war auch viel weiss, aber design war
+richtig schoen. schaue es dir noch mal an und mache aehnlich."
 
-Der Koffer-Slide in Trial 1 liegt auf hellem Tatami (Median 114, p90 186 von
-255) und bekommt dieselbe Umkehrung.
+**Nachgesehen in `daya/studio/build-japan.mjs`**, dem Bauplan des Posts mit
+3.202 Aufrufen. Sein Cover steht auf `light: true` und `ty: 80`, und der
+Kommentar im Kopf der Datei sagt woertlich: „Ab ty >= 65 wird zusaetzlich der
+untere Verlauf eingeblendet, sonst waere Creme auf hellem Leinen unlesbar."
+
+Der erfolgreiche Post war also viel weiss auf hellem Leinen, und lesbar wurde er
+durch einen Verlauf. Genau der fehlte den Trials, deshalb war ich ueberhaupt auf
+dunkle Schrift ausgewichen.
+
+**Jetzt:** Creme mit Marigold ueberall, kein Emerald und kein Amber mehr. Und
+ein Verlauf nur auf den drei Covern, weil nur dort Creme auf Leinen liegt. Die
+Punkte-Slides liegen auf Fotos und bleiben ohne, so wie abgenommen.
+
+**Der Verlauf ist gemessen, nicht geschaetzt.** Im Zuschnitt-Schritt wird die
+Helligkeit im Textfeld gemessen; die Deckkraft ist die kleinste, mit der der
+Grund auf `CREAM_FLOOR` kommt. Ergebnis: 0,32 auf dem Japan-Cover, 0,21 auf
+Italien nuetzlich, 0,18 auf Italien Bussgeld.
+
+Drei Dinge daran sind Korrekturen an mir selbst:
+
+- **Median statt p85.** Erste Fassung nahm p85 und gab 13 von 15 Slides ein
+  Band, auch denen, die Alesya so schon abgenommen hatte. An hellen
+  Einzelstellen scheitert der Text nicht, an einem durchgehend hellen Grund
+  schon.
+- **`CREAM_FLOOR` ist 135, nicht 103.** Die reine Kontrastrechnung sagt 103,
+  das ergab ein Band von 0,39 und machte das Leinen grau - das Gegenteil von
+  „bilder etwas zu dunkel alle". 135 kommt aus Alesyas eigener Abnahme: der
+  Sand-Slide des Italien-Posts hat Median 158 und traegt Creme allein mit dem
+  Schlagschatten. Der Schatten legt einen dunklen Hof um jeden Buchstaben, den
+  die Flaechenrechnung nicht kennt.
+- **Warm-ink statt neutralem Schwarz.** Schwarz ueber cremefarbenem Leinen
+  ergibt Grau. Die Regel vom 29.08. („alle Verlaeufe sind neutrales Schwarz")
+  richtete sich gegen den Emerald-Stich ueber Fotos, nicht gegen die eigene
+  Tintenfarbe der Marke.
+- **Bandbreite dreimal verkleinert**, von 48 ueber 34 auf 28 Prozentpunkte.
+  Bei 48 wusch es die halbe Bildhoehe grau, bei 34 reichte es noch auf die
+  Gegenstaende und machte sie stumpf.
+
+## Bilder eine Spur heller
+
+Alesya, 05.09.: „bilder etwas zu dunkel alle." Auf allen soul_2-Bildern dieser
+Serie liegt ein kuehlgrauer Stich. `LIFT` in `build-trials.mjs` hebt jede
+Backplate um 7 % in der Helligkeit und um 3 % in der Waerme. Kein Farblayer -
+der Emerald-Layer ist seit dem 29.08. gestrichen und kommt nicht zurueck.
+
+## Neues Japan-Cover
+
+Das alte war das Problem, nicht die Schrift: olivgrauer Koffer, kuehlgraues
+Leinen, ein harter Schraegschatten ueber dem oberen Drittel, alle Gegenstaende
+weiss auf weiss. Daneben haben die Italien-Cover Strohhut, Zitronen,
+Olivenzweig und braunes Leder.
+
+Neu, `photos/japan/final/j00-flatlay.png`: cremefarbener Kabinenkoffer als
+Anker, Kirschbluetenzweig, ein Seidentuch in Altrosa, eine Perlen-Haarspange,
+gefaltete cremefarbene Socken, runde Sonnenbrille. Weiches gleichmaessiges
+Licht, keine harten Schatten, oberes Drittel leer fuer den Text.
+
+Von drei Varianten war eine brauchbar. Die anderen beiden trugen wieder
+Etiketten auf Koffer und Korb.
 
 ## Noch offen
 

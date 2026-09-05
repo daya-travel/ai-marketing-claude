@@ -162,8 +162,21 @@ Serie ansehen und den Look treffen.
   „real creases in the sheet", „warm natural window light from one side".
 - **Auf hellen Objektbildern keine Verläufe über das ganze Bild.** Mittelverlauf und
   Emerald-Gradierung machen Leinen zu Matsch und die Gegenstände unlesbar. Nur ein
-  enger, kräftiger Verlauf hinter dem Textblock. Und die Kopfzeile dort in Emerald
-  statt Creme, sonst steht Creme auf Creme.
+  enger, kräftiger Verlauf hinter dem Textblock.
+- **Auf hellem Leinen trägt ein schmales Band, nicht dunkle Schrift.** Am 04.09.
+  hatte ich auf den Flatlay-Covern Emerald mit Amber gesetzt, weil Verdunkeln
+  gestrichen war. Alesya, 05.09.: „textfarbe auf weiß und gold setzen, nicht orange
+  und grün, sieht nicht gut aus." Der Post, der 3.202 Aufrufe holte, stand ebenfalls
+  in Creme auf hellem Leinen - `build-japan.mjs` schaltet dort ab `ty >= 65` einen
+  Verlauf dazu, „sonst wäre Creme auf hellem Leinen unlesbar". Also: Creme mit
+  Marigold bleibt, und darunter kommt ein Band. Drei Dinge daran sind gemessen und
+  nicht geschätzt: die Deckkraft aus der Helligkeit im Textfeld, der **Median** als
+  Maß (p85 gab 13 von 15 Slides ein Band, auch abgenommenen), und die Schwelle 135
+  von 255 - die reine Kontrastrechnung sagt 103 und macht das Leinen grau, während
+  ein schon abgenommener Slide bei Median 158 mit dem Schlagschatten allein trägt.
+  Der Verlauf ist warm-ink `26,20,11`, nicht neutrales Schwarz: Schwarz über Creme
+  ergibt Grau. Und er bleibt schmal, rund 28 Prozentpunkte der Bildhöhe - breiter
+  liegt er auf den Gegenständen und macht sie stumpf.
 - **Behauptungen über das eigene Bild sind auch Behauptungen.** Bevor ein Text sagt
   „this bag", „these shoes" oder „die Frau links", das Bild ansehen und auflisten,
   was wirklich drauf ist. Am 28.08. stand „One thing in this bag is banned in Japan"

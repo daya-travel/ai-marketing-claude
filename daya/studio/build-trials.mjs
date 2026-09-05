@@ -29,16 +29,38 @@
 //   - Zahlen als Ziffern, ueberall wo sie gelesen werden
 //   - Wortmarke auf bottom 440, das sind 77,1 % - nicht 300 wie in Thailand
 //
-// NEU HIER: das Cover ist ein helles Flatlay auf weissem Leinen. Creme auf
-// Creme ist unlesbar, und dunkler machen darf ich es nicht. Also kehrt sich die
-// Schrift um: Emerald mit Amber-Auszeichnung und einem hellen statt dunklen
-// Schlagschatten. Die Regel steht schon im CLAUDE.md („Und die Kopfzeile dort in
-// Emerald statt Creme, sonst steht Creme auf Creme").
+// HELLE FLATLAYS: SCHMALES BAND, NICHT DUNKLE SCHRIFT.
+//
+// Erste Fassung setzte auf den hellen Covern Emerald mit Amber-Auszeichnung,
+// weil Creme auf Creme unlesbar ist und Verdunkeln seit dem 02.09. gestrichen
+// war. Alesya am 05.09.: „textfarbe im post fuer japan auf weiss und gold
+// setzen, nicht orange und gruen, sieht nicht gut aus."
+//
+// Auf die Rueckfrage, wie weisse Schrift auf hellem Leinen lesbar wird: „in
+// unserem erfolgreichen post fuer japan war auch viel weiss, aber design war
+// richtig schoen. schaue es dir noch mal an und mache aehnlich."
+//
+// Nachgesehen in build-japan.mjs, dem Bauplan des Posts mit 3.202 Aufrufen.
+// Sein Cover steht auf `light: true` und `ty: 80`, und der Kommentar dort sagt
+// woertlich: „Ab ty >= 65 wird zusaetzlich der untere Verlauf eingeblendet,
+// sonst waere Creme auf hellem Leinen unlesbar." Der erfolgreiche Post war also
+// viel weiss auf hellem Leinen, und lesbar wurde er durch einen Verlauf.
+//
+// Also: Creme mit Marigold ueberall, und ein Verlauf nur da, wo die Messung ihn
+// verlangt. Als BAND in der Bauart von build-italy.mjs, nicht als Rampe bis zum
+// Rand - die Rampe hat am 02.09. das untere Drittel schwarz gemacht und genau
+// den bearbeiteten Look erzeugt, der weg sollte. Das Band liegt hinter dem
+// Textblock, ist dort am kraeftigsten und faellt nach oben und unten ab.
+//
+// ALLE BILDER BEKOMMEN EINEN LIFT. Alesya, 05.09.: „bilder etwas zu dunkel
+// alle." Auf allen soul_2-Bildern dieser Serie liegt ein kuehlgrauer Stich.
+// LIFT unten hebt Helligkeit und Waerme leicht an. Kein Farblayer - der
+// Emerald-Layer ist seit dem 29.08. gestrichen und kommt nicht zurueck.
 //
 // Usage: TRIAL=trial1 node build-trials.mjs
 //        TRIAL=trial2 ONLY=02 node build-trials.mjs
 //        TRIAL=all node build-trials.mjs
-import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { writeFileSync, readFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -46,16 +68,42 @@ import { FONT_CSS } from './fonts.mjs';
 
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const __dirname = dirname(fileURLToPath(import.meta.url));
+// Flaches Lockup ohne die Emerald-Kachel - Alesya, 31.08.: die App-Icon-Fassung
+// ist nicht das Logo fuer Posts. Nur die cremefarbene Fassung, seit die
+// Schlusskarten dunkle Fotos sind.
 const LOCKUP = join(__dirname, '..', 'brand', 'design-package', 'daya-brand', 'daya-lockup-flat-cream.png');
-// Emerald-Fassung fuer helle Slides, dieselbe Zeichnung ohne Kachel.
-const LOCKUP_DARK = join(__dirname, '..', 'brand', 'design-package', 'daya-brand', 'daya-lockup-flat-emerald.png');
 const glyph = (stroke) => `<svg viewBox="0 0 24 24" fill="none" stroke="${stroke}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h9"/><path d="M11 9.5 13.5 12 11 14.5"/><path d="M16.5 7.2a7 7 0 0 1 0 9.6"/><path d="M19 5a10.5 10.5 0 0 1 0 14"/></svg>`;
 const W = 1080, H = 1920, RESERVE = 87;
+
+// Milder Lift auf jede Backplate, gegen den kuehlgrauen Stich von soul_2.
+// Bewusst klein: „muss aber eher roh aussehen, nicht wie KI" (Alesya, 29.08.).
+const LIFT = { brightness: 1.07, warmth: 1.03 };
+
+// Ab welcher Helligkeit Creme nicht mehr traegt.
+//
+// Die reine Rechnung sagt 103 von 255: Creme #f4ecdb hat rund 0,79 relative
+// Leuchtdichte, fuer 4,5:1 darf der Grund hoechstens 0,1367 haben. Das ergab
+// ein Band von 0,39 und machte das Leinen grau - genau das Gegenteil von
+// „bilder etwas zu dunkel alle".
+//
+// 135 ist der Wert aus Alesyas eigener Abnahme. Der Sand-Slide des
+// Italien-Posts hat Median 158 und traegt Creme allein mit dem Schlagschatten.
+// Der Schatten (0 4px 22px schwarz) legt einen dunklen Hof um jeden Buchstaben,
+// den die reine Flaechenrechnung nicht kennt. 135 plus Hof liest sich sauber
+// und laesst das Leinen hell.
+const CREAM_FLOOR = 135;
+const BAND_MAX = 0.5;
+
+// Der Verlauf ist warm-ink, nicht neutral schwarz. Schwarz ueber cremefarbenem
+// Leinen ergibt Grau, und grau sah das Cover schmutzig aus. Die Regel vom
+// 29.08. („alle Verlaeufe sind neutrales Schwarz") richtete sich gegen den
+// EMERALD-Stich ueber Fotos, nicht gegen die eigene Tintenfarbe der Marke.
+const BAND_RGB = '26,20,11';
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const fmt = (s) => esc(s).replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>');
 
-// ink   = dunkle Schrift auf hellem Foto (Emerald + Amber, heller Schatten)
+// Das Band kommt aus der Messung, nicht aus einem Flag am Beat - siehe bandFor().
 // ty    = vertikale Mitte des Textblocks in Prozent, nie ueber 72
 const TRIALS = {
   // ---------------------------------------------------------------- Trial 1
@@ -67,11 +115,11 @@ const TRIALS = {
   trial1: {
     photos: join(__dirname, 'photos', 'japan', 'final'),
     beats: [
-      { id: '01', photo: 'j00-flatlay', cover: true, ink: true, darkBar: true, ty: 30,
+      { id: '01', photo: 'j00-flatlay', cover: true, darkBar: true, ty: 24,
         head: 'One thing in this picture costs you a *whole day*.',
         body: '3 things to sort before Japan.' },
 
-      { id: '02', photo: 'j01-luggage', ink: true, darkBar: true, ty: 63,
+      { id: '02', photo: 'j01-luggage', ty: 63,
         head: 'Your *suitcase*.',
         lines: [
           'Hand it in at the hotel desk or a konbini',
@@ -98,7 +146,7 @@ const TRIALS = {
           'Check your last train before you go out',
         ] },
 
-      { id: 'end', photo: 'j04-end', endcard: true, ty: 60, zoom: 1.18, oy: 0.82,
+      { id: 'end', photo: 'j04-end', endcard: true, ty: 60,
         head: 'Save this for your *Japan trip*.',
         body: 'Follow for more.' },
     ],
@@ -110,7 +158,7 @@ const TRIALS = {
   trial2: {
     photos: join(__dirname, 'photos', 'italy', 'final'),
     beats: [
-      { id: '01', photo: 'u00-flatlay', cover: true, ink: true, darkBar: true, ty: 30,
+      { id: '01', photo: 'u00-flatlay', cover: true, darkBar: true, ty: 30,
         head: 'One thing in this picture gets you into the *Vatican*.',
         body: '3 things to sort before you land.' },
 
@@ -157,7 +205,7 @@ const TRIALS = {
   trial3: {
     photos: join(__dirname, 'photos', 'italy', 'final'),
     beats: [
-      { id: '01', photo: 'u10-shells', cover: true, ink: true, darkBar: true, ty: 20,
+      { id: '01', photo: 'u10-shells', cover: true, darkBar: true, ty: 24,
         head: 'One thing in this picture is a *3,000 euro* fine.',
         body: '3 things Italy fines you for.' },
 
@@ -224,26 +272,11 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .list div{margin-bottom:14px}
 .list div:last-child{margin-bottom:0}
 
-/* HELLES FOTO, DUNKLE SCHRIFT. Das Cover ist ein Flatlay auf weissem Leinen,
-   dort ist Creme unlesbar - und dunkler machen darf ich das Foto nicht
-   (Alesya, 02.09.). Also Emerald statt Creme, Amber statt Marigold, und der
-   Schlagschatten wird hell statt dunkel. */
-.block.ink .head{color:#0e3b2c;
-  text-shadow:0 2px 18px rgba(244,236,219,.95),0 1px 5px rgba(255,255,255,.9)}
-/* Kein cremefarbener Glow an der Auszeichnung: Amber auf Leinen mit Creme
-   drumherum war der unlesbarste Text im ganzen Reel. Stattdessen ein schmaler
-   dunkler Schatten, der die Kante haelt. */
-/* Amber #cf8a1d auf cremefarbenem Leinen ergibt rund 2,6:1 Kontrast, das ist
-   unter jeder Lesbarkeitsgrenze. #8a5209 ist dieselbe Farbe zwei Stufen
-   dunkler und kommt auf rund 5,5:1. */
-.block.ink .hl{color:#8a5209;text-shadow:0 1px 3px rgba(26,20,11,.35)}
-.block.ink .body{color:#1a140b;opacity:.86;
-  text-shadow:0 2px 14px rgba(244,236,219,.95)}
-/* Ohne diese Zeile blieben die Stichpunkte creme, waehrend die Ueberschrift
-   darueber schon dunkel war - auf hellem Tatami war das der schwaechste Text
-   im ganzen Reel. */
-.block.ink .list{color:#1a140b;
-  text-shadow:0 2px 14px rgba(244,236,219,.95)}
+/* BAND HINTER DEM TEXT, nur auf hellen Backplates. Die Deckkraft kommt aus
+   der Messung und nicht aus dem Gefuehl - siehe bandFor() weiter unten. Sie
+   ist die kleinste, mit der Creme auf der gemessenen Helligkeit rund 4,5:1
+   erreicht. Lage und Hoehe folgen dem Textblock, deshalb stehen sie inline. */
+.band{position:absolute;left:0;right:0;pointer-events:none}
 
 .block.cover,.block.end{text-align:center;left:80px;right:80px}
 .cover .head{font-size:102px;line-height:1.02}
@@ -281,25 +314,60 @@ for (const name of names) {
     const out = join(GRID, `${b.id}.png`);
     const zoom = b.zoom || 1;
     const oy = b.oy === undefined ? 0.5 : b.oy;
+    const ty = b.ty || 50;
     const py = `
-from PIL import Image
+from PIL import Image, ImageEnhance
+import json
+
 im = Image.open('${f}').convert('RGB'); w, h = im.size
 s = max(${W} / w, ${H} / h) * ${zoom}
 im = im.resize((int(w * s), int(h * s)), Image.LANCZOS); w, h = im.size
 x = (w - ${W}) // 2
 y = int((h - ${H}) * ${oy})
-im.crop((x, y, x + ${W}, y + ${H})).save('${out}')`;
+im = im.crop((x, y, x + ${W}, y + ${H}))
+
+# Lift: Helligkeit leicht hoch, Blau leicht runter. Gegen den kuehlgrauen
+# Stich, nicht als Filter - die Werte stehen als LIFT in build-trials.mjs.
+im = ImageEnhance.Brightness(im).enhance(${LIFT.brightness})
+r, g, bl = im.split()
+bl = bl.point(lambda v: min(255, int(v / ${LIFT.warmth})))
+r = r.point(lambda v: min(255, int(v * ${LIFT.warmth})))
+im = Image.merge('RGB', (r, g, bl))
+im.save('${out}')
+
+# Helligkeit im Textfeld messen. p85 statt Median: der Text scheitert an den
+# hellen Stellen, nicht am Durchschnitt.
+box = im.convert('L').crop((80, max(0, int((${ty} - 15) / 100 * ${H})),
+                            ${W} - 110, min(${H}, int((${ty} + 15) / 100 * ${H}))))
+px = sorted(box.getdata())
+json.dump({'p85': px[int(len(px) * 0.85)], 'median': px[len(px) // 2]},
+          open('${join(GRID, `${b.id}.json`)}', 'w'))`;
     const pyPath = join(GRID, `${b.id}.py`);
     writeFileSync(pyPath, py);
     execSync(`python3 "${pyPath}"`, { stdio: 'inherit' });
   });
 
+  // Wie kraeftig das Band sein muss, damit Creme auf dieser Backplate traegt.
+  // Nichts geraten: der Median kommt aus der Messung im Zuschnitt-Schritt,
+  // CREAM_FLOOR aus der Kontrastrechnung.
+  //
+  // Gemessen wird der Median, nicht p85. Erste Fassung nahm p85 und gab damit
+  // 13 von 15 Slides ein Band - auch denen, die Alesya so schon abgenommen
+  // hatte. Ihre eigene Abnahme ist der bessere Massstab: der Sand-Slide des
+  // Italien-Posts hat Median 158 und traegt Creme allein mit Schlagschatten.
+  // An den hellen Einzelstellen scheitert der Text nicht, an einem durchgehend
+  // hellen Grund schon.
+  const bandFor = (id) => {
+    const m = JSON.parse(readFileSync(join(GRID, `${id}.json`), 'utf8'));
+    if (m.median <= CREAM_FLOOR) return 0;
+    return Math.min(BAND_MAX, 1 - CREAM_FLOOR / m.median);
+  };
+
   // 2) Overlay
   beats.forEach((b) => {
     const htmlPath = join(OV, `${b.id}.html`);
     const pngPath = join(OV, `${b.id}.png`);
-    const lockFile = b.ink && existsSync(LOCKUP_DARK) ? LOCKUP_DARK : LOCKUP;
-    const lock = existsSync(lockFile) ? `<img src="file://${lockFile}">` : '';
+    const lock = existsSync(LOCKUP) ? `<img src="file://${LOCKUP}">` : '';
     if (b.endcard && !lock) throw new Error('missing DAYA lockup ' + lockFile);
     const text =
       `<div class="head">${fmt(b.head)}</div>` +
@@ -308,12 +376,36 @@ im.crop((x, y, x + ${W}, y + ${H})).save('${out}')`;
     const cls = ['block'];
     if (b.cover) cls.push('cover');
     if (b.endcard) cls.push('end');
-    if (b.ink) cls.push('ink');
     const inner = `
   <div class="${cls.join(' ')}"${b.ty ? ` style="top:${b.ty}%"` : ''}>${text}</div>`;
+
+    // Band nur auf dem Cover. Dort liegt Creme auf weissem Leinen, das ist der
+    // einzige Fall, den der Schlagschatten nicht traegt - und genau der Fall,
+    // den der erfolgreiche Japan-Post mit einem Verlauf geloest hat. Die
+    // Punkte-Slides liegen auf Fotos und bleiben ohne, so wie abgenommen.
+    //
+    // Es spannt 14 Prozentpunkte ueber und unter der Textmitte und faellt zu
+    // beiden Seiten auf null. Erste Fassung war 48 Prozentpunkte breit und
+    // wusch damit die halbe Bildhoehe grau; die zweite mit 34 reichte noch bis
+    // auf die Gegenstaende und machte sie stumpf.
+    const a = b.cover ? bandFor(b.id) : 0;
+    const ty = b.ty || 50;
+    const top = Math.max(0, ty - 14);
+    const height = Math.min(100 - top, 28);
+    const bandHtml = a === 0 ? '' : `
+  <div class="band" style="top:${top}%;height:${height}%;background:linear-gradient(180deg,
+    rgba(${BAND_RGB},0) 0%, rgba(${BAND_RGB},${(a * 0.8).toFixed(3)}) 24%,
+    rgba(${BAND_RGB},${a.toFixed(3)}) 42%, rgba(${BAND_RGB},${a.toFixed(3)}) 64%,
+    rgba(${BAND_RGB},${(a * 0.66).toFixed(3)}) 84%, rgba(${BAND_RGB},0) 100%)"></div>`;
+    if (a > 0) console.log(name, b.id, 'Band', a.toFixed(2));
+    // Emerald-Kopfzeile nur, solange oben wirklich helles Leinen steht. Reicht
+    // das Band bis unter die Zeile, waere Emerald auf Dunkel unlesbar.
+    const dark = Boolean(b.darkBar) && (a === 0 || top > 8);
+
     writeFileSync(htmlPath, style + `<div class="wrap">
+  ${bandHtml}
   ${inner}
-  <div class="bar${b.darkBar ? ' dark' : ''}"><span class="brand">${glyph(b.darkBar ? '#0e3b2c' : '#f4ecdb')}<span>her.solotrip</span></span></div>
+  <div class="bar${dark ? ' dark' : ''}"><span class="brand">${glyph(dark ? '#0e3b2c' : '#f4ecdb')}<span>her.solotrip</span></span></div>
   ${b.endcard ? `<div class="lockup">${lock}</div>` : ''}
   <div class="grain"></div>
 </div>` + foot);
