@@ -46,6 +46,9 @@ const W = 1080, H = 1920, FPS = 30;
 
 const HOLD = 1.2;
 
+// 48 kHz stereo ausdruecklich gesetzt. seed_audio liefert 24 kHz, und ein MP4
+// mit 24-kHz-Ton spielt nicht ueberall ab - Alesya am 06.09.: „In meinem Video
+// ist kein Ton?" Der Ton war da und hatte Pegel, nur die Rate war unueblich.
 const ids = ['01', '02', '03', '04', 'end'];
 if (!existsSync(AUDIO)) throw new Error('missing audio ' + AUDIO);
 if (!existsSync(CUTS)) throw new Error('missing cuts ' + CUTS);
@@ -79,7 +82,7 @@ execSync(`cd "${OUT}" && ffmpeg -y -loglevel error -f concat -safe 0 -i list.txt
 // 3) Tonspur anlegen. Kein -shortest: das Video ist um HOLD laenger als der Ton
 //    und dieser Nachlauf soll stehen bleiben.
 const final = join(OUT, `${NAMES[TRIAL] || TRIAL}.mp4`);
-execSync(`ffmpeg -y -loglevel error -i "${join(OUT, 'silent.mp4')}" -i "${AUDIO}" -c:v copy -c:a aac -b:a 192k -map 0:v:0 -map 1:a:0 "${final}"`, { stdio: 'inherit' });
+execSync(`ffmpeg -y -loglevel error -i "${join(OUT, 'silent.mp4')}" -i "${AUDIO}" -c:v copy -c:a aac -b:a 192k -ar 48000 -ac 2 -map 0:v:0 -map 1:a:0 "${final}"`, { stdio: 'inherit' });
 
 const probe = (f, stream) => execSync(`ffprobe -v error -select_streams ${stream} -show_entries stream=duration -of csv=p=0 "${f}"`).toString().trim();
 console.log('->', final);

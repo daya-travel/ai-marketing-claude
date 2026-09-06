@@ -31,6 +31,15 @@ from pathlib import Path
 GAP_IN = 0.24   # Pause innerhalb eines Abschnitts, in Sekunden
 GAP_OUT = 0.30  # Pause zwischen zwei Abschnitten
 
+# Ausgaberate der fertigen Tonspur.
+#
+# seed_audio liefert 24 kHz. Alesya am 06.09.: „In meinem Video ist kein Ton?"
+# Der Ton war da und hatte Pegel (-13,8 dB im Mittel), aber 24 kHz ist fuer ein
+# MP4 unueblich, und Instagram und TikTok erwarten 44,1 oder 48 kHz. Am Ende
+# wird deshalb auf 48 kHz stereo gewandelt.
+OUT_RATE = 48000
+OUT_CH = 2
+
 # Nach dem Hook laenger. Das Cover stellt ein Raetsel und will abgesucht werden;
 # in der ersten Fassung stand es 3,7 Sekunden, das reicht fuer den Satz, aber
 # nicht fuer den Blick. Der erste Punkt setzt danach ein.
@@ -41,6 +50,30 @@ MINDUR = '0.18'
 
 def run(*args):
     return subprocess.run(args, capture_output=True, text=True)
+
+
+def audio_params(path):
+    """Rate und Kanalzahl einer Datei.
+
+    Gebraucht, weil die Stille zu den Clips passen MUSS. Erste Fassung erzeugte
+    sie fest mit `anullsrc=r=44100:cl=mono`, waehrend seed_audio 24 kHz stereo
+    liefert. Der concat-Demuxer hat die Stille dann mit den falschen Parametern
+    gelesen, und jede Pause kam um den Faktor 44100/(2*24000) = 0,919 zu kurz
+    heraus - aus 0,30 s wurden 0,276, aus 0,90 s wurden 0,833. Damit lief das
+    Bild gegen den Ton, denn cuts.json rechnete mit den Sollwerten.
+    """
+    out = run('ffprobe', '-v', 'error', '-select_streams', 'a:0',
+              '-show_entries', 'stream=sample_rate,channels',
+              '-of', 'csv=p=0', str(path)).stdout.strip()
+    rate, ch = out.split(',')
+    return int(rate), int(ch)
+
+
+def silence(path, seconds, rate, ch):
+    layout = 'mono' if ch == 1 else 'stereo'
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'lavfi',
+                    '-i', f'anullsrc=r={rate}:cl={layout}',
+                    '-t', f'{seconds}', str(path)], check=True)
 
 
 def duration(path):
@@ -83,9 +116,7 @@ def tighten(src, dst):
         parts.append(piece)
         if i < len(speech) - 1:
             gap = tmp / f'{dst.stem}-{i}-gap.wav'
-            subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'lavfi',
-                            '-i', f'anullsrc=r=44100:cl=mono', '-t', f'{GAP_IN}',
-                            str(gap)], check=True)
+            silence(gap, GAP_IN, *audio_params(src))
             parts.append(gap)
     listfile = tmp / f'{dst.stem}.txt'
     listfile.write_text(''.join(f"file '{p.name}'\n" for p in parts))
@@ -111,11 +142,10 @@ def main():
         lens.append(tighten(s, out))
         print(f'{s.name}  {duration(s):5.2f} -> {lens[-1]:5.2f} s')
 
+    rate, ch = audio_params(srcs[0])
     gaps = [GAP_AFTER_HOOK] + [GAP_OUT] * (len(srcs) - 2)
     for i, g in enumerate(gaps):
-        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'lavfi',
-                        '-i', 'anullsrc=r=44100:cl=mono', '-t', f'{g}',
-                        str(tight / f'gap{i}.wav')], check=True)
+        silence(tight / f'gap{i}.wav', g, rate, ch)
 
     parts = []
     for i, s in enumerate(srcs):
@@ -125,7 +155,9 @@ def main():
     (tight / 'list.txt').write_text(''.join(f"file '{p}'\n" for p in parts))
     voice = d / 'voice.wav'
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat',
-                    '-safe', '0', '-i', 'list.txt', str(voice.resolve())],
+                    '-safe', '0', '-i', 'list.txt',
+                    '-ar', str(OUT_RATE), '-ac', str(OUT_CH),
+                    str(voice.resolve())],
                    cwd=str(tight), check=True)
 
     # Die Grenze liegt am ENDE der Pause, nicht in ihrer Mitte: das Bild
