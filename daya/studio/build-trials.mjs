@@ -169,27 +169,27 @@ const TRIALS = {
       { id: '02', photo: 'j01-luggage', slug: '02-suitcase', ty: 63,
         head: 'Your *suitcase*.',
         lines: [
-          'Hand it in at the hotel desk or a konbini',
+          'The hotel desk sends it to your next hotel',
           '*About 3,000 yen* inside Tokyo, about $19',
           'Tokyo to Kyoto *about 3,200 yen*, about $21',
-          'Under 25 kilos, there the next day',
+          'Under 25 kilos, it arrives the next day',
         ] },
 
       { id: '03', photo: 'j02-card', slug: '03-bank-card', ty: 63,
         head: 'Your *bank card*.',
         lines: [
-          'Bank machines refuse foreign cards',
-          '7-Eleven: *over 28,000*, open all night',
-          'Visa, Mastercard, Maestro, Amex and JCB',
-          'Post offices work, but they shut overnight',
+          'Japanese bank ATMs refuse foreign cards',
+          '7-Eleven has *over 28,000* ATMs',
+          'Open around the clock, all year',
+          'Post offices work too, but close at night',
         ] },
 
       { id: '04', photo: 'j03-lasttrain', slug: '04-last-train', ty: 52,
         head: 'The *last train*.',
         lines: [
           'Trains stop around midnight, back around 5',
-          'Taxis add *20 %* from 10pm to 5am',
-          '7 km is *2,500 to 3,000 yen*, about $17',
+          'Taxis add *20 %* between 10pm and 5am',
+          'A 7 km ride: *2,500 to 3,000 yen*, about $17',
           'Check your last train before you go out',
         ] },
 
