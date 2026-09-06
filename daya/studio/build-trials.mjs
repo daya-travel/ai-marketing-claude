@@ -73,7 +73,45 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // Schlusskarten dunkle Fotos sind.
 const LOCKUP = join(__dirname, '..', 'brand', 'design-package', 'daya-brand', 'daya-lockup-flat-cream.png');
 const glyph = (stroke) => `<svg viewBox="0 0 24 24" fill="none" stroke="${stroke}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h9"/><path d="M11 9.5 13.5 12 11 14.5"/><path d="M16.5 7.2a7 7 0 0 1 0 9.6"/><path d="M19 5a10.5 10.5 0 0 1 0 14"/></svg>`;
-const W = 1080, H = 1920, RESERVE = 87;
+// ZWEI FORMATE AUS EINER DATEI.
+//
+// Alesya am 06.09.: „Diana postet immer irgendwie so, dass der obere Kopf und
+// der untere Teil auch abgeschnitten werden ... obwohl sie sagt, sie postet
+// ganz normal."
+//
+// Es liegt nicht an Diana. Ein Instagram-Feed-Post ist hoechstens 4:5, und ein
+// 9:16-Upload wird dort selbsttaetig zentriert zugeschnitten: 285 px oben und
+// 285 px unten, je 14,8 % der Hoehe. Damit verschwindet die Kopfzeile
+// her.solotrip (4,6 bis 6,2 %) bei jedem Feed-Post, und der Cover-Text wird
+// oben angesaegt. „Ganz normal posten" ist genau die Handlung, die das
+// ausloest.
+//
+// Der Befund stand schon in build-cities-warning-ig.mjs: „Instagram's feed
+// shows a 4:5 center-crop of a 9:16 upload." Geloest wurde er dort nicht - die
+// -ig-Fassungen blieben bei 1080x1920 und ruecken nur den Text nach innen.
+// Hier kommt eine echte 4:5-Fassung, in der nichts wegzuschneiden ist.
+//
+// Ein Schalter statt einer zweiten Datei: build-cities-warning.mjs und
+// build-cities-warning-ig.mjs sind genau daran auseinandergelaufen.
+const FORMAT = process.env.FORMAT || '9x16';
+const SIZES = {
+  '9x16': { W: 1080, H: 1920, lockupBottom: 440 },
+  // 150 px auf 1350 Hoehe sind 11 %. Die 440 aus 9:16 waeren hier 32,6 % und
+  // saessen mitten im Bild.
+  '4x5':  { W: 1080, H: 1350, lockupBottom: 150 },
+};
+if (!SIZES[FORMAT]) throw new Error(`unbekanntes FORMAT: ${FORMAT} (${Object.keys(SIZES).join(', ')})`);
+const { W, H, lockupBottom } = SIZES[FORMAT];
+const RESERVE = 87;
+
+// Dieselben Pixel wirken auf dem kuerzeren 4:5-Rahmen groesser. Gemessen am
+// ersten Lauf: die Cover-Ueberschrift mit 102 px fuellte dort die halbe
+// Bildhoehe und schob die Unterzeile aus dem Band heraus. Die Punkte-Slides
+// tragen ihre Groessen dagegen unveraendert, dort steht der Text ohnehin
+// enger.
+const TYPE = FORMAT === '4x5'
+  ? { coverHead: 84, coverBody: 36, endHead: 72, endBody: 35 }
+  : { coverHead: 102, coverBody: 41, endHead: 83, endBody: 39 };
 
 // Milder Lift auf jede Backplate, gegen den kuehlgrauen Stich von soul_2.
 // Bewusst klein: „muss aber eher roh aussehen, nicht wie KI" (Alesya, 29.08.).
@@ -101,6 +139,15 @@ const BAND_MAX = 0.5;
 const BAND_RGB = '26,20,11';
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+// ty und oy duerfen je Format abweichen. Der 4:5-Rahmen ist kuerzer, dort
+// sitzt der Text anders und der Zuschnitt nimmt einen anderen Ausschnitt des
+// Fotos. Fehlt der 4:5-Wert, gilt der aus 9:16.
+const tyOf = (b) => (FORMAT === '4x5' && b.ty45 !== undefined ? b.ty45 : (b.ty || 50));
+const oyOf = (b) => {
+  const v = FORMAT === '4x5' && b.oy45 !== undefined ? b.oy45 : b.oy;
+  return v === undefined ? 0.5 : v;
+};
 const fmt = (s) => esc(s).replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>');
 
 // Das Band kommt aus der Messung, nicht aus einem Flag am Beat - siehe bandFor().
@@ -115,11 +162,11 @@ const TRIALS = {
   trial1: {
     photos: join(__dirname, 'photos', 'japan', 'final'),
     beats: [
-      { id: '01', photo: 'j00-flatlay', cover: true, darkBar: true, ty: 24,
+      { id: '01', photo: 'j00-flatlay', slug: '01-cover', cover: true, darkBar: true, ty: 24,
         head: 'One thing in this picture costs you a *whole day*.',
         body: '3 things to sort before Japan.' },
 
-      { id: '02', photo: 'j01-luggage', ty: 63,
+      { id: '02', photo: 'j01-luggage', slug: '02-suitcase', ty: 63,
         head: 'Your *suitcase*.',
         lines: [
           'Hand it in at the hotel desk or a konbini',
@@ -128,7 +175,7 @@ const TRIALS = {
           'Under 25 kilos, there the next day',
         ] },
 
-      { id: '03', photo: 'j02-card', ty: 63,
+      { id: '03', photo: 'j02-card', slug: '03-bank-card', ty: 63,
         head: 'Your *bank card*.',
         lines: [
           'Bank machines refuse foreign cards',
@@ -137,7 +184,7 @@ const TRIALS = {
           'Post offices work, but they shut overnight',
         ] },
 
-      { id: '04', photo: 'j03-lasttrain', ty: 52,
+      { id: '04', photo: 'j03-lasttrain', slug: '04-last-train', ty: 52,
         head: 'The *last train*.',
         lines: [
           'Trains stop around midnight, back around 5',
@@ -146,7 +193,7 @@ const TRIALS = {
           'Check your last train before you go out',
         ] },
 
-      { id: 'end', photo: 'j04-end', endcard: true, ty: 60,
+      { id: 'end', photo: 'j04-end', slug: '05-end', endcard: true, ty: 60,
         head: 'Save this for your *Japan trip*.',
         body: 'Follow for more.' },
     ],
@@ -158,11 +205,11 @@ const TRIALS = {
   trial2: {
     photos: join(__dirname, 'photos', 'italy', 'final'),
     beats: [
-      { id: '01', photo: 'u00-flatlay', cover: true, darkBar: true, ty: 30,
+      { id: '01', photo: 'u00-flatlay', slug: '01-cover', cover: true, darkBar: true, ty: 30,
         head: 'One thing in this picture gets you into the *Vatican*.',
         body: '3 things to sort before you land.' },
 
-      { id: '02', photo: 'u01-scarf', ty: 63,
+      { id: '02', photo: 'u01-scarf', slug: '02-scarf', ty: 63,
         head: 'A *scarf*.',
         lines: [
           'No sleeveless tops, nothing low-cut',
@@ -171,7 +218,7 @@ const TRIALS = {
           'A scarf covers it and weighs nothing',
         ] },
 
-      { id: '03', photo: 'f12-fountain', ty: 63,
+      { id: '03', photo: 'f12-fountain', slug: '03-water-bottle', ty: 63,
         head: 'A *water bottle*.',
         lines: [
           '*Over 3,000* public fountains in Rome',
@@ -180,7 +227,7 @@ const TRIALS = {
           'Cover the hole on top and drink upwards',
         ] },
 
-      { id: '04', photo: 'u03-arrival', ty: 63,
+      { id: '04', photo: 'u03-arrival', slug: '04-airport-taxi', ty: 63,
         head: 'The taxi from the *airport*.',
         lines: [
           'Fiumicino to the centre: fixed *55 euros*',
@@ -189,7 +236,7 @@ const TRIALS = {
           'Nobody inside the terminal is a taxi',
         ] },
 
-      { id: 'end', photo: 'f13-end', endcard: true, ty: 60,
+      { id: 'end', photo: 'f13-end', slug: '05-end', endcard: true, ty: 60,
         head: 'Save this for your *Italy trip*.',
         body: 'Follow for more.' },
     ],
@@ -205,11 +252,11 @@ const TRIALS = {
   trial3: {
     photos: join(__dirname, 'photos', 'italy', 'final'),
     beats: [
-      { id: '01', photo: 'u10-shells', cover: true, darkBar: true, ty: 24,
+      { id: '01', photo: 'u10-shells', slug: '01-cover', cover: true, darkBar: true, ty: 24,
         head: 'One thing in this picture is a *3,000 euro* fine.',
         body: '3 things Italy fines you for.' },
 
-      { id: '02', photo: 'f02-sand', ty: 62,
+      { id: '02', photo: 'f02-sand', slug: '02-sand', ty: 62,
         head: 'Sand from the *beach*.',
         lines: [
           'Free to pick up. *Up to 3,000 euros* to keep',
@@ -218,7 +265,7 @@ const TRIALS = {
           '*4 tonnes* seized at one airport in 2 years',
         ] },
 
-      { id: '03', photo: 'f05-steps', ty: 27, oy: 0.82,
+      { id: '03', photo: 'f05-steps', slug: '03-spanish-steps', ty: 27, oy: 0.82,
         head: 'Sitting on the *Spanish Steps*.',
         lines: [
           'Sitting alone is enough, no food needed',
@@ -227,7 +274,7 @@ const TRIALS = {
           'Enforced since 2019',
         ] },
 
-      { id: '04', photo: 'f06-ztl', ty: 63,
+      { id: '04', photo: 'f06-ztl', slug: '04-ztl-camera', ty: 63,
         head: 'The *camera* at the end of the street.',
         lines: [
           '*80 to 130 euros* per gate',
@@ -236,7 +283,7 @@ const TRIALS = {
           'The letter arrives months after the trip',
         ] },
 
-      { id: 'end', photo: 'f13-end', endcard: true, ty: 60,
+      { id: 'end', photo: 'f13-end', slug: '05-end', endcard: true, ty: 60,
         head: 'Save this for your *Italy trip*.',
         body: 'Follow for more.' },
     ],
@@ -279,13 +326,13 @@ html,body{width:${W}px;height:${H}px;background:transparent;overflow:hidden}
 .band{position:absolute;left:0;right:0;pointer-events:none}
 
 .block.cover,.block.end{text-align:center;left:80px;right:80px}
-.cover .head{font-size:102px;line-height:1.02}
-.cover .body{margin-top:28px;font-size:41px;letter-spacing:.01em;opacity:.92}
-.end .head{font-size:83px}
-.end .body{font-size:39px;letter-spacing:.01em;opacity:.9}
+.cover .head{font-size:${TYPE.coverHead}px;line-height:1.02}
+.cover .body{margin-top:28px;font-size:${TYPE.coverBody}px;letter-spacing:.01em;opacity:.92}
+.end .head{font-size:${TYPE.endHead}px}
+.end .body{font-size:${TYPE.endBody}px;letter-spacing:.01em;opacity:.9}
 /* bottom 440 = Unterkante auf 77,1 % der Bildhoehe. 300, wie in Thailand,
    waeren 84,3 % und damit unter der Linie, die genau dafuer aufgestellt wurde. */
-.lockup{position:absolute;left:0;right:0;bottom:440px;display:flex;justify-content:center}
+.lockup{position:absolute;left:0;right:0;bottom:${lockupBottom}px;display:flex;justify-content:center}
 .lockup img{height:78px;filter:drop-shadow(0 3px 14px rgba(0,0,0,.9))}
 </style></head><body>`;
 const foot = `</body></html>`;
@@ -298,13 +345,21 @@ const ONLY = process.env.ONLY || '';
 for (const name of names) {
   const trial = TRIALS[name];
   if (!trial) throw new Error('unbekannter TRIAL: ' + name + ' (' + Object.keys(TRIALS).join(', ') + ')');
-  const OUT = join(__dirname, 'reels', name);
+  // 9:16 behaelt die alten Pfade, damit build-trials-video.mjs unveraendert
+  // weiterlaeuft. 4:5 bekommt einen eigenen Zweig und fasst die Arbeitsordner
+  // des Reels nicht an.
+  const OUT = FORMAT === '9x16'
+    ? join(__dirname, 'reels', name)
+    : join(__dirname, 'reels', name, FORMAT);
   const OV = join(OUT, 'overlays');
   const GRID = join(OUT, 'grids');
   const SLIDES = join(OUT, 'slides');
   const beats = ONLY ? trial.beats.filter((b) => b.id === ONLY) : trial.beats;
   if (!beats.length) throw new Error('ONLY matched no beat: ' + ONLY);
-  if (!ONLY) rmSync(OUT, { recursive: true, force: true });
+  // Nur die eigenen Arbeitsordner leeren, nicht OUT als Ganzes: im 9:16-Lauf
+  // ist OUT der Trial-Ordner, und der enthaelt den 4x5-Zweig und das fertige
+  // MP4. Ein rmSync auf OUT hat beim ersten Doppel-Lauf genau die geloescht.
+  if (!ONLY) [OV, GRID, SLIDES].forEach((d) => rmSync(d, { recursive: true, force: true }));
   [OV, GRID, SLIDES].forEach((d) => mkdirSync(d, { recursive: true }));
 
   // 1) Backplate, randlos beschnitten
@@ -313,8 +368,8 @@ for (const name of names) {
     if (!existsSync(f)) throw new Error('missing photo ' + f);
     const out = join(GRID, `${b.id}.png`);
     const zoom = b.zoom || 1;
-    const oy = b.oy === undefined ? 0.5 : b.oy;
-    const ty = b.ty || 50;
+    const oy = oyOf(b);
+    const ty = tyOf(b);
     const py = `
 from PIL import Image, ImageEnhance
 import json
@@ -377,7 +432,7 @@ json.dump({'p85': px[int(len(px) * 0.85)], 'median': px[len(px) // 2]},
     if (b.cover) cls.push('cover');
     if (b.endcard) cls.push('end');
     const inner = `
-  <div class="${cls.join(' ')}"${b.ty ? ` style="top:${b.ty}%"` : ''}>${text}</div>`;
+  <div class="${cls.join(' ')}" style="top:${tyOf(b)}%">${text}</div>`;
 
     // Band nur auf dem Cover. Dort liegt Creme auf weissem Leinen, das ist der
     // einzige Fall, den der Schlagschatten nicht traegt - und genau der Fall,
@@ -388,15 +443,20 @@ json.dump({'p85': px[int(len(px) * 0.85)], 'median': px[len(px) // 2]},
     // beiden Seiten auf null. Erste Fassung war 48 Prozentpunkte breit und
     // wusch damit die halbe Bildhoehe grau; die zweite mit 34 reichte noch bis
     // auf die Gegenstaende und machte sie stumpf.
+    //
+    // Die volle Deckkraft liegt zwischen 32 und 72 % des Bandes, nicht erst
+    // zwischen 42 und 64. Der Textblock ist fast so hoch wie das Band, und mit
+    // dem kurzen Plateau lagen Ober- und Unterkante im Auslauf - die Unterzeile
+    // des Covers war dadurch die schwaechste Zeile im ganzen Slide.
     const a = b.cover ? bandFor(b.id) : 0;
-    const ty = b.ty || 50;
+    const ty = tyOf(b);
     const top = Math.max(0, ty - 14);
     const height = Math.min(100 - top, 28);
     const bandHtml = a === 0 ? '' : `
   <div class="band" style="top:${top}%;height:${height}%;background:linear-gradient(180deg,
-    rgba(${BAND_RGB},0) 0%, rgba(${BAND_RGB},${(a * 0.8).toFixed(3)}) 24%,
-    rgba(${BAND_RGB},${a.toFixed(3)}) 42%, rgba(${BAND_RGB},${a.toFixed(3)}) 64%,
-    rgba(${BAND_RGB},${(a * 0.66).toFixed(3)}) 84%, rgba(${BAND_RGB},0) 100%)"></div>`;
+    rgba(${BAND_RGB},0) 0%, rgba(${BAND_RGB},${(a * 0.8).toFixed(3)}) 16%,
+    rgba(${BAND_RGB},${a.toFixed(3)}) 32%, rgba(${BAND_RGB},${a.toFixed(3)}) 72%,
+    rgba(${BAND_RGB},${(a * 0.7).toFixed(3)}) 88%, rgba(${BAND_RGB},0) 100%)"></div>`;
     if (a > 0) console.log(name, b.id, 'Band', a.toFixed(2));
     // Emerald-Kopfzeile nur, solange oben wirklich helles Leinen steht. Reicht
     // das Band bis unter die Zeile, waere Emerald auf Dunkel unlesbar.
@@ -426,4 +486,16 @@ Image.alpha_composite(g, o).convert('RGB').save('${join(SLIDES, `${n}-${b.id}.pn
     execSync(`python3 "${pyPath}"`, { stdio: 'inherit' });
     console.log(name, 'slide', n, b.id, 'ok');
   });
+
+  // 4) Export mit sprechenden Namen. Die Arbeitsordner heissen 01-01.png und
+  // sind fuer den Video-Builder da; was an Alesya geht, soll lesbar heissen.
+  const EXPORT = join(__dirname, 'reels', name, 'export', FORMAT);
+  mkdirSync(EXPORT, { recursive: true });
+  beats.forEach((b) => {
+    const n = String(trial.beats.indexOf(b) + 1).padStart(2, '0');
+    const src = join(SLIDES, `${n}-${b.id}.png`);
+    const dst = join(EXPORT, `${name}-${b.slug || b.id}.png`);
+    execSync(`cp "${src}" "${dst}"`);
+  });
+  console.log(name, FORMAT, '->', EXPORT);
 }

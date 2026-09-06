@@ -241,6 +241,19 @@ Serie ansehen und den Look treffen.
   Zigarettenstummel standen dreimal senkrecht wie Pfosten im Sand, ordentlich
   verteilt. Echte Kippen liegen. Prompt-Baustein, der es loest: „lying flat on their
   sides half buried in the sand, casually dropped, not arranged, at different angles".
+- **Ein 9:16-Bild verliert im Instagram-Feed oben und unten je 14,8 %.** Der Feed
+  zeigt höchstens 4:5 und schneidet einen 9:16-Upload selbsttätig zentriert zu:
+  285 px oben, 285 px unten. Damit verschwindet die Kopfzeile `her.solotrip` bei
+  jedem Feed-Post, und die Cover-Überschrift wird oben angesägt. Alesya am
+  06.09.2026: „Diana postet immer irgendwie so, dass der obere Kopf und der
+  untere Teil auch abgeschnitten werden, obwohl sie sagt, sie postet ganz
+  normal." Es liegt nicht an Diana - „ganz normal posten" ist genau die
+  Handlung, die den Zuschnitt auslöst. Der Befund stand seit einer früheren
+  Runde in `build-cities-warning-ig.mjs`, wurde dort aber nur umgangen (Text
+  nach innen gerückt), nicht gelöst. Wer beide Kanäle bedient, **exportiert zwei
+  Fassungen**: `TRIAL=… node build-trials.mjs` für 9:16 und
+  `FORMAT=4x5` für 1080x1350. Ein Schalter, keine zweite Datei -
+  `build-cities-warning.mjs` und `-ig.mjs` sind genau daran auseinandergelaufen.
 - **Text nie tiefer als rund 78 % der Bildhöhe.** Auf TikTok verdeckt die Oberfläche
   den unteren Rand, dort steht die Caption über dem Bild. Belegt am 31.08.: vier Slides
   lagen auf `ty: 84` und waren damit im Zweifel nicht lesbar. Richtwert ist `ty: 72`,
