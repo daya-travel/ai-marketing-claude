@@ -529,3 +529,29 @@ Laenge jetzt 41,2 s Bild auf 39,2 s Ton. Die 30-Sekunden-Regel ist gestrichen.
 **Was ich nicht pruefen kann:** wie es klingt. Das Sprechtempo je Abschnitt
 liegt bei 156 bis 207 Woertern pro Minute, der Koffer-Abschnitt ist der
 schnellste. Ob das gehetzt wirkt, muss Alesya hoeren.
+
+## Nachtrag 07.09., zweite Runde
+
+**Text nur noch auf dem ersten Bild eines Punktes.** Die Verteilung ueber zwei
+bis drei Bilder war falsch - auf Bild zwei und drei standen Zeilen ohne
+Ueberschrift. Jetzt: Ueberschrift plus alle drei Zeilen auf Bild eins, danach
+reine Bilder. Das Textbild bekommt die Haelfte der Abschnittszeit (6,1 s beim
+Koffer), die stummen je ein Viertel.
+
+**Bankkarte: ein echtes Kartenmotiv gibt es nicht.** Sechs Varianten geprueft,
+alle durchgefallen - Karten in einem Etui lesen sich als Briefpapier, eine
+Karte auf Holz als Notizbuch, jede Ladenszene bringt ein erfundenes Schild mit.
+Eine Bankkarte ist definiert durch ihren Aufdruck, und genau den kann soul_2
+nicht. Die Kartenboerse auf Leinen bleibt deshalb das Ankerbild.
+
+Ersetzt wurde das **zweite** Bild des Punktes: statt der Frau im Tatami-Zimmer,
+die mit dem Thema nichts zu tun hatte, steht dort jetzt eine Frau im hellen
+Tuerlicht bei Nacht - passend zu „open around the clock". Das schwache Schild
+am oberen Bildrand faellt per Zuschnitt raus (zoom 1.18, oy 1), nicht per
+Retusche.
+
+**Untertitel macht Alesya selbst in ElevenLabs.**
+
+**Was offen bleibt:** die drei Nachtbilder beim letzten Zug tragen die
+Stimmung, nicht die Information. Ein Bahnsteig waere richtig, japanische
+Bahnsteige sind aber voller Schilder - sechs Versuche sind daran gescheitert.

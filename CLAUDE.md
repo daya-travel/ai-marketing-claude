@@ -203,6 +203,23 @@ Serie ansehen und den Look treffen.
   Münzbörsen, Verpackungen und Schuhe mit Label erzeugen zuverlässig Buchstabensalat
   („PASSGORT", „MARSSOFIT", „CUPPI M SINOCTAY", alle am 29.08.). Ein Pass lässt sich
   nicht sauber generieren, er fliegt raus statt neu geprompted zu werden.
+- **Ein Gegenstand, den man nur an seinem Aufdruck erkennt, ist kein Motiv.**
+  Alesya, 07.09.2026: „Bank Card Bild neu generieren, passend zum Text." Eine
+  Bankkarte ist definiert durch Nummer, Name, Logo und Chip - genau das, was
+  `soul_2` nicht kann und was die Regel oben verbietet. Sechs Varianten
+  geprüft: Karten in einem Etui lesen sich als Briefpapier, eine Karte auf Holz
+  als Notizbuch, jede Ladenszene bringt ein erfundenes Schild mit. Was bleibt,
+  ist das **Umfeld** des Gegenstands: eine schlichte Kartenbörse zeigt „Karte",
+  ohne eine bedruckte Fläche zu zeigen. Dieselbe Familie wie der Pass vom
+  29.08. - solche Themen bekommen ein Ersatzmotiv oder Alesya fotografiert sie.
+- **Der Text eines Punktes steht ganz auf dessen erstem Bild.** Am 07.09. hatte
+  ich ihn über zwei bis drei Bilder verteilt, damit weniger pro Bild zu lesen
+  ist. Alesya: „du solltest bitte den ganzen Text auf dem ersten Bild von der
+  Serie zeigen und auf den anderen kein Text.. so ist es irgendwie komisch."
+  Auf Bild zwei und drei standen Zeilen ohne Überschrift, das las sich
+  abgerissen. Richtig ist: Überschrift plus alle Zeilen auf Bild eins, danach
+  reine Bilder. Das Textbild bekommt dafür rund die Hälfte der Zeit des
+  Abschnitts, die stummen teilen sich den Rest.
 - **Das DAYA-Logo fuer Posts ist die flache Fassung, nicht das App-Icon.** Alesya,
   31.08.2026: „das logo von daya muss aber anders sein". Im Repo lagen nur Dateien
   mit der abgerundeten Emerald-Kachel und dem gepraegten Bogen - das ist das

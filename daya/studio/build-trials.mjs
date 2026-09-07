@@ -166,54 +166,53 @@ const TRIALS = {
         head: 'One thing in this picture costs you a *whole day*.',
         body: '3 things to sort before Japan.' },
 
-      // Der Koffer-Punkt auf drei Bilder. Alesya am 07.09.: „ich hab nicht
-      // verstanden, warum sie den Koffer weiterschicken ... man muss lange
-      // lesen und bevor man liest, kommt man schon zum naechsten Bild."
-      // Also erst was es ueberhaupt gibt, dann wie es geht, dann was es kostet.
-      { id: '02a', sec: 1, w: 9, photo: 'j01-luggage', slug: '02a-suitcase', ty: 63,
+      // DER GANZE TEXT EINES PUNKTES STEHT AUF SEINEM ERSTEN BILD.
+      //
+      // Am 07.09. hatte ich ihn auf zwei oder drei Bilder verteilt. Alesya:
+      // „du solltest bitte den ganzen Text auf dem ersten Bild von der Serie
+      // zeigen und auf den anderen kein Text.. so ist es irgendwie komisch."
+      // Sie hat recht: auf Bild zwei und drei standen Zeilen ohne
+      // Ueberschrift, wie abgerissen.
+      //
+      // Die Gewichte drehen sich damit um. Vorher hingen sie an der Wortzahl
+      // des gesprochenen Satzes; jetzt braucht das Textbild die meiste Zeit,
+      // weil dort alles zu lesen ist, und die stummen Bilder laufen kuerzer.
+      { id: '02a', sec: 1, w: 10, photo: 'j01-luggage', slug: '02a-suitcase', ty: 63,
         head: 'Your *suitcase*.',
-        lines: ['Japan moves it between hotels for you'] },
-
-      { id: '02b', sec: 1, w: 20, photo: 'j05-genkan', slug: '02b-handover', ty: 63,
         lines: [
+          'Japan moves it between hotels for you',
           'Hand it in at your hotel in the morning',
-          'It waits at the next hotel the following day',
-        ] },
-
-      // ty 46 statt 63: bei 63 lag „About 3,000 yen" in Marigold auf dem
-      // sonnenbeschienenen Weg, also warm auf warm, und verschwand fast. Weiter
-      // oben liegt der Schatten der Baeume.
-      { id: '02c', sec: 1, w: 13, photo: 'j06-handsfree', slug: '02c-hands-free', ty: 46,
-        lines: [
           '*About 3,000 yen* inside Tokyo, about $19',
-          'You take the train with just a bag',
         ] },
 
-      { id: '03a', sec: 2, w: 13, photo: 'j02-card', slug: '03a-bank-card', ty: 63,
-        head: 'Your *bank card*.',
-        lines: ['Japanese bank ATMs refuse foreign cards'] },
+      { id: '02b', sec: 1, w: 5, photo: 'j05-genkan', slug: '02b-handover' },
 
-      { id: '03b', sec: 2, w: 12, photo: 'j02b-room', slug: '03b-konbini', ty: 63,
+      { id: '02c', sec: 1, w: 5, photo: 'j06-handsfree', slug: '02c-hands-free' },
+
+      { id: '03a', sec: 2, w: 10, photo: 'j02-card', slug: '03a-bank-card', ty: 63,
+        head: 'Your *bank card*.',
         lines: [
+          'Japanese bank ATMs refuse foreign cards',
           '7-Eleven has *over 28,000* ATMs',
           'Open around the clock, all year',
         ] },
 
-      { id: '04a', sec: 3, w: 8, photo: 'j03-lasttrain', slug: '04a-last-train', ty: 52,
+      // Zuschnitt statt Retusche: am oberen Bildrand steht ein schwaches
+      // erfundenes Schild weit im Dunkeln. zoom plus oy schieben es raus.
+      { id: '03b', sec: 2, w: 6, photo: 'j02b-room', slug: '03b-open-all-night',
+        zoom: 1.18, oy: 1 },
+
+      { id: '04a', sec: 3, w: 10, photo: 'j03-lasttrain', slug: '04a-last-train', ty: 52,
         head: 'The *last train*.',
-        lines: ['It goes around midnight'] },
-
-      { id: '04b', sec: 3, w: 9, photo: 'j07-steps', slug: '04b-nothing-runs', ty: 55,
         lines: [
-          'Nothing runs again until *5 in the morning*',
+          'It goes around midnight, back around 5',
           'Taxis add *20 %* between 10pm and 5am',
+          'A 7 km ride: *2,500 to 3,000 yen*, about $17',
         ] },
 
-      { id: '04c', sec: 3, w: 9, photo: 'j08-river', slug: '04c-taxi-cost', ty: 55,
-        lines: [
-          'A 7 km ride: *2,500 to 3,000 yen*, about $17',
-          'Check your last train before you go out',
-        ] },
+      { id: '04b', sec: 3, w: 5, photo: 'j07-steps', slug: '04b-alley' },
+
+      { id: '04c', sec: 3, w: 5, photo: 'j08-river', slug: '04c-slope' },
 
       { id: 'end', sec: 4, photo: 'j04-end', slug: '05-end', endcard: true, ty: 60,
         head: 'Save this for your *Japan trip*.',
