@@ -517,6 +517,9 @@ Image.alpha_composite(g, o).convert('RGB').save('${join(SLIDES, `${n}-${b.id}.pn
   // 4) Export mit sprechenden Namen. Die Arbeitsordner heissen 01-01.png und
   // sind fuer den Video-Builder da; was an Alesya geht, soll lesbar heissen.
   const EXPORT = join(__dirname, 'reels', name, 'export', FORMAT);
+  // Leeren, nicht nur anlegen: nach dem Umbau von fuenf auf zehn Frames lagen
+  // die alten Dateien noch daneben, und der Ordner enthielt beides.
+  if (!ONLY) rmSync(EXPORT, { recursive: true, force: true });
   mkdirSync(EXPORT, { recursive: true });
   beats.forEach((b) => {
     const n = String(trial.beats.indexOf(b) + 1).padStart(2, '0');
