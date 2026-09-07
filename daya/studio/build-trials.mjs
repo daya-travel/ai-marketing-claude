@@ -162,38 +162,60 @@ const TRIALS = {
   trial1: {
     photos: join(__dirname, 'photos', 'japan', 'final'),
     beats: [
-      { id: '01', photo: 'j00-flatlay', slug: '01-cover', cover: true, darkBar: true, ty: 24,
+      { id: '01', sec: 0, photo: 'j00-flatlay', slug: '01-cover', cover: true, darkBar: true, ty: 24,
         head: 'One thing in this picture costs you a *whole day*.',
         body: '3 things to sort before Japan.' },
 
-      { id: '02', photo: 'j01-luggage', slug: '02-suitcase', ty: 63,
+      // Der Koffer-Punkt auf drei Bilder. Alesya am 07.09.: „ich hab nicht
+      // verstanden, warum sie den Koffer weiterschicken ... man muss lange
+      // lesen und bevor man liest, kommt man schon zum naechsten Bild."
+      // Also erst was es ueberhaupt gibt, dann wie es geht, dann was es kostet.
+      { id: '02a', sec: 1, w: 9, photo: 'j01-luggage', slug: '02a-suitcase', ty: 63,
         head: 'Your *suitcase*.',
+        lines: ['Japan moves it between hotels for you'] },
+
+      { id: '02b', sec: 1, w: 20, photo: 'j05-genkan', slug: '02b-handover', ty: 63,
         lines: [
-          'The hotel desk sends it to your next hotel',
-          '*About 3,000 yen* inside Tokyo, about $19',
-          'Tokyo to Kyoto *about 3,200 yen*, about $21',
-          'Under 25 kilos, it arrives the next day',
+          'Hand it in at your hotel in the morning',
+          'It waits at the next hotel the following day',
         ] },
 
-      { id: '03', photo: 'j02-card', slug: '03-bank-card', ty: 63,
-        head: 'Your *bank card*.',
+      // ty 46 statt 63: bei 63 lag „About 3,000 yen" in Marigold auf dem
+      // sonnenbeschienenen Weg, also warm auf warm, und verschwand fast. Weiter
+      // oben liegt der Schatten der Baeume.
+      { id: '02c', sec: 1, w: 13, photo: 'j06-handsfree', slug: '02c-hands-free', ty: 46,
         lines: [
-          'Japanese bank ATMs refuse foreign cards',
+          '*About 3,000 yen* inside Tokyo, about $19',
+          'You take the train with just a bag',
+        ] },
+
+      { id: '03a', sec: 2, w: 13, photo: 'j02-card', slug: '03a-bank-card', ty: 63,
+        head: 'Your *bank card*.',
+        lines: ['Japanese bank ATMs refuse foreign cards'] },
+
+      { id: '03b', sec: 2, w: 12, photo: 'j02b-room', slug: '03b-konbini', ty: 63,
+        lines: [
           '7-Eleven has *over 28,000* ATMs',
           'Open around the clock, all year',
-          'Post offices work too, but close at night',
         ] },
 
-      { id: '04', photo: 'j03-lasttrain', slug: '04-last-train', ty: 52,
+      { id: '04a', sec: 3, w: 8, photo: 'j03-lasttrain', slug: '04a-last-train', ty: 52,
         head: 'The *last train*.',
+        lines: ['It goes around midnight'] },
+
+      { id: '04b', sec: 3, w: 9, photo: 'j07-steps', slug: '04b-nothing-runs', ty: 55,
         lines: [
-          'Trains stop around midnight, back around 5',
+          'Nothing runs again until *5 in the morning*',
           'Taxis add *20 %* between 10pm and 5am',
+        ] },
+
+      { id: '04c', sec: 3, w: 9, photo: 'j08-river', slug: '04c-taxi-cost', ty: 55,
+        lines: [
           'A 7 km ride: *2,500 to 3,000 yen*, about $17',
           'Check your last train before you go out',
         ] },
 
-      { id: 'end', photo: 'j04-end', slug: '05-end', endcard: true, ty: 60,
+      { id: 'end', sec: 4, photo: 'j04-end', slug: '05-end', endcard: true, ty: 60,
         head: 'Save this for your *Japan trip*.',
         body: 'Follow for more.' },
     ],
@@ -424,8 +446,10 @@ json.dump({'p85': px[int(len(px) * 0.85)], 'median': px[len(px) // 2]},
     const pngPath = join(OV, `${b.id}.png`);
     const lock = existsSync(LOCKUP) ? `<img src="file://${LOCKUP}">` : '';
     if (b.endcard && !lock) throw new Error('missing DAYA lockup ' + lockFile);
+    // Seit ein Punkt mehrere Bilder hat, tragen die Folgebilder nur Zeilen und
+    // keine Ueberschrift mehr - die stand schon auf dem ersten.
     const text =
-      `<div class="head">${fmt(b.head)}</div>` +
+      (b.head ? `<div class="head">${fmt(b.head)}</div>` : '') +
       (b.body ? `<div class="body">${fmt(b.body)}</div>` : '') +
       (b.lines ? `<div class="list">${b.lines.map((l) => `<div>${fmt(l)}</div>`).join('')}</div>` : '');
     const cls = ['block'];
@@ -501,4 +525,10 @@ Image.alpha_composite(g, o).convert('RGB').save('${join(SLIDES, `${n}-${b.id}.pn
     execSync(`cp "${src}" "${dst}"`);
   });
   console.log(name, FORMAT, '->', EXPORT);
+
+  // Der Video-Builder muss wissen, welcher Frame zu welchem gesprochenen
+  // Abschnitt gehoert. Seit ein Punkt mehrere Bilder haben kann, ist das keine
+  // 1:1-Zuordnung mehr.
+  writeFileSync(join(OUT, 'frames.json'), JSON.stringify(
+    beats.map((b) => ({ id: b.id, sec: b.sec === undefined ? 0 : b.sec, w: b.w || 1 })), null, 2));
 }

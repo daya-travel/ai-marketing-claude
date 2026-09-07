@@ -488,3 +488,44 @@ spielt die Laenge fuer eine Rolle?? Ich habe dich nie darin eingegrenzt."
   Creme. Auf den dunklen Fotos faellt der Median unter 135, die bleiben ohne.
 - **Lautheit auf -16 LUFS normalisiert.** Isla lag bei -13,9 dB, Daisy bei
   -21,1 - sieben Dezibel Unterschied allein durch die Stimmwahl.
+
+## Umbau am 07.09.: mehrere Bilder je Punkt
+
+Alesya: „ich hab nicht verstanden, warum sie den Koffer weiterschicken. Das ist
+sehr unklar ... man muss lange lesen und bevor man liest, kommt man schon zum
+naechsten Bild ... ich hatte da teilweise zwei oder drei Bilder."
+
+**Der Koffer-Punkt erklaerte nichts.** „Hand it in at the hotel desk" sagt nicht,
+dass es in Japan ueberhaupt einen Gepaeckdienst zwischen Hotels gibt. Neue
+gesprochene Fassung:
+
+> One. Your suitcase. Japan will move it for you. You hand it in at your hotel
+> in the morning, and it's waiting at the next one the following day. About
+> three thousand yen, and you take the train with just a bag.
+
+**Aus 5 Frames sind 10 geworden.** Ein gesprochener Abschnitt kann jetzt
+mehrere Bilder haben, und der Text verteilt sich darauf - hoechstens zwei
+Zeilen je Bild statt vier.
+
+| Abschnitt | Bilder | Was jedes zeigt |
+|---|---|---|
+| Hook | 1 | Flatlay mit dem Koffer |
+| Koffer | 3 | Koffer im Zimmer, Koffer im Genkan, Frau mit nur einer Tasche |
+| Bankkarte | 2 | Kartenboerse auf Leinen, ruhiges Zimmer |
+| Letzter Zug | 3 | Nachtstrasse, Gasse, Hang bei Nacht |
+| Schluss | 1 | Parkweg |
+
+**Technisch:** `build-trials.mjs` schreibt `frames.json` mit `sec` und `w` je
+Frame, `build-trials-video.mjs` verteilt die Zeit eines Abschnitts darauf.
+`w` ist die Wortzahl des Satzes, der zu diesem Bild gesprochen wird - ohne
+Gewichtung wechselte das Bild mitten im Satz statt dazwischen.
+
+**Gemessen und nachgebessert:** `About 3,000 yen` in Marigold lag auf dem
+sonnenbeschienenen Weg, also warm auf warm, und verschwand fast. Textblock von
+ty 63 auf 46 in den Baumschatten, Median dort 57 statt 98.
+
+Laenge jetzt 41,2 s Bild auf 39,2 s Ton. Die 30-Sekunden-Regel ist gestrichen.
+
+**Was ich nicht pruefen kann:** wie es klingt. Das Sprechtempo je Abschnitt
+liegt bei 156 bis 207 Woertern pro Minute, der Koffer-Abschnitt ist der
+schnellste. Ob das gehetzt wirkt, muss Alesya hoeren.

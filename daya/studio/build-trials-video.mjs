@@ -40,9 +40,9 @@ const CUTS = join(__dirname, 'audio', TRIAL, 'cuts.json');
 const NAMES = { trial1: 'daya-trial1-japan', trial2: 'daya-trial2-italy-useful', trial3: 'daya-trial3-italy-fines' };
 
 const W = 1080, H = 1920, FPS = 30;
-// crf 21 statt 18: bei 18 kam Trial 1 auf 31 MB und liess sich nicht mehr
-// verschicken. Instagram kodiert ohnehin neu, der Unterschied ist dort nicht
-// mehr zu sehen - die Dateigroesse dagegen schon.
+// crf 23: bei 18 kam Trial 1 auf 31 MB, bei 21 mit zehn Frames wieder auf 31.
+// Der Versand haengt bei 30 MB. Instagram kodiert ohnehin neu, der Unterschied
+// ist dort nicht zu sehen - die Dateigroesse dagegen schon.
 
 // 2,0 s Nachlauf. Daisy liest die Schlusszeile in 1,78 s - mit 1,2 s Nachlauf
 // staende die Schlusskarte samt DAYA-Wortmarke nur knapp 3 Sekunden.
@@ -51,17 +51,32 @@ const HOLD = 2.0;
 // 48 kHz stereo ausdruecklich gesetzt. seed_audio liefert 24 kHz, und ein MP4
 // mit 24-kHz-Ton spielt nicht ueberall ab - Alesya am 06.09.: „In meinem Video
 // ist kein Ton?" Der Ton war da und hatte Pegel, nur die Rate war unueblich.
-const ids = ['01', '02', '03', '04', 'end'];
+//
+// MEHRERE BILDER JE GESPROCHENEM ABSCHNITT. Alesya am 07.09.: „man muss lange
+// lesen und bevor man liest, kommt man schon zum naechsten Bild ... ich hatte
+// da teilweise zwei oder drei Bilder." Die Zuordnung Frame zu Abschnitt steht
+// deshalb in frames.json, geschrieben von build-trials.mjs. Die Zeit eines
+// Abschnitts wird auf seine Frames verteilt, gewichtet nach `w`.
+const FRAMES = join(OUT, 'frames.json');
+if (!existsSync(FRAMES)) throw new Error('missing frames.json - erst build-trials.mjs laufen lassen');
+const frames = JSON.parse(readFileSync(FRAMES, 'utf8'));
+const sections = [...new Set(frames.map((f) => f.sec))].sort((a, b) => a - b);
 if (!existsSync(AUDIO)) throw new Error('missing audio ' + AUDIO);
 if (!existsSync(CUTS)) throw new Error('missing cuts ' + CUTS);
 const cuts = JSON.parse(readFileSync(CUTS, 'utf8'));
-if (cuts.length !== ids.length + 1) {
-  throw new Error(`cuts.json hat ${cuts.length} Grenzen, erwartet ${ids.length + 1}`);
+if (cuts.length !== sections.length + 1) {
+  throw new Error(`cuts.json hat ${cuts.length} Grenzen, erwartet ${sections.length + 1}`);
 }
 
-const segs = ids.map((id, i) => {
-  const dur = cuts[i + 1] - cuts[i] + (i === ids.length - 1 ? HOLD : 0);
-  return { id, dur, frames: Math.round(dur * FPS) };
+const segs = [];
+sections.forEach((sec, i) => {
+  const mine = frames.filter((f) => f.sec === sec);
+  const total = cuts[i + 1] - cuts[i] + (i === sections.length - 1 ? HOLD : 0);
+  const weight = mine.reduce((n, f) => n + f.w, 0);
+  mine.forEach((f) => {
+    const dur = total * f.w / weight;
+    segs.push({ id: f.id, dur, frames: Math.round(dur * FPS) });
+  });
 });
 segs.forEach((s) => console.log(`seg ${s.id}  ${s.dur.toFixed(2)}s  ${s.frames}f`));
 
@@ -74,7 +89,7 @@ segs.forEach((s) => {
   const filter = `[0:v]scale=${W * 2}:${H * 2}:flags=lanczos,` +
     `zoompan=z='min(1+0.0009*on,1.09)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':` +
     `d=${s.frames}:s=${W}x${H}:fps=${FPS}[v];[v][1:v]overlay=0:0,format=yuv420p[out]`;
-  execSync(`ffmpeg -y -loglevel error -loop 1 -i "${grid}" -i "${ov}" -filter_complex "${filter}" -map "[out]" -frames:v ${s.frames} -an -c:v libx264 -crf 21 -preset slow -pix_fmt yuv420p "${out}"`, { stdio: 'inherit' });
+  execSync(`ffmpeg -y -loglevel error -loop 1 -i "${grid}" -i "${ov}" -filter_complex "${filter}" -map "[out]" -frames:v ${s.frames} -an -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p "${out}"`, { stdio: 'inherit' });
 });
 
 // 2) zusammensetzen
