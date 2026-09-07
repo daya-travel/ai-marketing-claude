@@ -434,10 +434,13 @@ json.dump({'p85': px[int(len(px) * 0.85)], 'median': px[len(px) // 2]},
     const inner = `
   <div class="${cls.join(' ')}" style="top:${tyOf(b)}%">${text}</div>`;
 
-    // Band nur auf dem Cover. Dort liegt Creme auf weissem Leinen, das ist der
-    // einzige Fall, den der Schlagschatten nicht traegt - und genau der Fall,
-    // den der erfolgreiche Japan-Post mit einem Verlauf geloest hat. Die
-    // Punkte-Slides liegen auf Fotos und bleiben ohne, so wie abgenommen.
+    // Band ueberall dort, wo die Messung es verlangt - nicht nur auf dem Cover.
+    //
+    // Erst hing es an `b.cover`, weil die Punkte-Slides auf Fotos liegen und
+    // Creme dort traegt. Seit der Bankkarten-Slide ein Objektbild auf hellem
+    // Leinen ist, stimmt das nicht mehr: dort liegt Creme wieder auf Creme.
+    // Der Median entscheidet, so wie beim Cover, und auf den dunklen Fotos
+    // faellt er unter CREAM_FLOOR - die bleiben also unveraendert ohne Band.
     //
     // Es spannt 14 Prozentpunkte ueber und unter der Textmitte und faellt zu
     // beiden Seiten auf null. Erste Fassung war 48 Prozentpunkte breit und
@@ -448,7 +451,7 @@ json.dump({'p85': px[int(len(px) * 0.85)], 'median': px[len(px) // 2]},
     // zwischen 42 und 64. Der Textblock ist fast so hoch wie das Band, und mit
     // dem kurzen Plateau lagen Ober- und Unterkante im Auslauf - die Unterzeile
     // des Covers war dadurch die schwaechste Zeile im ganzen Slide.
-    const a = b.cover ? bandFor(b.id) : 0;
+    const a = bandFor(b.id);
     const ty = tyOf(b);
     const top = Math.max(0, ty - 14);
     const height = Math.min(100 - top, 28);

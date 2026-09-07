@@ -451,3 +451,40 @@ exakten Grenzen. **Nicht ins Bild gebrannt**, und dazu ein Einwand: auf diesen
 Slides steht der Text schon, gross und mittig. Instagram-Untertitel sitzen
 unten mittig und wuerden ihn verdoppeln. Bei Italien war das so, und Italien
 lief schlechter als Japan ohne.
+
+## Nachtrag 07.09.2026
+
+**Japan waechst weiter.** Insights aus Alesyas Screenshot: 3.300 Aufrufe, 3.012
+Betrachter, 21 Sek. durchschnittliche Wiedergabe, 12 neue Follower, 93
+Speicherungen, 37 Likes, 0 Kommentare, 2 Weiterleitungen. Am 03.09. waren es
+3.202 Aufrufe, 22 Sek., 89 Speicherungen und 11 Follower.
+
+**Die „6" auf dem Cover war ein Versehen.** Dort steht „Six things to know
+before you fly", das Reel hat aber drei Punkte. Alesya: „es war ein Fehler von
+mir, ich habe es uebersehen und dann gepostet, dann war es schon zu spaet."
+Damit ist die Frage vom 04.09. endgueltig geklaert, und die Drei-Punkte-Anlage
+der Trials stimmt.
+
+**Die 30-Sekunden-Regel ist gestrichen.** Sie war meine, aus allgemeinen
+Richtwerten, und der eigene beste Post laeuft rund eine Minute. Alesya: „Was
+spielt die Laenge fuer eine Rolle?? Ich habe dich nie darin eingegrenzt."
+
+## Trial 1, Stand 07.09.
+
+- **Stimme Gracie** (`09878754-f20b-5330-9790-58a8027ab5b2`), abschnittsweise,
+  ohne `atempo`. Gemessen 24,31 s Ton bei 158 W/min, Video 26,3 s.
+  Ich hatte aus der Testdatei 32 Sekunden hochgerechnet und deshalb eine
+  Beschleunigung geplant - die Hochrechnung lag daneben, weil der einzelne
+  Testclip laengere Pausen hatte als die fuenf echten Abschnitte. Gemessen
+  schlaegt geschaetzt, auch wenn ich selbst geschaetzt habe.
+- **Bankkarten-Slide neu bebildert.** Vorher eine Frau im Tatami-Zimmer, die mit
+  dem Thema nichts zu tun hatte. Drei Versuche mit Konbini und Geldautomat sind
+  an erfundenen Schildern gescheitert, einer zusaetzlich an der Kameraposition
+  hinter der Frau. Geloest durch Motivwechsel statt besseren Prompt: ein
+  Objektbild, eine schlichte Kartenboerse auf Leinen mit Bluetenzweig, in
+  derselben Bildsprache wie das Cover.
+- **Band jetzt ueberall messungsgesteuert**, nicht mehr nur auf dem Cover. Seit
+  der Bankkarten-Slide ein helles Objektbild ist, liegt Creme auch dort auf
+  Creme. Auf den dunklen Fotos faellt der Median unter 135, die bleiben ohne.
+- **Lautheit auf -16 LUFS normalisiert.** Isla lag bei -13,9 dB, Daisy bei
+  -21,1 - sieben Dezibel Unterschied allein durch die Stimmwahl.

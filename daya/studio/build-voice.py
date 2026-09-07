@@ -40,6 +40,16 @@ GAP_OUT = 0.30  # Pause zwischen zwei Abschnitten
 OUT_RATE = 48000
 OUT_CH = 2
 
+# Ziellautheit der fertigen Spur, EBU R128.
+#
+# Jede Preset-Stimme kommt mit einem anderen Pegel: Isla lag bei -13,9 dB im
+# Mittel, Daisy bei -21,1 - sieben Dezibel leiser, ohne dass jemand etwas
+# geaendert haette. Ohne Normalisierung haengt die Lautstaerke des Reels also
+# an der Stimmwahl. -16 LUFS ist der uebliche Wert fuer mobiles Ausspielen,
+# True Peak bei -1,5 dB, damit die Kodierung nicht clippt.
+TARGET_LUFS = -16.0
+TARGET_TP = -1.5
+
 # Nach dem Hook laenger. Das Cover stellt ein Raetsel und will abgesucht werden;
 # in der ersten Fassung stand es 3,7 Sekunden, das reicht fuer den Satz, aber
 # nicht fuer den Blick. Der erste Punkt setzt danach ein.
@@ -157,6 +167,7 @@ def main():
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'concat',
                     '-safe', '0', '-i', 'list.txt',
                     '-ar', str(OUT_RATE), '-ac', str(OUT_CH),
+                    '-af', f'loudnorm=I={TARGET_LUFS}:TP={TARGET_TP}:LRA=11',
                     str(voice.resolve())],
                    cwd=str(tight), check=True)
 

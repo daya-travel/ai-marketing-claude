@@ -106,12 +106,22 @@ Website-Texte lassen sich ohne Rendering auslesen: die Copy steht in den JS-Bund
   Wanderschaft. Thailand und Italien zeigten eine Frau am Strand - in einer halben
   Sekunde erfasst, dann wischt man weg. Wer ein Rätsel stellt, legt das Gesuchte
   ins Bild. Ist ein Punkt kein Gegenstand, gehört er nicht ins Cover-Rätsel.
-- **Ein Reel bleibt unter 30 Sekunden.** Wer mehr Punkte hat, macht mehrere Reels.
-  Die Wiedergabezeit ist 2026 das Hauptsignal für die Verbreitung, und Skip Rate
-  (wegwischen in den ersten drei Sekunden) ist ein eigenes negatives Signal. Die
-  drei Ein-Minuten-Reels lagen bei 21 bis 37 % Wiedergabe, solide wären 40 bis
-  50 %. Die lange Fassung gehört ins **Karussell**: dort kostet Zurückhalten nur
-  einen Wisch, in einem Reel kostet es Wartezeit.
+- **Länge ist kein Ziel, Wiedergabezeit schon.** Ich hatte am 03.09. „ein Reel
+  bleibt unter 30 Sekunden" als Regel gesetzt - aus allgemeinen Richtwerten, nicht
+  aus eigenen Zahlen. **Der eigene beste Post widerlegt sie.** Der Japan-Reel läuft
+  rund eine Minute und steht am 07.09. bei 3.300 Aufrufen, 21 Sekunden
+  durchschnittlicher Wiedergabe, 93 Speicherungen und 12 neuen Followern. Alesya am
+  07.09.: „Was spielt die Länge für eine Rolle?? Ich habe dich nie darin
+  eingegrenzt." Sie hat nie eine Obergrenze genannt, die Regel war meine.
+  Was zählt, ist wie lange jemand bleibt. Nichts kürzen, solange keine Zahl es
+  verlangt - und schon gar nicht die Stimme beschleunigen, um eine selbst gesetzte
+  Marke zu treffen.
+- **Der Japan-Reel hatte 3 Punkte, nicht 6.** Auf dem Cover steht „Six things to
+  know before you fly", und das war ein Versehen: Alesya am 07.09.: „es steht 6,
+  aber es sind tatsächlich nur 3! Es war ein Fehler von mir, ich habe es übersehen
+  und dann gepostet, dann war es schon zu spät." Wer die Zahl auf dem Cover als
+  Beleg nimmt, zieht den falschen Schluss. Die Fassung mit 3.300 Aufrufen hat drei
+  Punkte.
 - **Captions immer als Chat-Text ausgeben**, nicht nur als Datei — Alesya öffnet die
   Dateien nicht.
 

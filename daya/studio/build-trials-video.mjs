@@ -44,7 +44,9 @@ const W = 1080, H = 1920, FPS = 30;
 // verschicken. Instagram kodiert ohnehin neu, der Unterschied ist dort nicht
 // mehr zu sehen - die Dateigroesse dagegen schon.
 
-const HOLD = 1.2;
+// 2,0 s Nachlauf. Daisy liest die Schlusszeile in 1,78 s - mit 1,2 s Nachlauf
+// staende die Schlusskarte samt DAYA-Wortmarke nur knapp 3 Sekunden.
+const HOLD = 2.0;
 
 // 48 kHz stereo ausdruecklich gesetzt. seed_audio liefert 24 kHz, und ein MP4
 // mit 24-kHz-Ton spielt nicht ueberall ab - Alesya am 06.09.: „In meinem Video
