@@ -189,6 +189,10 @@ const TRIALS = {
 
       { id: '02c', sec: 1, w: 5, photo: 'j06-handsfree', slug: '02c-hands-free' },
 
+      // Kein zoom hier. Ein Versuch mit 1.22 hat die Karte formatfuellend gemacht,
+      // der Text lag dann quer darauf und die Kopfzeile mit. Ohne Zuschnitt
+      // liegt die Karte im oberen Zweidrittel und der Text auf ihrem unteren
+      // Rand - creme auf dunklem Blau, gemessener Median 17.
       { id: '03a', sec: 2, w: 10, photo: 'j02-card', slug: '03a-bank-card', ty: 63,
         head: 'Your *bank card*.',
         lines: [

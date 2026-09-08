@@ -203,6 +203,16 @@ Serie ansehen und den Look treffen.
   Münzbörsen, Verpackungen und Schuhe mit Label erzeugen zuverlässig Buchstabensalat
   („PASSGORT", „MARSSOFIT", „CUPPI M SINOCTAY", alle am 29.08.). Ein Pass lässt sich
   nicht sauber generieren, er fliegt raus statt neu geprompted zu werden.
+- **Ein Gegenstand braucht ein Merkmal, das keine Schrift ist.** Nachtrag zur
+  Regel darunter, Alesya am 08.09.2026: „Kann man denn keine ‚normale' Bankkarte
+  abbilden? Das sieht ja wie Papier aus." Ich hatte die Karte unbedruckt
+  bestellt und damit jedes Merkmal mitentfernt - ein Rechteck aus Kunststoff
+  liest sich dann als Papier. Der **EMV-Chip** ist keine Schrift und macht die
+  Karte sofort erkennbar. Erst das Merkmal suchen, das ohne Buchstaben
+  auskommt, dann den Rest wegprompten.
+  Und: erfundene Schrift auf **glattem, einfarbigem** Kunststoff laesst sich
+  rueckstandsfrei überdecken. Auf strukturiertem Grund wie Papier oder Leder
+  fällt die Retusche auf - dort gilt weiter, dass das Motiv fliegt.
 - **Ein Gegenstand, den man nur an seinem Aufdruck erkennt, ist kein Motiv.**
   Alesya, 07.09.2026: „Bank Card Bild neu generieren, passend zum Text." Eine
   Bankkarte ist definiert durch Nummer, Name, Logo und Chip - genau das, was

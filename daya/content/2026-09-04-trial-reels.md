@@ -604,3 +604,31 @@ Textur, waehrend Leder flach ist. Lesbar ist es, die Zeile „over 28,000" in
 Marigold ist die schwaechste im ganzen Reel.
 
 41,2 s Bild auf 39,2 s Ton, 18 MB.
+
+## Nachtrag 08.09.: Karte mit Chip, Bahnsteigbild ohne Person
+
+Alesya: „Kann man denn keine ‚normale' Bankkarte abbilden? Das sieht ja wie
+Papier aus. Und Bild 9 wo eine Frau von hinten steht auf der Straße sieht sehr
+Creepy aus."
+
+**Der Chip war der fehlende Baustein.** Ich hatte die Karte immer unbedruckt
+bestellt, weil die Regel keine Buchstaben auf Gegenstaenden erlaubt - und ohne
+jedes Merkmal liest sich ein Rechteck aus Kunststoff als Papier. Ein
+EMV-Chip ist aber keine Schrift. Mit Chip, glaenzendem Navy und den richtigen
+Proportionen ist die Karte sofort als Bankkarte erkennbar.
+
+Die erfundene Praegeschrift, die soul_2 dazu erfindet („CNANNANS", „SMC 8SVS"),
+liegt auf glattem Kunststoff einer einzigen Farbe und laesst sich rueckstandsfrei
+ueberdecken. Das ist der Unterschied zu Pass oder Verpackung: dort ist die
+Schrift auf strukturiertem Grund und die Retusche faellt auf.
+
+**Bild 9 hat keine Person mehr.** Statt einer Frau von hinten allein im Dunkeln
+stehen dort jetzt zwei rote Signallichter ueber den Gleisen. Die Schilderreihe
+am linken Rand und die gruene Bahnsteignummer sind mit Nachthimmel ueberdeckt.
+
+**Verworfen:** ein Bahnsteig mit Werbetafel voller Zeichen, eine Frau auf einer
+Bank mit Schild und Telefonbildschirm im Bild, ein Bahnsteig mit geschlossenen
+Rolllaeden und Anzeigetafel.
+
+Ein Zuschnittsversuch am Karten-Slide (zoom 1.22) hat die Karte formatfuellend
+gemacht, der Text lag dann quer darauf und die Kopfzeile mit. Zurueckgenommen.
