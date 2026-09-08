@@ -555,3 +555,52 @@ Retusche.
 **Was offen bleibt:** die drei Nachtbilder beim letzten Zug tragen die
 Stimmung, nicht die Information. Ein Bahnsteig waere richtig, japanische
 Bahnsteige sind aber voller Schilder - sechs Versuche sind daran gescheitert.
+
+## Nachtrag 08.09.: Bilder zeigen jetzt, was der Text sagt
+
+Alesya am 07.09.: „Nein, die Bilder passen nicht dazu, Mann." Und danach:
+„Versuche doch einfach passende Bilder zu erzeugen die das zeigen, was wir
+sagen… Cover bleibt, den Rest ändern. Außer das Bild passt dazu, dann lass es!"
+
+Sie hatte recht: beim letzten Zug war auf keinem der drei Bilder ein Zug. Ich
+hatte Stimmung geliefert und Information behauptet.
+
+**Fuenf getauscht, fuenf geblieben.**
+
+| Slide | Text sagt | Bild jetzt |
+|---|---|---|
+| 03a | Deine Bankkarte | blanke Karte im Etui auf Leinen |
+| 03b | rund um die Uhr offen | Konbini bei Nacht ueber der Strasse |
+| 04a | Der letzte Zug | Bahnsteig mit Zug bei Nacht |
+| 04b | nichts faehrt bis 5 | Gleise mit Ruecklichtern in der Ferne |
+| 04c | Taxi 20 % teurer | Frau allein auf dem Bahnsteig |
+
+**Was den Durchbruch gebracht hat, war nicht der bessere Prompt, sondern der
+andere Ausschnitt.** Bahnhoefe sind voller Schilder, und sechs Versuche waren
+schon daran gescheitert. Was funktioniert, sind Motive, in denen Schrift
+baulich nicht vorkommt:
+
+- Kamera flach ueber dem Blindenleitstreifen, Decke und Anzeigetafeln
+  ausserhalb des Rahmens
+- Gleise von einer Bruecke aus, zwei rote Lichtpunkte in der Ferne
+- der Konbini klein im Bild auf der anderen Strassenseite, das Licht macht die
+  Arbeit
+
+**Zwei Retuschen.** Auf dem Konbini standen erfundene Zeichen auf dem Vordach,
+auf dem Wagen eine Nummer. Beides mit Nachbarflaeche ueberdeckt. Beim Wagen war
+der zweite Versuch schlechter als der erste - eine Fensterkante wanderte in die
+Wagenwand und erzeugte ein sichtbares Rechteck. Zurueck auf die schonende
+Fassung: ein weicher Fleck statt einer Ziffer.
+
+**Verworfen:** ein Wageninneres mit Streckenplan und Anzeigetafel, ein
+Bahnsteig mit „Y H SRING / PA TEEO VILEK" im Bild, zwei Kartenmotive, die sich
+als Notizbuch lesen, drei Ladenszenen mit Schildern. Zwoelf Varianten, fuenf
+brauchbar.
+
+**Was schwach bleibt:** der Bankkarten-Slide. Der Text liegt auf hellem Leder
+und Leinen, gemessener Median 149. Das Band greift dort nur mit 0,09, weil die
+Schwelle bei 135 liegt - und die Schwelle stammt aus einem Slide mit viel
+Textur, waehrend Leder flach ist. Lesbar ist es, die Zeile „over 28,000" in
+Marigold ist die schwaechste im ganzen Reel.
+
+41,2 s Bild auf 39,2 s Ton, 18 MB.
