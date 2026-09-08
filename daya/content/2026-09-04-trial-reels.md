@@ -632,3 +632,30 @@ Rolllaeden und Anzeigetafel.
 
 Ein Zuschnittsversuch am Karten-Slide (zoom 1.22) hat die Karte formatfuellend
 gemacht, der Text lag dann quer darauf und die Kopfzeile mit. Zurueckgenommen.
+
+### Nachkontrolle in Anzeigegroesse: zwei Reste
+
+**Die Bahnsteignummer war nur halb ueberdeckt.** Auf dem fertigen Slide in
+Anzeigegroesse (405 px breit) stand links oben noch eine gruenliche „2". Bei
+2,6-facher Aufhellung des Originals war sie unuebersehbar. Gemessen: 938 Pixel,
+bei denen der Gruenkanal ueber dem Rotkanal liegt, in einem Kasten von 24 x 80
+Pixeln. Jetzt mit einer weich auslaufenden Flaeche aus dem gleichmaessigen
+Dunkel 200 px weiter rechts ueberdeckt (Standardabweichung dort 2,4, also
+reines Rauschen ohne Struktur). Nachgemessen: null solche Pixel.
+
+Merksatz: eine Retusche gilt erst als fertig, wenn die aufgehellte Fassung
+sauber ist. Bei Nachtbildern versteckt die Dunkelheit den Rest, und die
+TikTok-Oberflaeche hellt Videos nicht auf - aber ein Handy im Dunkeln mit
+hoher Helligkeit tut es.
+
+**Zwei Exportnamen stimmten nicht mehr.** `04b-alley` und `04c-slope` stammten
+aus dem alten Bildersatz; im Reel sind es Gleise und Signallichter. Jetzt
+`04b-tracks` und `04c-signals`. Die Dateinamen sind das, wonach die Bilder in
+der App sortiert werden, eine Gasse kommt darin nicht vor.
+
+**Drei Versuche mit querliegender Karte, keiner besser.** soul_2 legt
+Zahlkarten im Hochformat an, alle drei kamen hochkant. Gemessen:
+Seitenverhaeltnis 1,52 / 1,26 / (die dritte gleich der ersten). Eine echte
+Karte hat 1,586 - die schon eingebaute Fassung liegt bei **1,63** und ist damit
+die genaueste von allen. Bei einer Variante standen ausserdem erfundene Zeichen
+im Chipfeld. Es bleibt bei der Karte von gestern.

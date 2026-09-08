@@ -214,9 +214,9 @@ const TRIALS = {
           'A 7 km ride: *2,500 to 3,000 yen*, about $17',
         ] },
 
-      { id: '04b', sec: 3, w: 5, photo: 'j07-steps', slug: '04b-alley' },
+      { id: '04b', sec: 3, w: 5, photo: 'j07-steps', slug: '04b-tracks' },
 
-      { id: '04c', sec: 3, w: 5, photo: 'j08-river', slug: '04c-slope' },
+      { id: '04c', sec: 3, w: 5, photo: 'j08-river', slug: '04c-signals' },
 
       { id: 'end', sec: 4, photo: 'j04-end', slug: '05-end', endcard: true, ty: 60,
         head: 'Save this for your *Japan trip*.',
