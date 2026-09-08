@@ -300,6 +300,22 @@ Serie ansehen und den Look treffen.
   Fläche scharf im Bild liegt. Bilder immer in echter Anzeigegröße prüfen, nicht in voller
   Auflösung - Buchstabensalat, der bei 100 % unsichtbar ist, wird in der Zelle zur Schlagzeile.
 
+## Ton
+
+**Die Zahl der Sprechstöße gegen die Zahl der Sätze im Skript prüfen.** `seed_audio`
+wiederholt gelegentlich das erste Wort eines Abschnitts. Alesya, 08.09.2026: „die
+stimme sagt 2 mal: two, two - vor dem bild." Nachgemessen in `s3.wav`: sechs
+Sprechstöße bei fünf Sätzen, die beiden ersten 0,33 s und 0,30 s lang, ihr
+mittleres Betragsspektrum korreliert mit 0,998. Zum Vergleich zwei wirklich
+verschiedene Wörter im Nachbarclip: 0,952. Der Befehl, der es zeigt:
+
+```
+ffmpeg -i sN.wav -af silencedetect=noise=-35dB:d=0.18 -f null -
+```
+
+Ein Bild sieht man an, einen Ton nicht. Deshalb ist diese Zählung bei jedem
+vertonten Abschnitt fällig, bevor das Video gebaut wird.
+
 Bei Videoclips nicht nur ein Standbild prüfen, sondern **acht Frames über die ganze Länge**.
 Die Fehler stecken in der Bewegung: eine Person, die sich auflöst; ein Handtuch, das am Ende
 herunterrutscht; zwei Hände mit verschiedenen Hauttönen; eine Männerhand auf einem

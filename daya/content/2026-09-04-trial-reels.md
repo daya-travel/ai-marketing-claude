@@ -659,3 +659,33 @@ Seitenverhaeltnis 1,52 / 1,26 / (die dritte gleich der ersten). Eine echte
 Karte hat 1,586 - die schon eingebaute Fassung liegt bei **1,63** und ist damit
 die genaueste von allen. Bei einer Variante standen ausserdem erfundene Zeichen
 im Chipfeld. Es bleibt bei der Karte von gestern.
+
+### Nachtrag 08.09.: doppeltes „Two", Text und stumme Fassung
+
+Alesya: „die stimme sagt 2 mal: two, two - vor dem bild. gib mir bitte den
+text, ich gebe das video ohne ton dem elevenlabs - ich brauche auch
+untertitel, deshalb"
+
+**Der Fehler saß in `s3.wav`.** Fuenf Saetze im Skript, sechs Sprechstoesse in
+der Datei. Die beiden ersten waren 0,33 s und 0,30 s lang und ihr mittleres
+Betragsspektrum korreliert mit 0,998 - zweimal dasselbe Wort. Zum Vergleich die
+ersten beiden Stoesse in `s2.wav` („One." / „Your suitcase."): 0,952. Weil die
+beiden messbar austauschbar sind, war es gleichgueltig, welchen man streicht;
+die ersten 1,34 s sind raus, das Original liegt als `s3-doppelt.wav` daneben.
+
+Der Kartenabschnitt ist damit 9,03 s statt 9,61 s, das Reel 40,6 s statt 41,2 s.
+
+**`subtitles.srt` war veraltet.** Sie trug die Zeiten der alten 24,3-s-Fassung
+und einen gekuerzten Text, der mit `sections.json` nicht mehr uebereinstimmte.
+Neu erzeugt aus `sections.json` plus `cuts.json`: 13 Cues, satzweise, die
+Abschnittsdauer nach Zeichenzahl verteilt. „One." / „Two." / „Three." haengen am
+Folgesatz, sonst stuende eine Zahl 0,3 s allein im Bild.
+
+**Stumme Fassung:** `daya-trial1-japan-stumm.mp4`, per `-c:v copy -an` aus der
+fertigen Datei, also ohne Neukodierung. Kein Audiostream, sonst identisch.
+
+**Was daran haengt:** die Bildschnitte kommen aus `cuts.json`, also aus der
+Laenge der jetzigen Tonspur. Spricht ElevenLabs anders schnell, laeuft das Bild
+gegen die Stimme. Deshalb gehen die Soll-Dauern pro Abschnitt mit raus, und das
+Angebot, die fertige WAV zurueckzuschicken - dann `build-voice.py` und
+`build-trials-video.mjs` neu, und das Bild sitzt exakt darauf.
