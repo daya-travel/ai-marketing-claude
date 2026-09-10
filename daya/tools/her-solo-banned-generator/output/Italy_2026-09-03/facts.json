@@ -1,0 +1,95 @@
+{
+  "country": "Italy",
+  "generated": "2026-09-03",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "Flip-flops on the trails",
+      "why": "The Cinque Terre paths look like a coastal stroll from the village. They are a marked mountain trail and the rock is polished smooth.",
+      "penalty": "50 euros at the low end and up to 2,500 if it ends in a rescue.",
+      "source": "Cinque Terre National Park rules (in force since 2019); idealista.it 16.06.2026; afar.com; travel.yahoo.com 2026",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "The bag on the beach towel",
+      "why": "Someone lays out twenty handbags in front of you while you're lying on the sand. It feels like shopping, and the seller is the one breaking the law. Not only him.",
+      "penalty": "The buyer pays, not only the seller. An Austrian tourist in Venice paid 1,000 euros for one bag.",
+      "source": "Italian anti-counterfeiting decree of 2005 (buyer liability); italymagazine.com (Austrian tourist fined 1,000 euros); thelocal.it 25.06.2018; europeforvisitors.com",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Sitting on the Spanish Steps",
+      "why": "Everyone has seen the photo of people sitting on them. That photo is older than the rule.",
+      "penalty": "250 euros for sitting, 400 if you leave a mark.",
+      "source": "Comune di Roma decorum rules 2019; CNN travel; ABC News 08.08.2019; NBC News (enforcement patrols)",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "The camera at the end of the street",
+      "why": "Historic centres are closed to traffic and the sign is small, in Italian, and often the same shape as the one before it. The car in front of you may live there.",
+      "penalty": "About 80 to 130 euros per gate, and every camera you pass is a separate fine.",
+      "source": "European Consumer Centre (evz.de / europe-consommateurs.eu) on Italian ZTL fines; Art. 7 Codice della Strada",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Sand from the beach",
+      "why": "A bottle of white sand looks like the most harmless souvenir there is. Sardinia has been losing tonnes of it a year.",
+      "penalty": "500 to 3,000 euros under Sardinia's regional law, and four tonnes of sand and shells came out of departing luggage at Olbia airport alone in two years.",
+      "source": "Sardinia Regional Law 16/2017; L'Unione Sarda 2026 (Take Me Back to the Sea report, 4 t seized at Olbia in two years); rental12.com",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Your licence on its own",
+      "why": "The rental desk hands over the keys without asking. The police at the roadside are a different conversation.",
+      "penalty": "408 to 1,634 euros under Article 135 of the Highway Code, payable on the spot.",
+      "source": "Art. 135 Codice della Strada; internationaldrivingpermit.org country page Italy; vipcars.com non-EU licence guide",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Lunch on a bridge",
+      "why": "There is nowhere to sit in Venice that isn't a bridge, a step or a monument. That's the point of the rule.",
+      "penalty": "100 to 200 euros, and they can add an urban Daspo that bars you from the spot.",
+      "source": "Comune di Venezia, comune.venezia.it 'Forbidden behaviour' (decorum rules 2019)",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Swimwear in town",
+      "why": "Sorrento is built above its beaches, so the walk back to your room goes straight through the centre.",
+      "penalty": "25 to 500 euros in Sorrento, and Venice fines the same thing at 250.",
+      "source": "Sorrento mayoral ordinance 06.07.2022 (Mayor Massimo Coppola); CNN travel; thelocal.it 11.07.2022; Comune di Venezia forbidden behaviour",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "Walking into Venice",
+      "why": "It only applies on certain days, so most people arrive having never heard of it, and the checks are random.",
+      "penalty": "5 or 10 euros to book, and 50 to 300 euros on top of it if you're checked without one.",
+      "source": "Venezia Unica / cda.ve.it official access fee pages, 2026 calendar; euronews 30.03.2026",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "The towel you left out",
+      "why": "You walk down at eight to find every free stretch already taken by empty umbrellas. Putting yours out the night before is how that started.",
+      "penalty": "Around 200 euros for a private individual, and the towel or umbrella is taken away.",
+      "source": "Italian coastal enforcement against 'furbetti dell'ombrellone', summer 2026; Forbes 09.07.2026 (Italy's new beach rules); thelocal.it 12.08.2026; Coast Guard operation Torre del Greco",
+      "checked": "2026-09-02",
+      "verified": true
+    },
+    {
+      "title": "One foot in the fountain",
+      "why": "It's forty degrees, the water is right there, and someone in front of you is already doing it for a video.",
+      "penalty": "About 500 euros plus a Daspo, the city ban. A traveller from New Zealand got a lifetime one in May 2026.",
+      "source": "Comune di Roma fountain regulation (2017, urban Daspo); idealista.it 05.09.2025 legal guide; Euro Weekly News 29.05.2026 (lifetime ban); wantedinrome.com",
+      "checked": "2026-09-02",
+      "verified": true
+    }
+  ]
+}

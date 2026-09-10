@@ -1,0 +1,17 @@
+# Flatlay prompts - Thailand
+# soul_2. The banned items are NOT in these pictures, they come as text overlay.
+
+## 1 - main flatlay
+Top-down flatlay on soft white linen, Thailand solo travel aesthetic, straw hat, round sunglasses, linen shirt, small notebook, seashell, frangipani flower, woven bag, soft daylight from one side, clean and bright, casually dropped and not arranged, items at different angles and some overlapping, uneven spacing, real creases in the linen, rich saturated colour, slight imperfection, realistic, vertical
+
+negative: no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers
+
+## 2 - detail
+Close photograph of a folded linen shirt and a straw hat brim on soft white linen, shallow depth of field, soft daylight from one side, nothing printed anywhere, no lettering, rich saturated colour, slight imperfection, realistic, vertical
+
+negative: no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers
+
+## 3 - detail
+Close photograph of a seashell and a frangipani flower resting on the linen on soft white linen, shallow depth of field, soft daylight from one side, nothing printed anywhere, no lettering, rich saturated colour, slight imperfection, realistic, vertical
+
+negative: no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers

@@ -1,0 +1,17 @@
+# Flatlay prompts - Bali
+# soul_2. The banned items are NOT in these pictures, they come as text overlay.
+
+## 1 - main flatlay
+Top-down flatlay on soft white linen, Bali solo travel aesthetic, straw hat, woven rattan bag, sarong folded, sunglasses, frangipani flowers, small notebook, soft daylight from one side, clean and bright, casually dropped and not arranged, items at different angles and some overlapping, uneven spacing, real creases in the linen, rich saturated colour, slight imperfection, realistic, vertical
+
+negative: no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers
+
+## 2 - detail
+Close photograph of a folded sarong with the woven bag handle on soft white linen, shallow depth of field, soft daylight from one side, nothing printed anywhere, no lettering, rich saturated colour, slight imperfection, realistic, vertical
+
+negative: no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers
+
+## 3 - detail
+Close photograph of frangipani flowers scattered on the linen on soft white linen, shallow depth of field, soft daylight from one side, nothing printed anywhere, no lettering, rich saturated colour, slight imperfection, realistic, vertical
+
+negative: no lettering, no writing, no labels, no logos, no printed packaging, no passport pages open, no signs, no numbers

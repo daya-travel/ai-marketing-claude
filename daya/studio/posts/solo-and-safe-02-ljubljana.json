@@ -1,0 +1,69 @@
+{
+  "slug": "solo-and-safe-02-ljubljana",
+  "series": "SOLO & SAFE",
+  "city": "Ljubljana, Slovenia",
+  "slides": [
+    {
+      "type": "cover",
+      "photo": "01.png",
+      "label": "START HERE",
+      "kicker": "SOLO & SAFE · SLOVENIA",
+      "lead": "you feel calm from the very first minute.",
+      "headline": "the *safest* small\ncapital in europe",
+      "body": "five reasons slovenia is a great first solo trip. save this post."
+    },
+    {
+      "type": "credential",
+      "photo": "02.png",
+      "kicker": "LJUBLJANA, SLOVENIA",
+      "text": "one of the *safest*\ncountries in the world"
+    },
+    {
+      "type": "tip",
+      "photo": "03.png",
+      "num": "01",
+      "head": "why women travel here *alone*",
+      "body": "low crime. easy to walk everywhere. and most people speak english."
+    },
+    {
+      "type": "tip",
+      "photo": "04.png",
+      "num": "02",
+      "head": "the old town has *no cars*",
+      "body": "just the river, small bridges, and cafes. calm and easy to walk."
+    },
+    {
+      "type": "tip",
+      "photo": "05.png",
+      "num": "03",
+      "head": "the best *view*",
+      "body": "take the cable car up to the castle. you see the whole city and the alps."
+    },
+    {
+      "type": "tip",
+      "photo": "06.png",
+      "num": "04",
+      "head": "a tip most people *miss*",
+      "body": "the small \"kavalir\" cart is free. locals use it to cross the old town."
+    },
+    {
+      "type": "tip",
+      "photo": "07.png",
+      "num": "05",
+      "head": "one *easy* day trip",
+      "body": "lake bled is 40 minutes by bus. see the island church, walk around the lake, come back the same day."
+    },
+    {
+      "type": "endcard",
+      "photo": "08.png",
+      "credit": false,
+      "lead": "five simple tips. one easier trip.",
+      "headline": "*save this* for your next trip",
+      "ctas": [
+        {"icon": "bookmark", "text": "save it for your first solo trip"},
+        {"icon": "send", "text": "send it to a friend who travels alone"}
+      ],
+      "tagline": "solo travel, minus the fear"
+    }
+  ]
+}

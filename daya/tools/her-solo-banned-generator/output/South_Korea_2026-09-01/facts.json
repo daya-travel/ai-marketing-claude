@@ -1,0 +1,87 @@
+{
+  "country": "South Korea",
+  "generated": "2026-09-01",
+  "disclaimer": "Not legal advice. Laws change. Every fact carries its source and the date it was checked - re-check before posting.",
+  "facts": [
+    {
+      "title": "A bad review",
+      "why": "Truth is not a defence here. Saying something true about a person or a business can still be a crime.",
+      "penalty": "Up to three years even when it's true. Truth only counts as a defence if it served the public interest, and you have to prove that.",
+      "source": "Information and Communications Network Act (cyber defamation); ARTICLE 19; Open Net Korea; thekoreanlawblog.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Undeclared food in your bag",
+      "why": "Beef jerky, ham, a sausage from home. Sniffer dogs work the arrivals hall, and the fine is for not declaring it.",
+      "penalty": "Up to 10 million won, about $7,300, for not declaring it. Declare it and it is only confiscated, no fine.",
+      "source": "Animal and Plant Quarantine Agency (APQA); trip.com Korea customs 2026; haniseoul.com; roafly.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "The rental e-scooter",
+      "why": "They stand on every corner in Seoul and need a licence, which is the part nobody expects.",
+      "penalty": "You need at least a moped licence and a helmet. Up to 100,000 won, about $75, without one.",
+      "source": "Korea Herald (Seoul licence check for rentals); swapswap.kr; frontlens.io; koreaquicktips.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Your ADHD or painkiller prescription",
+      "why": "Ordinary prescriptions from home are controlled narcotics here, and the permit takes weeks.",
+      "penalty": "Adderall is banned outright. Concerta and Ritalin need a permit you apply for two to three weeks before you fly.",
+      "source": "nomedic.co South Korea ADHD guide; insight-bridge.co.kr; tripbase.com prescription; MFDS permit process",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Buying a resold concert ticket",
+      "why": "The new law punishes the buyer too, not only the scalper. Enforcement started in August 2026, right in the middle of the concert boom.",
+      "penalty": "Up to a year or 10 million won, about $7,300, and fines up to fifty times the ticket price. Buying counts, not only selling.",
+      "source": "Korea Herald (scalping crackdown, enforcement from Aug 2026); Korea Times 2026-06-24; korea.net press release",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "The river park picnic",
+      "why": "Chimaek by the Han is on every Seoul itinerary. The rules there are stricter than the mood suggests.",
+      "penalty": "Littering is 30,000 won, about $22. Noise or drunken behaviour is 70,000, about $51.",
+      "source": "korea.net, stricter rules for Seoul's Hangang Park",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Paying on the spot",
+      "why": "Jeju police run a crackdown aimed at foreign tourists, and the fine is due immediately.",
+      "penalty": "Jaywalking, littering, smoking on the wrong street. The fine is issued on the spot and paid immediately.",
+      "source": "Korea Herald, Jeju police on-site fines for foreign tourists",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "Nicotine liquid in your bag",
+      "why": "Separate from where you vape. This one happens at the border.",
+      "penalty": "Twenty millilitres maximum, and anything above one percent is confiscated as a toxic substance.",
+      "source": "roafly.com South Korea airport customs rules",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "The border no-fly zone",
+      "why": "Fifteen kilometres is far wider than any tourist expects, and it follows the whole border.",
+      "penalty": "Up to a year or 10 million won, about $7,300. No-fly runs 15 km from the border in the east.",
+      "source": "drone-laws.com South Korea; dronesgator.com",
+      "checked": "2026-09-01",
+      "verified": true
+    },
+    {
+      "title": "The hair test",
+      "why": "Customs can hair-test you, and a legal smoke at home is still evidence here.",
+      "penalty": "Up to five years or 50 million won, about $36,500. Customs can hair-test you on arrival.",
+      "source": "Narcotics Control Act; tripbase.com South Korea cannabis; UK FCDO travel advice; cannabisregulations.ai",
+      "checked": "2026-09-01",
+      "verified": true
+    }
+  ]
+}
