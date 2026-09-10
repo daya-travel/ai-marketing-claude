@@ -76,3 +76,36 @@ ist eine Behauptung ueber sie selbst. Unbedenklich sind Motive, die nichts
 behaupten: eine Frau am Bahnsteig als Illustration zu einem Hinweis, ein
 Cafétisch zu einem Tipp. Heikel ist „ich war in Tokio", wenn sie nicht dort
 war. Das ist ihre Entscheidung, gehoert aber einmal ausgesprochen.
+
+## Das Training hat die Aehnlichkeit verschlechtert
+
+Soul `alesya`, `183fe6eb-0a5a-4eea-a83c-84f20e334da9`, neun Referenzen, rund
+25 Minuten von der Warteschlange bis `ready`. Danach dieselben drei Umgebungen
+mit `soul_2`, damit der Vergleich Motiv gegen Motiv steht.
+
+**Das Ergebnis ist schlechter als der Schnelltest, in beiden Punkten.**
+
+Aehnlichkeit: drei Gesichter nebeneinander gelegt - Studioportrait, Element,
+Soul. Das Element traegt den zurueckgebundenen Ansatz, die hohe Stirn, den
+Nasenring und den Ohrschmuck. Das Soul zeigt offene Wellen, keinen Nasenring,
+weichere und rundere Zuege. Es ist eine andere Frau.
+
+Schrift: auf dem Bahnsteigbild haengt ein Anzeigenband mit „Bàis Ra Merlind /
+Pahgintars", scharf und schon in der kleinen Ansicht lesbar. Das Marktbild ist
+voller erfundener Plakate und Banner. Der Schnelltest hatte an derselben Stelle
+nur eine unscharfe Kiste.
+
+**Die wahrscheinliche Ursache: sieben der neun Referenzen sind Spiegelbilder.**
+Drei Videoframes, das Kleid-Foto, zwei Badezimmerselfies und das Aufzugselfie
+sind alle im Spiegel entstanden und damit seitenverkehrt. Nur das
+Studioportrait und der Park-Zuschnitt zeigen ihr Gesicht richtigherum. Ein
+Gesicht ist nicht symmetrisch; wer dem Training beide Fassungen mischt, bekommt
+den Mittelwert, und der ist niemand.
+
+**Was daraus folgt fuer den naechsten Versuch:** Spiegelaufnahmen vor dem
+Training horizontal spiegeln, damit sie die echte Seitigkeit zeigen. Und
+Videoframes nur nehmen, wenn nichts Schaerferes da ist - ein 700 px breiter
+Ausschnitt aus 1080p ist weicher als jedes Handyfoto.
+
+**Bis dahin ist das Element der bessere Weg.** Es kostet kein Training, ist
+sofort da und trifft sie deutlich besser.
